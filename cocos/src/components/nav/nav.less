@@ -1,0 +1,121 @@
+.nav_box {
+    width: 1200px;
+    margin: auto;
+    margin-top: 15px;
+    .nav {
+        width: 683px;
+        height: 41px;
+        background: rgba(103, 103, 103, 1);
+        transform: skewX(-30deg);
+        margin-left: 420px;
+
+        .nav_list_box {
+            transform: skewX(30deg);
+            margin-left: 50px;
+
+            .active {
+                color: #2AD9FE;
+            }
+
+            .nav_develop,
+            .nav_jl,
+            .nav_st,
+            .nav_action,
+            .nav_browser,
+            .nav_about {
+                margin-left: 45px;
+            }
+
+            a {
+                color: #BEBEBE;
+                line-height: 41px;
+                font-size: 14px;
+
+                &:hover {
+                    color: #2AD9FE;
+                }
+            }
+
+            .nav_develop {
+                position: relative;
+                .nav_develop_click{
+                    z-index: 3;
+                }
+                .nav_develop_more_close {
+                    // display: none;
+                    width: 0;
+                    height: 0;
+                    border-width: 0 4px 6px;
+                    border-style: solid;
+                    border-color: transparent transparent #2AD9FE;
+                    position: absolute;
+                    top: 17px;
+                    right: -14px;
+                    cursor: pointer;
+                }
+
+                .nav_develop_more {
+                    width: 0;
+                    height: 0;
+                    border-width: 6px 4px 0;
+                    border-style: solid;
+                    border-color: #BEBEBE transparent transparent;
+                    position: absolute;
+                    top: 18px;
+                    right: -14px;
+                    cursor: pointer;
+                }
+
+                .nav_develop_list {
+                    display: none;
+                    position: absolute;
+                    width: 83px;
+                    top: 0px;
+                    left: 0;
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    .nav_develop_list_box {
+                        margin-top: 46px;
+                        width: 83px;
+                        height: 88px;
+                        overflow: hidden;
+
+                        .nav_develop_list_trans {
+                            padding-top: 2px;
+                            width: 83px;
+                            height: 86px;
+                            background: rgba(51, 51, 51, 1);
+                            opacity: 0.76;
+                            transform: translateY(-88px);
+                            transition: all .3s;
+                            overflow: hidden;
+                        }
+                    }
+
+
+                    a {
+                        display: block;
+                        margin-top: 12px;
+                        height: 12px;
+                        line-height: 12px;
+                        margin-left: 11px;
+                        font-size: 12px;
+
+                        &:hover {
+                            color: #2AD9FE;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .lang_box {
+        width: 53px;
+        height: 41px;
+        background: rgba(42, 217, 254, 1);
+        transform: skewX(-30deg);
+        margin-left: 20px;
+    }
+}

@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Routermy from './router/router'
+import { IntlProvider,addLocaleData } from 'react-intl';
+import zh_CN from './i18n/zh_CN'
+import en_US from './i18n/en_US'
+import zh from 'react-intl/locale-data/zh';//react-intl语言包
+import en from 'react-intl/locale-data/en';//react-intl语言包
 import './App.css';
-
+addLocaleData([...en, ...zh])
+let rootElement = document.getElementById('root');
+function chooseLocale(){
+switch(navigator.language.split('-')[0]){
+    case 'en':
+        return en_US;
+        break;
+    case 'zh':
+        return zh_CN;
+        break;
+    default:
+        return en_US;
+        break;
+ } }
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <IntlProvider locale={navigator.language} messages={chooseLocale()}>
+          <div className="App">
+            <Routermy/>
+          </div>
+        </IntlProvider>
     );
   }
 }

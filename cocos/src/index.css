@@ -8,7 +8,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: 'FjallaOne';
+  src: url('./font/fjallaone-webfont.woff2') format('woff2'),
+       url('./font/fjallaone-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+li{
+  list-style: none;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.lt {
+  float: left;
+}
+
+.rt {
+  float: right;
 }

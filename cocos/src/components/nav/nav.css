@@ -1,0 +1,106 @@
+.nav_box {
+  width: 1200px;
+  margin: auto;
+  margin-top: 15px;
+}
+.nav_box .nav {
+  width: 683px;
+  height: 41px;
+  background: #676767;
+  transform: skewX(-30deg);
+  margin-left: 420px;
+}
+.nav_box .nav .nav_list_box {
+  transform: skewX(30deg);
+  margin-left: 50px;
+}
+.nav_box .nav .nav_list_box .active {
+  color: #2AD9FE;
+}
+.nav_box .nav .nav_list_box .nav_develop,
+.nav_box .nav .nav_list_box .nav_jl,
+.nav_box .nav .nav_list_box .nav_st,
+.nav_box .nav .nav_list_box .nav_action,
+.nav_box .nav .nav_list_box .nav_browser,
+.nav_box .nav .nav_list_box .nav_about {
+  margin-left: 45px;
+}
+.nav_box .nav .nav_list_box a {
+  color: #BEBEBE;
+  line-height: 41px;
+  font-size: 14px;
+}
+.nav_box .nav .nav_list_box a:hover {
+  color: #2AD9FE;
+}
+.nav_box .nav .nav_list_box .nav_develop {
+  position: relative;
+}
+.nav_box .nav .nav_list_box .nav_develop .nav_develop_click {
+  z-index: 3;
+}
+.nav_box .nav .nav_list_box .nav_develop .nav_develop_more_close {
+  width: 0;
+  height: 0;
+  border-width: 0 4px 6px;
+  border-style: solid;
+  border-color: transparent transparent #2AD9FE;
+  position: absolute;
+  top: 17px;
+  right: -14px;
+  cursor: pointer;
+}
+.nav_box .nav .nav_list_box .nav_develop .nav_develop_more {
+  width: 0;
+  height: 0;
+  border-width: 6px 4px 0;
+  border-style: solid;
+  border-color: #BEBEBE transparent transparent;
+  position: absolute;
+  top: 18px;
+  right: -14px;
+  cursor: pointer;
+}
+.nav_box .nav .nav_list_box .nav_develop .nav_develop_list {
+  display: none;
+  position: absolute;
+  width: 83px;
+  top: 0px;
+  left: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+.nav_box .nav .nav_list_box .nav_develop .nav_develop_list .nav_develop_list_box {
+  margin-top: 46px;
+  width: 83px;
+  height: 88px;
+  overflow: hidden;
+}
+.nav_box .nav .nav_list_box .nav_develop .nav_develop_list .nav_develop_list_box .nav_develop_list_trans {
+  padding-top: 2px;
+  width: 83px;
+  height: 86px;
+  background: #333333;
+  opacity: 0.76;
+  transform: translateY(-88px);
+  transition: all .3s;
+  overflow: hidden;
+}
+.nav_box .nav .nav_list_box .nav_develop .nav_develop_list a {
+  display: block;
+  margin-top: 12px;
+  height: 12px;
+  line-height: 12px;
+  margin-left: 11px;
+  font-size: 12px;
+}
+.nav_box .nav .nav_list_box .nav_develop .nav_develop_list a:hover {
+  color: #2AD9FE;
+}
+.nav_box .lang_box {
+  width: 53px;
+  height: 41px;
+  background: #2ad9fe;
+  transform: skewX(-30deg);
+  margin-left: 20px;
+}
