@@ -18,7 +18,8 @@ export default class Product extends Component {
                     <Nav></Nav>
                 </div>
                 <div className='dev_plan'>
-                    <a href="http://www.baidu.com" className='ljdev' target='_blank' rel="noopener noreferrer">
+                    <a href="https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA
+" className='ljdev' target='_blank' rel="noopener noreferrer">
                         <FormattedMessage id='ljdev' />
                     </a>
                 </div>

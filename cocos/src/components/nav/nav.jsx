@@ -96,9 +96,10 @@ export default class Nav extends Component {
                             </NavLink>
                         </div>
                         <div className='nav_browser lt'>
-                            <NavLink to="/browser" exact={true} activeClassName="active"
+                        <a href="https://jdex.one/"  className='nav_browser_click' target='_blank'><FormattedMessage id='browser' /></a>
+                            {/* <NavLink to="/browser" exact={true} activeClassName="active"
                                 className='nav_browser_click' ><FormattedMessage id='browser' />
-                            </NavLink>
+                            </NavLink> */}
                         </div>
                         <div className='nav_about lt'>
                             <NavLink to="/about" exact={true} activeClassName="active"

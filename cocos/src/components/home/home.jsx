@@ -47,6 +47,7 @@ import w12 from '../../images/white(12).png'
 import w13 from '../../images/white(13).png'
 import w14 from '../../images/white(14).png'
 import jia from '../../images/jia.png'
+import close from '../../images/close.png'
 import './home.css'
 
 export default class Home extends Component {
@@ -131,13 +132,32 @@ export default class Home extends Component {
             ]
         }
     }
+    //打开播放器
+    showVideo = () => {
+        this.videoBox.style.display = 'flex';
+    }
+    hideVideo = () => {
+        this.videoBox.style.display = 'none';
+    }
+    componentDidMount() {
+    }
     render() {
         return (
             <div className='homepage_index'>
+                <div className='video_box' ref={(x) => { this.videoBox = x }}>
+                    <div className='video'>
+                        <div className='close_box' onClick={this.hideVideo}>
+                            <img src={close} alt="" />
+                        </div>
+                        <iframe width="1200px" height="688px" src='http://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=0' frameBorder='0' >
+                        </iframe>
+                    </div>
+                </div>
                 <div className='banner_box'>
                     <Nav></Nav>
-                    <div className='play_btn'>
+                    <div className='play_btn' onClick={this.showVideo}>
                         <img src={play} alt="" />
+
                     </div>
                 </div>
                 <div className='explane'>
@@ -307,7 +327,9 @@ export default class Home extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+         
+                {/* <iframe type="text/html" src="http://www.youtube.com/embed/KiKc3FG9Auc?autoplay=1&controls=0" frameBorder="0" ></iframe> */}
+            </div >
         );
     }
 }
