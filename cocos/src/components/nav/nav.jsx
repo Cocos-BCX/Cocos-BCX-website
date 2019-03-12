@@ -91,7 +91,7 @@ export default class Nav extends Component {
                             </NavLink>
                         </div>
                         <div className='nav_action lt'>
-                            <NavLink to="/action" exact={true} activeClassName="active"
+                            <NavLink to="/action/news" exact={true} activeClassName="active"
                                 className='nav_action_click' ><FormattedMessage id='action' />
                             </NavLink>
                         </div>

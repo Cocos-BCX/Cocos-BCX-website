@@ -1,0 +1,172 @@
+.big {
+  width: 1168px;
+  margin: auto;
+  margin-bottom: 200px;
+}
+.big .news_til_box {
+  height: 59px;
+  position: relative;
+  margin-top: 55px;
+}
+.big .news_til_box .news_til {
+  width: 177px;
+  height: 54px;
+  background: #585858;
+  transform: skewX(-25deg);
+  position: relative;
+  margin-left: 11.6px;
+}
+.big .news_til_box .news_til h3 {
+  transform: skewX(25deg);
+  font-family: FjallaOne;
+  letter-spacing: 1px;
+  font-size: 26px;
+  color: #ffffff;
+  font-weight: normal;
+  line-height: 54px;
+  text-align: center;
+  margin-left: -5px;
+}
+.big .news_til_box .news_til .news_line {
+  width: 1168px;
+  height: 5px;
+  background: #2ad9fe;
+}
+.big .news_til_box .news_til_mask {
+  position: absolute;
+  width: 177px;
+  height: 54px;
+  background: #2AD9FE;
+  top: -19px;
+  left: 112px;
+  z-index: -2;
+  transform: skewX(-25deg);
+}
+.big .news_til_box .choose_year {
+  position: absolute;
+  height: 82px;
+  right: 6px;
+  top: 12px;
+  text-align: center;
+  background: #fff;
+  font-size: 11px;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: #aaaaaa;
+  cursor: pointer;
+}
+.big .news_til_box .choose_year .sy {
+  height: 28px;
+  border: 1px solid #dddddd;
+  line-height: 28px;
+  transform: skewX(20deg);
+  margin-left: -6px;
+  width: 79px;
+}
+.big .news_til_box .choose_year .sy:hover {
+  opacity: .8;
+}
+.big .news_til_box .choose_year .sy span {
+  display: block;
+  transform: skewX(-20deg);
+  margin-left: 8px;
+}
+.big .news_til_box .choose_year .ey {
+  width: 79px;
+  height: 28px;
+  border: 1px solid #dddddd;
+  border-top: 0;
+  line-height: 28px;
+}
+.big .news_til_box .choose_year .ey:hover {
+  opacity: .8;
+}
+.big .news_til_box .choose_year .ny {
+  width: 79px;
+  height: 28px;
+  border: 1px solid #dddddd;
+  border-top: 0;
+  line-height: 28px;
+}
+.big .news_til_box .choose_year .ny:hover {
+  opacity: .8;
+}
+.big .big_list_box {
+  margin-top: 54px;
+}
+.big .big_list_box .s1_box {
+  overflow: hidden;
+}
+.big .big_list_box .s1_box .s1_til {
+  width: 88px;
+  height: 37px;
+  background: #2ad9fe;
+  border-radius: 3px;
+  font-size: 18px;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 37px;
+  text-align: center;
+}
+.big .big_list_box .s1_box .s1_content {
+  width: 1059px;
+  height: 182px;
+  border: 1px solid #e2e2e2;
+  padding: 43px 32px 43px 36px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  transition: height .6s;
+}
+.big .big_list_box .s1_box .s1_content .s1_more {
+  position: absolute;
+  width: 105px;
+  height: 39px;
+  background: #2AD9FE;
+  transform: skewX(-25deg);
+  left: 45px;
+  bottom: 43px;
+  cursor: pointer;
+}
+.big .big_list_box .s1_box .s1_content .s1_more:hover {
+  opacity: .8;
+}
+.big .big_list_box .s1_box .s1_content .s1_more img {
+  display: block;
+  transform: skewX(25deg);
+  width: 36px;
+  height: 18px;
+  margin: auto;
+  margin-top: 9px;
+}
+.big .big_list_box .s1_box .s1_content .s1_list {
+  overflow: hidden;
+  margin-top: 21px;
+}
+.big .big_list_box .s1_box .s1_content .s1_list:nth-child(2) {
+  margin-bottom: 100px;
+}
+.big .big_list_box .s1_box .s1_content .s1_list .s1_time {
+  width: 136px;
+  background: url('../../../images/date.png') no-repeat;
+  background-size: 20px 20px;
+  padding-left: 28px;
+  font-size: 16px;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: #787878;
+  box-sizing: border-box;
+}
+.big .big_list_box .s1_box .s1_content .s1_list .s1_text {
+  width: 844px;
+  background: #e7e7e7;
+  border-radius: 3px;
+  padding: 22px 30px 30px 30px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: #323232;
+  line-height: 26px;
+}

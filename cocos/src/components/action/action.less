@@ -6,5 +6,37 @@
         background-color: #07070a;
         overflow: hidden;
 
+        .a_nav {
+            width: 760px;
+            height: 54px;
+            margin: auto;
+            margin-top: 176px;
+            transform: skewX(-25deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            a {
+                flex: 1;
+                margin-left: 2px;
+                background: #585858;
+                height: 54px;
+                line-height: 54px;
+                color: #fff;
+                font-size: 20px;
+                font-family: PingFang-SC-Regular;
+                font-weight: 400;
+                span{
+                    display: block;
+                    transform: skewX(25deg);
+                }
+
+            }
+
+            .active {
+                background: #2AD9FE;
+            }
+        }
     }
 }
