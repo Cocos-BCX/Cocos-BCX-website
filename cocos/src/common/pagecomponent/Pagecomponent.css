@@ -1,0 +1,38 @@
+.page-container:after {
+    content: '.';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+.page-container {
+    zoom: 1
+}
+
+.page-container li {
+    list-style: none;
+    float: left;
+    padding: 0px 8px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    height: 28px;
+    line-height: 28px;
+    margin-right: 8px;
+}
+
+.page-container li:last-child {
+    margin-right: 0px;
+}
+
+/*当前页样式*/
+.activePage {
+    color: #fff !important;
+    background: #54b0bd;
+    border-color: #54b0bd !important;
+}
+
+/*没有上一页和下一页时样式*/
+.nomore {
+    color: #b5b5b5 !important;
+    cursor: not-allowed !important;
+}

@@ -1,24 +1,35 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
+import { get, post } from '../../../api/api'
 import newpic from '../../../images/newlist.png'
+import Page from '../../../common/pagecomponent/Pagecontainer'
 import './new.css'
 export default class New extends Component {
     constructor() {
         super();
         this.state = {
-            newList: [
-                { img: newpic, til: 'Cocos-BCX的2018，知既往 见未来', date: '2019-02-20' },
-                { img: newpic, til: 'Cocos-BCX的2018，知既往 见未来', date: '2019-02-20' },
-                { img: newpic, til: 'Cocos-BCX的2018，知既往 见未来', date: '2019-02-20' },
-                { img: newpic, til: 'Cocos-BCX的2018，知既往 见未来', date: '2019-02-20' },
-                { img: newpic, til: 'Cocos-BCX的2018，知既往 见未来', date: '2019-02-20' },
-                { img: newpic, til: 'Cocos-BCX的2018，知既往 见未来', date: '2019-02-20' },
-                { img: newpic, til: 'Cocos-BCX的2018，知既往 见未来', date: '2019-02-20' },
-                { img: newpic, til: 'Cocos-BCX的2018，知既往 见未来', date: '2019-02-20' },
-            ],
+            newmsg:{},
+            newList: [],
         }
     }
-
+    getNews = () => {
+        let lang = localStorage.getItem('lang_type');
+        if (lang === 'en') {
+            lang = 'en_US'
+        } else if (lang === 'zh') {
+            lang = 'zh_CN'
+        }
+        let url = 'news/list';
+        let params = { lang: lang,limit:8, page: 1 };
+        get(url, params).then(response => {
+            console.log(response.data.data);
+            this.setState({ newList: response.data.data.data })
+            this.setState({ newmsg: response.data.data })
+        })
+    }
+    componentDidMount() {
+        this.getNews()
+    }
     render() {
         return (
             <div className='new'>
@@ -49,7 +60,9 @@ export default class New extends Component {
                         })}
                     </ul>
                 </div>
-                <div className='pageNumber'></div>
+                <div className='pageNumber'>
+                    <Page  msg={this.state.newmsg}></Page>
+                </div>
             </div>
         );
     }

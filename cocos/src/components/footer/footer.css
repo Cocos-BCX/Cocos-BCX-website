@@ -11,11 +11,13 @@
   height: 54px;
   width: 63px;
   background: #676767;
-  position: absolute;
-  right: 120px;
-  top: -27px;
+  display: none;
+  position: fixed;
   transform: skewX(-20deg);
   cursor: pointer;
+  right: 120px;
+  bottom: 150px;
+  transition: all .8s;
 }
 .footer .footer_box .totop:hover {
   opacity: .8;
@@ -76,6 +78,7 @@
   line-height: 17px;
 }
 .footer .footer_box .footer_con .footer_con_l .file {
+  display: block;
   overflow: hidden;
   margin-top: 24px;
 }
@@ -94,6 +97,12 @@
   font-weight: 400;
   color: #ffffff;
   line-height: 24px;
+}
+.footer .footer_box .footer_con .footer_con_l .file p a {
+  color: #fff;
+}
+.footer .footer_box .footer_con .footer_con_l .file p a:hover {
+  opacity: .8;
 }
 .footer .footer_box .footer_con .footer_con_r {
   width: 560px;
@@ -166,21 +175,40 @@
   transform: skewX(-25deg);
   cursor: pointer;
 }
-.footer .footer_box .footer_con .footer_con_r .footer_dy .input_r_box p {
+.footer .footer_box .footer_con .footer_con_r .footer_dy .input_r_box .button {
+  background: #2AD9FE;
+  border: none;
+  margin: auto;
   transform: skewX(25deg);
   font-size: 16px;
   font-family: FjallaOne;
   font-weight: 400;
   color: #fff;
-  line-height: 66px;
-  text-align: center;
+  line-height: 60px;
+  display: block;
+  outline: none;
+  cursor: pointer;
 }
 .footer .footer_box .footer_img {
   width: 440px;
   height: 28px;
   margin: auto;
-  overflow: hidden;
   margin-top: 105px;
+}
+.footer .footer_box .footer_img .wechet_box {
+  display: inline-block;
+  margin-left: 52px;
+  cursor: pointer;
+  position: relative;
+}
+.footer .footer_box .footer_img .wechet_box .biao {
+  height: 26px;
+}
+.footer .footer_box .footer_img .wechet_box .ma {
+  display: none;
+  position: absolute;
+  left: -58px;
+  top: 28px;
 }
 .footer .footer_box .footer_img a {
   margin-left: 52px;

@@ -9,7 +9,6 @@ import { HashRouter as Router, Route, Redirect, } from "react-router-dom";
 import './router.css'
 export default class Homepage extends Component {
     componentDidMount() {
-        console.log(this.props);
 
     }
     render() {

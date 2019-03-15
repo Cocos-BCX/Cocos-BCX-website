@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import Nav from '../nav/nav'
+import { get, post } from '../../api/api'
 import play from '../../images/play.png'
 import fenge from '../../images/fenge.png'
 import game from '../../images/icon_game.png'
@@ -48,6 +49,7 @@ import w13 from '../../images/white(13).png'
 import w14 from '../../images/white(14).png'
 import jia from '../../images/jia.png'
 import close from '../../images/close.png'
+import dline from '../../images/dline.png'
 import './home.css'
 
 export default class Home extends Component {
@@ -56,81 +58,62 @@ export default class Home extends Component {
         this.state = {
             black1: [{ b: b, w: w }, { b: b1, w: w1 }, { b: b2, w: w2 }, { b: b3, w: w3 }, { b: b4, w: w4 }, { b: b5, w: w5 }, { b: b6, w: w6 }, { b: b7, w: w7 }, { b: b8, w: w8 }, { b: b9, w: w9 }],
             black2: [{ b: b10, w: w10 }, { b: b11, w: w11 }, { b: b12, w: w12 }, { b: b13, w: w13 }, { b: b14, w: w14 }],
-            sysImg: [{ img: cocos1, text: 'Game developer' },
-            { img: cocos2, text: 'Blockchain' },
-            { img: cocos3, text: 'Developers' },
-            { img: cocos4, text: 'End-users' },
-            { img: cocos5, text: 'Copyrights&IPs' },],
+            sysImg: [{ img: cocos1, text: 'system1' },
+            { img: cocos2, text: 'system2' },
+            { img: cocos3, text: 'system3' },
+            { img: cocos4, text: 'system4' },
+            { img: cocos5, text: 'system5' },],
             mapList: [{
-                til1: '更新 Cocos-BCX 链系统',
-                til2: '节点抗压能力优化',
-                til3: '尝试优化节点爆发性事务容忍能力...',
+                til1: 'map1',
+                til3: 'md1',
             }, {
-                til1: '更新 Cocos-BCX 链系统',
-                til2: '节点抗压能力优化',
-                til3: '尝试优化节点爆发性事务容忍能力 ...',
+                til1: 'map2',
+                til3: 'md2',
             }, {
-                til1: '更新 Cocos-BCX 链系统',
-                til2: '节点抗压能力优化',
-                til3: '尝试优化节点爆发性事务容忍能力 ...',
+                til1: 'map3',
+                til3: 'md3',
             }, {
-                til1: '更新 Cocos-BCX 链系统',
-                til2: '节点抗压能力优化',
-                til3: '尝试优化节点爆发性事务容忍能力 ...',
+                til1: 'map4',
+                til3: 'md4',
             }, {
-                til1: '更新 Cocos-BCX 链系统',
-                til2: '节点抗压能力优化',
-                til3: '尝试优化节点爆发性事务容忍能力 ...',
+                til1: 'map5',
+                til3: 'md5',
             }],
-            newsTopList: [{
-                url: 'https://www.eosjoy.io',
-                img: new1,
-                til: 'SED MOLESTIE FEUGIAT LECTUS TEMPUS ERAT ',
-                text: 'Nam non nisl. Phasellus commodo libero ac massa. Nulla di euism odm lesu ada nibh. Curabitur accumsan selm maleis uada loreld accu msla viverkra Lorem ipsum.'
-            }, {
-                url: 'https://www.eosjoy.io',
-                img: new1,
-                til: 'SED MOLESTIE FEUGIAT LECTUS TEMPUS ERAT ',
-                text: 'Nam non nisl. Phasellus commodo libero ac massa. Nulla di euism odm lesu ada nibh. Curabitur accumsan selm maleis uada loreld accu msla viverkra Lorem ipsum.'
-            }, {
-                url: 'https://www.eosjoy.io',
-                img: new1,
-                til: 'SED MOLESTIE FEUGIAT LECTUS TEMPUS ERAT ',
-                text: 'Nam non nisl. Phasellus commodo libero ac massa. Nulla di euism odm lesu ada nibh. Curabitur accumsan selm maleis uada loreld accu msla viverkra Lorem ipsum.'
-            },],
-            newsBottomList: [
-                {
-                    url: 'https://www.eosjoy.io',
-                    img: newl1,
-                    til: 'MORBI NON SEM A LACUS PORTA SUSPENDISSE VITAE SAPIEN ',
-                },
-                {
-                    url: 'https://www.eosjoy.io',
-                    img: newl1,
-                    til: 'MORBI NON SEM A LACUS PORTA SUSPENDISSE VITAE SAPIEN ',
-                },
-                {
-                    url: 'https://www.eosjoy.io',
-                    img: newl1,
-                    til: 'MORBI NON SEM A LACUS PORTA SUSPENDISSE VITAE SAPIEN ',
-                },
-                {
-                    url: 'https://www.eosjoy.io',
-                    img: newl1,
-                    til: 'MORBI NON SEM A LACUS PORTA SUSPENDISSE VITAE SAPIEN ',
-                },
-                {
-                    url: 'https://www.eosjoy.io',
-                    img: newl1,
-                    til: 'MORBI NON SEM A LACUS PORTA SUSPENDISSE VITAE SAPIEN ',
-                },
-                {
-                    url: 'https://www.eosjoy.io',
-                    img: newl1,
-                    til: 'MORBI NON SEM A LACUS PORTA SUSPENDISSE VITAE SAPIEN ',
-                },
-            ]
+            newsTopList: [],
+            newsBottomList: []
         }
+    }
+    //获取指定3篇新闻
+    getTopNews = () => {
+        let lang = localStorage.getItem('lang_type');
+        console.log(lang);
+
+        if (lang === 'en') {
+            lang = 'en_US'
+        } else if (lang === 'zh') {
+            lang = 'zh_CN'
+        }
+        let url = 'news/recommend';
+        let params = { lang: lang, };
+        get(url, params).then(response => {
+            console.log(response.data.data);
+            this.setState({ newsTopList: response.data.data })
+        })
+    }
+    //获取6篇新闻
+    getNews = () => {
+        let lang = localStorage.getItem('lang_type');
+        if (lang === 'en') {
+            lang = 'en_US'
+        } else if (lang === 'zh') {
+            lang = 'zh_CN'
+        }
+        let url = 'news/recent';
+        let params = { lang: lang, };
+        get(url, params).then(response => {
+            console.log(response.data.data);
+            this.setState({ newsBottomList: response.data.data })
+        })
     }
     //打开播放器
     showVideo = () => {
@@ -139,9 +122,25 @@ export default class Home extends Component {
     hideVideo = () => {
         this.videoBox.style.display = 'none';
     }
+    //隐藏播放器
+    closeVideo = () => {
+        document.addEventListener('click', () => {
+            this.videoBox.style.display = 'none';
+        }, false)
+    }
+    //阻止冒泡
+    stopImmediate(e) {
+        e = e || window.event;
+        e.stopPropagation();
+        e.nativeEvent.stopImmediatePropagation();
+    }
     componentDidMount() {
+        this.getNews();
+        this.getTopNews()
+        this.closeVideo()
     }
     render() {
+        let lang = localStorage.getItem('lang_type');
         return (
             <div className='homepage_index'>
                 <div className='video_box' ref={(x) => { this.videoBox = x }}>
@@ -149,13 +148,17 @@ export default class Home extends Component {
                         <div className='close_box' onClick={this.hideVideo}>
                             <img src={close} alt="" />
                         </div>
-                        <iframe width="1200px" height="688px" src='http://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=0' frameBorder='0' >
-                        </iframe>
+                        {
+                            lang === 'en' ?
+                                <iframe type="text/html" width="1200px" height="688px" src="http://www.youtube.com/embed/KiKc3FG9Auc?autoplay=1&controls=0" frameBorder="0" ></iframe> : <iframe width="1200px" height="688px" src='http://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=0' frameBorder='0' >
+                                </iframe>
+                        }
+
                     </div>
                 </div>
                 <div className='banner_box'>
                     <Nav></Nav>
-                    <div className='play_btn' onClick={this.showVideo}>
+                    <div className='play_btn' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }}>
                         <img src={play} alt="" />
 
                     </div>
@@ -200,17 +203,17 @@ export default class Home extends Component {
                             <div className='news_line'></div>
                         </div>
                         <div className="news_til_mask"></div>
-                        <div className='news_til_more'><div><FormattedMessage id='more' /></div></div>
+                        <div className='news_til_more' onClick={() => { window.location.hash = '#/action/news'; window.scrollTo(0, 0); }}><div><FormattedMessage id='more' /></div></div>
                     </div>
                     <div className='news_main'>
                         <div className="news_top">
                             {this.state.newsTopList.map((item, index) => {
                                 return <div className='news_top_box lt' key={index}>
                                     <div className='news_pic'>
-                                        <a href={item.url} target="_blank" rel="noopener noreferrer"><img src={item.img} alt="" /></a>
+                                        <a href={item.resource} target="_blank" rel="noopener noreferrer"><img src={item.image} alt="" /></a>
                                         <div className='news_top_til'>
                                             <div>
-                                                <h5>{item.til}</h5>
+                                                <h5>{item.title}</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -221,13 +224,13 @@ export default class Home extends Component {
                         <ul className='news_bottom'>
                             {this.state.newsBottomList.map((item, index) => {
                                 return <li className='lt' key={index}>
-                                    <a href={item.url} target="_blank" rel="noopener noreferrer">
+                                    <a href={item.resource} target="_blank" rel="noopener noreferrer">
                                         <div className='img_box lt'>
-                                            <img src={item.img} alt="" />
+                                            <img src={item.image} alt="" />
                                         </div>
                                         <div className='img_box_text lt'>
                                             <div>
-                                                <h5>{item.til}</h5>
+                                                <h5>{item.title}</h5>
                                             </div>
                                         </div>
                                     </a>
@@ -253,7 +256,7 @@ export default class Home extends Component {
                         {this.state.sysImg.map((item, index) => {
                             return <div className='sys_img_box lt' key={index}>
                                 <img src={item.img} alt="" />
-                                <p>{item.text}</p>
+                                <p><FormattedMessage id={item.text} /></p>
                             </div>
                         })}
                     </div>
@@ -265,24 +268,37 @@ export default class Home extends Component {
                             <div className='news_line'></div>
                         </div>
                         <div className="news_til_mask"></div>
-                        <div className='news_til_more'><div><FormattedMessage id='more' /></div></div>
+                        <div className='news_til_more' onClick={() => { window.location.hash = '#/action/yb'; window.scrollTo(0, 0); }}><div><FormattedMessage id='more' /></div></div>
                     </div>
                     <div className='map_main_box'>
                         {this.state.mapList.map((item, index) => {
                             return <div className='map_s_box lt' key={index}>
-                                <p>{item.til1}</p>
-                                <p>{item.til2}</p>
-                                <p>{item.til3}</p>
-                                <h5>{item.time}</h5>
+                                <p><FormattedMessage id={item.til1} /></p>
+                                {/* <h5><FormattedMessage id={item.til3} /></h5> */}
                             </div>
                         })}
                     </div>
-                    <div className='point_line'>
+                    {/* <div className='point_line'>
                         <div></div>
                         <div></div>
                         <div></div>
                         <div></div>
+                    </div> */}
+                    <div className='line_box'>
+                        <img src={dline} alt="" />
+                        <img src={dline} alt="" />
+                        <img src={dline} alt="" />
+                        <img src={dline} alt="" />
+                        <img src={dline} alt="" />
                     </div>
+                    <div className='map_date'>
+                        {this.state.mapList.map((item, index) => {
+                            return <div className='map_date_box' key={index}>
+                                <FormattedMessage id={item.til3} />
+                            </div>
+                        })}
+                    </div>
+
                 </div>
                 <div className='hezuo'>
                     <div className="hezuo_box">
@@ -327,8 +343,8 @@ export default class Home extends Component {
                         </div>
                     </div>
                 </div>
-         
-                {/* <iframe type="text/html" src="http://www.youtube.com/embed/KiKc3FG9Auc?autoplay=1&controls=0" frameBorder="0" ></iframe> */}
+
+
             </div >
         );
     }
