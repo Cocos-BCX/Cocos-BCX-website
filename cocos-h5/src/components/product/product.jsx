@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Nav from '../nav/nav'
 import { FormattedMessage } from 'react-intl';
-import cat from '../../images/cat.png'
+import fruit from '../../images/fruit.png'
+import luck from '../../images/luck.png'
+import shotting from '../../images/shooting.png'
 import './product.css'
 
 export default class Product extends Component {
@@ -9,14 +11,14 @@ export default class Product extends Component {
         super(props);
         this.state = {
             gameList:[
-                {img:cat,url:'http://game.cocos-bcx.io/fruit/',til:'gname1',auther:'gauther1',gex:'gex1'},
-                {img:cat,url:'http://tyche-bcx.oriongaming.club/',til:'gname2',auther:'gauther2',gex:'gex2'},
-                {img:cat,url:'http://ccshooter.oriongaming.club/',til:'gname3',auther:'gauther3',gex:'gex3'},
+                {img:fruit,url:'http://game.cocos-bcx.io/fruit/',til:'gname1',auther:'gauther1',gex:'gex1'},
+                {img:luck,url:'http://tyche-bcx.oriongaming.club/',til:'gname2',auther:'gauther2',gex:'gex2'},
+                {img:shotting,url:'http://ccshooter.oriongaming.club/',til:'gname3',auther:'gauther3',gex:'gex3'},
             ],
             toolList:[
-                {img:cat,url:'https://explorer.cocosbcx.io/',til:'tname1',auther:'tauther1',gex:'tex1'},
-                {img:cat,url:'http://www.easywallet.pro/',til:'tname2',auther:'tauther2',gex:'tex2'},
-                {img:cat,url:'http://gpe.famegame.com.cn/',til:'tname3',auther:'tauther3',gex:'tex3'},
+                {img:fruit,url:'https://explorer.cocosbcx.io/',til:'tname1',auther:'tauther1',gex:'tex1'},
+                {img:fruit,url:'http://www.easywallet.pro/',til:'tname2',auther:'tauther2',gex:'tex2'},
+                {img:fruit,url:'http://gpe.famegame.com.cn/',til:'tname3',auther:'tauther3',gex:'tex3'},
             ],
         }
     }
@@ -45,7 +47,7 @@ export default class Product extends Component {
                         {this.state.gameList.map((item,index)=>{
                             return  <a href={item.url} target='_blank' rel="noopener noreferrer" className='dev_game_left lt' key={index}>
                             <div className='img_box lt'>
-                                <img src={cat} alt="" />
+                                <img src={item.img} alt="" />
                             </div>
                             <div className='dev_text_box lt'>
                                 <h4><FormattedMessage id={item.til} /></h4>
@@ -69,7 +71,7 @@ export default class Product extends Component {
                         {this.state.toolList.map((item,index)=>{
                             return  <a href={item.url} target='_blank' rel="noopener noreferrer" className='dev_game_left lt' key={index}>
                             <div className='img_box lt'>
-                                <img src={cat} alt="" />
+                                <img src={item.img} alt="" />
                             </div>
                             <div className='dev_text_box lt'>
                                 <h4><FormattedMessage id={item.til} /></h4>

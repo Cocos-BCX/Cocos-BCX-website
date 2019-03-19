@@ -19,7 +19,7 @@ export default class Footer extends Component {
                     <Nav></Nav>
                     <div className='a_nav'>
                         <NavLink to="/action/news" exact={true} activeClassName="active"
-                            className='a_nav_new' ><h5></h5><FormattedMessage id='a_news' />
+                            className='a_nav_new' ><FormattedMessage id='a_news' />
                         </NavLink>
                         <NavLink to="/action/hd" exact={true} activeClassName="active"
                             className='a_nav_new' ><FormattedMessage id='hd' />

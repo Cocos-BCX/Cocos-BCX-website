@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import Nav from '../nav/nav'
-import { get, post } from '../../api/api'
+import { get,  } from '../../api/api'
 import play from '../../images/play.png'
 import fenge from '../../images/fenge.png'
 import game from '../../images/icon_game.png'
 import daohang from '../../images/icon_daohang.png'
 import eye from '../../images/icon_eye.png'
-import new1 from '../../images/new1.png'
-import newl1 from '../../images/newl1.png'
 import cocoslogo from '../../images/COCOS_logo.png'
 import line from '../../images/line.png'
 import cocos1 from '../../images/cocos1.png'
@@ -86,8 +84,6 @@ export default class Home extends Component {
     //获取指定3篇新闻
     getTopNews = () => {
         let lang = localStorage.getItem('lang_type');
-        console.log(lang);
-
         if (lang === 'en') {
             lang = 'en_US'
         } else if (lang === 'zh') {
@@ -111,7 +107,6 @@ export default class Home extends Component {
         let url = 'news/recent';
         let params = { lang: lang, };
         get(url, params).then(response => {
-            console.log(response.data.data);
             this.setState({ newsBottomList: response.data.data })
         })
     }
@@ -125,7 +120,9 @@ export default class Home extends Component {
     //隐藏播放器
     closeVideo = () => {
         document.addEventListener('click', () => {
-            this.videoBox.style.display = 'none';
+            if (this.videoBox) {
+                this.videoBox.style.display = 'none';
+            }
         }, false)
     }
     //阻止冒泡
@@ -138,6 +135,11 @@ export default class Home extends Component {
         this.getNews();
         this.getTopNews()
         this.closeVideo()
+    }
+    componentWillUnmount = () => {
+        this.setState = (state, callback) => {
+            return;
+        };
     }
     render() {
         let lang = localStorage.getItem('lang_type');

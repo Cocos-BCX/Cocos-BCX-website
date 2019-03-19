@@ -1,32 +1,44 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
-import newpic from '../../../images/newlist.png'
+import { get } from '../../../api/api'
+import Page from '../../../common/pagecomponent/Pagecontainer'
 import './yb.css'
 export default class Yb extends Component {
 
     constructor() {
         super();
         this.state = {
-            newList: [
-                { img: newpic, til: 'Cocos-BCX的2018，知既往 见未来', date: '2019-02-20' },
-                { img: newpic, til: 'Cocos-BCX的2018，知既往 见未来', date: '2019-02-20' },
-                { img: newpic, til: 'Cocos-BCX的2018，知既往 见未来', date: '2019-02-20' },
-                { img: newpic, til: 'Cocos-BCX的2018，知既往 见未来', date: '2019-02-20' },
-                { img: newpic, til: 'Cocos-BCX的2018，知既往 见未来', date: '2019-02-20' },
-                { img: newpic, til: 'Cocos-BCX的2018，知既往 见未来', date: '2019-02-20' },
-                { img: newpic, til: 'Cocos-BCX的2018，知既往 见未来', date: '2019-02-20' },
-                { img: newpic, til: 'Cocos-BCX的2018，知既往 见未来', date: '2019-02-20' },
-            ],
+            newmsg: {},
+            newList: [],
         }
     }
-
+    getNewList = (page) => {
+        let lang = localStorage.getItem('lang_type');
+        if (lang === 'en') {
+            lang = 'en_US'
+        } else if (lang === 'zh') {
+            lang = 'zh_CN'
+        }
+        let url = 'reports/list';
+        let params = { lang: lang, limit: 8, page: page, };
+        get(url, params).then(response => {
+            console.log(response.data.data);
+            this.setState({ newList: response.data.data.data })
+            this.setState({ newmsg: response.data.data })
+        })
+    }
+    componentWillUnmount = () => {
+        this.setState = (state, callback) => {
+            return;
+        };
+    }
     render() {
         let lang = localStorage.getItem('lang_type');
         return (
             <div className='new yb'>
                 <div className="news_til_box">
                     <div className="news_til">
-                        <h3 className={lang==='en'?'yb_en':''}><FormattedMessage id='yb' /></h3>
+                        <h3 className={lang === 'en' ? 'yb_en' : ''}><FormattedMessage id='yb' /></h3>
                         <div className='news_line'></div>
                     </div>
                     <div className="news_til_mask"></div>
@@ -35,19 +47,24 @@ export default class Yb extends Component {
                     <ul className='new_list_box'>
                         {this.state.newList.map((item, index) => {
                             return <li className='lt' key={index}>
-                                <div className='img_box'>
-                                    <img src={item.img} alt="" />
-                                </div>
-                                <div className='new_til'>{item.til}</div>
-                                <div className='new_bottom'>
-                                    <div className='new_bottom_l lt'><FormattedMessage id='month' /></div>
-                                    <div className='new_bottom_R rt'>{item.date}</div>
-                                </div>
+                                <a href={item.resource} target="_blank"  rel="noopener noreferrer" >
+                                    <div className='img_box'>
+                                        <img src={item.image} alt="" />
+                                    </div>
+                                    <div className='new_til'>{item.title}</div>
+                                    <div className='new_bottom'>
+                                        <div className='new_bottom_l lt'><FormattedMessage id='month' /></div>
+                                        <div className='new_bottom_R rt'>{item.published_at}</div>
+                                    </div>
+                                </a>
                             </li>
                         })}
+
                     </ul>
+                    <div className='pageNumber' >
+                        <Page msg={this.state.newmsg} getNews={this.getNewList}></Page>
+                    </div>
                 </div>
-                <div className='pageNumber'></div>
             </div>
         );
     }

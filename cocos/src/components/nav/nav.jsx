@@ -82,10 +82,19 @@ export default class Nav extends Component {
     componentWillMount() {
 
     }
+    closeLang = () => {
+        document.addEventListener('click', () => {
+            if( this.langBox){
+                this.langBox.style.display = 'none';
+            }
+        }, false)
+    }
     componentDidMount() {
         this.handleDom()
+        this.closeLang()
     }
     render() {
+        let lang = localStorage.getItem('lang_type');
         return (
             <div className='nav_box'>
                 <div className="nav lt" >
@@ -133,7 +142,7 @@ export default class Nav extends Component {
                             </NavLink>
                         </div>
                         <div className='nav_browser lt'>
-                            <a href="https://jdex.one/" rel="noopener noreferrer" className='nav_browser_click' target='_blank'><FormattedMessage id='browser' /></a>
+                            <a href={lang === 'zh' ? "https://explorer.cocosbcx.io/" : 'https://explorer.cocosbcx.io?language=en'} rel="noopener noreferrer" className='nav_browser_click' target='_blank'><FormattedMessage id='browser' /></a>
                             {/* <NavLink to="/browser" exact={true} activeClassName="active"
                                 className='nav_browser_click' ><FormattedMessage id='browser' />
                             </NavLink> */}
@@ -158,7 +167,7 @@ export default class Nav extends Component {
                         </div>
                     </div>
                 </div>
-                <div className='lang_box lt' onClick={() => { this.langBox.style.display = 'block' }}>
+                <div className='lang_box lt' onClick={(e) => { this.langBox.style.display = 'block'; this.stopImmediate(e) }}>
                     <div className='lang'>
                         <div className='now'>中文</div>
                     </div>

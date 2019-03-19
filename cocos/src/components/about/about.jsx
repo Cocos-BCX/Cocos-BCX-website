@@ -58,8 +58,9 @@ export default class About extends Component {
                 <div className="banner_a_box">
                     <Nav></Nav>
                     <div className='white_book'>
-                        <div className='w_book rt'>
-                        </div>
+                        <a href='https://www.cocosbcx.io/wp-content/themes/cocosBlog/source/white_paper.pdf' target="_blank" className='w_book rt' rel="noopener noreferrer">
+                        <FormattedMessage id='lookBook' />
+                        </a>
                     </div>
                 </div>
                 <div className='team_ex'>
@@ -126,7 +127,7 @@ export default class About extends Component {
                             </div>
                         </div>
                         <div className='hezuo_imgs'>
-                            <img src={hezuo} alt=""/>
+                            <img src={hezuo} alt="" />
                         </div>
                     </div>
                 </div>

@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import Nav from '../nav/nav'
+import { get, } from '../../api/api'
 import play from '../../images/play.png'
 import fenge from '../../images/fenge.png'
 import game from '../../images/icon_game.png'
 import daohang from '../../images/icon_daohang.png'
 import eye from '../../images/icon_eye.png'
-import new1 from '../../images/new1.png'
-import newl1 from '../../images/newl1.png'
 import cocoslogo from '../../images/COCOS_logo.png'
 import line from '../../images/line.png'
 import cocos1 from '../../images/cocos1.png'
@@ -78,55 +77,38 @@ export default class Home extends Component {
                 til1: 'map5',
                 til3: 'md5',
             }],
-            newsTopList: [{
-                url: 'https://www.eosjoy.io',
-                img: new1,
-                til: 'SED MOLESTIE FEUGIAT LECTUS TEMPUS ERAT ',
-                text: 'Nam non nisl. Phasellus commodo libero ac massa. Nulla di euism odm lesu ada nibh. Curabitur accumsan selm maleis uada loreld accu msla viverkra Lorem ipsum.'
-            }, {
-                url: 'https://www.eosjoy.io',
-                img: new1,
-                til: 'SED MOLESTIE FEUGIAT LECTUS TEMPUS ERAT ',
-                text: 'Nam non nisl. Phasellus commodo libero ac massa. Nulla di euism odm lesu ada nibh. Curabitur accumsan selm maleis uada loreld accu msla viverkra Lorem ipsum.'
-            }, {
-                url: 'https://www.eosjoy.io',
-                img: new1,
-                til: 'SED MOLESTIE FEUGIAT LECTUS TEMPUS ERAT ',
-                text: 'Nam non nisl. Phasellus commodo libero ac massa. Nulla di euism odm lesu ada nibh. Curabitur accumsan selm maleis uada loreld accu msla viverkra Lorem ipsum.'
-            },],
-            newsBottomList: [
-                {
-                    url: 'https://www.eosjoy.io',
-                    img: newl1,
-                    til: 'MORBI NON SEM A LACUS PORTA SUSPENDISSE VITAE SAPIEN ',
-                },
-                {
-                    url: 'https://www.eosjoy.io',
-                    img: newl1,
-                    til: 'MORBI NON SEM A LACUS PORTA SUSPENDISSE VITAE SAPIEN ',
-                },
-                {
-                    url: 'https://www.eosjoy.io',
-                    img: newl1,
-                    til: 'MORBI NON SEM A LACUS PORTA SUSPENDISSE VITAE SAPIEN ',
-                },
-                {
-                    url: 'https://www.eosjoy.io',
-                    img: newl1,
-                    til: 'MORBI NON SEM A LACUS PORTA SUSPENDISSE VITAE SAPIEN ',
-                },
-                {
-                    url: 'https://www.eosjoy.io',
-                    img: newl1,
-                    til: 'MORBI NON SEM A LACUS PORTA SUSPENDISSE VITAE SAPIEN ',
-                },
-                {
-                    url: 'https://www.eosjoy.io',
-                    img: newl1,
-                    til: 'MORBI NON SEM A LACUS PORTA SUSPENDISSE VITAE SAPIEN ',
-                },
-            ]
+            newsTopList: [],
+            newsBottomList: []
         }
+    }
+    //获取指定3篇新闻
+    getTopNews = () => {
+        let lang = localStorage.getItem('lang_type');
+        if (lang === 'en') {
+            lang = 'en_US'
+        } else if (lang === 'zh') {
+            lang = 'zh_CN'
+        }
+        let url = 'news/recommend';
+        let params = { lang: lang, };
+        get(url, params).then(response => {
+            console.log(response.data.data);
+            this.setState({ newsTopList: response.data.data })
+        })
+    }
+    //获取6篇新闻
+    getNews = () => {
+        let lang = localStorage.getItem('lang_type');
+        if (lang === 'en') {
+            lang = 'en_US'
+        } else if (lang === 'zh') {
+            lang = 'zh_CN'
+        }
+        let url = 'news/recent';
+        let params = { lang: lang, };
+        get(url, params).then(response => {
+            this.setState({ newsBottomList: response.data.data })
+        })
     }
     //打开播放器
     showVideo = () => {
@@ -138,7 +120,9 @@ export default class Home extends Component {
     //隐藏播放器
     closeVideo = () => {
         document.addEventListener('click', () => {
-            this.videoBox.style.display = 'none';
+            if (this.videoBox) {
+                this.videoBox.style.display = 'none';
+            }
         }, false)
     }
     //阻止冒泡
@@ -148,7 +132,14 @@ export default class Home extends Component {
         e.nativeEvent.stopImmediatePropagation();
     }
     componentDidMount() {
+        this.getNews();
+        this.getTopNews()
         this.closeVideo()
+    }
+    componentWillUnmount = () => {
+        this.setState = (state, callback) => {
+            return;
+        };
     }
     render() {
         let lang = localStorage.getItem('lang_type');
@@ -168,11 +159,8 @@ export default class Home extends Component {
                     </div>
                 </div>
                 <div className='banner_box'>
-                    <Nav></Nav>
-                    <div className='play_btn' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }}>
-                        <img src={play} alt="" />
-
-                    </div>
+                    {/* <Nav></Nav> */}
+                    <img src={play} className='play_btn' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
                 </div>
                 <div className='explane'>
                     <div className="expplane_til"><FormattedMessage id='explane' /></div>
@@ -185,11 +173,14 @@ export default class Home extends Component {
                     <img className='fenge' src={fenge} alt="" />
                     <div className='explane_img'>
                         <div className='ex_l_box lt' style={{ marginLeft: '66px' }}>
-                            <div className='ex_l_w'>
+                            <div className='ex_l_w lt'>
                                 <img src={game} className='ex_l_img' alt="" />
                             </div>
-                            <h4 className='ex_img_til'><FormattedMessage id='ex_tel1' /></h4>
-                            <p className='ex_img_text'><FormattedMessage id='ex_text1' /></p>
+                            <div className='ex_l_r lt'>
+                                <h4 className='ex_img_til'><FormattedMessage id='ex_tel1' /></h4>
+                                <p className='ex_img_text'><FormattedMessage id='ex_text1' /></p>
+                            </div>
+
                         </div>
                         <div className='ex_l_box lt' style={{ marginLeft: '86px' }}>
                             <div className='ex_l_w'>
@@ -221,10 +212,10 @@ export default class Home extends Component {
                             {this.state.newsTopList.map((item, index) => {
                                 return <div className='news_top_box lt' key={index}>
                                     <div className='news_pic'>
-                                        <a href={item.url} target="_blank" rel="noopener noreferrer"><img src={item.img} alt="" /></a>
+                                        <a href={item.resource} target="_blank" rel="noopener noreferrer"><img src={item.image} alt="" /></a>
                                         <div className='news_top_til'>
                                             <div>
-                                                <h5>{item.til}</h5>
+                                                <h5>{item.title}</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -235,13 +226,13 @@ export default class Home extends Component {
                         <ul className='news_bottom'>
                             {this.state.newsBottomList.map((item, index) => {
                                 return <li className='lt' key={index}>
-                                    <a href={item.url} target="_blank" rel="noopener noreferrer">
+                                    <a href={item.resource} target="_blank" rel="noopener noreferrer">
                                         <div className='img_box lt'>
-                                            <img src={item.img} alt="" />
+                                            <img src={item.image} alt="" />
                                         </div>
                                         <div className='img_box_text lt'>
                                             <div>
-                                                <h5>{item.til}</h5>
+                                                <h5>{item.title}</h5>
                                             </div>
                                         </div>
                                     </a>

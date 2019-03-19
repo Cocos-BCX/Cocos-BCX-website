@@ -26,19 +26,21 @@
   font-weight: 400;
   color: #585858;
   line-height: 25px;
+  overflow: hidden;
 }
 .hd .hd_for .hd_box .hd_every .every_b {
   margin-top: 15px;
   overflow: hidden;
 }
 .hd .hd_for .hd_box .hd_every .every_b .e_address {
-  width: 73px;
   height: 29px;
   background: #585858;
   transform: skewX(-20deg);
   margin-left: 30px;
 }
 .hd .hd_for .hd_box .hd_every .every_b .e_address p {
+  width: 130px;
+  padding: 0 20px;
   font-size: 18px;
   font-family: PingFang-SC-Regular;
   font-weight: 400;
@@ -46,6 +48,10 @@
   line-height: 29px;
   transform: skewX(20deg);
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 .hd .hd_for .hd_box .hd_every .every_b .e_date {
   height: 29px;
@@ -120,6 +126,9 @@
   line-height: 28px;
   height: 28px;
 }
+.hd .hd_list_box {
+  height: 2080px;
+}
 .hd .hd_list_box .hd_list_e {
   overflow: hidden;
   width: 1156px;
@@ -148,6 +157,9 @@
   font-family: PingFang-SC-Bold;
   font-weight: bold;
   color: #323232;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .hd .hd_list_box .hd_list_e .e_text_box p {
   margin-top: 26px;
@@ -157,9 +169,11 @@
   color: #323232;
   line-height: 25px;
   height: 50px;
+  overflow: hidden;
 }
 .hd .hd_list_box .hd_list_e .e_text_box .e_address {
-  width: 88px;
+  display: inline-block;
+  padding: 0 20px;
   height: 37px;
   background: #2ad9fe;
   border-radius: 3px;

@@ -2,14 +2,25 @@
   margin: auto;
   height: 336px;
   background: url('../../images/a_banner.png') no-repeat center;
-  background-color: #033E4E;
+  background-color: #150F11;
   overflow: hidden;
 }
 .about .banner_a_box .white_book {
-  width: 852px;
+  width: 1200px;
   margin: auto;
-  margin-top: 267px;
   overflow: hidden;
+  margin-top: 267px;
+}
+.about .banner_a_box .white_book .w_book {
+  width: 80px;
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid #ffffff;
+  margin-right: 171px;
+  color: #fff;
+  font-size: 12px;
+  font-family: PingFang-SC-Regular;
+  line-height: 25px;
+  text-align: center;
 }
 .about .news_til_box {
   margin: auto;

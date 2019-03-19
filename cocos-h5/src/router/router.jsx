@@ -5,11 +5,11 @@ import About from '../components/about/about'
 import Product from '../components/product/product'
 import Footer from '../components/footer/footer'
 import Action from '../components/action/action'
+import Nav from '../components/nav/nav'
 import { HashRouter as Router, Route, Redirect, } from "react-router-dom";
 import './router.css'
 export default class Homepage extends Component {
     componentDidMount() {
-        console.log(this.props);
 
     }
     render() {

@@ -28,6 +28,7 @@
                     font-weight: 400;
                     color: rgba(88, 88, 88, 1);
                     line-height: 25px;
+                    overflow: hidden;
                 }
 
                 .every_b {
@@ -35,13 +36,16 @@
                     overflow: hidden;
 
                     .e_address {
-                        width: 73px;
+                        // display: inline-block;
+                        // padding: 0 10px;
                         height: 29px;
                         background: rgba(88, 88, 88, 1);
                         transform: skewX(-20deg);
                         margin-left: 30px;
 
                         p {
+                            width: 130px;
+                            padding: 0 20px;
                             font-size: 18px;
                             font-family: PingFang-SC-Regular;
                             font-weight: 400;
@@ -49,6 +53,10 @@
                             line-height: 29px;
                             transform: skewX(20deg);
                             text-align: center;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            box-sizing: border-box;
 
                         }
                     }
@@ -140,6 +148,8 @@
     }
 
     .hd_list_box {
+        height: 2080px;
+
         .hd_list_e {
             overflow: hidden;
             width: 1156px;
@@ -170,9 +180,13 @@
                     font-family: PingFang-SC-Bold;
                     font-weight: bold;
                     color: rgba(50, 50, 50, 1);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                 }
 
                 p {
+                    height: 50px;
                     margin-top: 26px;
                     font-size: 18px;
                     font-family: PingFang-SC-Regular;
@@ -180,10 +194,12 @@
                     color: rgba(50, 50, 50, 1);
                     line-height: 25px;
                     height: 50px;
+                    overflow: hidden;
                 }
 
                 .e_address {
-                    width: 88px;
+                    display: inline-block;
+                    padding: 0 20px;
                     height: 37px;
                     background: rgba(42, 217, 254, 1);
                     border-radius: 3px;

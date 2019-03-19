@@ -175,14 +175,19 @@
   transform: skewX(-25deg);
   cursor: pointer;
 }
-.footer .footer_box .footer_con .footer_con_r .footer_dy .input_r_box p {
+.footer .footer_box .footer_con .footer_con_r .footer_dy .input_r_box .button {
+  background: #2AD9FE;
+  border: none;
+  margin: auto;
   transform: skewX(25deg);
   font-size: 16px;
   font-family: FjallaOne;
   font-weight: 400;
   color: #fff;
-  line-height: 66px;
-  text-align: center;
+  line-height: 60px;
+  display: block;
+  outline: none;
+  cursor: pointer;
 }
 .footer .footer_box .footer_img {
   width: 440px;
