@@ -272,31 +272,19 @@ export default class Home extends Component {
                     <div className='map_main_box'>
                         {this.state.mapList.map((item, index) => {
                             return <div className='map_s_box lt' key={index}>
-                                <p><FormattedMessage id={item.til1} /></p>
-                                {/* <h5><FormattedMessage id={item.til3} /></h5> */}
+                                <h5 className='lt'><FormattedMessage id={item.til3} /></h5>
+                                <p className='lt'><FormattedMessage id={item.til1} /></p>
                             </div>
                         })}
+                        <div className='line_box'>
+                            <img src={dline} alt="" />
+                            <img src={dline} alt="" />
+                            <img src={dline} alt="" />
+                            <img src={dline} alt="" />
+                            <img src={dline} alt="" />
+                        </div>
                     </div>
-                    {/* <div className='point_line'>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div> */}
-                    <div className='line_box'>
-                        <img src={dline} alt="" />
-                        <img src={dline} alt="" />
-                        <img src={dline} alt="" />
-                        <img src={dline} alt="" />
-                        <img src={dline} alt="" />
-                    </div>
-                    <div className='map_date'>
-                        {this.state.mapList.map((item, index) => {
-                            return <div className='map_date_box' key={index}>
-                                <FormattedMessage id={item.til3} />
-                            </div>
-                        })}
-                    </div>
+
 
                 </div>
                 <div className='hezuo'>
@@ -316,9 +304,9 @@ export default class Home extends Component {
                         <div className='hezuo_com'>
                             <div className="hezuo_top">
                                 {this.state.black1.map((item, index) => {
-                                    return <div key={index} className='lt' style={{ background: `url(${item.b})`, }}
-                                        onMouseEnter={(e) => { e.target.style.background = `url(${item.w})` }}
-                                        onMouseLeave={(e) => { e.target.style.background = `url(${item.b})` }}
+                                    return <div key={index} className='lt' style={{ background: `url(${item.b}) no-repeat center`,backgroundSize:'1.26rem .86rem' }}
+                                    /*     onMouseEnter={(e) => { e.target.style.background = `url(${item.w})no-repeat center` }}
+                                        onMouseLeave={(e) => { e.target.style.background = `url(${item.b})no-repeat center` }} */
                                     >
                                     </div>
                                 })}
@@ -328,7 +316,7 @@ export default class Home extends Component {
                             </div>
                             <div className="hezuo_bottom">
                                 {this.state.black2.map((item, index) => {
-                                    return <div key={index} className='lt' style={{ background: `url(${item.b})`, }}
+                                    return <div key={index} className='lt' style={{ background: `url(${item.b}) no-repeat center`,backgroundSize:'1.26rem .86rem' }}
                                         onMouseEnter={(e) => { e.target.style.background = `url(${item.w})` }}
                                         onMouseLeave={(e) => { e.target.style.background = `url(${item.b})` }}
                                     >
