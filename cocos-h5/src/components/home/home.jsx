@@ -96,7 +96,7 @@ export default class Home extends Component {
             this.setState({ newsTopList: response.data.data })
         })
     }
-    //获取6篇新闻
+    //获取4篇新闻
     getNews = () => {
         let lang = localStorage.getItem('lang_type');
         if (lang === 'en') {
@@ -105,7 +105,7 @@ export default class Home extends Component {
             lang = 'zh_CN'
         }
         let url = 'news/recent';
-        let params = { lang: lang, };
+        let params = { lang: lang, limit: 4 };
         get(url, params).then(response => {
             this.setState({ newsBottomList: response.data.data })
         })
@@ -172,7 +172,7 @@ export default class Home extends Component {
                     </div>
                     <img className='fenge' src={fenge} alt="" />
                     <div className='explane_img'>
-                        <div className='ex_l_box lt' style={{ marginLeft: '66px' }}>
+                        <div className='ex_l_box lt' >
                             <div className='ex_l_w lt'>
                                 <img src={game} className='ex_l_img' alt="" />
                             </div>
@@ -180,21 +180,24 @@ export default class Home extends Component {
                                 <h4 className='ex_img_til'><FormattedMessage id='ex_tel1' /></h4>
                                 <p className='ex_img_text'><FormattedMessage id='ex_text1' /></p>
                             </div>
-
                         </div>
-                        <div className='ex_l_box lt' style={{ marginLeft: '86px' }}>
-                            <div className='ex_l_w'>
+                        <div className='ex_l_box lt' >
+                            <div className='ex_l_w lt'>
                                 <img src={daohang} className='ex_l_img' alt="" />
                             </div>
-                            <h4 className='ex_img_til'><FormattedMessage id='ex_tel2' /></h4>
-                            <p className='ex_img_text' style={{ width: '282px' }}><FormattedMessage id='ex_text2' /></p>
+                            <div className='ex_l_r lt'>
+                                <h4 className='ex_img_til'><FormattedMessage id='ex_tel2' /></h4>
+                                <p className='ex_img_text' ><FormattedMessage id='ex_text2' /></p>
+                            </div>
                         </div>
-                        <div className='ex_l_box lt' style={{ marginLeft: '86px' }}>
-                            <div className='ex_l_w'>
+                        <div className='ex_l_box lt' >
+                            <div className='ex_l_w lt'>
                                 <img src={eye} className='ex_l_img' alt="" />
                             </div>
-                            <h4 className='ex_img_til'><FormattedMessage id='ex_tel3' /></h4>
-                            <p className='ex_img_text'><FormattedMessage id='ex_text3' /></p>
+                            <div className='ex_l_r lt'>
+                                <h4 className='ex_img_til'><FormattedMessage id='ex_tel3' /></h4>
+                                <p className='ex_img_text'><FormattedMessage id='ex_text3' /></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -210,8 +213,8 @@ export default class Home extends Component {
                     <div className='news_main'>
                         <div className="news_top">
                             {this.state.newsTopList.map((item, index) => {
-                                return <div className='news_top_box lt' key={index}>
-                                    <div className='news_pic'>
+                                return <div className='news_top_box ' key={index}>
+                                    <div className='news_pic lt'>
                                         <a href={item.resource} target="_blank" rel="noopener noreferrer"><img src={item.image} alt="" /></a>
                                         <div className='news_top_til'>
                                             <div>
@@ -219,7 +222,7 @@ export default class Home extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='news_top_content'>{item.text}</div>
+                                    <div className='news_top_content lt'>{item.summary}</div>
                                 </div>
                             })}
                         </div>
@@ -227,9 +230,7 @@ export default class Home extends Component {
                             {this.state.newsBottomList.map((item, index) => {
                                 return <li className='lt' key={index}>
                                     <a href={item.resource} target="_blank" rel="noopener noreferrer">
-                                        <div className='img_box lt'>
-                                            <img src={item.image} alt="" />
-                                        </div>
+                                        <img src={item.image} className='img_box lt' />
                                         <div className='img_box_text lt'>
                                             <div>
                                                 <h5>{item.title}</h5>
@@ -248,12 +249,8 @@ export default class Home extends Component {
                         </div>
                         <div className="sys_til_ex"><FormattedMessage id='sysex' /></div>
                     </div>
-                    <div className='sys_logo'>
-                        <img src={cocoslogo} alt="" />
-                    </div>
-                    <div className='sys_line'>
-                        <img src={line} alt="" />
-                    </div>
+                    <img src={cocoslogo} alt="" className='sys_logo' />
+                    <img src={line} alt="" className='sys_line' />
                     <div className='sys_img'>
                         {this.state.sysImg.map((item, index) => {
                             return <div className='sys_img_box lt' key={index}>

@@ -219,7 +219,7 @@ export default class Home extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='news_top_content'>{item.text}</div>
+                                    <div className='news_top_content'>{item.summary}</div>
                                 </div>
                             })}
                         </div>
