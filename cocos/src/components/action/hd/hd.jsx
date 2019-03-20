@@ -65,7 +65,7 @@ export default class Hd extends Component {
                 <div className='hd_for'>
                     <div className='hd_box'>
                         {this.state.forList.map((item, index) => {
-                            return <div className='hd_every lt' key={index}>
+                            return <a href={item.resource} target="_blank" className='hd_every lt' key={index} rel="noopener noreferrer">
                                 <div className='every_til'>{item.title}</div>
                                 <div className='every_b'>
                                     <div className='e_address lt'>
@@ -73,7 +73,7 @@ export default class Hd extends Component {
                                     </div>
                                     <div className='e_date rt'>{item.published_at}</div>
                                 </div>
-                            </div>
+                            </a>
                         })}
                     </div>
                     <div className='yg_box'>
@@ -89,7 +89,7 @@ export default class Hd extends Component {
                 </div>
                 <div className='hd_list_box'>
                     {this.state.hdList.map((item, index) => {
-                        return <a href={item.resource} target="_blank" className=' hd_list_e' style={{ display: 'block' }} key={index}  rel="noopener noreferrer" >
+                        return <a href={item.resource} target="_blank" className=' hd_list_e' style={{ display: 'block' }} key={index} rel="noopener noreferrer" >
                             <div className='pic_box lt'>
                                 <img src={item.image} alt="" />
                             </div>
@@ -102,8 +102,8 @@ export default class Hd extends Component {
                         </a>
                     })}
                     <div className='pageNumber' style={{ marginRight: '11px' }}>
-                        <Page msg={this.state.newmsg} getNews={this.getHdList}></Page> 
-                </div>
+                        <Page msg={this.state.newmsg} getNews={this.getHdList}></Page>
+                    </div>
                 </div>
             </div>
         );

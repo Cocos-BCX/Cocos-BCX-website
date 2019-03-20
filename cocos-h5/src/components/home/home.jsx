@@ -112,16 +112,17 @@ export default class Home extends Component {
     }
     //打开播放器
     showVideo = () => {
-        this.videoBox.style.display = 'flex';
+        this.videoBox.style.transform = ' translateY(0)';
     }
-    hideVideo = () => {
-        this.videoBox.style.display = 'none';
+    hideVideo = (e) => {
+        this.stopImmediate(e) 
+        this.videoBox.style.transform = 'translateY(-30rem)';
     }
     //隐藏播放器
     closeVideo = () => {
         document.addEventListener('click', () => {
             if (this.videoBox) {
-                this.videoBox.style.display = 'none';
+                this.videoBox.style.display = 'translateY(-30rem)';
             }
         }, false)
     }
@@ -145,21 +146,21 @@ export default class Home extends Component {
         let lang = localStorage.getItem('lang_type');
         return (
             <div className='homepage_index'>
-                <div className='video_box' ref={(x) => { this.videoBox = x }}>
+                <div className='video_box ' onClick={(e)=>{this.hideVideo(e)}} ref={(x) => { this.videoBox = x }}>
                     <div className='video'>
-                        <div className='close_box' onClick={this.hideVideo}>
+                        {/* <div className='close_box' onClick={this.hideVideo}>
                             <img src={close} alt="" />
-                        </div>
+                        </div> */}
                         {
                             lang === 'en' ?
-                                <iframe type="text/html" width="1200px" height="688px" src="http://www.youtube.com/embed/KiKc3FG9Auc?autoplay=1&controls=0" frameBorder="0" ></iframe> : <iframe width="1200px" height="688px" src='http://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=0' frameBorder='0' >
-                                </iframe>
+                                <iframe type="text/html" width="1200px" height="688px" src="http://www.youtube.com/embed/KiKc3FG9Auc?autoplay=1&controls=0" frameBorder="0" ></iframe> : <iframe className='video_play' height={document.body.clientWidth * 9 / 16} width={document.body.clientWidth}
+                                    allow="autoplay; fullscreen" src='http://player.youku.com/embed/XNDA4NjA1NDAwMA=='
+                                    ref={(x) => { this.videoBox = x }} frameBorder='0' allowFullScreen></iframe>
                         }
-
                     </div>
                 </div>
                 <div className='banner_box'>
-                    {/* <Nav></Nav> */}
+                    <Nav></Nav>
                     <img src={play} className='play_btn' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
                 </div>
                 <div className='explane'>
@@ -304,7 +305,7 @@ export default class Home extends Component {
                         <div className='hezuo_com'>
                             <div className="hezuo_top">
                                 {this.state.black1.map((item, index) => {
-                                    return <div key={index} className='lt' style={{ background: `url(${item.b}) no-repeat center`,backgroundSize:'1.26rem .86rem' }}
+                                    return <div key={index} className='lt' style={{ background: `url(${item.b}) no-repeat center`, backgroundSize: '1.26rem .86rem' }}
                                     /*     onMouseEnter={(e) => { e.target.style.background = `url(${item.w})no-repeat center` }}
                                         onMouseLeave={(e) => { e.target.style.background = `url(${item.b})no-repeat center` }} */
                                     >
@@ -314,9 +315,9 @@ export default class Home extends Component {
                             <img src={jia} alt="" className="hezuo_middle" />
                             <div className="hezuo_bottom">
                                 {this.state.black2.map((item, index) => {
-                                    return <div key={index} className='lt' style={{ background: `url(${item.b}) no-repeat center`,backgroundSize:'1.26rem .86rem' }}
-                                        /* onMouseEnter={(e) => { e.target.style.background = `url(${item.w})` }}
-                                        onMouseLeave={(e) => { e.target.style.background = `url(${item.b})` }} */
+                                    return <div key={index} className='lt' style={{ background: `url(${item.b}) no-repeat center`, backgroundSize: '1.26rem .86rem' }}
+                                    /* onMouseEnter={(e) => { e.target.style.background = `url(${item.w})` }}
+                                    onMouseLeave={(e) => { e.target.style.background = `url(${item.b})` }} */
                                     >
                                     </div>
                                 })}
@@ -328,8 +329,6 @@ export default class Home extends Component {
                         </div>
                     </div>
                 </div>
-
-
             </div >
         );
     }

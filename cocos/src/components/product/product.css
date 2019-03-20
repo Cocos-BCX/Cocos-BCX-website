@@ -15,9 +15,7 @@
 }
 .product .dev_plan .ljdev {
   display: block;
-  width: 254px;
   height: 65px;
-  background: #2ad9fe;
   border-radius: 4px;
   margin: auto;
   margin-top: 108px;
@@ -25,6 +23,13 @@
   font-size: 24px;
   color: #ffffff;
   line-height: 65px;
+}
+.product .dev_plan .ljdev span {
+  display: inline-block;
+  background: #2ad9fe;
+  border-radius: 4px;
+  line-height: 65px;
+  padding: 0 30px;
 }
 .product .dev_list_box {
   margin: auto;

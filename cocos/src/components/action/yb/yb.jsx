@@ -38,7 +38,7 @@ export default class Yb extends Component {
             <div className='new yb'>
                 <div className="news_til_box">
                     <div className="news_til">
-                        <h3 className={lang === 'en' ? 'yb_en' : ''}><FormattedMessage id='yb' /></h3>
+                        <h3 className=''><FormattedMessage id='yb' /></h3>
                         <div className='news_line'></div>
                     </div>
                     <div className="news_til_mask"></div>
@@ -47,7 +47,7 @@ export default class Yb extends Component {
                     <ul className='new_list_box'>
                         {this.state.newList.map((item, index) => {
                             return <li className='lt' key={index}>
-                                <a href={item.resource} target="_blank"  rel="noopener noreferrer" >
+                                <a href={item.resource} target="_blank" rel="noopener noreferrer" >
                                     <div className='img_box'>
                                         <img src={item.image} alt="" />
                                     </div>

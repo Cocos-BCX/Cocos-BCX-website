@@ -99,7 +99,7 @@ export default class Footer extends Component {
                         </div>
                     </div>
                     <div className='footer_img'>
-                        <a href="http://www.baidu.com" target='_blank' rel="noopener noreferrer">
+                        <a href="https://medium.com/cocosbcx" target='_blank' rel="noopener noreferrer">
                             <img src={face} alt="" />
                         </a>
                         <a href="https://twitter.com/CocosBCX" target='_blank' rel="noopener noreferrer">

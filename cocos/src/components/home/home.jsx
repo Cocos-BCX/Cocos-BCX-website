@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import Nav from '../nav/nav'
-import { get,  } from '../../api/api'
+import { get, } from '../../api/api'
 import play from '../../images/play.png'
 import fenge from '../../images/fenge.png'
 import game from '../../images/icon_game.png'
@@ -54,6 +54,7 @@ export default class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            lang:localStorage.getItem('lang_type'),
             black1: [{ b: b, w: w }, { b: b1, w: w1 }, { b: b2, w: w2 }, { b: b3, w: w3 }, { b: b4, w: w4 }, { b: b5, w: w5 }, { b: b6, w: w6 }, { b: b7, w: w7 }, { b: b8, w: w8 }, { b: b9, w: w9 }],
             black2: [{ b: b10, w: w10 }, { b: b11, w: w11 }, { b: b12, w: w12 }, { b: b13, w: w13 }, { b: b14, w: w14 }],
             sysImg: [{ img: cocos1, text: 'system1' },
@@ -112,9 +113,20 @@ export default class Home extends Component {
     }
     //打开播放器
     showVideo = () => {
+        if (this.state.lang === 'en') {
+            this.youku.src = 'https://www.youtube.com/embed/KiKc3FG9Auc?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1'
+        } else {
+            this.youku.src = 'http://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1'
+        }
         this.videoBox.style.display = 'flex';
+
     }
     hideVideo = () => {
+        if (this.state.lang=== 'en') {
+            this.youku.src = 'https://www.youtube.com/embed/KiKc3FG9Auc?autoplay=0&loop=1&playlist=EMfebeQg2Z4&muted=1'
+        } else {
+            this.youku.src = 'http://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=0&loop=1&playlist=EMfebeQg2Z4&muted=1'
+        }
         this.videoBox.style.display = 'none';
     }
     //隐藏播放器
@@ -152,8 +164,10 @@ export default class Home extends Component {
                         </div>
                         {
                             lang === 'en' ?
-                                <iframe type="text/html" width="1200px" height="688px" src="http://www.youtube.com/embed/KiKc3FG9Auc?autoplay=1&controls=0" frameBorder="0" ></iframe> : <iframe width="1200px" height="688px" src='http://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=0' frameBorder='0' >
+                                <iframe type="text/html" width="1200px" height="688px" ref={(x) => { this.youku = x }} src="https://www.youtube.com/embed/KiKc3FG9Auc?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1" frameBorder="0" allowFullScreen allowtransparency='yes' allow="autoplay"></iframe> :
+                                <iframe width="1200px" height="688px" ref={(x) => { this.youku = x }} src='http://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1' frameBorder='0' allowtransparency='yes' flashvars="isAutoPlay=true" allow="autoplay" >
                                 </iframe>
+                            // <embed src='http://player.youku.com/player.php/sid/XNDA4NjA1NDAwMA==/v.swf' allowFullScreen={true} flashvars="isAutoPlay=true" quality='high' width='480' height='400' align='middle' allowscriptaccess='always' type='application/x-shockwave-flash'></embed>
                         }
 
                     </div>
@@ -187,7 +201,7 @@ export default class Home extends Component {
                                 <img src={daohang} className='ex_l_img' alt="" />
                             </div>
                             <h4 className='ex_img_til'><FormattedMessage id='ex_tel2' /></h4>
-                            <p className='ex_img_text' style={{ width: '282px' }}><FormattedMessage id='ex_text2' /></p>
+                            <p className='ex_img_text' ><FormattedMessage id='ex_text2' /></p>
                         </div>
                         <div className='ex_l_box lt' style={{ marginLeft: '86px' }}>
                             <div className='ex_l_w'>
@@ -246,7 +260,6 @@ export default class Home extends Component {
                         <div className="sys_til_our">
                             <h4><FormattedMessage id='system' /></h4>
                         </div>
-                        <div className="sys_til_ex"><FormattedMessage id='sysex' /></div>
                     </div>
                     <div className='sys_logo'>
                         <img src={cocoslogo} alt="" />

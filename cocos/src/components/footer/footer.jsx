@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import email from '../../images/email.png'
 import file from '../../images/file.png'
-import face from '../../images/facebook.png'
+import medium from '../../images/medium.png'
 import twitter from '../../images/Twitter.png'
 import wechet from '../../images/wechat.png'
 import weibo from '../../images/weibo.png'
@@ -84,8 +84,8 @@ export default class Footer extends Component {
                         </div>
                     </div>
                     <div className='footer_img'>
-                        <a href="http://www.baidu.com" target='_blank' rel="noopener noreferrer">
-                            <img src={face} alt="" />
+                        <a href="https://medium.com/cocosbcx" target='_blank' rel="noopener noreferrer">
+                            <img src={medium} alt="" />
                         </a>
                         <a href="https://twitter.com/CocosBCX" target='_blank' rel="noopener noreferrer">
                             <img src={twitter} alt="" />
@@ -101,7 +101,7 @@ export default class Footer extends Component {
                         <a href={lang === 'zh' ? "https://t.me/CocosBCX" : 'https://t.me/cocosblockchainexpedition'} target='_blank' rel="noopener noreferrer">
                             <img src={tele} alt="" />
                         </a>
-                        <a href="https://github.com/cocosbcx" target='_blank' rel="noopener noreferrer">
+                        <a href="https://github.com/cocos-bcx" target='_blank' rel="noopener noreferrer">
                             <img src={git} alt="" />
                         </a>
                     </div>

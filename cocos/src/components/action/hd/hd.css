@@ -7,6 +7,7 @@
   margin-top: 45px;
 }
 .hd .hd_for .hd_box .hd_every {
+  display: block;
   width: 307px;
   height: 131px;
   background: #ffffff;

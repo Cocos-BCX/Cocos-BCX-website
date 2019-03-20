@@ -195,6 +195,9 @@
   margin: auto;
   margin-top: 105px;
 }
+.footer .footer_box .footer_img img {
+  width: 28px;
+}
 .footer .footer_box .footer_img .wechet_box {
   display: inline-block;
   margin-left: 52px;

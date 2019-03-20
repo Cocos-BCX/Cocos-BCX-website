@@ -59,7 +59,7 @@ const en_US = {
     devsq: 'Cocos-BCX 于2018年12月21日14:00正式上线内测，这标志 Cocos-BCX 公链的基础设施已经初具成果，更标志着 Cocos-BCX 向正式网络发布迈进一大步！在此之际，Cocos-BCX 推出《开发者计划》，面向全球开放30名内测资格，诚意邀请有想法参与内测的开发者个人或者团队加入内测。',
 
     //生态产品
-    ljdev: '了解开发者扶持计划',
+    ljdev: 'Learn about the Developer Support Program',
     gamedapps: 'Game',
     tool:'Tool',
     gname1:'Happy Fruit',
@@ -83,9 +83,9 @@ const en_US = {
 
     //关于我们
     lookBook:'Check the White Paper',
-    teamextil: '团队介绍',
+    teamextil: 'Our Team',
     teamex: 'Cocos-BCX team has complete skills, know-how and industry experience required for project development, covering a good mixture of blockchain technology development, game engine, IDE, developer community operations, game production & release, entertainment community operations, financial market mechanism, assets valuation and multinational enterprise operations. Core founders of Cocos BCX project experienced two business cycles of startup,  with a worldwide range of business network and recognition in the fields of information technology entrepreneurship and gaming, as well as decision making, execution experience and industry resources required to establish an ecological platform.',
-    teamPerson: '团队成员',
+    teamPerson: 'Members',
     p1: 'CHEN Haozhi',
     p2: 'Richard Yang',
     p3: 'Reed Hong',
@@ -140,7 +140,7 @@ const en_US = {
     //动态
     a_news: 'News',
     hd: 'Events',
-    yb: 'Monthly/Bi-Weekly Report',
+    yb: 'Updates',
     big: 'Chronicles',
     zx: 'Info',
     video: 'Video',

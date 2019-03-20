@@ -20,7 +20,7 @@ export default class Develop extends Component {
                     <Nav></Nav>
                 </div>
                 <div className='dev_box'>
-                    <div className='dev_m'>
+                    <a href="https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA" target="_blank" rel="noopener noreferrer" className='dev_m'>
                         <div className='dev_img lt'>
                             <img src={dev1} alt="" />
                         </div>
@@ -33,8 +33,8 @@ export default class Develop extends Component {
                                 <div>GO</div>
                             </a>
                         </div>
-                    </div>
-                    <div className='dev_m'>
+                    </a>
+                    <a href="https://www.cocosbcx.io/" target="_blank" rel="noopener noreferrer" className='dev_m'>
                         <div className='dev_img lt'>
                             <img src={dev2} alt="" />
                         </div>
@@ -47,8 +47,8 @@ export default class Develop extends Component {
                                 <div>GO</div>
                             </a>
                         </div>
-                    </div>
-                    <div className='dev_m'>
+                    </a>
+                    <a href="https://forum.cocos.com/c/bcx" target="_blank" rel="noopener noreferrer" className='dev_m'>
                         <div className='dev_img lt'>
                             <img src={dev3} alt="" />
                         </div>
@@ -61,7 +61,7 @@ export default class Develop extends Component {
                                 <div>GO</div>
                             </a>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         );
