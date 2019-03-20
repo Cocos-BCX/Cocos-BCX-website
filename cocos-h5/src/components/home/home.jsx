@@ -311,14 +311,12 @@ export default class Home extends Component {
                                     </div>
                                 })}
                             </div>
-                            <div className="hezuo_middle">
-                                <img src={jia} alt="" />
-                            </div>
+                            <img src={jia} alt="" className="hezuo_middle" />
                             <div className="hezuo_bottom">
                                 {this.state.black2.map((item, index) => {
                                     return <div key={index} className='lt' style={{ background: `url(${item.b}) no-repeat center`,backgroundSize:'1.26rem .86rem' }}
-                                        onMouseEnter={(e) => { e.target.style.background = `url(${item.w})` }}
-                                        onMouseLeave={(e) => { e.target.style.background = `url(${item.b})` }}
+                                        /* onMouseEnter={(e) => { e.target.style.background = `url(${item.w})` }}
+                                        onMouseLeave={(e) => { e.target.style.background = `url(${item.b})` }} */
                                     >
                                     </div>
                                 })}

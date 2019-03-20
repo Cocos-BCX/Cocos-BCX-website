@@ -10,22 +10,14 @@
 }
 .video_box .video {
   margin: auto;
-  width: 1200px;
   position: relative;
 }
 .video_box .video .close_box {
   display: block;
-  width: 40px;
-  height: 40px;
-  margin-left: 1160px;
   cursor: pointer;
 }
 .video_box .video .close_box:hover {
   opacity: .7;
-}
-.video_box .video .close_box img {
-  width: 40px;
-  height: 40px;
 }
 .video_box .video .iframe {
   margin: auto;
@@ -44,6 +36,9 @@
   width: 0.64rem;
   height: 0.64rem;
 }
+.explane {
+  overflow: hidden;
+}
 .explane .expplane_til {
   margin-top: .38rem;
   text-align: center;
@@ -52,12 +47,12 @@
   font-family: HYQiHeiX1-FEW;
 }
 .explane .expplane_main {
-  margin-top: 44px;
   width: 6.53rem;
   height: 2.64rem;
   border: 1px solid #e2e2e2;
   padding: .28rem .35rem 0 .35rem;
   margin: auto;
+  margin-top: .29rem;
   box-sizing: border-box;
 }
 .explane .expplane_main ul li {
@@ -594,38 +589,38 @@
   margin-left: 0;
 }
 .hezuo .hezuo_box .hezuo_com .hezuo_middle {
-  width: 29px;
-  height: 31px;
+  display: block;
+  width: .17rem;
+  height: .2rem;
   margin: auto;
-  margin-top: 24px;
+  margin-top: .14rem;
 }
 .hezuo .hezuo_box .hezuo_com .hezuo_bottom {
   overflow: hidden;
 }
 .hezuo .hezuo_box .hezuo_com .hezuo_bottom div {
-  width: 202px;
-  height: 139px;
-  margin-left: 34px;
-  margin-top: 23px;
-  cursor: pointer;
+  width: 1.26rem;
+  height: .86rem;
+  margin-left: .18rem;
+  margin-top: .13rem;
 }
 .hezuo .hezuo_box .hezuo_com .hezuo_bottom div:nth-child(1) {
   margin-left: 0;
 }
 .hezuo .hezuo_box .hezuo_sm {
   margin: auto;
-  margin-top: 126px;
+  margin-top: .6rem;
   text-align: center;
 }
 .hezuo .hezuo_box .hezuo_sm h6 {
-  font-size: 20px;
+  font-size: .2rem;
   font-family: MyriadPro-Regular;
   font-weight: bold;
   color: #2ad9fe;
 }
 .hezuo .hezuo_box .hezuo_sm p {
-  margin-top: 21px;
-  font-size: 13px;
+  margin-top: .21rem;
+  font-size: .12rem;
   font-family: HiraginoSansGB-W3;
   font-weight: normal;
   color: #ffffff;

@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const baseUrl = "http://192.168.15.37:10086/api/v1/"; //测试
+// const baseUrl = "http://api-cocos.dev.cjfan.net/api/v1/"; //测试
+const baseUrl = "http://api-cocos.dev.cjfan.net/api/v1/";
 
 export function get(url, msg, header) {
     return axios.get(baseUrl + url, {

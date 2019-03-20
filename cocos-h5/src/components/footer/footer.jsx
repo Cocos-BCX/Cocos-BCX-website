@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import email from '../../images/email.png'
 import file from '../../images/file.png'
-import face from '../../images/facebook.png'
+import face from '../../images/medium.png'
 import twitter from '../../images/Twitter.png'
 import wechet from '../../images/wechat.png'
 import weibo from '../../images/weibo.png'
 import tele from '../../images/telegram.png'
 import git from '../../images/github.png'
+import totop from '../../images/totop.png'
 import wx from '../../images/wxma.jpg'
 import terms from '../../file/terms.pdf'
 import privacy from '../../file/privacy.pdf'
@@ -30,6 +31,20 @@ export default class Footer extends Component {
         }
         window.onscroll = () => { getScrollTop() - 400 > 0 ? this.toTomDom.style.display = "block" : this.toTomDom.style.display = "none"; }
     }
+    wxshow = (e) => {
+        e = e || window.event;
+        e.stopPropagation();
+        e.nativeEvent.stopImmediatePropagation();
+        this.wxma.style.display = 'block';
+        this.wxma.style.display = 'flex';
+    }
+    //微信二维码
+    mahide = (e) => {
+        e = e || window.event;
+        e.stopPropagation();
+        e.nativeEvent.stopImmediatePropagation();
+        this.wxma.style.display = 'none';
+    }
     componentDidMount() {
         this.goTopEx()
     }
@@ -40,7 +55,7 @@ export default class Footer extends Component {
                 <div className='footer_box'>
                     <div className='totop' ref={(x) => { this.toTomDom = x }} onClick={this.toTop}>
                         <div className='tojt'>
-                            <div></div>
+                           <img src={totop} alt=""/>
                         </div>
                     </div>
                     <div className='footer_con'>
@@ -90,10 +105,12 @@ export default class Footer extends Component {
                         <a href="https://twitter.com/CocosBCX" target='_blank' rel="noopener noreferrer">
                             <img src={twitter} alt="" />
                         </a>
-                        <div className='wechet_box' onMouseEnter={() => { this.wxma.style.display = 'block' }}
+                        <div className='wechet_box lt' onClick={(e) => { this.wxshow(e) }}
                             onMouseLeave={() => { this.wxma.style.display = 'none' }}>
                             <img className='biao' src={wechet} alt="" />
-                            <img className='ma' src={wx} ref={(x) => { this.wxma = x }} alt="" />
+                            <div className='ma' onClick={(e)=>{this.mahide(e)}} ref={(x) => { this.wxma = x }} style={{ width: '7.5rem', height: document.documentElement.clientHeight || document.body.clientHeight }}>
+                                <img src={wx} alt="" onClick={this.stop} />
+                            </div>
                         </div>
                         <a href="https://www.weibo.com/p/1006062183715773" target='_blank' rel="noopener noreferrer">
                             <img src={weibo} alt="" />
