@@ -81,11 +81,11 @@
 }
 .new .new_list .new_list_box {
   overflow: hidden;
-  height: 780px;
+  height: 680px;
 }
 .new .new_list .new_list_box li {
   width: 267px;
-  height: 346px;
+  height: 300px;
   border: 1px solid #e2e2e2;
   margin-top: 44px;
   margin-left: 33px;
@@ -99,7 +99,7 @@
 }
 .new .new_list .new_list_box li .img_box {
   width: 267px;
-  height: 204px;
+  height: 150px;
   overflow: hidden;
 }
 .new .new_list .new_list_box li .img_box img {
