@@ -27,12 +27,12 @@ export default class Nav extends Component {
         window.history.go(0);
     }
     //显示导航
-    showNav=()=>{
-        this.navBox.style.display='block'
+    showNav = () => {
+        this.navBox.style.display = 'block'
     }
-    hideNav=(e)=>{
+    hideNav = (e) => {
         this.stopImmediate(e)
-        this.navBox.style.display='none'
+        this.navBox.style.display = 'none'
     }
 
     //给DOM绑定事件
@@ -46,7 +46,7 @@ export default class Nav extends Component {
         e.stopPropagation();
         e.nativeEvent.stopImmediatePropagation();
     }
- 
+
     componentWillMount() {
 
     }
@@ -75,7 +75,7 @@ export default class Nav extends Component {
                         </div>
                     </div>
                     <div className="nav lt" onClick={this.showNav} >
-                        <div className='nav_list_box' ref={(x)=>{this.navBox=x}} onClick={(e)=>{this.hideNav(e)}}>
+                        <div className='nav_list_box' ref={(x) => { this.navBox = x }} onClick={(e) => { this.hideNav(e) }}>
                             <div className='nav_logo_box'>
                                 <img className='logo' src={clogo} alt="" />
                                 <img className='close' src={close} alt="" />
@@ -106,11 +106,6 @@ export default class Nav extends Component {
 
                             <NavLink to="/about" exact={true} activeClassName="active"
                                 className='nav_about_click navBox' > <span ref={(x) => { this.abouttil = x }} ><FormattedMessage id='about' />  </span>
-                            </NavLink>
-
-                            <div className='dev_a navBox' onClick={(e) => { this.stopImmediate(e); window.open("https://www.cocosbcx.io/wp-content/themes/cocosBlog/source/white_paper.pdf", '_blank'); }}><FormattedMessage id='whiteBook' /></div>
-                            <NavLink to="/about" exact={true} activeClassName="active"
-                                className='nav_about_click navBox' > <span ref={(x) => { this.abouttil = x }} ><FormattedMessage id='team' />  </span>
                             </NavLink>
                         </div>
                     </div>

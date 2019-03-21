@@ -23,6 +23,13 @@ export default class Nav extends Component {
         window.chooseLocale()
         window.history.go(0);
     }
+    showLang = (e) => {
+        if (!this.langBox.style.display || this.langBox.style.display === 'none') {
+            this.langBox.style.display = 'block'; this.stopImmediate(e)
+        } else {
+            this.langBox.style.display = 'none'; this.stopImmediate(e)
+        }
+    }
     //打开开发者菜单
     showDevList = (e) => {
         this.devListBox.style.display = 'block'
@@ -78,7 +85,7 @@ export default class Nav extends Component {
     render() {
         let lang = localStorage.getItem('lang_type');
         return (
-            <div className='nav_box'>
+            <div className='nav_box' style={lang === 'en' ? { fontSize: '12px' } : { fontSize: '14px' }}>
                 <div className="nav lt" >
                     <div className='nav_list_box'>
                         <div className='nav_home lt'  >
@@ -117,7 +124,7 @@ export default class Nav extends Component {
                             </NavLink>
                         </div>
                         <div className='nav_action lt'>
-                            <NavLink to="/action/"  activeClassName="active"
+                            <NavLink to="/action/" activeClassName="active"
                                 className='nav_action_click' ><FormattedMessage id='action' />
                             </NavLink>
                         </div>
@@ -134,9 +141,9 @@ export default class Nav extends Component {
                         </div>
                     </div>
                 </div>
-                <div className='lang_box lt' onClick={(e) => { this.langBox.style.display = 'block'; this.stopImmediate(e) }}>
-                    <div className='lang'>
-                        <div className='now'>中文</div>
+                <div className='lang_box lt' onClick={(e) => { this.showLang(e) }}>
+                    <div className='lang' >
+                        <div className='now'>{lang === 'en' ? 'English' : '中文'}</div>
                     </div>
                     <div className='choose_lang_box' ref={(x) => { this.langBox = x }}>
                         <div className='chinese' onClick={this.chooseCH}>中文</div>

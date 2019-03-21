@@ -12,7 +12,7 @@
 }
 .nav_box .nav .nav_list_box {
   transform: skewX(30deg);
-  margin-left: 50px;
+  margin-left: 60px;
 }
 .nav_box .nav .nav_list_box .active {
   color: #2AD9FE;
@@ -28,7 +28,6 @@
 .nav_box .nav .nav_list_box a {
   color: #BEBEBE;
   line-height: 41px;
-  font-size: 14px;
 }
 .nav_box .nav .nav_list_box a:hover {
   color: #2AD9FE;

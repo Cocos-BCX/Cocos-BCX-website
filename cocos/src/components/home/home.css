@@ -68,6 +68,7 @@
   width: 1169px;
   border: 1px solid #e2e2e2;
   padding: 41px 34px 91px;
+  box-sizing: border-box;
 }
 .explane .expplane_main ul li {
   list-style: none;

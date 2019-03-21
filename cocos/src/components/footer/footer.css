@@ -81,6 +81,7 @@
   display: block;
   overflow: hidden;
   margin-top: 24px;
+  box-sizing: border-box;
 }
 .footer .footer_box .footer_con .footer_con_l .file img {
   display: block;
@@ -88,15 +89,16 @@
   width: 14px;
   height: 20px;
   margin-left: 3px;
+  box-sizing: border-box;
 }
 .footer .footer_box .footer_con .footer_con_l .file p {
   float: left;
   font-size: 15px;
   margin-left: 12px;
-  font-family: MyriadPro-Regular;
   font-weight: 400;
   color: #ffffff;
   line-height: 24px;
+  box-sizing: border-box;
 }
 .footer .footer_box .footer_con .footer_con_l .file p a {
   color: #fff;
@@ -210,8 +212,10 @@
 .footer .footer_box .footer_img .wechet_box .ma {
   display: none;
   position: absolute;
-  left: -58px;
+  left: -38px;
   top: 28px;
+  width: 100px;
+  height: 100px;
 }
 .footer .footer_box .footer_img a {
   margin-left: 52px;

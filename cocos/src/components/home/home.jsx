@@ -64,18 +64,23 @@ export default class Home extends Component {
             { img: cocos5, text: 'system5' },],
             mapList: [{
                 til1: 'map1',
+                til2: 'map11',
                 til3: 'md1',
             }, {
                 til1: 'map2',
+                til2: 'map22',
                 til3: 'md2',
             }, {
                 til1: 'map3',
+                til2: 'map33',
                 til3: 'md3',
             }, {
                 til1: 'map4',
+                til2: 'map44',
                 til3: 'md4',
             }, {
                 til1: 'map5',
+                til2: 'map55',
                 til3: 'md5',
             }],
             newsTopList: [],
@@ -287,18 +292,14 @@ export default class Home extends Component {
                     </div>
                     <div className='map_main_box'>
                         {this.state.mapList.map((item, index) => {
-                            return <div className='map_s_box lt' key={index}>
+                            return <div className='map_s_box lt' key={index} style={lang==='en'?{height:'180px'}:{height:'130px'}}>
                                 <p><FormattedMessage id={item.til1} /></p>
+                                <p><FormattedMessage id={item.til2} /></p>
                                 {/* <h5><FormattedMessage id={item.til3} /></h5> */}
                             </div>
                         })}
                     </div>
-                    {/* <div className='point_line'>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div> */}
+                 
                     <div className='line_box'>
                         <img src={dline} alt="" />
                         <img src={dline} alt="" />
