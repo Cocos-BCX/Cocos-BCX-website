@@ -11,9 +11,7 @@ export default class Hd extends Component {
         super();
         this.state = {
             newmsg: {},
-            forList: [{ title: '超级赛亚人超级赛亚人超级赛亚人', address: '北京', published_at: '2018-05-21' },
-            { title: '超级赛亚人', address: '北京', published_at: '2018-05-21' },
-            { title: '超级赛亚人', address: '北京', published_at: '2018-05-21' },
+            forList: [
             ],
             hdList: []
         }
@@ -50,13 +48,13 @@ export default class Hd extends Component {
         })
     }
     componentDidMount() {
-        // this.forList()
+        this.forList()
         var mySwiper = new Swiper('.swiper-container', {
-            loop : true,
+            loop: true,
             autoplay: {
                 delay: 3000,//1秒切换一次
                 disableOnInteraction: false,
-              },
+            },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -84,7 +82,7 @@ export default class Hd extends Component {
                             <div class="swiper-wrapper" >
                                 {this.state.forList.map((item, index) => {
                                     return <div className='swiper-slide'>
-                                        <div className='hd_every  ' key={index} style={{ marginLeft: '1.2rem',width:'3rem' }}>
+                                        <div className='hd_every  ' key={index} style={{ marginLeft: '1.2rem', width: '3rem' }}>
                                             <div className='every_til'>{item.title}</div>
                                             <div className='every_b'>
                                                 <div className='e_address lt'>
@@ -107,7 +105,7 @@ export default class Hd extends Component {
                         <div className='yg_text lt'><FormattedMessage id='yg' /></div>
                         <div className='line1 lt'>--------------------------</div>
                         <div className='ball lt'></div>
-                        <div className='line2 lt'>----------------------------------</div>
+                        <div className='line2 lt'>--------------------------------------------------------------------------------------</div>
                         <div className='ball lt'></div>
                     </div>
                 </div>
