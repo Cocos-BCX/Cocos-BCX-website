@@ -78,13 +78,10 @@ export default class Hd extends Component {
                     </div>
                     <div className='yg_box'>
                         <div className='yg_text lt'><FormattedMessage id='yg' /></div>
-                        <div className='line1 lt'>--------------------</div>
+                        <div className='line1 lt'>--------------------------</div>
                         <div className='ball lt'></div>
                         <div className='line2 lt'>----------------------------------</div>
                         <div className='ball lt'></div>
-                        <div className='line3 lt'>---------------------------------------</div>
-                        <div className='ball lt'></div>
-                        <div className='line4 lt'>-----------------------</div>
                     </div>
                 </div>
                 <div className='hd_list_box'>
@@ -96,8 +93,8 @@ export default class Hd extends Component {
                             <div className='e_text_box lt'>
                                 <h5>{item.title}</h5>
                                 <p>{item.summary}</p>
-                                <div className='e_address'>{item.address}</div>
-                                <div className="e_date">{item.published_at}</div>
+                                <div className='e_address lt'>{item.address}</div>
+                                <div className="e_date rt">{item.published_at}</div>
                             </div>
                         </a>
                     })}

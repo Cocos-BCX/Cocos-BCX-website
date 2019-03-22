@@ -1,5 +1,6 @@
 .pagenumber_box{
-    float: right;
+    /* float: right; */
+    margin: auto;
 }
 .pageNumber:nth-child(1){
     float: right;

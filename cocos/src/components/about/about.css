@@ -81,7 +81,7 @@
 }
 .about .team_box .team_pic_box {
   margin: auto;
-  overflow: hidden;
+  height: 1100px;
   padding-bottom: 40px;
 }
 .about .team_box .team_pic_box .team_every {
@@ -89,6 +89,7 @@
   width: 174px;
   margin-left: 71px;
   margin-top: 73px;
+  position: relative;
 }
 .about .team_box .team_pic_box .team_every:nth-child(1) {
   margin-left: 0;
@@ -100,8 +101,10 @@
   margin-left: 0;
 }
 .about .team_box .team_pic_box .team_every .pic_box {
+  cursor: pointer;
   width: 174px;
   height: 200px;
+  position: relative;
 }
 .about .team_box .team_pic_box .team_every .pic_box img {
   width: 100%;
@@ -126,6 +129,39 @@
   text-align: center;
   margin-top: 6px;
 }
+.about .team_box .team_pic_box .team_every .people_ex_box {
+  display: none;
+  position: absolute;
+  width: 252px;
+  border: 1px solid #2ad9fe;
+  box-shadow: 0px 3px 8px 0px rgba(32, 84, 133, 0.4);
+  top: -41px;
+  left: -38px;
+  overflow: hidden;
+  z-index: 50;
+  cursor: pointer;
+}
+.about .team_box .team_pic_box .team_every .people_ex_box a {
+  position: absolute;
+  right: 25px;
+  top: 170px;
+  width: 42px;
+  height: 42px;
+}
+.about .team_box .team_pic_box .team_every .people_ex_box a img {
+  width: 100%;
+  height: 100%;
+}
+.about .team_box .team_pic_box .team_every .people_ex_box p {
+  margin: auto;
+  margin-top: 354px;
+  font-size: 14px;
+  line-height: 25px;
+  background: #fff;
+  padding-bottom: 20px;
+  padding-left: 26px;
+  padding-right: 26px;
+}
 .about .adviser_box {
   margin: auto;
   width: 1170px;
@@ -133,7 +169,7 @@
 }
 .about .adviser_box .team_pic_box {
   margin: auto;
-  overflow: hidden;
+  height: 726px;
   padding-bottom: 20px;
 }
 .about .adviser_box .team_pic_box .team_every {
@@ -141,6 +177,7 @@
   width: 174px;
   margin-left: 71px;
   margin-top: 73px;
+  position: relative;
 }
 .about .adviser_box .team_pic_box .team_every:nth-child(1) {
   margin-left: 0;
@@ -165,6 +202,28 @@
   margin: auto;
   text-align: center;
   margin-top: 20px;
+}
+.about .adviser_box .team_pic_box .team_every .people_ex_two {
+  display: none;
+  position: absolute;
+  width: 252px;
+  border: 1px solid #2ad9fe;
+  box-shadow: 0px 3px 8px 0px rgba(32, 84, 133, 0.4);
+  top: -41px;
+  left: -38px;
+  overflow: hidden;
+  z-index: 50;
+  cursor: pointer;
+}
+.about .adviser_box .team_pic_box .team_every .people_ex_two p {
+  margin: auto;
+  margin-top: 354px;
+  font-size: 14px;
+  line-height: 25px;
+  background: #fff;
+  padding-bottom: 20px;
+  padding-left: 26px;
+  padding-right: 26px;
 }
 .about .adviser_box .team_pic_box .team_every .ex {
   font-size: 18px;

@@ -19,6 +19,7 @@ import p14 from '../../images/p14.png'
 import p15 from '../../images/p15.png'
 import p16 from '../../images/p16.png'
 import p17 from '../../images/p17.png'
+import p18 from '../../images/p18.png'
 import ly from '../../images/lingying.png'
 import hezuo from '../../images/hezuopic.png'
 import './about.css'
@@ -47,7 +48,7 @@ export default class About extends Component {
                 { pic: p15, ex: 'p1ex15', name: 'p15', position: 'fqr15' },
                 { pic: p16, ex: 'p1ex16', name: 'p16', position: 'fqr16' },
                 { pic: p17, ex: 'p1ex17', name: 'p17', position: 'fqr17' },
-                { pic: p17, ex: 'p1ex18', name: 'p18', position: 'fqr18' },
+                { pic: p18, ex: 'p1ex18', name: 'p18', position: 'fqr18' },
 
             ]
         }

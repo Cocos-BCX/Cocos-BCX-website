@@ -62,7 +62,7 @@ export default class New extends Component {
                     </div>
                     <div className="news_til_mask"></div>
                     <div className='news_til_more'>
-                        <div className='zx_btn active lt' ref={(x) => { this.articleBtn = x }} onClick={this.showarticle}><FormattedMessage id='zx' /></div>
+                        <div className='zx_btn active lt' style={{background:'#585858',color:'#fff' }} ref={(x) => { this.articleBtn = x }} onClick={this.showarticle}><FormattedMessage id='zx' /></div>
                         <div className='sp_btn lt' ref={(x) => { this.videoBtn = x }} onClick={this.showVideo}><FormattedMessage id='video' /></div>
                     </div>
                 </div>

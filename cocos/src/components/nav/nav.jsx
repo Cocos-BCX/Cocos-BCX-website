@@ -85,9 +85,9 @@ export default class Nav extends Component {
     render() {
         let lang = localStorage.getItem('lang_type');
         return (
-            <div className='nav_box' style={lang === 'en' ? { fontSize: '12px' } : { fontSize: '14px' }}>
+            <div className='nav_box' >
                 <div className="nav lt" >
-                    <div className='nav_list_box'>
+                    <div className={lang==='zh'?'nav_list_box':' nav_list_en'}>
                         <div className='nav_home lt'  >
                             <NavLink to="/home" exact={true} activeClassName="active"
                                 className='nav_home_click' ><FormattedMessage id='homepage' />
@@ -108,9 +108,18 @@ export default class Nav extends Component {
                                 onClick={() => { this.toDev() }}>
                                 <div className='nav_develop_list_box' >
                                     <div className='nav_develop_list_trans' ref={(x) => { this.devList = x }}>
-                                        <div className='dev_a' onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7', '_blank'); }}><FormattedMessage id='developPlan' /></div>
-                                        <div className='dev_a' onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://dev.cocosbcx.io" : 'https://doc.cocosbcx.io', '_blank'); }} ><FormattedMessage id='developApi' /></div>
-                                        <div className='dev_a' onClick={(e) => { this.stopImmediate(e); window.open("https://discuss.cocos2d-x.org/c/cocos-bcx", '_blank'); }} ><FormattedMessage id='developsq' /></div>
+                                        <div className='dev_a'
+                                            onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7', '_blank'); }}>
+                                            <FormattedMessage id='developPlan' />
+                                        </div>
+                                        <div className='dev_a'
+                                            onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://dev.cocosbcx.io" : 'https://doc.cocosbcx.io', '_blank'); }} >
+                                            <FormattedMessage id='developApi' />
+                                        </div>
+                                        <div className='dev_a'
+                                            onClick={(e) => { this.stopImmediate(e); window.open("https://discuss.cocos2d-x.org/c/cocos-bcx", '_blank'); }} >
+                                            <FormattedMessage id='developsq' />
+                                        </div>
                                     </div>
                                 </div>
                             </div>

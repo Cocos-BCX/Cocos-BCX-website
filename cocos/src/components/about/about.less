@@ -98,7 +98,7 @@
 
         .team_pic_box {
             margin: auto;
-            overflow: hidden;
+            height: 1100px;
             padding-bottom: 40px;
 
             .team_every {
@@ -106,6 +106,7 @@
                 width: 174px;
                 margin-left: 71px;
                 margin-top: 73px;
+                position: relative;
 
                 &:nth-child(1) {
                     margin-left: 0;
@@ -120,13 +121,16 @@
                 }
 
                 .pic_box {
+                    cursor: pointer;
                     width: 174px;
                     height: 200px;
+                    position: relative;
 
                     img {
                         width: 100%;
                         height: 100%;
                     }
+
                 }
 
                 .name {
@@ -150,6 +154,45 @@
                     text-align: center;
                     margin-top: 6px;
                 }
+
+                .people_ex_box {
+                    display: none;
+                    position: absolute;
+                    width: 252px;
+                    // height: 630px;
+                    border: 1px solid rgba(42, 217, 254, 1);
+                    box-shadow: 0px 3px 8px 0px rgba(32, 84, 133, 0.4);
+                    top: -41px;
+                    left: -38px;
+                    overflow: hidden;
+                    z-index: 50;
+                    cursor: pointer;
+
+                    a {
+                        position: absolute;
+                        right: 25px;
+                        top: 170px;
+                        width: 42px;
+                        height: 42px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    p {
+                        margin: auto;
+                        margin-top: 354px;
+                        font-size: 14px;
+                        line-height: 25px;
+                        background: #fff;
+                        padding-bottom: 20px;
+                        padding-left: 26px;
+                        padding-right: 26px;
+                        // height: 264px;
+                    }
+                }
             }
         }
     }
@@ -161,7 +204,7 @@
 
         .team_pic_box {
             margin: auto;
-            overflow: hidden;
+            height: 726px;
             padding-bottom: 20px;
 
             .team_every {
@@ -169,6 +212,7 @@
                 width: 174px;
                 margin-left: 71px;
                 margin-top: 73px;
+                position: relative;
 
                 &:nth-child(1) {
                     margin-left: 0;
@@ -197,6 +241,32 @@
                     margin: auto;
                     text-align: center;
                     margin-top: 20px;
+                }
+
+                .people_ex_two {
+                    display: none;
+                    position: absolute;
+                    width: 252px;
+                    // height: 630px;
+                    border: 1px solid rgba(42, 217, 254, 1);
+                    box-shadow: 0px 3px 8px 0px rgba(32, 84, 133, 0.4);
+                    top: -41px;
+                    left: -38px;
+                    overflow: hidden;
+                    z-index: 50;
+                    cursor: pointer;
+
+                    p {
+                        margin: auto;
+                        margin-top: 354px;
+                        font-size: 14px;
+                        line-height: 25px;
+                        background: #fff;
+                        padding-bottom: 20px;
+                        padding-left: 26px;
+                        padding-right: 26px;
+                        // height: 264px;
+                    }
                 }
 
                 .ex {

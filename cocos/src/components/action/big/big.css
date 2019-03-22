@@ -44,7 +44,6 @@
 }
 .big .news_til_box .choose_year {
   position: absolute;
-  height: 82px;
   right: 6px;
   top: 12px;
   text-align: center;
@@ -69,9 +68,13 @@
 .big .news_til_box .choose_year .sy span {
   display: block;
   transform: skewX(-20deg);
-  margin-left: 8px;
+  background: url('../../../images/xx.png') 60px no-repeat;
+  background-size: 8px 8px ;
+  text-align: left;
+  padding-left: 20px;
 }
 .big .news_til_box .choose_year .ey {
+  display: none;
   width: 79px;
   height: 28px;
   border: 1px solid #dddddd;
@@ -82,6 +85,7 @@
   opacity: .8;
 }
 .big .news_til_box .choose_year .ny {
+  display: none;
   width: 79px;
   height: 28px;
   border: 1px solid #dddddd;

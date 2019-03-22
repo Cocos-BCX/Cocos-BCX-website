@@ -9,6 +9,7 @@
   margin: auto;
 }
 .develop .dev_box .dev_m {
+  display: block;
   width: 6.64rem;
   height: 3.9rem;
   background: rgba(226, 226, 226, 0.22);
@@ -16,6 +17,7 @@
   margin: auto;
   margin-top: .5rem;
   overflow: hidden;
+  color: #000;
 }
 .develop .dev_box .dev_m .dev_img {
   width: 3.06rem;
@@ -55,7 +57,7 @@
   margin-top: .18rem;
   overflow: hidden;
 }
-.develop .dev_box .dev_m .dev_main a {
+.develop .dev_box .dev_m .dev_main .dev_go {
   display: block;
   margin-top: .33rem;
   width: 1.2rem;
@@ -64,12 +66,12 @@
   height: .41rem;
   margin-left: 1.56rem;
 }
-.develop .dev_box .dev_m .dev_main a div {
-  font-size: 29px;
+.develop .dev_box .dev_m .dev_main .dev_go div {
+  font-size: .29rem;
   font-family: FjallaOne;
   font-weight: 400;
   color: #ffffff;
-  line-height: 50px;
+  line-height: .41rem;
   text-align: center;
   transform: skewX(22deg);
 }

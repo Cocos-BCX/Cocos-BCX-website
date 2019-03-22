@@ -7,6 +7,7 @@ export default class Big extends Component {
     constructor() {
         super();
         this.state = {
+            year:'2018',
             s1action: false,
             s2action: false,
             s3action: false,
@@ -66,22 +67,39 @@ export default class Big extends Component {
 
         }
     }
+    showYbtn=()=>{
+        this.sbtn.style.display='block';
+        this.ebtn.style.display='block';
+        this.nbtn.style.display='block';
+    }
     //点击2017
     cliclSeven = () => {
         this.eight.style.display = 'none'
         this.seven.style.display = 'block'
         this.nine.style.display = 'none'
+        this.sbtn.style.display='none';
+        this.ebtn.style.display='none';
+        this.nbtn.style.display='none';
+        this.setState({year:'2017'})
     }
     //点击2018
     cliclEight = () => {
         this.eight.style.display = 'block'
         this.seven.style.display = 'none'
         this.nine.style.display = 'none'
+        this.sbtn.style.display='none';
+        this.ebtn.style.display='none';
+        this.nbtn.style.display='none';
+        this.setState({year:'2018'})
     }
     cliclNine = () => {
         this.eight.style.display = 'none'
         this.seven.style.display = 'none'
         this.nine.style.display = 'block'
+        this.sbtn.style.display='none';
+        this.ebtn.style.display='none';
+        this.nbtn.style.display='none';
+        this.setState({year:'2019'})
     }
     //收起/打开s1
     s1action = () => {
@@ -146,9 +164,10 @@ export default class Big extends Component {
                     </div>
                     <div className="news_til_mask"></div>
                     <div className='choose_year'>
-                        <div className='sy' onClick={this.cliclSeven}><span>2017</span></div>
-                        <div className='ey' onClick={this.cliclEight}>2018</div>
-                        <div className='ny' onClick={this.cliclNine}>2019</div>
+                        <div className='sy' onClick={this.showYbtn}><span>{this.state.year}</span></div>
+                        <div className='ey' onClick={this.cliclSeven} ref={(x) => { this.sbtn = x }}><span>2017</span></div>
+                        <div className='ey' onClick={this.cliclEight} ref={(x) => { this.ebtn = x }}>2018</div>
+                        <div className='ny' onClick={this.cliclNine} ref={(x) => { this.nbtn = x }}>2019</div>
                     </div>
                 </div>
                 <div style={{ display: 'block' }} ref={(x) => { this.eight = x }}>
@@ -268,8 +287,8 @@ export default class Big extends Component {
                             <div className='s1_content rt' style={{ height: 'auto' }} >
                                 {this.state.ns1.map((item, index) => {
                                     return <div className='s1_list s3_list' style={{ marginBottom: 'auto' }} key={index}>
-                                        <div className='s1_time lt' style={{width:'160px'}}>{item.date}</div>
-                                        <div className='s1_text lt' style={{width:'828px'}}><FormattedMessage id={item.til} /></div>
+                                        <div className='s1_time lt' style={{ width: '160px' }}>{item.date}</div>
+                                        <div className='s1_text lt' style={{ width: '828px' }}><FormattedMessage id={item.til} /></div>
                                     </div>
                                 })}
                             </div>

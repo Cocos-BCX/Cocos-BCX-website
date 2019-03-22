@@ -29,7 +29,7 @@ class App extends Component {
   render() {
     return (
         <IntlProvider locale={navigator.language} messages={chooseLocale()}>
-          <div className="App">
+          <div className="App" style={{fontFamily:'PingFangSC-Regular, sans-serif'}}>
             <Routermy/>
           </div>
         </IntlProvider>

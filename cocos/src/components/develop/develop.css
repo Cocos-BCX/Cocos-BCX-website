@@ -19,6 +19,7 @@
   margin: auto;
   margin-top: 90px;
   overflow: hidden;
+  color: #000;
 }
 .develop .dev_box .dev_m .dev_img {
   width: 286px;
@@ -59,7 +60,7 @@
   line-height: 36px;
   margin-top: 20px;
 }
-.develop .dev_box .dev_m .dev_main a {
+.develop .dev_box .dev_m .dev_main .dev_go {
   display: block;
   margin-top: 46px;
   width: 155px;
@@ -68,7 +69,7 @@
   height: 50px;
   margin-left: 538px;
 }
-.develop .dev_box .dev_m .dev_main a div {
+.develop .dev_box .dev_m .dev_main .dev_go div {
   font-size: 29px;
   font-family: FjallaOne;
   font-weight: 400;

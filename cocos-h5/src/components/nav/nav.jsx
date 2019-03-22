@@ -47,9 +47,6 @@ export default class Nav extends Component {
         e.nativeEvent.stopImmediatePropagation();
     }
 
-    componentWillMount() {
-
-    }
     closeLang = () => {
         document.addEventListener('click', () => {
             if (this.langBox) {
@@ -68,7 +65,7 @@ export default class Nav extends Component {
                 <div className='nav_box'>
                     <div className='lang_box lt'
                         onClick={(e) => { this.langBox.style.display = 'block'; this.stopImmediate(e) }}>
-                        <div className='lang'>中文</div>
+                        <div className='lang'>{lang === 'en' ? 'English' : '中文'}</div>
                         <div className='choose_lang_box' ref={(x) => { this.langBox = x }}>
                             <div className='chinese' onClick={this.chooseCH}>中文</div>
                             <div className='english' onClick={this.chooseEN}>English</div>
@@ -89,11 +86,20 @@ export default class Nav extends Component {
                                 <FormattedMessage id='develop' />
                             </NavLink>
 
-                            <div className='dev_a navBox' onClick={(e) => { this.stopImmediate(e); window.open("https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA", '_blank'); }}><FormattedMessage id='developPlan' /></div>
-                            <div className='dev_a navBox' onClick={(e) => { this.stopImmediate(e); window.open("https://www.cocosbcx.io/", '_blank'); }} ><FormattedMessage id='developApi' /></div>
-                            <div className='dev_a navBox' onClick={(e) => { this.stopImmediate(e); window.open("https://discuss.cocos2d-x.org/c/cocos-bcx", '_blank'); }} ><FormattedMessage id='developsq' /></div>
+                            <div className='dev_a navBox'
+                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7', '_blank'); }}>
+                                <FormattedMessage id='developPlan' />
+                            </div>
+                            <div className='dev_a navBox'
+                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://dev.cocosbcx.io" : 'https://doc.cocosbcx.io', '_blank'); }} >
+                                <FormattedMessage id='developApi' />
+                            </div>
+                            <div className='dev_a navBox'
+                                onClick={(e) => { this.stopImmediate(e); window.open("https://discuss.cocos2d-x.org/c/cocos-bcx", '_blank'); }} >
+                                <FormattedMessage id='developsq' />
+                            </div>
 
-                            <a href={lang === 'zh' ? " https://bcx.cocos.com" : ' https://bcx.cocos.com/en'} rel="noopener noreferrer" className='nav_browser_click navBox' target='_blank'><FormattedMessage id='jili' /></a>
+                            <a href={lang === 'zh' ? "https://bcx.cocos.com" : 'https://bcx.cocos.com/en'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'><FormattedMessage id='jili' /></a>
 
                             <NavLink to="/product" exact={true} activeClassName="active"
                                 className='nav_st_click navBox' ><FormattedMessage id='stproduct' />

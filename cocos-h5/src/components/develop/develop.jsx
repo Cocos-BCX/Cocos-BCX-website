@@ -14,13 +14,14 @@ export default class Develop extends Component {
         }
     }
     render() {
+        let lang = localStorage.getItem('lang_type');
         return (
             <div className='develop'>
                 <div className="banner_box">
                     <Nav></Nav>
                 </div>
                 <div className='dev_box'>
-                    <div className='dev_m'>
+                <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7'} target="_blank" rel="noopener noreferrer" className='dev_m'>
                         <div className='dev_img lt'>
                             <img src={dev1} alt="" />
                         </div>
@@ -29,12 +30,12 @@ export default class Develop extends Component {
                                 <h4><FormattedMessage id='developPlan' /></h4>
                             </div>
                             <p><FormattedMessage id='devjh' /></p>
-                            <a href="https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA" target="_blank" rel="noopener noreferrer">
+                            <div className='dev_go'>
                                 <div>GO</div>
-                            </a>
+                            </div>
                         </div>
-                    </div>
-                    <div className='dev_m'>
+                    </a>
+                    <a href={lang === 'zh' ? "https://dev.cocosbcx.io" : 'https://doc.cocosbcx.io'} target="_blank" rel="noopener noreferrer" className='dev_m'>
                         <div className='dev_img lt'>
                             <img src={dev2} alt="" />
                         </div>
@@ -43,12 +44,12 @@ export default class Develop extends Component {
                                 <h4><FormattedMessage id='developApi' /></h4>
                             </div>
                             <p><FormattedMessage id='devwd' /></p>
-                            <a href="https://www.cocosbcx.io/" target="_blank" rel="noopener noreferrer">
+                            <div className='dev_go'>
                                 <div>GO</div>
-                            </a>
+                            </div>
                         </div>
-                    </div>
-                    <div className='dev_m'>
+                    </a>
+                    <a href="https://forum.cocos.com/c/bcx" target="_blank" rel="noopener noreferrer" className='dev_m'>
                         <div className='dev_img lt'>
                             <img src={dev3} alt="" />
                         </div>
@@ -57,11 +58,11 @@ export default class Develop extends Component {
                                 <h4><FormattedMessage id='developsq' /></h4>
                             </div>
                             <p><FormattedMessage id='devsq' /></p>
-                            <a href="https://forum.cocos.com/c/bcx" target="_blank" rel="noopener noreferrer">
+                            <div className='dev_go'>
                                 <div>GO</div>
-                            </a>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         );
