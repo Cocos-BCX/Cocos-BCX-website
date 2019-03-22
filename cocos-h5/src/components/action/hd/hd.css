@@ -1,14 +1,10 @@
-.hd .hd_for {
-  margin-bottom: 70px;
-}
 .hd .hd_for .hd_box {
-  margin-left: 139px;
   overflow: hidden;
-  margin-top: 45px;
+  margin-top: .35rem;
 }
 .hd .hd_for .hd_box .hd_every {
-  width: 307px;
-  height: 131px;
+  width: 3.07rem;
+  height: 1.31rem;
   background: #ffffff;
   border: 1px solid #e2e2e2;
   margin-left: 48px;
@@ -17,36 +13,30 @@
   margin-left: 0;
 }
 .hd .hd_for .hd_box .hd_every .every_til {
-  width: 246px;
+  width: 2.46rem;
   margin: auto;
-  height: 50px;
-  margin-top: 23px;
-  font-size: 18px;
-  font-family: PingFang-SC-Regular;
-  font-weight: 400;
+  height: .55rem;
+  margin-top: .23rem;
+  font-size: .18rem;
   color: #585858;
-  line-height: 25px;
   overflow: hidden;
 }
 .hd .hd_for .hd_box .hd_every .every_b {
-  margin-top: 15px;
+  margin-top: .1rem;
   overflow: hidden;
 }
 .hd .hd_for .hd_box .hd_every .every_b .e_address {
-  height: 29px;
+  height: .29rem;
   background: #585858;
   transform: skewX(-20deg);
-  margin-left: 30px;
+  margin-left: .3rem;
 }
 .hd .hd_for .hd_box .hd_every .every_b .e_address p {
-  width: 130px;
-  padding: 0 20px;
-  font-size: 18px;
-  font-family: PingFang-SC-Regular;
-  font-weight: 400;
+  padding: 0 .2rem;
+  font-size: .18rem;
   color: #ffffff;
-  line-height: 29px;
   transform: skewX(20deg);
+  line-height: .29rem;
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -54,13 +44,13 @@
   box-sizing: border-box;
 }
 .hd .hd_for .hd_box .hd_every .every_b .e_date {
-  height: 29px;
-  margin-right: 35px;
-  font-size: 18px;
+  height: .29rem;
+  margin-right: .35rem;
+  font-size: .18rem;
   font-family: PingFang-SC-Regular;
   font-weight: 400;
   color: #787878;
-  line-height: 29px;
+  line-height: .29rem;
 }
 .hd .hd_for .yg_box {
   margin-top: 16px;
