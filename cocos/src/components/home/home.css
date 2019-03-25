@@ -74,7 +74,6 @@
   font-size: 20px;
   color: #000000;
   line-height: 38px;
-  font-family: PingFangSC-Regular, sans-serif;
 }
 .explane .fenge {
   display: block;
@@ -140,7 +139,6 @@
 }
 .news_box .news_til_box .news_til h3 {
   transform: skewX(20deg);
-  font-family: FjallaOne;
   letter-spacing: 1px;
   font-size: 26px;
   color: #ffffff;
@@ -178,7 +176,6 @@
 .news_box .news_til_box .news_til_more div {
   transform: skewX(-10deg);
   font-size: 11px;
-  font-family: MyriadPro-Regular;
   font-weight: 400;
   color: #aaaaaa;
   line-height: 28px;
@@ -232,7 +229,6 @@
 }
 .news_box .news_main .news_top .news_top_box .news_pic .news_top_til div h5 {
   font-size: 20px;
-  font-family: FjallaOne;
   font-weight: 350;
   color: #ffffff;
   line-height: 50px;
@@ -247,7 +243,6 @@
 .news_box .news_main .news_top .news_top_box .news_top_content {
   margin-top: 56px;
   font-size: 13px;
-  font-family: Roboto-Light;
   font-weight: 300;
   color: #878787;
   line-height: 17px;
@@ -299,13 +294,12 @@
   transform: skewX(12deg);
 }
 .news_box .news_main .news_bottom li a .img_box_text div h5 {
-  margin-top: 20px;
+  margin-top: 12px;
   margin-left: 20px;
   font-size: 17px;
-  font-family: FjallaOne;
   font-weight: 400;
   color: #666666;
-  line-height: 20px;
+  line-height: 24px;
   transform: translate3d(0, 0, 0);
 }
 .system {
@@ -330,7 +324,6 @@
 .system .system_til_box .sys_til_our h4 {
   transform: skewX(22deg);
   font-size: 28px;
-  font-family: FjallaOne;
   font-weight: 400;
   color: #ffffff;
   line-height: 60px;
@@ -403,7 +396,6 @@
 .system .sys_img .sys_img_box p {
   margin-top: 28px;
   font-size: 16px;
-  font-family: HiraginoSansGB-W6;
   font-weight: normal;
   color: #ffffff;
   line-height: 17px;
@@ -431,7 +423,6 @@
 }
 .map .news_til_box .news_til h3 {
   transform: skewX(20deg);
-  font-family: FjallaOne;
   letter-spacing: 1px;
   font-size: 26px;
   color: #ffffff;
@@ -469,7 +460,6 @@
 .map .news_til_box .news_til_more div {
   transform: skewX(-10deg);
   font-size: 11px;
-  font-family: MyriadPro-Regular;
   font-weight: 400;
   color: #aaaaaa;
   line-height: 28px;
@@ -495,7 +485,6 @@
 }
 .map .map_main_box .map_s_box p {
   font-size: 12px;
-  font-family: PingFang-SC-Regular;
   font-weight: 400;
   color: #2f2f2f;
   line-height: 25px;
@@ -503,7 +492,6 @@
 .map .map_main_box .map_s_box h5 {
   position: absolute;
   font-size: 20px;
-  font-family: HiraginoSansGB-W6;
   font-weight: normal;
   color: #202020;
   right: 13px;
@@ -527,7 +515,6 @@
   text-align: center;
   margin-top: 12px;
   font-size: 16px;
-  font-family: HiraginoSansGB-W6;
   font-weight: normal;
   color: #202020;
 }
@@ -585,7 +572,6 @@
 .hezuo .hezuo_box .hezuo_head .head_til .head_til_box {
   transform: skewX(25deg);
   font-size: 30px;
-  font-family: HiraginoSansGB-W6;
   font-weight: normal;
   color: #ffffff;
   line-height: 46px;
@@ -646,14 +632,12 @@
 }
 .hezuo .hezuo_box .hezuo_sm h6 {
   font-size: 20px;
-  font-family: MyriadPro-Regular;
   font-weight: bold;
   color: #2ad9fe;
 }
 .hezuo .hezuo_box .hezuo_sm p {
   margin-top: 21px;
   font-size: 13px;
-  font-family: HiraginoSansGB-W3;
   font-weight: normal;
   color: #ffffff;
   opacity: 0.44;

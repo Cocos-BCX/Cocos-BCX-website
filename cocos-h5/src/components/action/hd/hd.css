@@ -47,7 +47,6 @@
   height: .29rem;
   margin-right: .35rem;
   font-size: .18rem;
-  font-family: PingFang-SC-Regular;
   font-weight: 400;
   color: #787878;
   line-height: .29rem;
@@ -67,7 +66,6 @@
   display: block;
   transform: skewX(25deg);
   font-size: .16rem;
-  font-family: PingFang-SC-Regular;
   font-weight: 400;
   color: #ffffff;
   line-height: .29rem;
@@ -78,7 +76,6 @@
   overflow: hidden;
   color: #2AD9FE;
   font-size: .26rem;
-  font-family: MyriadPro-Regular;
   line-height: .29rem;
   height: .29rem;
 }
@@ -95,7 +92,6 @@
   overflow: hidden;
   color: #2AD9FE;
   font-size: .26rem;
-  font-family: MyriadPro-Regular;
   line-height: .29rem;
   height: .29rem;
 }
@@ -128,7 +124,6 @@
 }
 .hd .hd_list_box .hd_list_e .e_text_box h5 {
   font-size: .24rem;
-  font-family: PingFang-SC-Bold;
   height: .65rem;
   color: #323232;
   overflow: hidden;
@@ -137,7 +132,6 @@
   height: .42rem;
   margin-top: .1rem;
   font-size: .18rem;
-  font-family: PingFang-SC-Regular;
   font-weight: 400;
   color: #323232;
   line-height: .25rem;
@@ -152,7 +146,6 @@
   border-radius: 3px;
   margin-top: .24rem;
   font-size: .18rem;
-  font-family: PingFang-SC-Regular;
   font-weight: 400;
   color: #ffffff;
   line-height: .37rem;
@@ -161,7 +154,6 @@
 .hd .hd_list_box .hd_list_e .e_text_box .e_date {
   margin-top: .24rem;
   font-size: .18rem;
-  font-family: PingFang-SC-Regular;
   font-weight: 400;
   color: #787878;
   line-height: .37rem;

@@ -18,7 +18,6 @@
   margin-right: 171px;
   color: #fff;
   font-size: 12px;
-  font-family: PingFang-SC-Regular;
   line-height: 25px;
   text-align: center;
 }
@@ -37,7 +36,6 @@
 }
 .about .news_til_box .news_til h3 {
   transform: skewX(20deg);
-  font-family: FjallaOne;
   letter-spacing: 1px;
   font-size: 26px;
   color: #ffffff;
@@ -112,7 +110,6 @@
 }
 .about .team_box .team_pic_box .team_every .name {
   font-size: 22px;
-  font-family: HiraginoSansGB-W3;
   font-weight: normal;
   color: #000000;
   line-height: 40px;
@@ -122,7 +119,6 @@
 }
 .about .team_box .team_pic_box .team_every .ex {
   font-size: 18px;
-  font-family: HiraginoSansGB-W3;
   font-weight: normal;
   color: #767676;
   margin: auto;
@@ -195,7 +191,6 @@
 }
 .about .adviser_box .team_pic_box .team_every .name {
   font-size: 22px;
-  font-family: HiraginoSansGB-W3;
   font-weight: normal;
   color: #000000;
   line-height: 40px;
@@ -227,7 +222,6 @@
 }
 .about .adviser_box .team_pic_box .team_every .ex {
   font-size: 18px;
-  font-family: HiraginoSansGB-W3;
   font-weight: normal;
   color: #767676;
   line-height: 40px;

@@ -18,7 +18,6 @@
 }
 .big .news_til_box .news_til h3 {
   transform: skewX(25deg);
-  font-family: FjallaOne;
   letter-spacing: 1px;
   font-size: 26px;
   color: #ffffff;
@@ -49,7 +48,6 @@
   text-align: center;
   background: #fff;
   font-size: 11px;
-  font-family: PingFang-SC-Regular;
   font-weight: 400;
   color: #aaaaaa;
   cursor: pointer;
@@ -107,7 +105,6 @@
   background: #2ad9fe;
   border-radius: 3px;
   font-size: 18px;
-  font-family: PingFang-SC-Regular;
   font-weight: 400;
   color: #ffffff;
   line-height: 37px;
@@ -157,7 +154,6 @@
   background-size: 20px 20px;
   padding-left: 28px;
   font-size: 16px;
-  font-family: PingFang-SC-Regular;
   font-weight: 400;
   color: #787878;
   box-sizing: border-box;
@@ -169,7 +165,6 @@
   padding: 22px 30px 30px 30px;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: PingFang-SC-Regular;
   font-weight: 400;
   color: #323232;
   line-height: 26px;

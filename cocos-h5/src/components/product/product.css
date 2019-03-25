@@ -53,7 +53,6 @@
 }
 .product .dev_list_box .dev_game .news_til_box .news_til h3 {
   transform: skewX(20deg);
-  font-family: FjallaOne;
   letter-spacing: 1px;
   font-size: .26rem;
   color: #ffffff;
@@ -98,7 +97,6 @@
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box h4 {
   font-size: .26rem;
-  font-family: PingFang-SC-Bold;
   font-weight: bold;
   color: #696969;
 }
@@ -108,7 +106,6 @@
   background-size: .15rem .19rem;
   padding-left: .2rem;
   font-size: .2rem;
-  font-family: PingFang-SC-Regular;
   font-weight: 400;
   color: #696969;
   line-height: 20px;
@@ -118,7 +115,6 @@
   height: 1.63rem;
   margin-top: .3rem;
   font-size: .2rem;
-  font-family: HYQiHeiX1-CEW;
   font-weight: 300;
   line-height: .27rem;
   position: relative;

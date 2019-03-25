@@ -46,7 +46,6 @@
 .develop .dev_box .dev_m .dev_main .dev_main_til h4 {
   transform: skewX(22deg);
   font-size: 25px;
-  font-family: PingFang-SC-Bold;
   font-weight: bold;
   color: #ffffff;
   line-height: 54px;
@@ -71,7 +70,6 @@
 }
 .develop .dev_box .dev_m .dev_main .dev_go div {
   font-size: 29px;
-  font-family: FjallaOne;
   font-weight: 400;
   color: #ffffff;
   line-height: 50px;

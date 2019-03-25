@@ -17,7 +17,6 @@
 }
 .new .news_til_box .news_til h3 {
   transform: skewX(20deg);
-  font-family: FjallaOne;
   letter-spacing: 2px;
   font-size: .26rem;
   color: #ffffff;
@@ -55,7 +54,6 @@
 .new .news_til_box .news_til_more div {
   flex: 1;
   font-size: .15rem;
-  font-family: MyriadPro-Regular;
   font-weight: 400;
   color: #aaaaaa;
   line-height: .44rem;
@@ -99,7 +97,6 @@
   height: .75rem;
   padding: .2rem .15rem 0 .15rem;
   font-size: .2rem;
-  font-family: PingFang-SC-Regular;
   font-weight: 400;
   color: #323232;
   line-height: .25rem;
@@ -110,7 +107,6 @@
   overflow: hidden;
   margin-top: .3rem;
   font-size: .16rem;
-  font-family: PingFang-SC-Regular;
   font-weight: 400;
   color: #787878;
 }

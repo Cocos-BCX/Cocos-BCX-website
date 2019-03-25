@@ -35,7 +35,6 @@
 }
 .footer .footer_box .footer_con .footer_con_l .f_til {
   font-size: .2rem;
-  font-family: FjallaOne;
   color: #676767;
 }
 .footer .footer_box .footer_con .footer_con_l .f_line {
@@ -58,7 +57,6 @@
   float: left;
   margin-left: .09rem;
   font-size: .17rem;
-  font-family: MyriadPro-Regular;
   color: #ffffff;
   line-height: .15rem;
 }
@@ -78,7 +76,6 @@
   float: left;
   font-size: .17rem;
   margin-left: .12rem;
-  font-family: MyriadPro-Regular;
   font-weight: 400;
   color: #ffffff;
   line-height: .25rem;
@@ -91,7 +88,6 @@
 }
 .footer .footer_box .footer_con .footer_con_r .r_til {
   font-size: .2rem;
-  font-family: FjallaOne;
   color: #676767;
 }
 .footer .footer_box .footer_con .footer_con_r .r_line {
@@ -117,7 +113,6 @@
   height: .4rem;
   outline: none;
   font-size: .17rem;
-  font-family: MyriadPro-Regular;
   font-weight: 400;
   box-sizing: border-box;
   padding-left: .3rem;
@@ -131,7 +126,6 @@
   height: .4rem;
   line-height: .4rem;
   font-size: .17rem;
-  font-family: MyriadPro-Regular;
   font-weight: 400;
   color: #aaaaaa;
   width: 100%;
@@ -161,7 +155,6 @@
   margin: auto;
   transform: skewX(25deg);
   font-size: .12rem;
-  font-family: FjallaOne;
   font-weight: 400;
   color: #fff;
   line-height: .42rem;
@@ -215,7 +208,6 @@
 }
 .footer .footer_box .footer_bottom {
   font-size: .22rem;
-  font-family: HiraginoSansGB-W3;
   font-weight: normal;
   color: #ffffff;
   opacity: 0.34;

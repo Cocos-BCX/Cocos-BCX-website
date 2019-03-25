@@ -37,7 +37,6 @@
   text-align: center;
   font-size: .26rem;
   color: #676767;
-  font-family: HYQiHeiX1-FEW;
 }
 .explane .expplane_main {
   width: 6.53rem;
@@ -51,7 +50,6 @@
 .explane .expplane_main ul li {
   list-style: none;
   font-size: .2rem;
-  font-family: HYQiHeiX1-CEW;
   color: #000000;
   line-height: .35rem;
 }
@@ -97,7 +95,6 @@
 }
 .explane .explane_img .ex_l_box .ex_l_r .ex_img_til {
   font-size: .18rem;
-  font-family: HiraginoSansGB-W6;
   color: #767676;
   text-align: left;
   height: .4rem;
@@ -105,7 +102,6 @@
 .explane .explane_img .ex_l_box .ex_l_r .ex_img_text {
   margin-top: .23rem;
   font-size: .14rem;
-  font-family: HiraginoSansGB-W3;
   color: #2f2f2f;
   line-height: .24rem;
 }
@@ -128,7 +124,6 @@
 }
 .news_box .news_til_box .news_til h3 {
   transform: skewX(20deg);
-  font-family: FjallaOne;
   letter-spacing: 2px;
   font-size: .26rem;
   color: #ffffff;
@@ -164,7 +159,6 @@
 .news_box .news_til_box .news_til_more div {
   transform: skewX(-10deg);
   font-size: .15rem;
-  font-family: MyriadPro-Regular;
   font-weight: 400;
   color: #aaaaaa;
   line-height: .39rem;
@@ -204,7 +198,6 @@
 }
 .news_box .news_main .news_top .news_top_box .news_pic .news_top_til div h5 {
   font-size: .1rem;
-  font-family: FjallaOne;
   font-weight: 350;
   color: #ffffff;
   line-height: .25rem;
@@ -217,7 +210,6 @@
 .news_box .news_main .news_top .news_top_box .news_top_content {
   margin-left: .33rem;
   font-size: .16rem;
-  font-family: Roboto-Light;
   color: #878787;
   line-height: .28rem;
   width: 4.2rem;
@@ -266,7 +258,6 @@
   margin-left: .14rem;
   margin-right: .08rem;
   font-size: .14rem;
-  font-family: FjallaOne;
   font-weight: 400;
   color: #666666;
   line-height: .17rem;
@@ -292,7 +283,6 @@
 .system .system_til_box .sys_til_our h4 {
   transform: skewX(22deg);
   font-size: .27rem;
-  font-family: FjallaOne;
   font-weight: 400;
   color: #ffffff;
   line-height: .53rem;
@@ -300,7 +290,6 @@
 }
 .system .system_til_box .sys_til_ex {
   font-size: .14rem;
-  font-family: HiraginoSansGB-W3;
   font-weight: normal;
   color: #ffffff;
   margin-top: .19rem;
@@ -379,7 +368,6 @@
 .system .sys_img .sys_img_box p {
   margin-top: .16rem;
   font-size: .09rem;
-  font-family: HiraginoSansGB-W6;
   font-weight: normal;
   color: #ffffff;
   text-align: center;
@@ -405,7 +393,6 @@
 }
 .map .news_til_box .news_til h3 {
   transform: skewX(20deg);
-  font-family: FjallaOne;
   letter-spacing: 2px;
   font-size: .26rem;
   color: #ffffff;
@@ -441,7 +428,6 @@
 .map .news_til_box .news_til_more div {
   transform: skewX(-10deg);
   font-size: .15rem;
-  font-family: MyriadPro-Regular;
   font-weight: 400;
   color: #aaaaaa;
   line-height: .39rem;
@@ -462,7 +448,6 @@
 }
 .map .map_main_box .map_s_box h5 {
   font-size: .16rem;
-  font-family: HiraginoSansGB-W6;
   font-weight: normal;
   color: #202020;
   line-height: 1.18rem;
@@ -472,7 +457,6 @@
   height: 1.18rem;
   margin-left: .73rem;
   font-size: .16rem;
-  font-family: PingFang-SC-Regular;
   font-weight: 400;
   color: #2f2f2f;
   line-height: .3rem;
@@ -547,7 +531,6 @@
   transform: skewX(25deg);
   font-size: .18rem;
   height: .28rem;
-  font-family: HiraginoSansGB-W6;
   font-weight: normal;
   color: #ffffff;
   line-height: .28rem;
@@ -609,14 +592,12 @@
 }
 .hezuo .hezuo_box .hezuo_sm h6 {
   font-size: .2rem;
-  font-family: MyriadPro-Regular;
   font-weight: bold;
   color: #2ad9fe;
 }
 .hezuo .hezuo_box .hezuo_sm p {
   margin-top: .21rem;
   font-size: .12rem;
-  font-family: HiraginoSansGB-W3;
   font-weight: normal;
   color: #ffffff;
   opacity: 0.44;
