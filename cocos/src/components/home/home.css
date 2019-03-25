@@ -605,17 +605,18 @@
 .hezuo .hezuo_box .hezuo_com .hezuo_top {
   overflow: hidden;
 }
-.hezuo .hezuo_box .hezuo_com .hezuo_top div {
+.hezuo .hezuo_box .hezuo_com .hezuo_top a {
+  display: block;
   width: 202px;
   height: 139px;
   margin-left: 34px;
   margin-top: 35px;
   cursor: pointer;
 }
-.hezuo .hezuo_box .hezuo_com .hezuo_top div:nth-child(1) {
+.hezuo .hezuo_box .hezuo_com .hezuo_top a:nth-child(1) {
   margin-left: 0;
 }
-.hezuo .hezuo_box .hezuo_com .hezuo_top div:nth-child(6) {
+.hezuo .hezuo_box .hezuo_com .hezuo_top a:nth-child(6) {
   margin-left: 0;
 }
 .hezuo .hezuo_box .hezuo_com .hezuo_middle {
@@ -627,14 +628,15 @@
 .hezuo .hezuo_box .hezuo_com .hezuo_bottom {
   overflow: hidden;
 }
-.hezuo .hezuo_box .hezuo_com .hezuo_bottom div {
+.hezuo .hezuo_box .hezuo_com .hezuo_bottom a {
+  display: block;
   width: 202px;
   height: 139px;
   margin-left: 34px;
   margin-top: 23px;
   cursor: pointer;
 }
-.hezuo .hezuo_box .hezuo_com .hezuo_bottom div:nth-child(1) {
+.hezuo .hezuo_box .hezuo_com .hezuo_bottom a:nth-child(1) {
   margin-left: 0;
 }
 .hezuo .hezuo_box .hezuo_sm {

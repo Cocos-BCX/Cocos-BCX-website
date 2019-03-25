@@ -48,14 +48,14 @@ import w14 from '../../images/white(14).png'
 import jia from '../../images/jia.png'
 import close from '../../images/close.png'
 import dline from '../../images/dline.png'
-import './home.css'
+import './home.css' 
 
 export default class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            black1: [{ b: b, w: w }, { b: b1, w: w1 }, { b: b2, w: w2 }, { b: b3, w: w3 }, { b: b4, w: w4 }, { b: b5, w: w5 }, { b: b6, w: w6 }, { b: b7, w: w7 }, { b: b8, w: w8 }, { b: b9, w: w9 }],
-            black2: [{ b: b10, w: w10 }, { b: b11, w: w11 }, { b: b12, w: w12 }, { b: b13, w: w13 }, { b: b14, w: w14 }],
+            black1: [{ b: b, w: w,url:'http://www.ngc.fund/' }, { b: b1, w: w1,url:'https://labs.binance.com/' }, { b: b2, w: w2,url:'http://www.inblockchain.com/' }, { b: b3, w: w3, }, { b: b4, w: w4,url:'https://500.co/' }, { b: b5, w: w5 ,url:'https://www.blockvc.com/'}, { b: b6, w: w6,url:'https://www.okcoin.com/capital' }, { b: b7, w: w7 ,url:'http://yisucapital.com/'}, { b: b8, w: w8 ,url:'http://gs.holdings/'}, { b: b9, w: w9,url:'https://ont.io/' }],
+            black2: [{ b: b10, w: w10 ,url:'https://www.helloeos.com.cn/'}, { b: b11, w: w11,url:'https://slowmist.io/' }, { b: b12, w: w12 ,url:'https://nebulas.io/cn/'}, { b: b13, w: w13,url:'https://loomx.io/' }, { b: b14, w: w14 ,url:'https://www.imeos.one/'}],
             sysImg: [{ img: cocos1, text: 'system1' },
             { img: cocos2, text: 'system2' },
             { img: cocos3, text: 'system3' },
@@ -115,7 +115,7 @@ export default class Home extends Component {
         this.videoBox.style.transform = ' translateY(0)';
     }
     hideVideo = (e) => {
-        this.stopImmediate(e) 
+        this.stopImmediate(e)
         this.videoBox.style.transform = 'translateY(-30rem)';
     }
     //隐藏播放器
@@ -146,16 +146,17 @@ export default class Home extends Component {
         let lang = localStorage.getItem('lang_type');
         return (
             <div className='homepage_index'>
-                <div className='video_box ' onClick={(e)=>{this.hideVideo(e)}} ref={(x) => { this.videoBox = x }}>
+                <div className='video_box ' onClick={(e) => { this.hideVideo(e) }} ref={(x) => { this.videoBox = x }}>
                     <div className='video'>
                         {/* <div className='close_box' onClick={this.hideVideo}>
                             <img src={close} alt="" />
                         </div> */}
                         {
                             lang === 'en' ?
-                                <iframe type="text/html" width="1200px" height="688px" src="http://www.youtube.com/embed/KiKc3FG9Auc?autoplay=1&controls=0" frameBorder="0" ></iframe> : <iframe className='video_play' height={document.body.clientWidth * 9 / 16} width={document.body.clientWidth}
-                                    allow="autoplay; fullscreen" src='http://player.youku.com/embed/XNDA4NjA1NDAwMA=='
-                                    ref={(x) => { this.videoBox = x }} frameBorder='0' allowFullScreen></iframe>
+                                <iframe type="text/html" height={document.body.clientWidth * 9 / 16} width={document.body.clientWidth} src="https://www.youtube.com/embed/KiKc3FG9Auc?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1"  allowtransparency='yes' allow="autoplay" frameBorder="0" ></iframe> :
+                                <iframe className='video_play' height={document.body.clientWidth * 9 / 16} width={document.body.clientWidth}
+                                    allow="autoplay; fullscreen" src='http://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1'
+                                    ref={(x) => { this.videoBox = x }} frameBorder='0'allowtransparency='yes' flashvars="isAutoPlay=true" allow="autoplay" ></iframe>
                         }
                     </div>
                 </div>
@@ -305,21 +306,21 @@ export default class Home extends Component {
                         <div className='hezuo_com'>
                             <div className="hezuo_top">
                                 {this.state.black1.map((item, index) => {
-                                    return <div key={index} className='lt' style={{ background: `url(${item.b}) no-repeat center`, backgroundSize: '1.26rem .86rem' }}
+                                    return <a href={item.url} target="_blank" rel="noopener noreferrer"  key={index} className='lt' style={{ background: `url(${item.b}) no-repeat center`, backgroundSize: '1.26rem .86rem' }}
                                     /*     onMouseEnter={(e) => { e.target.style.background = `url(${item.w})no-repeat center` }}
                                         onMouseLeave={(e) => { e.target.style.background = `url(${item.b})no-repeat center` }} */
                                     >
-                                    </div>
+                                    </a>
                                 })}
                             </div>
                             <img src={jia} alt="" className="hezuo_middle" />
                             <div className="hezuo_bottom">
                                 {this.state.black2.map((item, index) => {
-                                    return <div key={index} className='lt' style={{ background: `url(${item.b}) no-repeat center`, backgroundSize: '1.26rem .86rem' }}
+                                    return <a href={item.url} target="_blank" rel="noopener noreferrer"  key={index} className='lt' style={{ background: `url(${item.b}) no-repeat center`, backgroundSize: '1.26rem .86rem' }}
                                     /* onMouseEnter={(e) => { e.target.style.background = `url(${item.w})` }}
                                     onMouseLeave={(e) => { e.target.style.background = `url(${item.b})` }} */
                                     >
-                                    </div>
+                                    </a>
                                 })}
                             </div>
                         </div>

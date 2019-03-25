@@ -24,7 +24,7 @@
   overflow: hidden;
 }
 .banner_box .play_btn {
-  margin-top: 3.61rem;
+  margin-top: 2.96rem;
   margin-left: 0.98rem;
   width: 0.64rem;
   height: 0.64rem;
@@ -569,16 +569,17 @@
   overflow: hidden;
   margin-top: .06rem;
 }
-.hezuo .hezuo_box .hezuo_com .hezuo_top div {
+.hezuo .hezuo_box .hezuo_com .hezuo_top a {
+  display: block;
   width: 1.26rem;
   height: .86rem;
   margin-left: .18rem;
   margin-top: .2rem;
 }
-.hezuo .hezuo_box .hezuo_com .hezuo_top div:nth-child(1) {
+.hezuo .hezuo_box .hezuo_com .hezuo_top a:nth-child(1) {
   margin-left: 0;
 }
-.hezuo .hezuo_box .hezuo_com .hezuo_top div:nth-child(6) {
+.hezuo .hezuo_box .hezuo_com .hezuo_top a:nth-child(6) {
   margin-left: 0;
 }
 .hezuo .hezuo_box .hezuo_com .hezuo_middle {
@@ -591,13 +592,14 @@
 .hezuo .hezuo_box .hezuo_com .hezuo_bottom {
   overflow: hidden;
 }
-.hezuo .hezuo_box .hezuo_com .hezuo_bottom div {
+.hezuo .hezuo_box .hezuo_com .hezuo_bottom a {
+  display: block;
   width: 1.26rem;
   height: .86rem;
   margin-left: .18rem;
   margin-top: .13rem;
 }
-.hezuo .hezuo_box .hezuo_com .hezuo_bottom div:nth-child(1) {
+.hezuo .hezuo_box .hezuo_com .hezuo_bottom a:nth-child(1) {
   margin-left: 0;
 }
 .hezuo .hezuo_box .hezuo_sm {
