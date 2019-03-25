@@ -2,6 +2,7 @@
   width: 1200px;
   margin: auto;
   margin-top: 15px;
+  font-size: 14px;
 }
 .nav_box .nav {
   width: 683px;
@@ -23,7 +24,7 @@
 .nav_box .nav .nav_list_box .nav_action,
 .nav_box .nav .nav_list_box .nav_browser,
 .nav_box .nav .nav_list_box .nav_about {
-  margin-left: 45px;
+  margin-left: 47px;
 }
 .nav_box .nav .nav_list_box a {
   color: #BEBEBE;
