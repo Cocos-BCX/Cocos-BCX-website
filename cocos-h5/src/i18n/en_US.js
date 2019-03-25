@@ -140,7 +140,7 @@ const en_US = {
     //动态
     a_news: 'News',
     hd: 'Events',
-    yb: 'Monthly/Bi-Weekly Report',
+    yb: 'Updates',
     big: 'Chronicles',
     zx: 'Info',
     video: 'Video',

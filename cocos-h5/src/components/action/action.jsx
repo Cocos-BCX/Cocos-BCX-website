@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { NavLink } from "react-router-dom";
-import { HashRouter as Router, Route,} from "react-router-dom";
+import { HashRouter as Router, Route, } from "react-router-dom";
 import Nav from '../nav/nav'
 import New from './new/new'
 import Hd from './hd/hd'
@@ -25,7 +25,7 @@ export default class Footer extends Component {
                             className='a_nav_new' ><FormattedMessage id='hd' />
                         </NavLink>
                         <NavLink to="/action/yb" exact={true} activeClassName="active"
-                            className={lang==='zh'?'a_nav_new':'a_nav_new a_nav_en'} ><FormattedMessage id='yb' />
+                            className='a_nav_new'><FormattedMessage id='yb' />
                         </NavLink>
                         <NavLink to="/action/big" exact={true} activeClassName="active"
                             className='a_nav_big' ><FormattedMessage id='big' />
