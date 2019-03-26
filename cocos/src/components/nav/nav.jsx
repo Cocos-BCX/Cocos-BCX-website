@@ -63,11 +63,11 @@ export default class Nav extends Component {
         e.nativeEvent.stopImmediatePropagation();
     }
     toDev = () => {
-        window.location.hash = '#/develop'
+        console.log(window.location);
+
+        window.location.hash = '/develop'
     }
-    toAbout = () => {
-        window.location.hash = '#/about'
-    }
+
     componentWillMount() {
 
     }
@@ -87,14 +87,14 @@ export default class Nav extends Component {
         return (
             <div className='nav_box' >
                 <div className="nav lt" >
-                    <div className={lang==='zh'?'nav_list_box':' nav_list_en'}>
+                    <div className={lang === 'zh' ? 'nav_list_box' : ' nav_list_en'}>
                         <div className='nav_home lt'  >
                             <NavLink to="/home" exact={true} activeClassName="active"
                                 className='nav_home_click' ><FormattedMessage id='homepage' />
                             </NavLink>
                         </div>
                         <div className='nav_develop lt' onMouseEnter={this.showDevList} onMouseLeave={this.closeDevList} >
-                            <NavLink to="/develop" exact={true} activeClassName="active"
+                            <NavLink to="/develop" activeClassName="active"
                                 className='nav_develop_click'  >
                                 <span ref={(x) => { this.devtil = x }} >
                                     <FormattedMessage id='develop' />
@@ -104,25 +104,27 @@ export default class Nav extends Component {
                                 <div className='nav_develop_more_close' ></div> :
                                 <div className='nav_develop_more' ></div>
                             }
-                            <div className='nav_develop_list' ref={(x) => { this.devListBox = x }}
-                                onClick={() => { this.toDev() }}>
-                                <div className='nav_develop_list_box' >
-                                    <div className='nav_develop_list_trans' ref={(x) => { this.devList = x }}>
-                                        <div className='dev_a'
-                                            onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7', '_blank'); }}>
-                                            <FormattedMessage id='developPlan' />
-                                        </div>
-                                        <div className='dev_a'
-                                            onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://dev.cocosbcx.io" : 'https://doc.cocosbcx.io', '_blank'); }} >
-                                            <FormattedMessage id='developApi' />
-                                        </div>
-                                        <div className='dev_a'
-                                            onClick={(e) => { this.stopImmediate(e); window.open("https://discuss.cocos2d-x.org/c/cocos-bcx", '_blank'); }} >
-                                            <FormattedMessage id='developsq' />
+                            <NavLink to="/develop" >
+                                <div className='nav_develop_list' ref={(x) => { this.devListBox = x }}
+                                  >
+                                    <div className='nav_develop_list_box' >
+                                        <div className='nav_develop_list_trans' ref={(x) => { this.devList = x }}>
+                                            <div className='dev_a'
+                                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7', '_blank'); }}>
+                                                <FormattedMessage id='developPlan' />
+                                            </div>
+                                            <div className='dev_a'
+                                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://dev.cocosbcx.io" : 'https://doc.cocosbcx.io', '_blank'); }} >
+                                                <FormattedMessage id='developApi' />
+                                            </div>
+                                            <div className='dev_a'
+                                                onClick={(e) => { this.stopImmediate(e); window.open("https://discuss.cocos2d-x.org/c/cocos-bcx", '_blank'); }} >
+                                                <FormattedMessage id='developsq' />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </NavLink>
                         </div>
                         <div className='nav_jl lt'>
                             <a href={lang === 'zh' ? "https://bcx.cocos.com" : 'https://bcx.cocos.com/en'} rel="noopener noreferrer" className='nav_browser_click' target='_blank'><FormattedMessage id='jili' /></a>

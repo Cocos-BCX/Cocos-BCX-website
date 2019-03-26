@@ -6,7 +6,7 @@ import Product from '../components/product/product'
 import Footer from '../components/footer/footer'
 import Action from '../components/action/action'
 import Nav from '../components/nav/nav'
-import { BrowserRouter as Router, Route, Redirect, } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect,Switch } from "react-router-dom";
 import './router.css'
 export default class Homepage extends Component {
     componentDidMount() {
@@ -18,7 +18,7 @@ export default class Homepage extends Component {
 
                 <div className='homepage_main'>
                     <Router>
-                        <div>
+                        <Switch>
                             {/* <Nav></Nav> */}
                             <Route path="/home" component={Home} />
                             <Route path="/develop" component={Develop} />
@@ -28,7 +28,7 @@ export default class Homepage extends Component {
                             <Route path='/'  render={() => (
                                 <Redirect to='/home' />
                             )} />
-                        </div>
+                        </Switch>
                     </Router>
                     <Footer></Footer>
                 </div>

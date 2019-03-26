@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { NavLink } from "react-router-dom";
-import { HashRouter as Router, Route,Redirect} from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 import Nav from '../nav/nav'
 import New from './new/new'
 import Hd from './hd/hd'
@@ -18,10 +18,10 @@ export default class Footer extends Component {
                 <div className='banne_n_box'>
                     <Nav></Nav>
                     <div className='a_nav'>
-                        <NavLink to="/action/news" exact={true} activeClassName="active"
+                        <NavLink to="/action/news" activeClassName="active"
                             className='a_nav_new' ><FormattedMessage id='a_news' />
                         </NavLink>
-                        <NavLink to="/action/hd" exact={true} activeClassName="active"
+                        <NavLink to="/action/hd" activeClassName="active"
                             className='a_nav_new' ><FormattedMessage id='hd' />
                         </NavLink>
                         <NavLink to="/action/yb" exact={true} activeClassName="active"
@@ -33,15 +33,15 @@ export default class Footer extends Component {
                     </div>
                 </div>
                 <Router>
-                    <div>
+                    <Switch>
                         <Route path="/action/news" component={New} />
                         <Route path="/action/hd" component={Hd} />
                         <Route path="/action/yb" component={Yb} />
                         <Route path="/action/big" component={Big} />
-                        <Route path='/action' exact render={() => (
+                        <Route path='/action' render={() => (
                             <Redirect to='/action/news' />
                         )} />
-                    </div>
+                    </Switch>
                 </Router>
             </div>
         );
