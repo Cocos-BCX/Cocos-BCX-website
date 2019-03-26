@@ -54,9 +54,9 @@ export default class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            lang:localStorage.getItem('lang_type'),
-            black1: [{ b: b, w: w,url:'http://www.ngc.fund/' }, { b: b1, w: w1,url:'https://labs.binance.com/' }, { b: b2, w: w2,url:'http://www.inblockchain.com/' }, { b: b3, w: w3, }, { b: b4, w: w4,url:'https://500.co/' }, { b: b5, w: w5 ,url:'https://www.blockvc.com/'}, { b: b6, w: w6,url:'https://www.okcoin.com/capital' }, { b: b7, w: w7 ,url:'http://yisucapital.com/'}, { b: b8, w: w8 ,url:'http://gs.holdings/'}, { b: b9, w: w9,url:'https://ont.io/' }],
-            black2: [{ b: b10, w: w10 ,url:'https://www.helloeos.com.cn/'}, { b: b11, w: w11,url:'https://slowmist.io/' }, { b: b12, w: w12 ,url:'https://nebulas.io/cn/'}, { b: b13, w: w13,url:'https://loomx.io/' }, { b: b14, w: w14 ,url:'https://www.imeos.one/'}],
+            lang: localStorage.getItem('lang_type'),
+            black1: [{ b: b, w: w, url: 'http://www.ngc.fund/' }, { b: b1, w: w1, url: 'https://labs.binance.com/' }, { b: b2, w: w2, url: 'http://www.inblockchain.com/' }, { b: b3, w: w3, }, { b: b4, w: w4, url: 'https://500.co/' }, { b: b5, w: w5, url: 'https://www.blockvc.com/' }, { b: b6, w: w6, url: 'https://www.okcoin.com/capital' }, { b: b7, w: w7, url: 'http://yisucapital.com/' }, { b: b8, w: w8, url: 'http://gs.holdings/' }, { b: b9, w: w9, url: 'https://ont.io/' }],
+            black2: [{ b: b10, w: w10, url: 'https://www.helloeos.com.cn/' }, { b: b11, w: w11, url: 'https://slowmist.io/' }, { b: b12, w: w12, url: 'https://nebulas.io/cn/' }, { b: b13, w: w13, url: 'https://loomx.io/' }, { b: b14, w: w14, url: 'https://www.imeos.one/' }],
             sysImg: [{ img: cocos1, text: 'system1' },
             { img: cocos2, text: 'system2' },
             { img: cocos3, text: 'system3' },
@@ -127,7 +127,7 @@ export default class Home extends Component {
 
     }
     hideVideo = () => {
-        if (this.state.lang=== 'en') {
+        if (this.state.lang === 'en') {
             this.youku.src = 'https://www.youtube.com/embed/KiKc3FG9Auc?autoplay=0&loop=1&playlist=EMfebeQg2Z4&muted=1'
         } else {
             this.youku.src = 'http://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=0&loop=1&playlist=EMfebeQg2Z4&muted=1'
@@ -179,9 +179,14 @@ export default class Home extends Component {
                 </div>
                 <div className='banner_box'>
                     <Nav></Nav>
-                    <div className='play_btn' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }}>
-                        <img src={play} alt="" />
-
+                    <div className='home_btn_box'>
+                        <h5>COCOS</h5>
+                        <h5>BLOCKCHAIN EXPEDITION</h5>
+                        <h6><FormattedMessage id='next' /></h6>
+                        <div className='play_btn'>
+                            <img src={play} alt="" className='lt' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
+                            <p className='lt'><FormattedMessage id='nextex' /></p>
+                        </div>
                     </div>
                 </div>
                 <div className='explane'>
@@ -292,14 +297,14 @@ export default class Home extends Component {
                     </div>
                     <div className='map_main_box'>
                         {this.state.mapList.map((item, index) => {
-                            return <div className='map_s_box lt' key={index} style={lang==='en'?{height:'180px'}:{height:'130px'}}>
+                            return <div className='map_s_box lt' key={index} style={lang === 'en' ? { height: '180px' } : { height: '130px' }}>
                                 <p><FormattedMessage id={item.til1} /></p>
                                 <p><FormattedMessage id={item.til2} /></p>
                                 {/* <h5><FormattedMessage id={item.til3} /></h5> */}
                             </div>
                         })}
                     </div>
-                 
+
                     <div className='line_box'>
                         <img src={dline} alt="" />
                         <img src={dline} alt="" />
@@ -333,7 +338,7 @@ export default class Home extends Component {
                         <div className='hezuo_com'>
                             <div className="hezuo_top">
                                 {this.state.black1.map((item, index) => {
-                                    return  <a href={item.url} rel="noopener noreferrer"  target="_blank" key={index} className='lt' style={{ background: `url(${item.b})`, }}
+                                    return <a href={item.url} rel="noopener noreferrer" target="_blank" key={index} className='lt' style={{ background: `url(${item.b})`, }}
                                         onMouseEnter={(e) => { e.target.style.background = `url(${item.w})` }}
                                         onMouseLeave={(e) => { e.target.style.background = `url(${item.b})` }}
                                     >
@@ -345,7 +350,7 @@ export default class Home extends Component {
                             </div>
                             <div className="hezuo_bottom">
                                 {this.state.black2.map((item, index) => {
-                                    return  <a href={item.url} rel="noopener noreferrer"  target="_blank" key={index} className='lt' style={{ background: `url(${item.b})`, }}
+                                    return <a href={item.url} rel="noopener noreferrer" target="_blank" key={index} className='lt' style={{ background: `url(${item.b})`, }}
                                         onMouseEnter={(e) => { e.target.style.background = `url(${item.w})` }}
                                         onMouseLeave={(e) => { e.target.style.background = `url(${item.b})` }}
                                     >

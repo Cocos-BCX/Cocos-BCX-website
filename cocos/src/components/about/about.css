@@ -239,11 +239,36 @@
 }
 .about .hezuo .hezuo_box .hezuo_imgs {
   width: 1174px;
-  height: 1220px;
   margin: auto;
   margin-top: 42px;
+  overflow: hidden;
 }
-.about .hezuo .hezuo_box .hezuo_imgs img {
+.about .hezuo .hezuo_box .hezuo_imgs div {
+  width: 202px;
+  height: 139px;
+  margin-left: 35px;
+  margin-top: 23px;
+  border: 1px solid #ECEDEF;
+  overflow: hidden;
+}
+.about .hezuo .hezuo_box .hezuo_imgs div:nth-child(5n-4) {
+  margin-left: 0;
+}
+.about .hezuo .hezuo_box .hezuo_imgs div:nth-child(29) {
+  border: 1px solid #fff!important;
+}
+.about .hezuo .hezuo_box .hezuo_imgs div:nth-child(29) img {
+  width: 800px;
+  height: 800px;
+}
+.about .hezuo .hezuo_box .hezuo_imgs div:nth-child(30) {
+  border: 1px solid #fff!important;
+}
+.about .hezuo .hezuo_box .hezuo_imgs div:nth-child(30) img {
+  width: 800px;
+  height: 800px;
+}
+.about .hezuo .hezuo_box .hezuo_imgs div img {
   width: 100%;
   height: 100%;
 }

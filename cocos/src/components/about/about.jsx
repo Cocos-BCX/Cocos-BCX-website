@@ -20,6 +20,39 @@ import p15 from '../../images/p15.png'
 import p16 from '../../images/p16.png'
 import p17 from '../../images/p17.png'
 import p18 from '../../images/p18.png'
+import i1 from '../../images/logoi1.png'
+import i2 from '../../images/logoi2.png'
+import i3 from '../../images/logoi3.png'
+import i4 from '../../images/logoi4.png'
+import i5 from '../../images/logoi5.png'
+import i6 from '../../images/logoi6.png'
+import i7 from '../../images/logoi7.png'
+import i8 from '../../images/logoi8.png'
+import i9 from '../../images/logoi9.png'
+import i10 from '../../images/logoi10.png'
+import i11 from '../../images/logoi11.png'
+import i12 from '../../images/logoi12.png'
+import i13 from '../../images/logoi13.png'
+import i14 from '../../images/logoi14.png'
+import i15 from '../../images/logoi15.png'
+import i16 from '../../images/logoi16.png'
+import i17 from '../../images/logoi17.png'
+import i18 from '../../images/logoi18.png'
+import i19 from '../../images/logoi19.png'
+import i20 from '../../images/logoi20.png'
+import i21 from '../../images/logoi21.png'
+import i22 from '../../images/logoi22.png'
+import i23 from '../../images/logoi23.png'
+import i24 from '../../images/logoi24.png'
+import i25 from '../../images/logoi25.png'
+import i26 from '../../images/logoi26.png'
+import i27 from '../../images/logoi27.png'
+import i28 from '../../images/logoi28.png'
+import i29 from '../../images/logoi29.png'
+import i30 from '../../images/logoi30.png'
+import i31 from '../../images/logoi31.png'
+import i32 from '../../images/logoi32.png'
+import i33 from '../../images/logoi33.png'
 import ly from '../../images/lingying.png'
 import hezuo from '../../images/hezuopic.png'
 import booken from '../../file/whiteBooken.pdf'
@@ -52,6 +85,43 @@ export default class About extends Component {
                 { pic: p17, ex: 'plex17', name: 'p17', position: 'fqr17' },
                 { pic: p18, ex: 'plex18', name: 'p18', position: 'fqr18' },
 
+            ],
+            img: [
+                { pic: i1 },
+                { pic: i2 },
+                { pic: i3 },
+                { pic: i4 },
+                { pic: i5 },
+                { pic: i6 },
+                { pic: i7 },
+                { pic: i8 },
+                { pic: i9 },
+                { pic: i10 },
+                { pic: i11 },
+                { pic: i12 },
+                { pic: i13 },
+                { pic: i14 },
+                { pic: i15 },
+                { pic: i16 },
+                { pic: i17 },
+                { pic: i18 },
+                { pic: i19 },
+                { pic: i20 },
+                { pic: i21 },
+                { pic: i22 },
+                { pic: i23 },
+                { pic: i24 },
+                { pic: i25 },
+                { pic: i26 },
+                { pic: i27 },
+                { pic: i28 },
+                { pic: i5 },
+                { pic: i5 },
+                { pic: i29 },
+                { pic: i30 },
+                { pic: i31 },
+                { pic: i32 },
+                { pic: i33 },
             ]
         }
     }
@@ -170,7 +240,13 @@ export default class About extends Component {
                             </div>
                         </div>
                         <div className='hezuo_imgs'>
-                            <img src={hezuo} alt="" />
+                            {
+                                this.state.img.map((item, index) => {
+                                    return <div key={index} className='lt'>
+                                        <img src={item.pic} alt="" />
+                                    </div>
+                                })
+                            }
                         </div>
                     </div>
                 </div>

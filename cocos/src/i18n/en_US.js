@@ -13,6 +13,8 @@ const en_US = {
     whiteBook: 'WHITE PAPER',
     team: 'Team & Partners',
     //首页
+    next:'Next-Gen Digital Game Economy',
+    nextex:'Cocos-BCX is committed to facilitating the development of blockchain gaming. As the platform for the next generation of digital game economy, Cocos-BCX provides a complete set of development tools, as well as an integrated ecosystem',
     explane: 'What Is Cocos-BCX?',
     exf: '‘Cocos-BCX’ , fully named ‘Cocos BlockChain Expedition’',
     exs: 'aims to create an integrated multi-platform runtime environment for games. This is achieved by providing developers with the convenience and completeness in game development, while bringing users a whole new gaming experience, unprecedented gaming status, and with all the assets obtained in the games being wholly owned by the users.',

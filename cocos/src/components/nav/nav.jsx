@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { NavLink } from "react-router-dom";
+import logo from '../../images/COCOS_logo.png'
 import './nav.css'
 
 export default class Nav extends Component {
@@ -86,6 +87,10 @@ export default class Nav extends Component {
         let lang = localStorage.getItem('lang_type');
         return (
             <div className='nav_box' >
+                <div className='nav_logo_box'>
+                    <img src={logo} alt="" />
+                </div>
+                <div className='nav_line'></div>
                 <div className="nav lt" >
                     <div className={lang === 'zh' ? 'nav_list_box' : ' nav_list_en'}>
                         <div className='nav_home lt'  >
@@ -106,7 +111,7 @@ export default class Nav extends Component {
                             }
                             <NavLink to="/develop" >
                                 <div className='nav_develop_list' ref={(x) => { this.devListBox = x }}
-                                  >
+                                >
                                     <div className='nav_develop_list_box' >
                                         <div className='nav_develop_list_trans' ref={(x) => { this.devList = x }}>
                                             <div className='dev_a'
@@ -151,10 +156,11 @@ export default class Nav extends Component {
                             </NavLink>
                         </div>
                     </div>
+
                 </div>
                 <div className='lang_box lt' onClick={(e) => { this.showLang(e) }}>
                     <div className='lang' >
-                        <div className='now'>{lang === 'en' ? 'English' : '中文'}</div>
+                        <div className='now'>{lang === 'en' ? '中文' : 'English'}</div>
                     </div>
                     <div className='choose_lang_box' ref={(x) => { this.langBox = x }}>
                         <div className='chinese' onClick={this.chooseCH}>中文</div>
