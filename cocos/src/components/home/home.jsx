@@ -194,21 +194,21 @@ export default class Home extends Component {
                     </div>
                     <img className='fenge' src={fenge} alt="" />
                     <div className='explane_img'>
-                        <div className='ex_l_box lt' style={{ marginLeft: '66px' }}>
+                        <div className='ex_l_box lt' >
                             <div className='ex_l_w'>
                                 <img src={game} className='ex_l_img' alt="" />
                             </div>
                             <h4 className='ex_img_til'><FormattedMessage id='ex_tel1' /></h4>
                             <p className='ex_img_text'><FormattedMessage id='ex_text1' /></p>
                         </div>
-                        <div className='ex_l_box lt' style={{ marginLeft: '86px' }}>
+                        <div className='ex_l_box lt' >
                             <div className='ex_l_w'>
                                 <img src={daohang} className='ex_l_img' alt="" />
                             </div>
                             <h4 className='ex_img_til'><FormattedMessage id='ex_tel2' /></h4>
                             <p className='ex_img_text' ><FormattedMessage id='ex_text2' /></p>
                         </div>
-                        <div className='ex_l_box lt' style={{ marginLeft: '86px' }}>
+                        <div className='ex_l_box lt' >
                             <div className='ex_l_w'>
                                 <img src={eye} className='ex_l_img' alt="" />
                             </div>

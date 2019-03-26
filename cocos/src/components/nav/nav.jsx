@@ -138,7 +138,7 @@ export default class Nav extends Component {
                             </NavLink>
                         </div>
                         <div className='nav_browser lt'>
-                            <a href={lang === 'zh' ? "https://explorer.cocosbcx.io/" : 'https://explorer.cocosbcx.io?language=en'} rel="noopener noreferrer" className='nav_browser_click' target='_blank'><FormattedMessage id='browser' /></a>
+                            <a href={lang === 'zh' ? "https://explorer.cocosbcx.io/" : 'https://explorer.cocosbcx.io?language=en'} rel="noopener noreferrer" className='nav_browser_click' ><FormattedMessage id='browser' /></a>
                             {/* <NavLink to="/browser" exact={true} activeClassName="active"
                                 className='nav_browser_click' ><FormattedMessage id='browser' />
                             </NavLink> */}
