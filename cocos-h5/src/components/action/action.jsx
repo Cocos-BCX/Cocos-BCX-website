@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { NavLink } from "react-router-dom";
-import { HashRouter as Router, Route,Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from '../nav/nav'
 import New from './new/new'
 import Hd from './hd/hd'
@@ -32,17 +32,15 @@ export default class Footer extends Component {
                         </NavLink>
                     </div>
                 </div>
-                <Router>
-                    <Switch>
-                        <Route path="/action/news" component={New} />
-                        <Route path="/action/hd" component={Hd} />
-                        <Route path="/action/yb" component={Yb} />
-                        <Route path="/action/big" component={Big} />
-                        <Route path='/'  render={() => (
-                                <Redirect to='/home' />
-                            )} />
-                    </Switch>
-                </Router>
+                <Switch>
+                    <Route path="/action/news" component={New} />
+                    <Route path="/action/hd" component={Hd} />
+                    <Route path="/action/yb" component={Yb} />
+                    <Route path="/action/big" component={Big} />
+                    <Route path='/' render={() => (
+                        <Redirect to='/home' />
+                    )} />
+                </Switch>
             </div>
         );
     }

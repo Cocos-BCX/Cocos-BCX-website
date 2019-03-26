@@ -32,17 +32,15 @@ export default class Footer extends Component {
                         </NavLink>
                     </div>
                 </div>
-                <Router>
-                    <Switch>
-                        <Route path="/action/news" component={New} />
-                        <Route path="/action/hd" component={Hd} />
-                        <Route path="/action/yb" component={Yb} />
-                        <Route path="/action/big" component={Big} />
-                        <Route path='/action' render={() => (
-                            <Redirect to='/action/news' />
-                        )} />
-                    </Switch>
-                </Router>
+                <Switch>
+                    <Route path="/action/news" component={New} />
+                    <Route path="/action/hd" component={Hd} />
+                    <Route path="/action/yb" component={Yb} />
+                    <Route path="/action/big" component={Big} />
+                    <Route path='/action' render={() => (
+                        <Redirect to='/action/news' />
+                    )} />
+                </Switch>
             </div>
         );
     }
