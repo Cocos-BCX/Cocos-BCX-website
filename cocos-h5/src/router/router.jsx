@@ -6,7 +6,7 @@ import Product from '../components/product/product'
 import Footer from '../components/footer/footer'
 import Action from '../components/action/action'
 import Nav from '../components/nav/nav'
-import { HashRouter as Router, Route, Redirect, } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect, } from "react-router-dom";
 import './router.css'
 export default class Homepage extends Component {
     componentDidMount() {
@@ -25,7 +25,7 @@ export default class Homepage extends Component {
                             <Route path="/about" component={About} />
                             <Route path="/product" component={Product} />
                             <Route path="/action" component={Action} />
-                            <Route path='/' exact render={() => (
+                            <Route path='/'  render={() => (
                                 <Redirect to='/home' />
                             )} />
                         </div>
