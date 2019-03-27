@@ -162,16 +162,17 @@
   outline: none;
 }
 .footer .footer_box .footer_img {
-  width: 6.25rem;
+  width: 7rem;
   margin: auto;
   overflow: hidden;
   margin-top: .88rem;
+  margin-left: .46rem;
 }
 .footer .footer_box .footer_img .wechet_box {
   position: relative;
   width: .4rem;
   height: .4rem;
-  margin-left: .8rem;
+  margin-left: .4rem;
   font-size: 0;
 }
 .footer .footer_box .footer_img .wechet_box .biao {
@@ -192,12 +193,37 @@
   width: 3rem;
   height: 3rem;
 }
+.footer .footer_box .footer_img .zs_box {
+  position: relative;
+  width: .25rem;
+  height: .4rem;
+  margin-left: .4rem;
+  font-size: 0;
+}
+.footer .footer_box .footer_img .zs_box .biao {
+  width: .25rem;
+}
+.footer .footer_box .footer_img .zs_box .ma {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.footer .footer_box .footer_img .zs_box .ma img {
+  width: 3rem;
+  height: 3rem;
+}
 .footer .footer_box .footer_img a {
   display: block;
   float: left;
   width: .4rem;
   height: .4rem;
-  margin-left: .75rem;
+  margin-left: .4rem;
   font-size: 0;
 }
 .footer .footer_box .footer_img a:nth-child(1) {

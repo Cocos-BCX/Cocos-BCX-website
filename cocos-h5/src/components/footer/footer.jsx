@@ -8,6 +8,10 @@ import wechet from '../../images/wechat.png'
 import weibo from '../../images/weibo.png'
 import tele from '../../images/telegram.png'
 import git from '../../images/github.png'
+import zs from  '../../images/zs.png'
+import reddit from '../../images/reddit.png'
+import discord from '../../images/discord.png'
+import zsma from '../../images/zsma.jpg'
 import totop from '../../images/totop.png'
 import wx from '../../images/wxma.jpg'
 import terms from '../../file/terms.pdf'
@@ -32,6 +36,13 @@ export default class Footer extends Component {
         window.onscroll = () => { getScrollTop() - 400 > 0 ? this.toTomDom.style.display = "block" : this.toTomDom.style.display = "none"; }
     }
     wxshow = (e) => {
+        e = e || window.event;
+        e.stopPropagation();
+        e.nativeEvent.stopImmediatePropagation();
+        this.wxma.style.display = 'block';
+        this.wxma.style.display = 'flex';
+    }
+    zsshow = (e) => {
         e = e || window.event;
         e.stopPropagation();
         e.nativeEvent.stopImmediatePropagation();
@@ -108,8 +119,15 @@ export default class Footer extends Component {
                         <div className='wechet_box lt' onClick={(e) => { this.wxshow(e) }}
                             onMouseLeave={() => { this.wxma.style.display = 'none' }}>
                             <img className='biao' src={wechet} alt="" />
-                            <div className='ma' onClick={(e)=>{this.mahide(e)}} ref={(x) => { this.wxma = x }} style={{ width: '7.5rem', height: document.documentElement.clientHeight || document.body.clientHeight }}>
+                            <div className='ma' onClick={(e)=>{this.mahide(e)}} ref={(x) => { this.wxma = x }} style={{ width: '7.5rem', height: document.body.clientHeight || document.documentElement.clientHeight  }}>
                                 <img src={wx} alt="" onClick={this.stop} />
+                            </div>
+                        </div>
+                        <div className='zs_box lt' onClick={(e) => { this.zsshow(e) }}
+                            onMouseLeave={() => { this.zsma.style.display = 'none' }}>
+                            <img className='biao' src={zs} alt="" />
+                            <div className='ma' onClick={(e)=>{this.mahide(e)}} ref={(x) => { this.zsma = x }} style={{ width: '7.5rem', height: document.documentElement.clientHeight || document.body.clientHeight }}>
+                                <img src={zsma} alt="" onClick={this.stop} />
                             </div>
                         </div>
                         <a href="https://www.weibo.com/p/1006062183715773" target='_blank' rel="noopener noreferrer">
@@ -120,6 +138,12 @@ export default class Footer extends Component {
                         </a>
                         <a href="https://github.com/cocosbcx" target='_blank' rel="noopener noreferrer">
                             <img src={git} alt="" />
+                        </a>
+                        <a href="https://reddit.com/cocosbcx" target='_blank' rel="noopener noreferrer">
+                            <img src={reddit} alt="" />
+                        </a>
+                        <a href="https://discord.gg/jdJMNtC" target='_blank' rel="noopener noreferrer">
+                            <img src={discord} alt="" />
                         </a>
                     </div>
                     <div className='footer_bottom'>2018 Cocos-BCX All rights reserved.</div>
