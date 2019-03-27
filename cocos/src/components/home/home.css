@@ -614,22 +614,16 @@
     border: 1px solid #eeeeee;
     border-left: 0;
     box-sizing: border-box;
-    transform: skewX(-12deg);
     margin-left: -16.5px;
-    overflow: hidden;
-  }
-  .news_box .news_main .news_bottom li a .img_box_text div {
-    transform: skewX(12deg);
   }
   .news_box .news_main .news_bottom li a .img_box_text div h5 {
     margin-top: 4px;
     margin-left: 16px;
     font-size: 12px;
-    font-weight: 400;
-    color: #666666;
+    color: #000;
     line-height: 24px;
-    transform: translate3d(0, 0, 0);
-    color: #555555;
+    height: 50px;
+    overflow: hidden;
   }
 }
 .system {
