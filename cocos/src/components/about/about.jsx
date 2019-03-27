@@ -197,7 +197,7 @@ export default class About extends Component {
                                         </a> : null
                                     }
 
-                                    <p><FormattedMessage id={item.ex} /></p>
+                                    <p className={lang==='zh'?'ext':'ext_en'}><FormattedMessage id={item.ex} /></p>
                                 </div>
                             </div>
                         })}
