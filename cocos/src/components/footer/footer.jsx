@@ -8,6 +8,10 @@ import wechet from '../../images/wechat.png'
 import weibo from '../../images/weibo.png'
 import tele from '../../images/telegram.png'
 import git from '../../images/github.png'
+import zs from  '../../images/zs.png'
+import reddit from '../../images/reddit.png'
+import discord from '../../images/discord.png'
+import zsma from '../../images/zsma.jpg'
 import wx from '../../images/wxma.jpg'
 import terms from '../../file/terms.pdf'
 import privacy from '../../file/privacy.pdf'
@@ -95,6 +99,11 @@ export default class Footer extends Component {
                             <img className='biao' src={wechet} alt="" />
                             <img className='ma' src={wx} ref={(x) => { this.wxma = x }} alt="" />
                         </div>
+                        <div className='zs_box' onMouseEnter={() => { this.zsma.style.display = 'block' }}
+                            onMouseLeave={() => { this.zsma.style.display = 'none' }}>
+                            <img className='biao' src={zs} alt="" />
+                            <img className='ma' src={zsma} ref={(x) => { this.zsma = x }} alt="" />
+                        </div>
                         <a href="https://www.weibo.com/p/1006062183715773" target='_blank' rel="noopener noreferrer">
                             <img src={weibo} alt="" />
                         </a>
@@ -103,6 +112,12 @@ export default class Footer extends Component {
                         </a>
                         <a href="https://github.com/cocos-bcx" target='_blank' rel="noopener noreferrer">
                             <img src={git} alt="" />
+                        </a>
+                        <a href="https://reddit.com/cocosbcx" target='_blank' rel="noopener noreferrer">
+                            <img src={reddit} alt="" />
+                        </a>
+                        <a href="https://discord.gg/jdJMNtC" target='_blank' rel="noopener noreferrer">
+                            <img src={discord} alt="" />
                         </a>
                     </div>
                     <div className='footer_bottom'>2018 Cocos-BCX All rights reserved.</div>
