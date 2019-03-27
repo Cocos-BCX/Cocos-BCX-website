@@ -16,9 +16,12 @@ export default class Nav extends Component {
     //选择中文
     chooseCH = () => {
         localStorage.setItem('lang_type', 'zh');
-        let url = window.location.href.replace(/en/, "");
+        let url = window.location.href;
+        if (url.indexOf("?") != -1) {
+            url = url.split("?")[0];
+        }
         console.log(url);
-        window.chooseLocale()
+        // window.chooseLocale()
         window.location.href = url
         // window.history.go(0);
 

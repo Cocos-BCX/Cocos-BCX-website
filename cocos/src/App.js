@@ -11,7 +11,6 @@ let rootElement = document.getElementById('root');
 window.chooseLocale = chooseLocale;
 function chooseLocale() {
   var url = window.location.search; //获取url中"?"符后的字串  
-  console.log(url);
 
   var theRequest = new Object();
   if (url.indexOf("?") != -1) {
