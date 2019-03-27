@@ -9,7 +9,11 @@ export default class Hd extends Component {
         super();
         this.state = {
             newmsg: {},
-            forList: [],
+            forList: [
+                // {title:'超级赛亚人级赛亚人级赛亚人',address:'北京',published_at:'2018-02-23'},
+                // {title:'超级赛亚人',address:'北京',published_at:'2018-02-23'},
+                // {title:'超级赛亚人',address:'北京',published_at:'2018-02-23'},
+            ],
             hdList: []
         }
     }

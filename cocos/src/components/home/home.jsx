@@ -158,7 +158,10 @@ export default class Home extends Component {
             return;
         };
     }
-  
+    componentWillMount() {
+        console.log(this.props.choose);
+        
+    }
     render() {
         let lang = localStorage.getItem('lang_type');
         return (
@@ -179,7 +182,7 @@ export default class Home extends Component {
                     </div>
                 </div>
                 <div className='banner_box'>
-                    <Nav></Nav>
+                    <Nav choose={this.props.choose}></Nav>
                     <div className='home_btn_box'>
                         <h5>COCOS</h5>
                         <h5>BLOCKCHAIN EXPEDITION</h5>

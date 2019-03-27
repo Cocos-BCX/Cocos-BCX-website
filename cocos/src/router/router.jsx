@@ -9,16 +9,13 @@ import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-d
 import './router.css'
 export default class Homepage extends Component {
     //获取url后边的参数
-  
-    componentWillMount() {
-    }
     render() {
         return (
             <div className="router">
 
                 <div className='homepage_main'>
-                    <Router>
-                        <Switch>
+                    <Router >
+                        <Switch >
                             {/* <Nav></Nav> */}
                             <Route path="/home" component={Home} />
                             <Route path="/develop" component={Develop} />

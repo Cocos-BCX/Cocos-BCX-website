@@ -212,7 +212,7 @@
 }
 .about .adviser_box .team_pic_box .team_every .people_ex_two p {
   margin: auto;
-  margin-top: 354px;
+  margin-top: 310px;
   font-size: 14px;
   line-height: 25px;
   background: #fff;
@@ -255,14 +255,14 @@
   margin-left: 0;
 }
 .about .hezuo .hezuo_box .hezuo_imgs div:nth-child(29) {
-  border: 1px solid #fff!important;
+  border: 1px solid #fff !important;
 }
 .about .hezuo .hezuo_box .hezuo_imgs div:nth-child(29) img {
   width: 800px;
   height: 800px;
 }
 .about .hezuo .hezuo_box .hezuo_imgs div:nth-child(30) {
-  border: 1px solid #fff!important;
+  border: 1px solid #fff !important;
 }
 .about .hezuo .hezuo_box .hezuo_imgs div:nth-child(30) img {
   width: 800px;
@@ -271,4 +271,273 @@
 .about .hezuo .hezuo_box .hezuo_imgs div img {
   width: 100%;
   height: 100%;
+}
+@media screen and (max-width: 1400px) {
+  .about .banner_a_box {
+    margin: auto;
+    height: 336px;
+    background: url('../../images/a_banner.png') no-repeat center;
+    background-color: #150F11;
+    overflow: hidden;
+  }
+  .about .banner_a_box .white_book {
+    width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 267px;
+  }
+  .about .banner_a_box .white_book .w_book {
+    width: 80px;
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid #ffffff;
+    margin-right: 171px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 25px;
+    text-align: center;
+  }
+  .about .news_til_box {
+    height: 50px;
+    position: relative;
+  }
+  .about .news_til_box .news_til {
+    width: 150px;
+    height: 46px;
+    background: #585858;
+    transform: skewX(-20deg);
+    position: relative;
+    margin-left: 10px;
+  }
+  .about .news_til_box .news_til h3 {
+    transform: skewX(20deg);
+    letter-spacing: 1px;
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: normal;
+    line-height: 46px;
+    text-align: center;
+    margin-left: -8px;
+  }
+  .about .news_til_box .news_til .news_line {
+    width: 875px;
+    height: 4px;
+    background: #2ad9fe;
+  }
+  .about .news_til_box .news_til_mask {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    background: #2AD9FE;
+    top: -19px;
+    left: 85px;
+    z-index: -2;
+    transform: skewX(-20deg);
+  }
+  .about .team_ex {
+    margin: auto;
+    width: 877px;
+    margin-top: 58px;
+  }
+  .about .team_ex p {
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: normal;
+    color: #767676;
+    line-height: 36px;
+    padding: 0 10px;
+  }
+  .about .team_box {
+    margin: auto;
+    width: 877px;
+    margin-top: 80px;
+  }
+  .about .team_box .team_pic_box {
+    margin: auto;
+    height: 825px;
+    padding-bottom: 40px;
+  }
+  .about .team_box .team_pic_box .team_every {
+    height: 210px;
+    width: 131px;
+    margin-left: 53px;
+    margin-top: 55px;
+    position: relative;
+  }
+  .about .team_box .team_pic_box .team_every:nth-child(1) {
+    margin-left: 0;
+  }
+  .about .team_box .team_pic_box .team_every:nth-child(6) {
+    margin-left: 0;
+  }
+  .about .team_box .team_pic_box .team_every:nth-child(11) {
+    margin-left: 0;
+  }
+  .about .team_box .team_pic_box .team_every .pic_box {
+    cursor: pointer;
+    width: 130px;
+    height: 150px;
+    position: relative;
+  }
+  .about .team_box .team_pic_box .team_every .pic_box img {
+    width: 100%;
+    height: 100%;
+  }
+  .about .team_box .team_pic_box .team_every .name {
+    font-size: 20px;
+    font-weight: normal;
+    color: #000000;
+    line-height: 20px;
+    margin: auto;
+    text-align: center;
+    margin-top: 16px;
+    height: 40px;
+  }
+  .about .team_box .team_pic_box .team_every .ex {
+    font-size: 14px;
+    font-weight: normal;
+    color: #767676;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .about .team_box .team_pic_box .team_every .people_ex_box {
+    display: none;
+    position: absolute;
+    width: 189px;
+    border: 1px solid #2ad9fe;
+    box-shadow: 0px 3px 8px 0px rgba(32, 84, 133, 0.4);
+    top: -31px;
+    left: -28px;
+    overflow: hidden;
+    z-index: 50;
+    cursor: pointer;
+  }
+  .about .team_box .team_pic_box .team_every .people_ex_box a {
+    position: absolute;
+    right: 19px;
+    top: 128px;
+    width: 32px;
+    height: 32px;
+  }
+  .about .team_box .team_pic_box .team_every .people_ex_box a img {
+    width: 100%;
+    height: 100%;
+  }
+  .about .team_box .team_pic_box .team_every .people_ex_box p {
+    margin: auto;
+    margin-top: 270px;
+    font-size: 13px;
+    line-height: 25px;
+    background: #fff;
+    padding-bottom: 20px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .about .adviser_box {
+    margin: auto;
+    width: 877px;
+    margin-top: 78px;
+  }
+  .about .adviser_box .team_pic_box {
+    margin: auto;
+    height: 525px;
+    padding-bottom: 20px;
+  }
+  .about .adviser_box .team_pic_box .team_every {
+    height: 210px;
+    width: 131px;
+    margin-left: 53px;
+    margin-top: 55px;
+    position: relative;
+  }
+  .about .adviser_box .team_pic_box .team_every:nth-child(1) {
+    margin-left: 0;
+  }
+  .about .adviser_box .team_pic_box .team_every:nth-child(6) {
+    margin-left: 0;
+  }
+  .about .adviser_box .team_pic_box .team_every .pic_box {
+    width: 130px;
+    height: 150px;
+  }
+  .about .adviser_box .team_pic_box .team_every .pic_box img {
+    width: 100%;
+    height: 100%;
+  }
+  .about .adviser_box .team_pic_box .team_every .name {
+    font-size: 20px;
+    font-weight: normal;
+    color: #000000;
+    line-height: 20px;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    height: 40px;
+  }
+  .about .adviser_box .team_pic_box .team_every .people_ex_two {
+    display: none;
+    position: absolute;
+    width: 189px;
+    border: 1px solid #2ad9fe;
+    box-shadow: 0px 3px 8px 0px rgba(32, 84, 133, 0.4);
+    top: -31px;
+    left: -28px;
+    overflow: hidden;
+    z-index: 50;
+    cursor: pointer;
+  }
+  .about .adviser_box .team_pic_box .team_every .people_ex_two p {
+    margin: auto;
+    margin-top: 250px;
+    font-size: 13px;
+    line-height: 25px;
+    background: #fff;
+    padding-bottom: 20px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .about .hezuo {
+    margin-top: 74px;
+    height: auto;
+    background: #fff;
+    padding-bottom: 80px;
+  }
+  .about .hezuo .hezuo_box .hezuo_head .head_w {
+    background: #676767;
+  }
+  .about .hezuo .hezuo_box .hezuo_imgs {
+    width: 880px;
+    margin: auto;
+    margin-top: 42px;
+    overflow: hidden;
+  }
+  .about .hezuo .hezuo_box .hezuo_imgs div {
+    width: 152px;
+    height: 104px;
+    margin-left: 27px;
+    margin-top: 20px;
+    border: 1px solid #ECEDEF;
+    overflow: hidden;
+  }
+  .about .hezuo .hezuo_box .hezuo_imgs div:nth-child(5n-4) {
+    margin-left: 0;
+  }
+  .about .hezuo .hezuo_box .hezuo_imgs div:nth-child(29) {
+    border: 1px solid #fff !important;
+  }
+  .about .hezuo .hezuo_box .hezuo_imgs div:nth-child(29) img {
+    width: 800px;
+    height: 800px;
+  }
+  .about .hezuo .hezuo_box .hezuo_imgs div:nth-child(30) {
+    border: 1px solid #fff !important;
+  }
+  .about .hezuo .hezuo_box .hezuo_imgs div:nth-child(30) img {
+    width: 800px;
+    height: 800px;
+  }
+  .about .hezuo .hezuo_box .hezuo_imgs div img {
+    width: 100%;
+    height: 100%;
+  }
 }

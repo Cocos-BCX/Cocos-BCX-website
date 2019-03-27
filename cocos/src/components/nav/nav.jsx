@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { NavLink } from "react-router-dom";
 import { explorer } from '../../api/api'
-import logo from '../../images/COCOS_logo.png'
+import logo from '../../images/logow.png'
 import './nav.css'
 
 export default class Nav extends Component {

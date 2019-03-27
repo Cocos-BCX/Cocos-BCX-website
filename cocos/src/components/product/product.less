@@ -3,6 +3,7 @@
         margin: auto;
         height: 568px;
         background: url('../../images/s_banner.png') no-repeat center;
+        background-size: cover;
         background-color: #033E4E;
         overflow: hidden;
     }
@@ -158,6 +159,197 @@
                             // }
                         }
 
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .product {
+        .banner_s_box {
+            margin: auto;
+            height: 430px;
+            background: url('../../images/s_banner.png') no-repeat center;
+            background-size: cover;
+            background-color: #033E4E;
+            overflow: hidden;
+        }
+
+        .dev_plan {
+            width: 878px;
+            height: 205px;
+            margin: auto;
+            margin-top: 30px;
+            background: url('../../images/net.png') no-repeat center;
+            background-size: cover;
+            overflow: hidden;
+
+            .ljdev {
+                display: block;
+                // width: 254px;
+                height: 48px;
+                border-radius: 4px;
+                margin: auto;
+                margin-top: 81px;
+                text-align: center;
+                font-size: 18px;
+                // font-weight: normal;
+                color: rgba(255, 255, 255, 1);
+                line-height:  48px;
+
+                span {
+                    display: inline-block;
+                    background: rgba(42, 217, 254, 1);
+                    border-radius: 4px;
+                    padding: 0 30px;
+                }
+            }
+        }
+
+        .dev_list_box {
+            margin: auto;
+            margin-top: 64px;
+            padding-bottom: 30px;
+
+            .dev_game {
+                margin: auto;
+                width: 877px;
+                padding-bottom: 90px;
+
+                .news_til_box {
+                    height: 48px;
+                    position: relative;
+        
+                    .news_til {
+                        width: 151px;
+                        height: 46px;
+                        background: rgba(88, 88, 88, 1);
+                        transform: skewX(-20deg);
+                        position: relative;
+                        margin-left: 11.6px;
+        
+                        h3 {
+                            transform: skewX(20deg);
+                            letter-spacing: 1px;
+                            font-size: 17px;
+                            color: rgba(255, 255, 255, 1);
+                            font-weight: normal;
+                            line-height: 46px;
+                            text-align: center;
+                            margin-left: -5px;
+                        }
+        
+        
+        
+                        .news_line {
+                            width: 876px;
+                            height: 4px;
+                            background: rgba(42, 217, 254, 1);
+                        }
+                    }
+        
+                    .news_til_mask {
+                        position: absolute;
+                        width: 150px;
+                        height: 46px;
+                        background: #2AD9FE;
+                        top: -19px;
+                        left: 95px;
+                        z-index: -2;
+                        transform: skewX(-20deg);
+                    }
+        
+                    .news_til_more {
+                        position: absolute;
+                        top: 9px;
+                        right: 10px;
+                        width: 86px;
+                        height: 28px;
+                        background: rgba(255, 255, 255, 1);
+                        border: 1px solid rgba(221, 221, 221, 1);
+                        transform: skewX(10deg);
+                        cursor: pointer;
+        
+                        div {
+                            transform: skewX(-10deg);
+                            font-size: 11px;
+                            font-weight: 400;
+                            color: rgba(170, 170, 170, 1);
+                            line-height: 28px;
+                            text-align: center;
+                        }
+                    }
+        
+                }
+
+                .dev_game_box {
+                    overflow: hidden;
+
+                    .dev_game_left {
+                        overflow: hidden;
+                        margin-top: 37px;
+
+                        &:nth-child(2) {
+                            margin-left: 52px;
+                        }
+
+                        .img_box {
+                            width: 140px;
+                            height: 140px;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                        .dev_text_box {
+                            margin-left: 29px;
+
+                            h4 {
+                                font-size: 17px;
+                                font-weight: bold;
+                                color: rgba(105, 105, 105, 1);
+                                line-height: 23px;
+                            }
+
+                            .wordroom {
+                                margin-top: 12px;
+                                background: url('../../images/cocos3.png') no-repeat;
+                                background-size: 12px 15px;
+                                padding-left: 20px;
+                                font-size: 16px;
+                                font-weight: 400;
+                                color: rgba(105, 105, 105, 1);
+                                line-height: 15px;
+                            }
+
+                            p {
+                                width: 242px;
+                                height: 80px;
+                                margin-top: 8px;
+                                font-size: 14px;
+                                font-weight: 300;
+                                line-height: 21px;
+                                position: relative;
+                                color: #000;
+
+                                // &::after {
+                                //     content: "...";
+                                //     position: absolute;
+                                //     bottom: 0;
+                                //     right: 0;
+                                //     padding-left: 40px;
+                                //     background: -webkit-linear-gradient(left, transparent, #fff 55%);
+                                //     background: -o-linear-gradient(right, transparent, #fff 55%);
+                                //     background: -moz-linear-gradient(right, transparent, #fff 55%);
+                                //     background: linear-gradient(to right, transparent, #fff 55%);
+                                // }
+                            }
+
+                        }
                     }
                 }
             }

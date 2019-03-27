@@ -15,10 +15,11 @@
   left: 10px;
 }
 .nav_box .nav_logo_box img {
-  width: 100px;
+  width: 200px;
   height: 88px;
   transform: skewX(30deg);
   margin-left: 70px;
+  margin-top: 9px;
 }
 .nav_box .nav_line {
   position: absolute;
@@ -398,10 +399,11 @@
     left: 7px;
   }
   .nav_box .nav_logo_box img {
-    width: 75px;
-    height: 70px;
+    width: 150px;
+    height: 66px;
     transform: skewX(30deg);
-    margin-left: 70px;
+    margin-left: 50px;
+    margin-top: 8px;
   }
   .nav_box .nav_line {
     position: absolute;

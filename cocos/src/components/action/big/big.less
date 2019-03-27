@@ -59,6 +59,7 @@
             font-weight: 400;
             color: rgba(170, 170, 170, 1);
             cursor: pointer;
+            z-index: 10;
 
             .sy {
                 height: 28px;
@@ -75,8 +76,8 @@
                 span {
                     display: block;
                     transform: skewX(-20deg);
-                    background: url('../../../images/xx.png') 60px  no-repeat;
-                    background-size: 8px 8px ;
+                    background: url('../../../images/xx.png') 60px no-repeat;
+                    background-size: 8px 8px;
                     text-align: left;
                     padding-left: 20px;
                 }
@@ -89,7 +90,8 @@
                 border: 1px solid rgba(221, 221, 221, 1);
                 border-top: 0;
                 line-height: 28px;
-                &:hover{
+
+                &:hover {
                     opacity: .8;
                 }
             }
@@ -101,7 +103,8 @@
                 border: 1px solid rgba(221, 221, 221, 1);
                 border-top: 0;
                 line-height: 28px;
-                &:hover{
+
+                &:hover {
                     opacity: .8;
                 }
             }
@@ -190,6 +193,168 @@
                         font-weight: 400;
                         color: rgba(50, 50, 50, 1);
                         line-height: 26px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .big {
+        width: 876px;
+        margin: auto;
+        margin-bottom: 200px;
+
+        .news_til_box {
+            height: 50px;
+            position: relative;
+
+            .news_til {
+                width: 178px;
+                height: 46px;
+                background: rgba(88, 88, 88, 1);
+                transform: skewX(-20deg);
+                position: relative;
+                margin-left: 10px;
+
+                h3 {
+                    transform: skewX(20deg);
+                    letter-spacing: 1px;
+                    font-size: 17px;
+                    color: rgba(255, 255, 255, 1);
+                    font-weight: normal;
+                    line-height: 46px;
+                    text-align: center;
+                    margin-left: -8px;
+                }
+
+
+
+                .news_line {
+                    width: 875px;
+                    height: 4px;
+                    background: rgba(42, 217, 254, 1);
+                }
+            }
+
+            .news_til_mask {
+                position: absolute;
+                width: 164px;
+                height: 50px;
+                background: #2AD9FE;
+                top: -19px;
+                left: 132px;
+                z-index: -2;
+                transform: skewX(-20deg);
+            }
+
+            .news_til_more {
+                position: absolute;
+                top: 9px;
+                right: 10px;
+                width: 86px;
+                height: 28px;
+                background: rgba(255, 255, 255, 1);
+                border: 1px solid rgba(221, 221, 221, 1);
+                transform: skewX(10deg);
+                cursor: pointer;
+
+                div {
+                    transform: skewX(-10deg);
+                    font-size: 11px;
+                    font-weight: 400;
+                    color: rgba(170, 170, 170, 1);
+                    line-height: 28px;
+                    text-align: center;
+                }
+            }
+
+        }
+
+        .big_list_box {
+            margin-top: 54px;
+
+            .s1_box {
+                overflow: hidden;
+
+                .s1_til {
+                    width: 66px;
+                    height: 37px;
+                    background: rgba(42, 217, 254, 1);
+                    border-radius: 3px;
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: rgba(255, 255, 255, 1);
+                    line-height: 37px;
+                    text-align: center;
+                }
+
+                .s1_content {
+                    width: 800px;
+                    height: 182px;
+                    border: 1px solid rgba(226, 226, 226, 1);
+                    padding: 33px 25px 35px 20px;
+                    box-sizing: border-box;
+                    position: relative;
+                    overflow: hidden;
+                    transition: height .6s;
+
+                    .s1_more {
+                        position: absolute;
+                        width: 79px;
+                        height: 35px;
+                        background: #2AD9FE;
+                        transform: skewX(-25deg);
+                        left: 32px;
+                        bottom: 43px;
+                        cursor: pointer;
+
+                        &:hover {
+                            opacity: .8;
+                        }
+
+                        img {
+                            display: block;
+                            transform: skewX(25deg);
+                            width: 36px;
+                            height: 18px;
+                            margin: auto;
+                            margin-top: 9px;
+                        }
+                    }
+
+                    .s1_list {
+                        overflow: hidden;
+                        margin-top: 21px;
+
+                        &:nth-child(2) {
+                            margin-bottom: 100px;
+                        }
+
+                        .s1_time {
+                            width: 105px;
+                            background: url('../../../images/date.png') no-repeat;
+                            background-size: 18px 18px;
+                            padding-left: 24px;
+                            font-size: 13px;
+                            font-weight: 400;
+                            color: rgba(120, 120, 120, 1);
+                            box-sizing: border-box;
+                        }
+
+                        .s1_text {
+                            width: 633px;
+                            background: rgba(231, 231, 231, 1);
+                            border-radius: 3px;
+                            padding: 22px 30px 18px 30px;
+                            box-sizing: border-box;
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: rgba(50, 50, 50, 1);
+                            line-height: 24px;
+                            margin-left: 12px;
+                        }
                     }
                 }
             }
