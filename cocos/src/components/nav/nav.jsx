@@ -19,7 +19,6 @@ export default class Nav extends Component {
         let url = window.location.href.replace(/en/, "");
         console.log(url);
         window.chooseLocale()
-
         window.location.href = url
         // window.history.go(0);
 

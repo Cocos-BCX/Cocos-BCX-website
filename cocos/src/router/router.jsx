@@ -22,7 +22,7 @@ export default class Homepage extends Component {
             }
         }
         if (theRequest.language === 'en') {
-            // localStorage.setItem('lang_type', 'en')
+            localStorage.setItem('lang_type', 'en')
         }
     }
     componentWillMount() {
