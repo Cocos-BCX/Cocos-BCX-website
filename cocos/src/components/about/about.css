@@ -383,14 +383,14 @@
     height: 100%;
   }
   .about .team_box .team_pic_box .team_every .name {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: normal;
     color: #000000;
     line-height: 20px;
     margin: auto;
     text-align: center;
     margin-top: 16px;
-    height: 40px;
+    height: 24px;
   }
   .about .team_box .team_pic_box .team_every .ex {
     font-size: 14px;
@@ -425,7 +425,7 @@
   }
   .about .team_box .team_pic_box .team_every .people_ex_box p {
     margin: auto;
-    margin-top: 270px;
+    margin-top: 260px;
     font-size: 13px;
     line-height: 25px;
     background: #fff;
@@ -465,7 +465,7 @@
     height: 100%;
   }
   .about .adviser_box .team_pic_box .team_every .name {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: normal;
     color: #000000;
     line-height: 20px;
