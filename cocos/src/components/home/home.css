@@ -1066,6 +1066,7 @@
 .hezuo .hezuo_box {
   width: 1230px;
   margin: auto;
+  padding-bottom: 90px;
 }
 .hezuo .hezuo_box .hezuo_head {
   height: 86px;
@@ -1188,6 +1189,7 @@
   .hezuo .hezuo_box {
     width: 922px;
     margin: auto;
+    padding-bottom: 80px;
   }
   .hezuo .hezuo_box .hezuo_head {
     height: 73px;
