@@ -158,6 +158,7 @@ export default class Home extends Component {
             return;
         };
     }
+  
     render() {
         let lang = localStorage.getItem('lang_type');
         return (

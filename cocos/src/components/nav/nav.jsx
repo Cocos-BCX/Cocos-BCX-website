@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { NavLink } from "react-router-dom";
+import { explorer } from '../../api/api'
 import logo from '../../images/COCOS_logo.png'
 import './nav.css'
 
@@ -15,8 +16,12 @@ export default class Nav extends Component {
     //选择中文
     chooseCH = () => {
         localStorage.setItem('lang_type', 'zh');
+        let url = window.location.href.replace(/en/, "");
+        console.log(url);
         window.chooseLocale()
-        window.history.go(0);
+
+        window.location.href = url
+        // window.history.go(0);
 
     }
     chooseEN = () => {
@@ -145,7 +150,7 @@ export default class Nav extends Component {
                             </NavLink>
                         </div>
                         <div className='nav_browser lt'>
-                            <a href={lang === 'zh' ? "https://explorer.cocosbcx.io/" : 'https://explorer.cocosbcx.io?language=en'} rel="noopener noreferrer" className='nav_browser_click' ><FormattedMessage id='browser' /></a>
+                            <a href={lang === 'zh' ? explorer : `${explorer}?language=en`} rel="noopener noreferrer" className='nav_browser_click' ><FormattedMessage id='browser' /></a>
                             {/* <NavLink to="/browser" exact={true} activeClassName="active"
                                 className='nav_browser_click' ><FormattedMessage id='browser' />
                             </NavLink> */}
