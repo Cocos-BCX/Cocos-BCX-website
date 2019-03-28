@@ -4,6 +4,9 @@ import { FormattedMessage } from 'react-intl';
 import fruit from '../../images/fruit.png'
 import luck from '../../images/luck.png'
 import shotting from '../../images/shooting.png'
+import tool1 from '../../images/tool1.png'
+import tool2 from '../../images/tool2.png'
+import tool3 from '../../images/tool3.png'
 import './product.css'
 
 export default class Product extends Component {
@@ -16,9 +19,9 @@ export default class Product extends Component {
                 {img:shotting,url:'http://ccshooter.oriongaming.club/',til:'gname3',auther:'gauther3',gex:'gex3'},
             ],
             toolList:[
-                {img:fruit,url:'https://explorer.cocosbcx.io/',til:'tname1',auther:'tauther1',gex:'tex1'},
-                {img:fruit,url:'http://www.easywallet.pro/',til:'tname2',auther:'tauther2',gex:'tex2'},
-                {img:fruit,url:'http://gpe.famegame.com.cn/',til:'tname3',auther:'tauther3',gex:'tex3'},
+                {img:tool1,url:'https://explorer.cocosbcx.io/',til:'tname1',auther:'tauther1',gex:'tex1'},
+                {img:tool2,url:'http://www.easywallet.pro/',til:'tname2',auther:'tauther2',gex:'tex2'},
+                {img:tool3,url:'http://gpe.famegame.com.cn/',til:'tname3',auther:'tauther3',gex:'tex3'},
             ],
         }
     }
