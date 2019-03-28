@@ -78,11 +78,11 @@ export default class About extends Component {
                 { pic: p12, ex: 'plex12', name: 'p12', position: 'fqr12' },
             ],
             adviser: [
-                { pic: p13, ex: 'plex13', name: 'p13', position: 'fqr13' },
+                { pic: p13, ly: ly, url: 'https://www.linkedin.com/in/zhe-wang-ba18831b/', ex: 'plex13', name: 'p13', position: 'fqr13' },
                 { pic: p14, ex: 'plex14', name: 'p14', position: 'fqr14' },
                 { pic: p15, ex: 'plex15', name: 'p15', position: 'fqr15' },
-                { pic: p16, ex: 'plex16', name: 'p16', position: 'fqr16' },
-                { pic: p17, ex: 'plex17', name: 'p17', position: 'fqr17' },
+                { pic: p16, ly: ly, url: 'https://www.linkedin.com/in/edithyeung/', ex: 'plex16', name: 'p16', position: 'fqr16' },
+                { pic: p17, ly: ly, url: 'https://www.linkedin.com/in/mccannatron/', ex: 'plex17', name: 'p17', position: 'fqr17' },
                 { pic: p18, ex: 'plex18', name: 'p18', position: 'fqr18' },
 
             ],
@@ -197,7 +197,7 @@ export default class About extends Component {
                                         </a> : null
                                     }
 
-                                    <p className={lang==='zh'?'ext':'ext_en'}><FormattedMessage id={item.ex} /></p>
+                                    <p className={lang === 'zh' ? 'ext' : 'ext_en'}><FormattedMessage id={item.ex} /></p>
                                 </div>
                             </div>
                         })}
@@ -219,6 +219,12 @@ export default class About extends Component {
                                 </div>
                                 <p className='name'><FormattedMessage id={item.name} /></p>
                                 <div className='people_ex_two' onMouseLeave={() => { this.hidePeopleTwo(index) }}>
+                                    {
+                                        item.url ? <a href={item.url} target="_blank" rel="noopener noreferrer">
+                                            <img src={item.ly} className='ly' alt="" />
+                                        </a> : null
+                                    }
+
                                     <p><FormattedMessage id={item.ex} /></p>
                                 </div>
                             </div>
