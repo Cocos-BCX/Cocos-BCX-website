@@ -139,7 +139,7 @@ export default class Footer extends Component {
                         <a href="https://github.com/cocosbcx" target='_blank' rel="noopener noreferrer">
                             <img src={git} alt="" />
                         </a>
-                        <a href="https://reddit.com/cocosbcx" target='_blank' rel="noopener noreferrer">
+                        <a href="https://www.reddit.com/user/cocos-bcx/" target='_blank' rel="noopener noreferrer">
                             <img src={reddit} alt="" />
                         </a>
                         <a href="https://discord.gg/jdJMNtC" target='_blank' rel="noopener noreferrer">
