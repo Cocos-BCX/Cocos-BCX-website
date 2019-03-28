@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import FastClick from 'react-fastclick-alt'
 import { NavLink } from "react-router-dom";
+import { explorer } from '../../api/api'
 import clogo from '../../images/clogo.png'
 import close from '../../images/bclose.png'
 import './nav.css'
@@ -65,7 +66,7 @@ export default class Nav extends Component {
                 <div className='nav_box'>
                     <div className='lang_box lt'
                         onClick={(e) => { this.langBox.style.display = 'block'; this.stopImmediate(e) }}>
-                        <div className='lang'>{lang === 'en' ? 'English' : '中文'}</div>
+                        <div className='lang'>{lang === 'en' ? '中文' : 'English'}</div>
                         <div className='choose_lang_box' ref={(x) => { this.langBox = x }}>
                             <div className='chinese' onClick={this.chooseCH}>中文</div>
                             <div className='english' onClick={this.chooseEN}>English</div>
@@ -108,7 +109,7 @@ export default class Nav extends Component {
                             <NavLink to="/action/news" exact={true} activeClassName="active"
                                 className='nav_action_click navBox' ><FormattedMessage id='action' />
                             </NavLink>
-                            <a href={lang === 'zh' ? "https://explorer.cocosbcx.io/" : 'https://explorer.cocosbcx.io?language=en'} rel="noopener noreferrer" className='nav_browser_click navBox' target='_blank'><FormattedMessage id='browser' /></a>
+                            <a href={lang === 'zh' ? explorer : `${explorer}?language=en`} className='nav_browser_click navBox' ><FormattedMessage id='browser' /></a>
 
                             <NavLink to="/about" exact={true} activeClassName="active"
                                 className='nav_about_click navBox' > <span ref={(x) => { this.abouttil = x }} ><FormattedMessage id='about' />  </span>

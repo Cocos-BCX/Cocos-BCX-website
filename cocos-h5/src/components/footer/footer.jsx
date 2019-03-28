@@ -70,19 +70,19 @@ export default class Footer extends Component {
                         </div>
                     </div>
                     <div className='footer_con'>
-                        <div className="footer_con_l lt">
+                        <div className="footer_con_l ">
                             <div className='f_til'><FormattedMessage id='tel' /></div>
                             <div className='f_line'></div>
-                            <div className='email'>
+                            <div className='email lt' >
                                 <img src={email} alt="" />
                                 <p>Email:Support@cocosbcx.io</p>
                             </div>
-                            <div className='file' >
+                            <div className='file lt' >
                                 <img src={file} alt="" />
                                 <p><a href={terms} target='_blank' rel="noopener noreferrer">Terms of Service</a> | <a href={privacy} target='_blank' rel="noopener noreferrer">Privacy Policy</a>  </p>
                             </div>
                         </div>
-                        <div className="footer_con_r lt">
+                        <div className="footer_con_r ">
                             <div className='r_til'><FormattedMessage id='footUpdate' /></div>
                             <div className='r_line'></div>
                             <div className='footer_dy' id="mc_embed_signup">

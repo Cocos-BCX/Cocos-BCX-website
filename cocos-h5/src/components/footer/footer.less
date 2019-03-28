@@ -1,13 +1,13 @@
 .footer {
-    height: 4.2rem;
-    background: rgba(31, 31, 31, 1);
+    background: #1F1F1F;
 
     .footer_box {
         position: relative;
         margin: auto;
+        overflow: hidden;
 
         .totop {
-
+            z-index: 10;
             height: .51rem;
             width: .63rem;
             background: #676767;
@@ -36,69 +36,71 @@
         }
 
         .footer_con {
-            padding-top: .4rem;
+            padding-top: .52rem;
             margin: auto;
             overflow: hidden;
             margin-left: .34rem;
 
             .footer_con_l {
                 // width: 271px;
+                overflow: hidden;
 
                 .f_til {
-                    font-size: .2rem;
+                    font-size: .26rem;
                     color: rgba(103, 103, 103, 1);
                 }
 
                 .f_line {
-                    width: 2.05rem;
+                    width: 1.1rem;
                     height: 2px;
                     background: rgba(255, 255, 255, 0.3);
-                    margin-top: .13rem;
+                    margin-top: .15rem;
                 }
 
                 .email {
                     overflow: hidden;
-                    margin-top: .31rem;
+                    margin-top: .34rem;
 
                     img {
                         display: block;
                         float: left;
                         width: .22rem;
                         height: .16rem;
+                        margin-top: .07rem;
                     }
 
                     p {
                         float: left;
                         margin-left: .09rem;
-                        font-size: .17rem;
-                        color: rgba(255, 255, 255, 1);
-                        line-height: .15rem;
+                        font-size: .20rem;
+                        color: #676767;
+                        // line-height: .15rem;
                     }
                 }
 
                 .file {
                     display: block;
                     overflow: hidden;
-                    margin-top: .17rem;
+                    margin-top: .34rem;
 
                     img {
                         display: block;
                         float: left;
                         width: .16rem;
                         height: .22rem;
-                        margin-left: .02rem;
+                        margin-left: .76rem;
+                        margin-top: .02rem;
                     }
 
                     p {
                         float: left;
-                        font-size: .17rem;
+                        font-size: .20rem;
                         margin-left: .12rem;
                         font-weight: 400;
-                        color: rgba(255, 255, 255, 1);
-                        line-height: .25rem;
 
+                        // line-height: .15rem;
                         a {
-                            color: #fff;
+                            color: #676767;
 
                         }
                     }
@@ -106,29 +108,31 @@
             }
 
             .footer_con_r {
-                margin-left: .23rem;
+                margin-top: .53rem;
 
                 .r_til {
-                    font-size: .2rem;
+                    font-size: .26rem;
                     color: rgba(103, 103, 103, 1);
                 }
 
                 .r_line {
                     height: 2px;
-                    width: 3.49rem;
+                    width: 1.9rem;
                     background: rgba(255, 255, 255, 0.3);
                     margin-top: .13rem;
                 }
 
                 .footer_dy {
-                    margin-top: .35rem;
+                    margin: auto;
+                    margin-top: .33rem;
                     // background: #ccc;
                     position: relative;
-                    height: .42rem;
+                    height: .63rem;
+                    margin-left: .56rem;
 
                     .input_box {
                         // width: 403px;
-                        height: .4rem;
+                        height: .63rem;
                         position: relative;
                         margin-left: .2rem;
 
@@ -136,9 +140,10 @@
                             // margin-top: .01rem;
                             // width: 403px;
                             position: absolute;
-                            top: .01rem;
+                            width: 4.7rem;
+                            top: .02rem;
                             left: .1rem;
-                            height: .4rem;
+                            height: .6rem;
                             outline: none;
                             font-size: .17rem;
                             font-weight: 400;
@@ -154,19 +159,20 @@
                             left: .1rem;
                             top: 0;
                             height: .4rem;
-                            line-height: .4rem;
-                            font-size: .17rem;
+                            line-height: .6rem;
+                            font-size: .22rem;
                             font-weight: 400;
                             color: rgba(170, 170, 170, 1);
                             width: 100%;
                             padding-left: .3rem;
+                            z-index: 8;
                         }
                     }
 
                     .input_l_box {
                         position: absolute;
-                        height: .42rem;
-                        width: .35rem;
+                        height: .63rem;
+                        width: .42rem;
                         background: #2AD9FE;
                         top: 0;
                         left: .1rem;
@@ -175,11 +181,11 @@
 
                     .input_r_box {
                         position: absolute;
-                        height: .42rem;
-                        width: .9rem;
+                        height: .63rem;
+                        width: 1.5rem;
                         background: #2AD9FE;
                         top: 0;
-                        left: 2.6rem;
+                        left: 4.6rem;
                         transform: skewX(-25deg);
 
                         .button {
@@ -187,12 +193,21 @@
                             border: none;
                             margin: auto;
                             transform: skewX(25deg);
-                            font-size: .12rem;
+                            font-size: .26rem;
                             font-weight: 400;
                             color: #fff;
-                            line-height: .42rem;
+                            line-height: .56rem;
                             display: block;
                             outline: none;
+                            margin-top: .05rem;
+                        }
+
+                        input[type=button],
+                        input[type=submit],
+                        input[type=file],
+                        button {
+                            cursor: pointer;
+                            -webkit-appearance: none;
                         }
                     }
                 }
@@ -201,18 +216,19 @@
 
         .footer_img {
             margin: auto;
-            width: 7rem;
+            width: 6.4rem;
             // height: 28px;
             margin: auto;
             overflow: hidden;
-            margin-top: .88rem;
-            margin-left: .46rem;
+            // margin-top: .88rem;
+
             .wechet_box {
                 // margin-left: 52px;
                 position: relative;
                 width: .4rem;
                 height: .4rem;
-                margin-left: .4rem;
+                margin-left: 1.1rem;
+                margin-top: .6rem;
                 font-size: 0;
 
                 .biao {
@@ -236,12 +252,14 @@
                     }
                 }
             }
+
             .zs_box {
                 // margin-left: 52px;
                 position: relative;
                 width: .25rem;
                 height: .4rem;
-                margin-left: .4rem;
+                margin-left: 1.1rem;
+                margin-top: .6rem;
                 font-size: 0;
 
                 .biao {
@@ -265,15 +283,21 @@
                     }
                 }
             }
+
             a {
                 display: block;
                 float: left;
                 width: .4rem;
                 height: .4rem;
-                margin-left: .4rem;
+                margin-left: 1.1rem;
                 font-size: 0;
+                margin-top: .6rem;
 
                 &:nth-child(1) {
+                    margin-left: 0;
+                }
+
+                &:nth-child(6) {
                     margin-left: 0;
                 }
 
@@ -287,10 +311,11 @@
             font-size: .22rem;
             font-weight: normal;
             color: rgba(255, 255, 255, 1);
-            opacity: 0.34;
             margin: auto;
-            margin-top: .47rem;
+            margin-top: .4rem;
+            margin-bottom: .3rem;
             text-align: center;
+            opacity: 0.34;
         }
     }
 }

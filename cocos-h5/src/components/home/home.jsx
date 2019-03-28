@@ -48,14 +48,14 @@ import w14 from '../../images/white(14).png'
 import jia from '../../images/jia.png'
 import close from '../../images/close.png'
 import dline from '../../images/dline.png'
-import './home.css' 
+import './home.css'
 
 export default class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            black1: [{ b: b, w: w,url:'http://www.ngc.fund/' }, { b: b1, w: w1,url:'https://labs.binance.com/' }, { b: b2, w: w2,url:'http://www.inblockchain.com/' }, { b: b3, w: w3, }, { b: b4, w: w4,url:'https://500.co/' }, { b: b5, w: w5 ,url:'https://www.blockvc.com/'}, { b: b6, w: w6,url:'https://www.okcoin.com/capital' }, { b: b7, w: w7 ,url:'http://yisucapital.com/'}, { b: b8, w: w8 ,url:'http://gs.holdings/'}, { b: b9, w: w9,url:'https://ont.io/' }],
-            black2: [{ b: b10, w: w10 ,url:'https://www.helloeos.com.cn/'}, { b: b11, w: w11,url:'https://slowmist.io/' }, { b: b12, w: w12 ,url:'https://nebulas.io/cn/'}, { b: b13, w: w13,url:'https://loomx.io/' }, { b: b14, w: w14 ,url:'https://www.imeos.one/'}],
+            black1: [{ b: b, w: w, url: 'http://www.ngc.fund/' }, { b: b1, w: w1, url: 'https://labs.binance.com/' }, { b: b2, w: w2, url: 'http://www.inblockchain.com/' }, { b: b3, w: w3, }, { b: b4, w: w4, url: 'https://500.co/' }, { b: b5, w: w5, url: 'https://www.blockvc.com/' }, { b: b6, w: w6, url: 'https://www.okcoin.com/capital' }, { b: b7, w: w7, url: 'http://yisucapital.com/' }, { b: b8, w: w8, url: 'http://gs.holdings/' }, { b: b9, w: w9, url: 'https://ont.io/' }],
+            black2: [{ b: b10, w: w10, url: 'https://www.helloeos.com.cn/' }, { b: b11, w: w11, url: 'https://slowmist.io/' }, { b: b12, w: w12, url: 'https://nebulas.io/cn/' }, { b: b13, w: w13, url: 'https://loomx.io/' }, { b: b14, w: w14, url: 'https://www.imeos.one/' }],
             sysImg: [{ img: cocos1, text: 'system1' },
             { img: cocos2, text: 'system2' },
             { img: cocos3, text: 'system3' },
@@ -146,23 +146,33 @@ export default class Home extends Component {
         let lang = localStorage.getItem('lang_type');
         return (
             <div className='homepage_index'>
-                <div className='video_box ' onClick={(e) => { this.hideVideo(e) }} ref={(x) => { this.videoBox = x }}>
+                <div className='video_box '
+                    onClick={(e) => { this.hideVideo(e) }} ref={(x) => { this.videoBox = x }}>
                     <div className='video'>
                         {/* <div className='close_box' onClick={this.hideVideo}>
                             <img src={close} alt="" />
                         </div> */}
                         {
                             lang === 'en' ?
-                                <iframe type="text/html" height={document.body.clientWidth * 9 / 16} width={document.body.clientWidth} src="https://www.youtube.com/embed/KiKc3FG9Auc?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1"  allowtransparency='yes' allow="autoplay" frameBorder="0" ></iframe> :
+                                <iframe type="text/html" height={document.body.clientWidth * 9 / 16} width={document.body.clientWidth} src="https://www.youtube.com/embed/KiKc3FG9Auc?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1" allowtransparency='yes' allow="autoplay" frameBorder="0" ></iframe> :
                                 <iframe className='video_play' height={document.body.clientWidth * 9 / 16} width={document.body.clientWidth}
                                     allow="autoplay; fullscreen" src='http://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1'
-                                    ref={(x) => { this.videoBox = x }} frameBorder='0'allowtransparency='yes' flashvars="isAutoPlay=true" allow="autoplay" ></iframe>
+                                    ref={(x) => { this.videoBox = x }} frameBorder='0' allowtransparency='yes' flashvars="isAutoPlay=true" allow="autoplay" ></iframe>
                         }
                     </div>
                 </div>
                 <div className='banner_box'>
                     <Nav></Nav>
-                    <img src={play} className='play_btn' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
+                    <img src={logow} className='wlogo' alt="" />
+                    <div className='home_btn_box'>
+                        <h5>COCOS</h5>
+                        <h5>BLOCKCHAIN EXPEDITION</h5>
+                        <h6><FormattedMessage id='next' /></h6>
+                        <div className='play_btn'>
+                            <img src={play} className='play_btn lt' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
+                            <p className='lt'><FormattedMessage id='nextex' /></p>
+                        </div>
+                    </div>
                 </div>
                 <div className='explane'>
                     <div className="expplane_til"><FormattedMessage id='explane' /></div>
@@ -188,7 +198,7 @@ export default class Home extends Component {
                                 <img src={daohang} className='ex_l_img' alt="" />
                             </div>
                             <div className='ex_l_r lt'>
-                                <h4 className='ex_img_til'><FormattedMessage id='ex_tel2' /></h4>
+                                <h4 className='ex_img_til' style={lang === 'en' ? { fontSize: '.24rem' } : null}><FormattedMessage id='ex_tel2' /></h4>
                                 <p className='ex_img_text' ><FormattedMessage id='ex_text2' /></p>
                             </div>
                         </div>
@@ -215,17 +225,15 @@ export default class Home extends Component {
                     <div className='news_main'>
                         <div className="news_top">
                             {this.state.newsTopList.map((item, index) => {
-                                return <div className='news_top_box ' key={index}>
+                                return <a href={item.resource} target="_blank" rel="noopener noreferrer" className='news_top_box ' key={index}>
                                     <div className='news_pic lt'>
-                                        <a href={item.resource} target="_blank" rel="noopener noreferrer"><img src={item.image} alt="" /></a>
-                                        <div className='news_top_til'>
-                                            <div>
-                                                <h5>{item.title}</h5>
-                                            </div>
-                                        </div>
+                                        <img src={item.image} alt="" />
                                     </div>
-                                    <div className='news_top_content lt'>{item.summary}</div>
-                                </div>
+                                    <div className='news_top_til lt'>
+                                        <h5>{item.title}</h5>
+                                        <div className='news_top_content lt'>{item.summary}</div>
+                                    </div>
+                                </a>
                             })}
                         </div>
                         <ul className='news_bottom'>
@@ -249,7 +257,6 @@ export default class Home extends Component {
                         <div className="sys_til_our">
                             <h4><FormattedMessage id='system' /></h4>
                         </div>
-                        <div className="sys_til_ex"><FormattedMessage id='sysex' /></div>
                     </div>
                     <img src={cocoslogo} alt="" className='sys_logo' />
                     <img src={line} alt="" className='sys_line' />
@@ -295,7 +302,6 @@ export default class Home extends Component {
                             <div className='head_b'>
                                 <img src={logow} alt="" />
                             </div>
-                            <div className='head_w'></div>
                             <div className='head_til'>
                                 <div className='head_til_box'>
                                     <FormattedMessage id='hz' />
@@ -306,7 +312,7 @@ export default class Home extends Component {
                         <div className='hezuo_com'>
                             <div className="hezuo_top">
                                 {this.state.black1.map((item, index) => {
-                                    return <a href={item.url} target="_blank" rel="noopener noreferrer"  key={index} className='lt' style={{ background: `url(${item.b}) no-repeat center`, backgroundSize: '1.26rem .86rem' }}
+                                    return <a href={item.url} target="_blank" rel="noopener noreferrer" key={index} className='lt' style={{ background: `url(${item.b}) no-repeat center`, backgroundSize: '1.26rem .86rem' }}
                                     /*     onMouseEnter={(e) => { e.target.style.background = `url(${item.w})no-repeat center` }}
                                         onMouseLeave={(e) => { e.target.style.background = `url(${item.b})no-repeat center` }} */
                                     >
@@ -316,7 +322,7 @@ export default class Home extends Component {
                             <img src={jia} alt="" className="hezuo_middle" />
                             <div className="hezuo_bottom">
                                 {this.state.black2.map((item, index) => {
-                                    return <a href={item.url} target="_blank" rel="noopener noreferrer"  key={index} className='lt' style={{ background: `url(${item.b}) no-repeat center`, backgroundSize: '1.26rem .86rem' }}
+                                    return <a href={item.url} target="_blank" rel="noopener noreferrer" key={index} className='lt' style={{ background: `url(${item.b}) no-repeat center`, backgroundSize: '1.26rem .86rem' }}
                                     /* onMouseEnter={(e) => { e.target.style.background = `url(${item.w})` }}
                                     onMouseLeave={(e) => { e.target.style.background = `url(${item.b})` }} */
                                     >
