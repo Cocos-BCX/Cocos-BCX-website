@@ -116,6 +116,10 @@
   height: 182px;
   border: 1px solid #e2e2e2;
   padding: 43px 32px 43px 36px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
@@ -154,16 +158,24 @@
   background: url('../../../images/date.png') no-repeat;
   background-size: 20px 20px;
   padding-left: 28px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 16px;
   font-weight: 400;
   color: #787878;
-  box-sizing: border-box;
 }
 .big .big_list_box .s1_box .s1_content .s1_list .s1_text {
   width: 844px;
   background: #e7e7e7;
   border-radius: 3px;
   padding: 22px 30px 30px 30px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 16px;
   font-weight: 400;
@@ -254,8 +266,11 @@
     height: 182px;
     border: 1px solid #e2e2e2;
     padding: 33px 25px 35px 20px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
-    position: relative;
     overflow: hidden;
     transition: height .6s;
   }
@@ -295,6 +310,10 @@
     font-size: 13px;
     font-weight: 400;
     color: #787878;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
   }
   .big .big_list_box .s1_box .s1_content .s1_list .s1_text {
@@ -302,6 +321,10 @@
     background: #e7e7e7;
     border-radius: 3px;
     padding: 22px 30px 18px 30px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 14px;
     font-weight: 400;

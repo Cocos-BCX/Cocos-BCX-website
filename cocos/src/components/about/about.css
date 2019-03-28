@@ -136,6 +136,7 @@
   overflow: hidden;
   z-index: 50;
   cursor: pointer;
+  color: #999999;
 }
 .about .team_box .team_pic_box .team_every .people_ex_box a {
   position: absolute;
@@ -424,6 +425,7 @@
     overflow: hidden;
     z-index: 50;
     cursor: pointer;
+    color: #999999;
   }
   .about .team_box .team_pic_box .team_every .people_ex_box a {
     position: absolute;

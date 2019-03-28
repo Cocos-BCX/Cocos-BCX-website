@@ -50,7 +50,7 @@
   font-weight: 400;
 }
 .banner_box .home_btn_box h6 {
-  color: #A5A5A5;
+  color: #fff;
   font-size: 29px;
   font-family: FjallaOne;
   font-weight: bold;
@@ -564,8 +564,8 @@
     overflow: hidden;
   }
   .news_box .news_main .news_bottom li a .img_box {
-    width: 102px;
-    height: 68px;
+    width: 91.8px;
+    height: 61.2px;
     overflow: hidden;
   }
   .news_box .news_main .news_bottom li a .img_box img {
