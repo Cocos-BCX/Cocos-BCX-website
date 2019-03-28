@@ -76,6 +76,10 @@
   text-align: center;
   transform: skewX(22deg);
 }
+.develop .dev_box .dev_m:nth-child(1) .dev_en {
+  font-size: 18px;
+  line-height: 32px;
+}
 @media screen and (max-width: 1400px) {
   .develop .banner_box {
     margin: auto;
@@ -154,5 +158,9 @@
     line-height: 38px;
     text-align: center;
     transform: skewX(22deg);
+  }
+  .develop .dev_box .dev_m:nth-child(1) .dev_en {
+    font-size: 14px;
+    line-height: 22px;
   }
 }

@@ -1,6 +1,5 @@
 .footer {
   width: 100%;
-  height: 529px;
   background: #1f1f1f;
 }
 .footer .footer_box {
@@ -189,7 +188,7 @@
   width: 680px;
   height: 28px;
   margin: auto;
-  margin-top: 105px;
+  margin-top: 90px;
 }
 .footer .footer_box .footer_img img {
   width: 28px;
@@ -243,13 +242,13 @@
   color: #ffffff;
   opacity: 0.34;
   margin: auto;
-  margin-top: 92px;
+  margin-top: 60px;
   text-align: center;
+  padding-bottom: 50px;
 }
 @media screen and (max-width: 1400px) {
   .footer {
     width: 100%;
-    height: 529px;
     background: #1f1f1f;
   }
   .footer .footer_box {
@@ -438,7 +437,7 @@
     width: 680px;
     height: 28px;
     margin: auto;
-    margin-top: 105px;
+    margin-top: 50px;
   }
   .footer .footer_box .footer_img img {
     width: 28px;
@@ -492,7 +491,8 @@
     color: #ffffff;
     opacity: 0.34;
     margin: auto;
-    margin-top: 92px;
+    margin-top: 40px;
     text-align: center;
+    padding-bottom: 40px;
   }
 }

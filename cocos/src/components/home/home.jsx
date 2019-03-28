@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
+import { NavLink } from "react-router-dom";
 import Nav from '../nav/nav'
 import { get, } from '../../api/api'
 import play from '../../images/play.png'
@@ -160,8 +161,8 @@ export default class Home extends Component {
     }
     componentWillMount() {
         console.log(this.props.choose);
-        
     }
+
     render() {
         let lang = localStorage.getItem('lang_type');
         return (
@@ -233,7 +234,14 @@ export default class Home extends Component {
                             <div className='news_line'></div>
                         </div>
                         <div className="news_til_mask"></div>
-                        <div className='news_til_more' onClick={() => { window.location.hash = '#/action/news'; window.scrollTo(0, 0); }}><div><FormattedMessage id='more' /></div></div>
+                        <div className='news_til_more' >
+                            <NavLink to="action/news" exact={true}>
+                                <div>
+                                    <FormattedMessage id='more' />
+                                </div>
+                            </NavLink>
+
+                        </div>
                     </div>
                     <div className='news_main'>
                         <div className="news_top">
@@ -297,7 +305,16 @@ export default class Home extends Component {
                             <div className='news_line'></div>
                         </div>
                         <div className="news_til_mask"></div>
-                        <div className='news_til_more' onClick={() => { window.location.hash = '#/action/yb'; window.scrollTo(0, 0); }}><div><FormattedMessage id='more' /></div></div>
+
+                        <div className='news_til_more' >
+                            <NavLink to="action/yb" exact={true}>
+                                <div>
+                                    <FormattedMessage id='more' />
+                                </div>
+                            </NavLink>
+
+                        </div>
+
                     </div>
                     <div className='map_main_box'>
                         {this.state.mapList.map((item, index) => {

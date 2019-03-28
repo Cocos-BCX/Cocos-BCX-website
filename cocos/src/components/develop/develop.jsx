@@ -29,7 +29,7 @@ export default class Develop extends Component {
                             <div className='dev_main_til'>
                                 <h4><FormattedMessage id='developPlan' /></h4>
                             </div>
-                            <p><FormattedMessage id='devjh' /></p>
+                            <p className={lang==='en'?'dev_en':null}><FormattedMessage id='devjh'  /></p>
                             <div className='dev_go'>
                                 <div>GO</div>
                             </div>

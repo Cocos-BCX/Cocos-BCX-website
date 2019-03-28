@@ -63,8 +63,8 @@ const zh_CN = {
 
     //开发者
     devjh: 'Cocos-BCX 于2018年12月21日14:00正式上线内测，这标志 Cocos-BCX 公链的基础设施已经初具成果，更标志着 Cocos-BCX 向正式网络发布迈进一大步！在此之际，Cocos-BCX 推出《开发者计划》，面向全球开放30名内测资格，诚意邀请有想法参与内测的开发者个人或者团队加入内测。',
-    devwd: 'Cocos-BCX 于2018年12月21日14:00正式上线内测，这标志 Cocos-BCX 公链的基础设施已经初具成果，更标志着 Cocos-BCX 向正式网络发布迈进一大步！在此之际，Cocos-BCX 推出《开发者计划》，面向全球开放30名内测资格，诚意邀请有想法参与内测的开发者个人或者团队加入内测。',
-    devsq: 'Cocos-BCX 于2018年12月21日14:00正式上线内测，这标志 Cocos-BCX 公链的基础设施已经初具成果，更标志着 Cocos-BCX 向正式网络发布迈进一大步！在此之际，Cocos-BCX 推出《开发者计划》，面向全球开放30名内测资格，诚意邀请有想法参与内测的开发者个人或者团队加入内测。',
+    devwd: '欢迎使用 Cocos BlockChain Expedition（Cocos-BCX）技术文档集！本合集包括详尽的Cococs-BCX 链网络技术框架和特性说明，合约系统简介与使用教程，以及 BCX-NHAS-1808 非同质数字资产标准和世界观系统的介绍、范例。能够帮您快速掌握 Cococs-BCX 链网络的相关知识并进行链游戏开发方法。',
+    devsq: '欢迎进入 Cocos BlockChain Expedition（Cocos-BCX）开发者社区。Cocos 目前在全球拥有 130 万的注册开发者，30 万的月活跃开发者，遍布全球超过 203 个国家和地区，8 亿玩家。',
 
     //生态产品
     ljdev: '了解开发者扶持计划',
@@ -83,8 +83,8 @@ const zh_CN = {
     tname2:'Cocos Terminal',
     tname3:'Game props exchange',
     tauther1:'Cocos-BCX',
-    tauther2:'三方',
-    tauther3:'三方',
+    tauther2:'联合实验室',
+    tauther3:'FameGame',
     tex1:'官方检简版浏览器。可实时查看区块高度，链上交易情况和节点等Cocos-BCX链上详情。',
     tex2:'基于Cocos-BCX的dApp，集成钱包、区块链浏览器、资产交易所和订单管理功能。用户可在上面查看合约信息，并进行道具买卖交易。',
     tex3:'基于 Cocos-BCX JS SDK 开发，集成游戏市场、钱包、订单系统和游戏中心入口。',

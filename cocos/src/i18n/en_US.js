@@ -62,9 +62,9 @@ const en_US = {
     subscribe: 'SUBSCRIBE',
 
     //开发者
-    devjh: 'Cocos-BCX 于2018年12月21日14:00正式上线内测，这标志 Cocos-BCX 公链的基础设施已经初具成果，更标志着 Cocos-BCX 向正式网络发布迈进一大步！在此之际，Cocos-BCX 推出《开发者计划》，面向全球开放30名内测资格，诚意邀请有想法参与内测的开发者个人或者团队加入内测。',
-    devwd: 'Cocos-BCX 于2018年12月21日14:00正式上线内测，这标志 Cocos-BCX 公链的基础设施已经初具成果，更标志着 Cocos-BCX 向正式网络发布迈进一大步！在此之际，Cocos-BCX 推出《开发者计划》，面向全球开放30名内测资格，诚意邀请有想法参与内测的开发者个人或者团队加入内测。',
-    devsq: 'Cocos-BCX 于2018年12月21日14:00正式上线内测，这标志 Cocos-BCX 公链的基础设施已经初具成果，更标志着 Cocos-BCX 向正式网络发布迈进一大步！在此之际，Cocos-BCX 推出《开发者计划》，面向全球开放30名内测资格，诚意邀请有想法参与内测的开发者个人或者团队加入内测。',
+    devjh: '14:00 PM, December 21, 2018, Cocos-BCX TestNet was officially launched. Together with the TestNet launched, Cocos-BCX opened up the Developer Program with 30 spots offered to developers in China region to join Alpha testing on Cocos-BCX TestNet. Now with the English version technical documentations ready in place, Cocos-BCX further invites developers (individual or team) globally to join Alpha testing on the platform!',
+    devwd: 'Welcome to the technical documentation of Cocos Blockchain Expedition! This collection introduces the Cocos-BCX architecture and its features, the contract system including tutorials, non-homogenous assets standard (BCX-NHAS-1808) and world views.',
+    devsq: 'Welcome to the technical forum of Cocos Blockchain Expedition! Currently, Cocos has 1.3 million registered developers worldwide, with a monthly active developers of 300 thousand, as well as 800 million players in 203 countries and regions around the world.',
 
     //生态产品
     ljdev: 'Learn about the Developer Support Program',
@@ -83,8 +83,8 @@ const en_US = {
     tname2:'Cocos Terminal',
     tname3:'Game props exchange',
     tauther1:'Cocos-BCX',
-    tauther2:'Third-party',
-    tauther3:'Third-party',
+    tauther2:'United Labs of BCTech',
+    tauther3:'FameGame',
     tex1:'A simplified version of the official explorer. You can view the the on-chain details of block height, transactions and node in real time.',
     tex2:'A Cocos-BCX based dApp that integrates the features of wallet, blockchain explorer, assets transaction and order management. The users can check contract information, and conduct props trading.',
     tex3:'Developed based on the Cocos-BCX JS SDK, the dApp contains game market, wallet, order system and access to game center. In the market, players can purchase or sell the props(character, item, and treasure box , etc) for his beloved games. Players can deposit or withdraw in the market. Meanwhile, the props market is also an important social platform at which players can discuss about gameplay and strategy, etc. ',

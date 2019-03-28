@@ -130,7 +130,7 @@ export default class Nav extends Component {
                                                 <FormattedMessage id='developApi' />
                                             </div>
                                             <div className='dev_a'
-                                                onClick={(e) => { this.stopImmediate(e); window.open("https://discuss.cocos2d-x.org/c/cocos-bcx", '_blank'); }} >
+                                                onClick={(e) => { this.stopImmediate(e); window.open("https://forum.cocos.com/c/bcx", '_blank'); }} >
                                                 <FormattedMessage id='developsq' />
                                             </div>
                                         </div>

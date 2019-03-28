@@ -89,38 +89,6 @@
     margin: auto;
     margin-top: 265px;
   }
-  .banner_box .home_btn_box h5 {
-    color: #fff;
-    font-size: 30px;
-    font-family: FjallaOne;
-    font-weight: 400;
-  }
-  .banner_box .home_btn_box h6 {
-    color: #A5A5A5;
-    font-size: 24px;
-    font-family: FjallaOne;
-    font-weight: bold;
-  }
-  .banner_box .home_btn_box .play_btn {
-    overflow: hidden;
-    margin-top: 14px;
-  }
-  .banner_box .home_btn_box .play_btn img {
-    width: 38px;
-    height: 38px;
-    cursor: pointer;
-    opacity: .8;
-  }
-  .banner_box .home_btn_box .play_btn img:hover {
-    opacity: 1;
-  }
-  .banner_box .home_btn_box .play_btn p {
-    width: 210px;
-    margin-left: 19px;
-    color: #dbd2d2;
-    font-size: 12px;
-    line-height: 15px;
-  }
 }
 .explane {
   width: 1170px;

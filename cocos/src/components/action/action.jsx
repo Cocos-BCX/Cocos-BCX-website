@@ -10,7 +10,9 @@ import Big from './big/big'
 import './action.css'
 
 export default class Footer extends Component {
-
+    componentDidMount(nextProps) {
+        window.scrollTo(0, 0)
+    }
     render() {
         let lang = localStorage.getItem('lang_type');
         return (
