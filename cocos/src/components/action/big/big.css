@@ -115,7 +115,7 @@
   width: 1059px;
   height: 182px;
   border: 1px solid #e2e2e2;
-  padding: 43px 32px 43px 36px;
+  padding: 0px 32px 0px 36px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -124,6 +124,7 @@
   position: relative;
   overflow: hidden;
   transition: height .6s;
+  padding-bottom: 30px;
 }
 .big .big_list_box .s1_box .s1_content .s1_more {
   position: absolute;
@@ -148,7 +149,7 @@
 }
 .big .big_list_box .s1_box .s1_content .s1_list {
   overflow: hidden;
-  margin-top: 21px;
+  margin-top: 32px;
 }
 .big .big_list_box .s1_box .s1_content .s1_list:nth-child(2) {
   margin-bottom: 100px;
@@ -265,7 +266,7 @@
     width: 800px;
     height: 182px;
     border: 1px solid #e2e2e2;
-    padding: 33px 25px 35px 20px;
+    padding: 0px 25px 0px 20px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -o-box-sizing: border-box;
@@ -273,6 +274,7 @@
     box-sizing: border-box;
     overflow: hidden;
     transition: height .6s;
+    padding-bottom: 20px;
   }
   .big .big_list_box .s1_box .s1_content .s1_more {
     position: absolute;

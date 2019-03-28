@@ -7,7 +7,7 @@ export default class Big extends Component {
     constructor() {
         super();
         this.state = {
-            year:'2018',
+            year:'2019',
             s1action: false,
             s2action: false,
             s3action: false,
@@ -170,7 +170,7 @@ export default class Big extends Component {
                         <div className='ny' onClick={this.cliclNine} ref={(x) => { this.nbtn = x }}>2019</div>
                     </div>
                 </div>
-                <div style={{ display: 'block' }} ref={(x) => { this.eight = x }}>
+                <div style={{ display: 'none' }} ref={(x) => { this.eight = x }}>
                     <div className='big_list_box'>
                         <div className='s1_box'>
                             <div className='s1_til lt'>
@@ -209,7 +209,7 @@ export default class Big extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className='big_list_box'>
+                    <div className='big_list_box' >
                         <div className='s1_box'>
                             <div className='s1_til lt'>
                                 <FormattedMessage id='s3' />
@@ -278,7 +278,7 @@ export default class Big extends Component {
                         </div>
                     </div>
                 </div>
-                <div style={{ height: '1000px', display: 'none' }} ref={(x) => { this.nine = x }}>
+                <div style={{ height: '1000px', display: 'block' }} ref={(x) => { this.nine = x }}>
                     <div className='big_list_box'>
                         <div className='s1_box'>
                             <div className='s1_til lt'>
@@ -287,8 +287,8 @@ export default class Big extends Component {
                             <div className='s1_content rt' style={{ height: 'auto' }} >
                                 {this.state.ns1.map((item, index) => {
                                     return <div className='s1_list s3_list' style={{ marginBottom: 'auto' }} key={index}>
-                                        <div className='s1_time lt' style={{ width: '160px' }}>{item.date}</div>
-                                        <div className='s1_text lt' style={{ width: '828px' }}><FormattedMessage id={item.til} /></div>
+                                        <div className='s1_time lt' >{item.date}</div>
+                                        <div className='s1_text lt' ><FormattedMessage id={item.til} /></div>
                                     </div>
                                 })}
                             </div>

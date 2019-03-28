@@ -109,7 +109,7 @@
   transform: scale(1.2);
 }
 .new .new_list .new_list_box li .new_til {
-  height: 77px;
+  height: 50px;
   padding: 18px 14px 2px 14px;
   font-size: 18px;
   font-weight: 400;
@@ -120,7 +120,7 @@
 .new .new_list .new_list_box li .new_bottom {
   padding: 0 14px;
   overflow: hidden;
-  margin-top: 12px;
+  margin-top: 32px;
   font-size: 14px;
   font-weight: 400;
   color: #787878;
@@ -241,7 +241,7 @@
     transform: scale(1.2);
   }
   .new .new_list .new_list_box li .new_til {
-    height: 60px;
+    height: 40px;
     padding: 14px 12px 0px 12px;
     font-size: 15px;
     font-weight: 400;
@@ -252,7 +252,7 @@
   .new .new_list .new_list_box li .new_bottom {
     padding: 0 14px;
     overflow: hidden;
-    margin-top: 10px;
+    margin-top: 26px;
     font-size: 13px;
     font-weight: 400;
     color: #787878;
