@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { NavLink } from "react-router-dom";
-import { HashRouter as Router, Route, Switch ,Redirect} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch ,Redirect} from "react-router-dom";
 import Nav from '../nav/nav'
 import New from './new/new'
 import Hd from './hd/hd'
