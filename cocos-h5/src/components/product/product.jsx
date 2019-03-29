@@ -55,7 +55,7 @@ export default class Product extends Component {
                             <div className='dev_text_box lt'>
                                 <h4><FormattedMessage id={item.til} /></h4>
                                 <div className='wordroom'><FormattedMessage id={item.auther} /></div>
-                                <p><FormattedMessage id={item.gex} /></p>
+                                <p style={{"WebkitBoxOrient": "vertical"}}><FormattedMessage id={item.gex} /></p>
                             </div>
                         </a>
                         })}
@@ -79,7 +79,7 @@ export default class Product extends Component {
                             <div className='dev_text_box lt'>
                                 <h4><FormattedMessage id={item.til} /></h4>
                                 <div className='wordroom'><FormattedMessage id={item.auther} /></div>
-                                <p><FormattedMessage id={item.gex} /></p>
+                                <p style={{"WebkitBoxOrient": "vertical"}}><FormattedMessage id={item.gex} /></p>
                             </div>
                         </a>
                         })}

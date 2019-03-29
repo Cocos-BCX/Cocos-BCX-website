@@ -31,8 +31,8 @@ export default class About extends Component {
         super(props);
         this.state = {
             teamList: [
-                { pic: p1, ex: 'p1ex1', name: 'p1', position: 'fqr1', url: 'https://www.linkedin.com/in/%E6%98%8A%E8%8A%9D-%E9%99%88-51b805108/', icon: ly },
-                { pic: p2, ex: 'p1ex2', name: 'p2', position: 'fqr2', url: 'https://www.linkedin.com/in/xiaolong/', icon: ly },
+                { pic: p1, ly:ly,ex: 'p1ex1', name: 'p1', position: 'fqr1', url: 'https://www.linkedin.com/in/%E6%98%8A%E8%8A%9D-%E9%99%88-51b805108/', icon: ly },
+                { pic: p2, ly:ly,ex: 'p1ex2', name: 'p2', position: 'fqr2', url: 'https://www.linkedin.com/in/xiaolong/', icon: ly },
                 { pic: p3, ex: 'p1ex3', name: 'p3', position: 'fqr3' },
                 { pic: p4, ex: 'p1ex4', name: 'p4', position: 'fqr4' },
                 { pic: p5, ex: 'p1ex5', name: 'p5', position: 'fqr5' },
@@ -45,12 +45,12 @@ export default class About extends Component {
                 { pic: p12, ex: 'p1ex12', name: 'p12', position: 'fqr12' },
             ],
             adviser: [
-                { pic: p13, ex: 'p1ex13', name: 'p13', position: 'fqr13' },
-                { pic: p14, ex: 'p1ex14', name: 'p14', position: 'fqr14' },
-                { pic: p15, ex: 'p1ex15', name: 'p15', position: 'fqr15' },
-                { pic: p16, ex: 'p1ex16', name: 'p16', position: 'fqr16' },
-                { pic: p17, ex: 'p1ex17', name: 'p17', position: 'fqr17' },
-                { pic: p18, ex: 'p1ex18', name: 'p18', position: 'fqr18' },
+                { pic: p13, ly: ly, url: 'https://www.linkedin.com/in/zhe-wang-ba18831b/', ex: 'plex13', name: 'p13', position: 'fqr13' },
+                { pic: p14, ex: 'plex14', name: 'p14', position: 'fqr14' },
+                { pic: p15, ex: 'plex15', name: 'p15', position: 'fqr15' },
+                { pic: p16, ly: ly, url: 'https://www.linkedin.com/in/edithyeung/', ex: 'plex16', name: 'p16', position: 'fqr16' },
+                { pic: p17, ly: ly, url: 'https://www.linkedin.com/in/mccannatron/', ex: 'plex17', name: 'p17', position: 'fqr17' },
+                { pic: p18, ex: 'plex18', name: 'p18', position: 'fqr18' },
 
             ]
         }
@@ -62,7 +62,7 @@ export default class About extends Component {
                 <div className="banner_a_box">
                     <Nav></Nav>
                     <div className='white_book'>
-                    <a href={lang === 'zh' ? bookzh : booken} target="_blank" className='w_book rt' rel="noopener noreferrer">
+                        <a href={lang === 'zh' ? bookzh : booken} target="_blank" className='w_book rt' rel="noopener noreferrer">
                             <FormattedMessage id='lookBook' />
                         </a>
                     </div>
@@ -93,6 +93,15 @@ export default class About extends Component {
                                 </div>
                                 <p className='name'><FormattedMessage id={item.name} /></p>
                                 <p className='ex'><FormattedMessage id={item.position} /></p>
+                                <div className='people_ex_box' >
+                                    {
+                                        item.url ? <a href={item.url} target="_blank" rel="noopener noreferrer">
+                                            <img src={item.ly} className='ly' alt="" />
+                                        </a> : null
+                                    }
+
+                                    <p className={lang === 'zh' ? 'ext' : 'ext_en'}><FormattedMessage id={item.ex} /></p>
+                                </div>
                             </div>
                         })}
                     </div>

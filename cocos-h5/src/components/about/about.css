@@ -79,7 +79,7 @@
 }
 .about .team_box .team_pic_box {
   margin: auto;
-  overflow: hidden;
+  height: 13.04rem;
   padding-bottom: 40px;
 }
 .about .team_box .team_pic_box .team_every {
@@ -87,6 +87,7 @@
   width: 1.74rem;
   margin-left: .59rem;
   margin-top: .36rem;
+  position: relative;
 }
 .about .team_box .team_pic_box .team_every:nth-child(1) {
   margin-left: 0;
@@ -121,6 +122,49 @@
   margin: auto;
   text-align: center;
   margin-top: .1rem;
+}
+.about .team_box .team_pic_box .team_every .people_ex_box {
+  position: absolute;
+  width: 2.6rem;
+  border: 1px solid #2ad9fe;
+  box-shadow: 0px 2px 4px 0px rgba(32, 84, 133, 0.4);
+  top: -0.4rem;
+  left: -0.4rem;
+  overflow: hidden;
+  z-index: 50;
+  cursor: pointer;
+  color: #999999;
+}
+.about .team_box .team_pic_box .team_every .people_ex_box a {
+  position: absolute;
+  right: .3rem;
+  top: 1.7rem;
+  width: 42px;
+  height: 42px;
+  font-size: 0;
+}
+.about .team_box .team_pic_box .team_every .people_ex_box a img {
+  width: 100%;
+  height: 100%;
+}
+.about .team_box .team_pic_box .team_every .people_ex_box .ext {
+  margin: auto;
+  margin-top: 3.4rem;
+  font-size: .18rem;
+  line-height: .25rem;
+  background: #fff;
+  padding-bottom: .2rem;
+  padding-left: .2rem;
+  padding-right: .2rem;
+}
+.about .team_box .team_pic_box .team_every .people_ex_box .ext_en {
+  margin-top: 3.4rem;
+  font-size: .18rem;
+  line-height: .25rem;
+  background: #fff;
+  padding-bottom: .2rem;
+  padding-left: .2rem;
+  padding-right: .2rem;
 }
 .about .adviser_box {
   margin: auto;

@@ -117,9 +117,9 @@
 
                         .wordroom {
                             margin-top: .16rem;
-                            background: url('../../images/people.png') 0 0 no-repeat;
-                            background-size: .15rem .19rem;
-                            padding-left: .2rem;
+                            background: url('../../images/people.png') 0 0rem no-repeat;
+                            background-size: .2rem auto;
+                            padding-left: .3rem;
                             font-size: .2rem;
                             font-weight: 400;
                             color: rgba(105, 105, 105, 1);
@@ -127,15 +127,18 @@
                         }
 
                         p {
-                            width: 2.75rem;
-                            height: 1.63rem;
+                            width: 3.55rem;
+                            height: 1.33rem;
                             margin-top: .3rem;
                             font-size: .2rem;
                             font-weight: 300;
                             line-height:.27rem;
                             position: relative;
                             color: #000;
-
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 5;
+                            overflow: hidden;
                             // &::after {
                             //     content: "...";
                             //     position: absolute;

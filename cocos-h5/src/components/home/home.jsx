@@ -46,7 +46,6 @@ import w12 from '../../images/white(12).png'
 import w13 from '../../images/white(13).png'
 import w14 from '../../images/white(14).png'
 import jia from '../../images/jia.png'
-import close from '../../images/close.png'
 import dline from '../../images/dline.png'
 import './home.css'
 
@@ -170,7 +169,7 @@ export default class Home extends Component {
                         <h6><FormattedMessage id='next' /></h6>
                         <div className='play_btn'>
                             <img src={play} className='play_btn lt' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
-                            <p className='lt'><FormattedMessage id='nextex' /></p>
+                            <p style={{"WebkitBoxOrient": "vertical"}} className='lt'><FormattedMessage id='nextex' /></p>
                         </div>
                     </div>
                 </div>
@@ -198,8 +197,8 @@ export default class Home extends Component {
                                 <img src={daohang} className='ex_l_img' alt="" />
                             </div>
                             <div className='ex_l_r lt'>
-                                <h4 className='ex_img_til' style={lang === 'en' ? { fontSize: '.24rem' } : null}><FormattedMessage id='ex_tel2' /></h4>
-                                <p className='ex_img_text' ><FormattedMessage id='ex_text2' /></p>
+                                <h4 className='ex_img_til' style={lang === 'en' ? { fontSize: '.22rem' } : null}><FormattedMessage id='ex_tel2' /></h4>
+                                <p style={{"WebkitBoxOrient": "vertical"}} className='ex_img_text' ><FormattedMessage id='ex_text2' /></p>
                             </div>
                         </div>
                         <div className='ex_l_box lt' >
@@ -231,7 +230,7 @@ export default class Home extends Component {
                                     </div>
                                     <div className='news_top_til lt'>
                                         <h5>{item.title}</h5>
-                                        <div className='news_top_content lt'>{item.summary}</div>
+                                        <div className='news_top_content lt' style={{"WebkitBoxOrient": "vertical"}}>{item.summary}</div>
                                     </div>
                                 </a>
                             })}
@@ -243,7 +242,7 @@ export default class Home extends Component {
                                         <img src={item.image} className='img_box lt' />
                                         <div className='img_box_text lt'>
                                             <div>
-                                                <h5>{item.title}</h5>
+                                                <h5 style={{"WebkitBoxOrient": "vertical"}}>{item.title}</h5>
                                             </div>
                                         </div>
                                     </a>
@@ -272,7 +271,7 @@ export default class Home extends Component {
                 <div className='map'>
                     <div className="news_til_box">
                         <div className="news_til">
-                            <h3><FormattedMessage id='map' /></h3>
+                            <h3 style={lang==='en'?{fontSize:'.16rem'}:null}><FormattedMessage id='map' /></h3>
                             <div className='news_line'></div>
                         </div>
                         <div className="news_til_mask"></div>
@@ -282,7 +281,7 @@ export default class Home extends Component {
                         {this.state.mapList.map((item, index) => {
                             return <div className='map_s_box lt' key={index}>
                                 <h5 className='lt'><FormattedMessage id={item.til3} /></h5>
-                                <p className='lt'><FormattedMessage id={item.til1} /></p>
+                                <p style={{"WebkitBoxOrient": "vertical"}}  className='lt'><FormattedMessage id={item.til1} /></p>
                             </div>
                         })}
                         <div className='line_box'>
