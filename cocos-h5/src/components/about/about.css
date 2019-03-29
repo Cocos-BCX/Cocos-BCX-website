@@ -124,11 +124,12 @@
   margin-top: .1rem;
 }
 .about .team_box .team_pic_box .team_every .people_ex_box {
+  display: none;
   position: absolute;
   width: 2.6rem;
   border: 1px solid #2ad9fe;
   box-shadow: 0px 2px 4px 0px rgba(32, 84, 133, 0.4);
-  top: -0.4rem;
+  top: -0.2rem;
   left: -0.4rem;
   overflow: hidden;
   z-index: 50;
@@ -138,9 +139,9 @@
 .about .team_box .team_pic_box .team_every .people_ex_box a {
   position: absolute;
   right: .3rem;
-  top: 1.7rem;
-  width: 42px;
-  height: 42px;
+  top: 1.5rem;
+  width: .42rem;
+  height: .42rem;
   font-size: 0;
 }
 .about .team_box .team_pic_box .team_every .people_ex_box a img {
@@ -149,7 +150,7 @@
 }
 .about .team_box .team_pic_box .team_every .people_ex_box .ext {
   margin: auto;
-  margin-top: 3.4rem;
+  margin-top: 3.1rem;
   font-size: .18rem;
   line-height: .25rem;
   background: #fff;
@@ -158,7 +159,7 @@
   padding-right: .2rem;
 }
 .about .team_box .team_pic_box .team_every .people_ex_box .ext_en {
-  margin-top: 3.4rem;
+  margin-top: 3.3rem;
   font-size: .18rem;
   line-height: .25rem;
   background: #fff;
@@ -173,14 +174,16 @@
 }
 .about .adviser_box .team_pic_box {
   margin: auto;
-  overflow: hidden;
+  height: 6rem;
   padding-bottom: .32rem;
+  position: relative;
 }
 .about .adviser_box .team_pic_box .team_every {
   height: 2.42rem;
   width: 1.74rem;
   margin-left: .61rem;
   margin-top: .41rem;
+  position: relative;
 }
 .about .adviser_box .team_pic_box .team_every:nth-child(1) {
   margin-left: 0;
@@ -202,6 +205,41 @@
   margin: auto;
   text-align: center;
   margin-top: .21rem;
+}
+.about .adviser_box .team_pic_box .team_every .people_ex_two {
+  display: none;
+  position: absolute;
+  width: 2.6rem;
+  border: 1px solid #2ad9fe;
+  box-shadow: 0px 2px 4px 0px rgba(32, 84, 133, 0.4);
+  top: -0.2rem;
+  left: -0.4rem;
+  overflow: hidden;
+  z-index: 50;
+  cursor: pointer;
+  color: #999999;
+}
+.about .adviser_box .team_pic_box .team_every .people_ex_two a {
+  position: absolute;
+  right: .3rem;
+  top: 1.5rem;
+  width: .42rem;
+  height: .42rem;
+  font-size: 0;
+}
+.about .adviser_box .team_pic_box .team_every .people_ex_two a img {
+  width: 100%;
+  height: 100%;
+}
+.about .adviser_box .team_pic_box .team_every .people_ex_two p {
+  margin: auto;
+  margin-top: 2.8rem;
+  font-size: .18rem;
+  line-height: .25rem;
+  background: #fff;
+  padding-bottom: .2rem;
+  padding-left: .2rem;
+  padding-right: .2rem;
 }
 .about .hezuo {
   height: auto;

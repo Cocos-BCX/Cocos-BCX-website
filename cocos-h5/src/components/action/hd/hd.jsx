@@ -78,10 +78,10 @@ export default class Hd extends Component {
                 </div>
                 <div className='hd_for'>
                     <div className='hd_box'>
-                        <div class="swiper-container" style={{ width: '6rem' }}>
-                            <div class="swiper-wrapper" >
+                        <div className="swiper-container" style={{ width: '6rem' }}>
+                            <div className="swiper-wrapper" >
                                 {this.state.forList.map((item, index) => {
-                                    return <div className='swiper-slide'>
+                                    return <div className='swiper-slide' key={index}>
                                         <div className='hd_every  ' key={index} style={{ marginLeft: '1.2rem', width: '3rem' }}>
                                             <div className='every_til'>{item.title}</div>
                                             <div className='every_b'>
@@ -92,12 +92,11 @@ export default class Hd extends Component {
                                             </div>
                                         </div>
                                     </div>
-
                                 })}
 
                             </div>
-                            <div class="swiper-button-prev swiper-button-black" ></div>
-                            <div class="swiper-button-next swiper-button-black"></div>
+                            <div className="swiper-button-prev swiper-button-black" ></div>
+                            <div className="swiper-button-next swiper-button-black"></div>
                         </div>
 
                     </div>
