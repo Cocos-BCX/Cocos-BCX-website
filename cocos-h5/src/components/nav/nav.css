@@ -10,6 +10,7 @@
   border: 1px solid #2AD9FE;
   border-radius: 3px;
   position: relative;
+  z-index: 10;
 }
 .nav_box .lang_box .lang {
   box-sizing: border-box;

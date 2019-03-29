@@ -34,7 +34,6 @@
   width: 100%;
   height: 902px;
   margin: auto;
-  background: url('../../images/bg_banner.jpg') no-repeat;
   background-size: cover;
   overflow: hidden;
 }
@@ -384,6 +383,8 @@
   width: 120px;
   height: 80px;
   overflow: hidden;
+  position: relative;
+  z-index: 5;
 }
 .news_box .news_main .news_bottom li a .img_box img {
   width: 120px;
@@ -567,6 +568,8 @@
     width: 91.8px;
     height: 61.2px;
     overflow: hidden;
+    position: relative;
+    z-index: 5;
   }
   .news_box .news_main .news_bottom li a .img_box img {
     width: 91.8px;

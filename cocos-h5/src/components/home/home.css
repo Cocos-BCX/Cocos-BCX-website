@@ -266,6 +266,8 @@
   width: 1.02rem;
   height: 0.68rem;
   display: block;
+  position: relative;
+  z-index: 5;
 }
 .news_box .news_main .news_bottom li a .img_box_text {
   width: 2.4rem;

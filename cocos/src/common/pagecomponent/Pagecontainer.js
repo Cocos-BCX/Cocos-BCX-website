@@ -29,7 +29,7 @@ class Pagecontainer extends Component {
         })
     }
     componentWillReceiveProps(nextProps) {
-        this.setState({pageConfig: nextProps.msg.total});
+        this.setState({pageConfig: nextProps.msg.last_page});
       }
     componentDidMount(){
     }

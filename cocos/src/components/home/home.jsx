@@ -182,7 +182,7 @@ export default class Home extends Component {
 
                     </div>
                 </div>
-                <div className='banner_box'>
+                <div className='banner_box' style={{background:"url('https://jdi.cocosbcx.net/image/cocosbcx/bg_banner.jpg') no-repeat"}}>
                     <Nav choose={this.props.choose}></Nav>
                     <div className='home_btn_box'>
                         <h5>COCOS</h5>

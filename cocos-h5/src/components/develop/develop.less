@@ -9,6 +9,7 @@
     .dev_box {
         overflow: hidden;
         margin: auto;
+
         .dev_m {
             display: block;
             width: 6.64rem;
@@ -18,9 +19,10 @@
             margin: auto;
             margin-top: .5rem;
             overflow: hidden;
-            color:#000;
+            color: #000;
+
             .dev_img {
-                width:3.06rem;
+                width: 3.06rem;
                 height: 3rem;
                 margin-top: .13rem;
                 margin-left: .1rem;
@@ -33,7 +35,7 @@
 
             .dev_main {
                 width: 3rem;
-                margin-left:.15rem;
+                margin-left: .15rem;
                 margin-top: .4rem;
 
                 .dev_main_til {
@@ -59,7 +61,6 @@
                     font-weight: 400;
                     line-height: .29rem;
                     margin-top: .18rem;
-                    overflow: hidden;
                 }
 
                 .dev_go {
@@ -79,6 +80,21 @@
                         text-align: center;
                         transform: skewX(22deg);
                     }
+                }
+            }
+
+            &:nth-child(1) {
+                p {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    overflow: hidden;
+                }
+            }
+
+            &:nth-child(2) {
+                p {
+                    line-height: .26rem;
                 }
             }
         }
