@@ -124,8 +124,11 @@
 }
 .hd .hd_list_box .hd_list_e .e_text_box h5 {
   font-size: .24rem;
-  height: .65rem;
+  height: .6rem;
   color: #323232;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   overflow: hidden;
 }
 .hd .hd_list_box .hd_list_e .e_text_box p {

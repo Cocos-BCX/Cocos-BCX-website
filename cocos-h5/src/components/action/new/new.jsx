@@ -92,8 +92,6 @@ export default class New extends Component {
                             <Page msg={this.state.newmsg} key={this.state.type} getNews={this.getNews}></Page>
 
                     }
-                    {/* <Page msg={this.state.newmsg} getNews={this.getNews}></Page>
-                    <Page msg={this.state.newmsg} getNews={this.getNews}></Page> */}
                 </div>
             </div>
         );

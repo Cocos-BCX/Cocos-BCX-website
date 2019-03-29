@@ -115,7 +115,7 @@ export default class Hd extends Component {
                                 <img src={item.image} alt="" />
                             </div>
                             <div className='e_text_box lt'>
-                                <h5>{item.title}</h5>
+                                <h5 style={{"WebkitBoxOrient": "vertical"}}>{item.title}</h5>
                                 <p>{item.summary}</p>
                                 <div className='e_address lt'>{item.address}</div>
                                 <div className="e_date rt">{item.published_at}</div>
