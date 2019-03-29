@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { NavLink } from "react-router-dom";
-import { BrowserRouter as Router, Route, Switch ,Redirect} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Nav from '../nav/nav'
 import New from './new/new'
 import Hd from './hd/hd'
@@ -10,7 +10,9 @@ import Big from './big/big'
 import './action.css'
 
 export default class Footer extends Component {
-
+    componentDidMount(nextProps) {
+        window.scrollTo(0, 0)
+    }
     render() {
         let lang = localStorage.getItem('lang_type');
         return (
