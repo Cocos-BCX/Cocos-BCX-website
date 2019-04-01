@@ -53,7 +53,7 @@ export default class Hd extends Component {
             loop: true,
             autoplay: {
                 delay: 3000,//1秒切换一次
-                disableOnInteraction: false,
+                disableOnInteraction: true,
             },
             navigation: {
                 nextEl: '.swiper-button-next',

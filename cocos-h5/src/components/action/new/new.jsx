@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { get } from '../../../api/api'
+import '../../../api/rem'
 import Page from '../../../common/pagecomponent/Pagecontainer'
 import './new.css'
 export default class New extends Component {
