@@ -155,12 +155,19 @@ export default class About extends Component {
         let lang = localStorage.getItem('lang_type');
         return (
             <div className='about'>
-                <div className="banner_a_box">
+                <div className="banner_a_box" style={{ background: "url('https://jdi.cocosbcx.net/image/cocosbcx/about_banner.jpg') no-repeat center" }}>
                     <Nav></Nav>
                     <div className='white_book'>
-                        <a href={lang === 'zh' ? bookzh : booken} target="_blank" className='w_book rt' rel="noopener noreferrer">
-                            <FormattedMessage id='lookBook' />
-                        </a>
+                        <div className='white_logo_box rt'>
+                            <div className='white_logo '>
+                                <img src={logow} alt="" />
+                                <p><FormattedMessage id='whiteBook' /></p>
+                            </div>
+                            <a href={lang === 'zh' ? bookzh : booken} target="_blank" className='w_book ' rel="noopener noreferrer">
+                                <FormattedMessage id='lookBook' />
+                            </a>
+                        </div>
+
                     </div>
                 </div>
                 <div className='team_ex'>

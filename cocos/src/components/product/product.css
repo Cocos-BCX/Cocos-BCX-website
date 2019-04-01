@@ -1,7 +1,6 @@
 .product .banner_s_box {
   margin: auto;
-  height: 568px;
-  background: url('../../images/s_banner.png') no-repeat center;
+  height: 336px;
   background-size: cover;
   background-color: #033E4E;
   overflow: hidden;
@@ -130,8 +129,7 @@
 @media screen and (max-width: 1400px) {
   .product .banner_s_box {
     margin: auto;
-    height: 430px;
-    background: url('../../images/s_banner.png') no-repeat center;
+    height: 336px;
     background-size: cover;
     background-color: #033E4E;
     overflow: hidden;

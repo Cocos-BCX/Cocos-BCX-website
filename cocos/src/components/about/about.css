@@ -1,7 +1,6 @@
 .about .banner_a_box {
   margin: auto;
   height: 336px;
-  background: url('../../images/a_banner.png') no-repeat center;
   background-color: #150F11;
   overflow: hidden;
 }
@@ -9,17 +8,41 @@
   width: 1200px;
   margin: auto;
   overflow: hidden;
-  margin-top: 267px;
+  margin-top: 125px;
 }
-.about .banner_a_box .white_book .w_book {
-  width: 80px;
-  background: rgba(255, 255, 255, 0);
-  border: 1px solid #ffffff;
+.about .banner_a_box .white_book .white_logo_box {
   margin-right: 171px;
+  width: 90px;
+}
+.about .banner_a_box .white_book .white_logo_box .white_logo {
+  width: 90px;
+  height: 130px;
+  background: #2AD9FE;
+  overflow: hidden;
+}
+.about .banner_a_box .white_book .white_logo_box .white_logo img {
+  display: block;
+  width: 61px;
+  height: 27px;
+  margin: auto;
+  margin-top: 34px;
+}
+.about .banner_a_box .white_book .white_logo_box .white_logo p {
+  color: #fff;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 18px;
+}
+.about .banner_a_box .white_book .white_logo_box .w_book {
+  width: 90px;
+  display: block;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
   color: #fff;
   font-size: 12px;
   line-height: 25px;
   text-align: center;
+  margin-top: 20px;
 }
 .about .news_til_box {
   margin: auto;
@@ -301,7 +324,6 @@
   .about .banner_a_box {
     margin: auto;
     height: 336px;
-    background: url('../../images/a_banner.png') no-repeat center;
     background-color: #150F11;
     overflow: hidden;
   }

@@ -92,7 +92,7 @@ export default class Nav extends Component {
                                 <FormattedMessage id='developPlan' />
                             </div>
                             <div className='dev_a navBox'
-                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://dev.cocosbcx.io" : 'https://doc.cocosbcx.io', '_blank'); }} >
+                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://cn-dev.cocosbcx.io" : 'https://dev.cocosbcx.io', '_blank'); }} >
                                 <FormattedMessage id='developApi' />
                             </div>
                             <div className='dev_a navBox'

@@ -1,7 +1,6 @@
 .action .banne_n_box {
   margin: auto;
   height: 336px;
-  background: url('../../images/n_banner.png') no-repeat center;
   background-color: #07070a;
   overflow: hidden;
 }
@@ -43,7 +42,6 @@
   .action .banne_n_box {
     margin: auto;
     height: 336px;
-    background: url('../../images/s_banner.png') no-repeat center;
     background-color: #07070a;
     overflow: hidden;
   }

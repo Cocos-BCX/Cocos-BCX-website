@@ -126,7 +126,7 @@ export default class Nav extends Component {
                                                 <FormattedMessage id='developPlan' />
                                             </div>
                                             <div className='dev_a'
-                                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://dev.cocosbcx.io" : 'https://doc.cocosbcx.io', '_blank'); }} >
+                                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://cn-dev.cocosbcx.io" : 'https://dev.cocosbcx.io', '_blank'); }} >
                                                 <FormattedMessage id='developApi' />
                                             </div>
                                             <div className='dev_a'
@@ -139,7 +139,8 @@ export default class Nav extends Component {
                             </NavLink>
                         </div>
                         <div className='nav_jl lt'>
-                            <a href={lang === 'zh' ? "https://bcx.cocos.com" : 'https://bcx.cocos.com/en'} rel="noopener noreferrer" className='nav_browser_click' target='_blank'><FormattedMessage id='jili' /></a>
+                        <a href={lang === 'zh' ? "https://bcx.cocos.com" : 'https://bcx.cocos.com/en'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'><FormattedMessage id='jili' /></a>
+
                         </div>
                         <div className='nav_st lt' >
                             <NavLink to="/product" exact={true} activeClassName="active"

@@ -14,7 +14,7 @@ const en_US = {
     team: 'Team & Partners',
     //首页
     next:'Next-Gen Digital Game Economy',
-    nextex:'Cocos-BCX is committed to facilitating the development of blockchain gaming. As the platform for the next generation of digital game economy, Cocos-BCX provides a complete set of development tools, as well as an integrated ecosystem',
+    nextex:'Cocos-BCX is committed to facilitating the development of blockchain gaming. As the platform for the next generation of digital ...',
     explane: 'What Is Cocos-BCX?',
     exf: '‘Cocos-BCX’ , fully named ‘Cocos BlockChain Expedition’',
     exs: 'aims to create an integrated multi-platform runtime environment for games. This is achieved by providing developers with the convenience and completeness in game development, while bringing users a whole new gaming experience, unprecedented gaming status, and with all the assets obtained in the games being wholly owned by the users.',
@@ -39,16 +39,16 @@ const en_US = {
     map1:'Added validation to check the existence of matching account when creating proposal and timed task.Added expiration detection after the timed task is suspended.',
     map2:'Added the mechanism of limiting the size of message queue. Optimized the NH assets standard to allow modification of data zone limit in the case of lease.',
     map3:"Updated Cocos-BCX chain system Optimized the node's pressure tolerance. optimizing the node’s tolerant efficiency to explosive transactions.",
-    map4:'内容暂未输出，占位先内容暂未输出，占位先内容暂未输出，占位先',
-    map5:'内容暂未输出，占位先内容暂未输出，占位先内容暂未输出，占位先',
+    map4:'Adjusted the rules of splitting fees for on-chain transactions. Rebuilt the voting mechanism. Adjusted the authorities of the council.',
+    map5:'Updated Cocos-BCX blockchain system. Rebuilt the system and mechanism of homogenous assets blacklist and whitelist.',
     // md1:'January 28, 2019',
     // md2:'February 18, 2019',
     // md3:'March 4, 2019',
     md1:'2019.01.28',
     md2:'2019.02.18',
     md3:'2019.03.04',
-    md4:'2019.01.28',
-    md5:'2019.01.28',
+    md4:'2019.03.18',
+    md5:'2019.04.01',
 
     hz: 'STRATEGIC PARTNERS',
     hzsm: 'STATEMENT',
@@ -64,7 +64,7 @@ const en_US = {
     devsq: 'Welcome to the technical forum of Cocos Blockchain Expedition! Currently, Cocos has 1.3 million registered developers worldwide, with a monthly active developers of 300 thousand, as well as 800 million players in 203 countries and regions around the world.',
 
     //生态产品
-    ljdev: '了解开发者扶持计划',
+    ljdev: 'Learn about the Developer',
     gamedapps: 'Game',
     tool:'Tool',
     gname1:'Happy Fruit',
@@ -88,9 +88,9 @@ const en_US = {
 
     //关于我们
     lookBook:'Check the White Paper',
-    teamextil: '团队介绍',
+    teamextil: 'Our Team',
     teamex: 'Cocos-BCX team has complete skills, know-how and industry experience required for project development, covering a good mixture of blockchain technology development, game engine, IDE, developer community operations, game production & release, entertainment community operations, financial market mechanism, assets valuation and multinational enterprise operations. Core founders of Cocos BCX project experienced two business cycles of startup,  with a worldwide range of business network and recognition in the fields of information technology entrepreneurship and gaming, as well as decision making, execution experience and industry resources required to establish an ecological platform.',
-    teamPerson: '团队成员',
+    teamPerson: 'Members',
     p1: 'CHEN Haozhi',
     p2: 'Richard Yang',
     p3: 'Reed Hong',

@@ -42,32 +42,39 @@
   margin: auto;
   margin-top: 353px;
 }
-.banner_box .home_btn_box h5 {
+.banner_box .home_btn_box .home_btn_box_mask {
+  padding-left: 20px;
+  padding-top: 10px;
+  height: 220px;
+  width: 500px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.46) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.banner_box .home_btn_box .home_btn_box_mask h5 {
   color: #fff;
   font-size: 38px;
   font-family: FjallaOne;
   font-weight: 400;
 }
-.banner_box .home_btn_box h6 {
+.banner_box .home_btn_box .home_btn_box_mask h6 {
   color: #fff;
   font-size: 29px;
   font-family: FjallaOne;
   font-weight: bold;
 }
-.banner_box .home_btn_box .play_btn {
+.banner_box .home_btn_box .home_btn_box_mask .play_btn {
   overflow: hidden;
   margin-top: 18px;
 }
-.banner_box .home_btn_box .play_btn img {
+.banner_box .home_btn_box .home_btn_box_mask .play_btn img {
   width: 50px;
   height: 50px;
   cursor: pointer;
   opacity: .8;
 }
-.banner_box .home_btn_box .play_btn img:hover {
+.banner_box .home_btn_box .home_btn_box_mask .play_btn img:hover {
   opacity: 1;
 }
-.banner_box .home_btn_box .play_btn p {
+.banner_box .home_btn_box .home_btn_box_mask .play_btn p {
   width: 280px;
   margin-left: 25px;
   color: #dbd2d2;
@@ -414,6 +421,8 @@
   line-height: 24px;
   transform: translate3d(0, 0, 0);
   color: #555555;
+  height: 48px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1400px) {
   .news_box {
@@ -1043,15 +1052,6 @@
   width: 100%;
   position: relative;
 }
-.hezuo .hezuo_box .hezuo_head .head_w {
-  position: absolute;
-  width: 114px;
-  height: 41px;
-  background: #fff;
-  transform: skewX(-25deg);
-  top: 45px;
-  left: 9.5px;
-}
 .hezuo .hezuo_box .hezuo_head .head_b {
   position: absolute;
   height: 110px;
@@ -1059,7 +1059,7 @@
   background: #2AD9FE;
   transform: skewX(-25deg);
   top: -41px;
-  left: 77px;
+  left: 50px;
 }
 .hezuo .hezuo_box .hezuo_head .head_b img {
   display: block;
@@ -1076,7 +1076,7 @@
   background: #676767;
   transform: skewX(-25deg);
   bottom: 17px;
-  left: 328px;
+  left: 300px;
 }
 .hezuo .hezuo_box .hezuo_head .head_til .head_til_box {
   transform: skewX(25deg);
@@ -1166,15 +1166,6 @@
     width: 100%;
     position: relative;
   }
-  .hezuo .hezuo_box .hezuo_head .head_w {
-    position: absolute;
-    width: 90px;
-    height: 35px;
-    background: #fff;
-    transform: skewX(-25deg);
-    top: 38px;
-    left: 8px;
-  }
   .hezuo .hezuo_box .hezuo_head .head_b {
     position: absolute;
     height: 93px;
@@ -1182,7 +1173,7 @@
     background: #2AD9FE;
     transform: skewX(-25deg);
     top: -35px;
-    left: 65px;
+    left: 40px;
   }
   .hezuo .hezuo_box .hezuo_head .head_b img {
     display: block;
@@ -1194,12 +1185,12 @@
   }
   .hezuo .hezuo_box .hezuo_head .head_til {
     position: absolute;
-    width: 673px;
+    width: 656px;
     height: 39px;
     background: #676767;
     transform: skewX(-25deg);
     bottom: 15px;
-    left: 270px;
+    left: 245px;
   }
   .hezuo .hezuo_box .hezuo_head .head_til .head_til_box {
     transform: skewX(25deg);

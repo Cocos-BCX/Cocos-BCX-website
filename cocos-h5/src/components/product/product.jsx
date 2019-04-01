@@ -26,14 +26,14 @@ export default class Product extends Component {
         }
     }
     render() {
+        let lang = localStorage.getItem('lang_type');
         return (
             <div className='product'>
                 <div className="banner_s_box">
                     <Nav></Nav>
                 </div>
                 <div className='dev_plan'>
-                    <a href="https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA
-" className='ljdev' target='_blank' rel="noopener noreferrer">
+                <a href={lang==='zh'?"https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA":'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7'} className='ljdev' target='_blank' rel="noopener noreferrer">
                         <FormattedMessage id='ljdev' />
                     </a>
                 </div>

@@ -64,6 +64,9 @@
   font-size: .20rem;
   color: #676767;
 }
+.footer .footer_box .footer_con .footer_con_l .email p a {
+  color: #676767;
+}
 .footer .footer_box .footer_con .footer_con_l .file {
   display: block;
   overflow: hidden;

@@ -56,43 +56,52 @@
         margin: auto;
         margin-top: 353px;
 
-        h5 {
-            color: #fff;
-            font-size: 38px;
-            font-family: FjallaOne;
-            font-weight: 400;
-        }
+        .home_btn_box_mask {
+            padding-left: 20px;
+            padding-top: 10px;
+            height: 220px;
+            width: 500px;
+            background:linear-gradient(90deg,rgba(0,0,0,.46) 0%,rgba(0,0,0,0) 100%);
+            h5 {
+                color: #fff;
+                font-size: 38px;
+                font-family: FjallaOne;
+                font-weight: 400;
+            }
 
-        h6 {
-            color: #fff;
-            font-size: 29px;
-            font-family: FjallaOne;
-            font-weight: bold;
-        }
+            h6 {
+                color: #fff;
+                font-size: 29px;
+                font-family: FjallaOne;
+                font-weight: bold;
+            }
 
-        .play_btn {
-            overflow: hidden;
-            margin-top: 18px;
+            .play_btn {
+                overflow: hidden;
+                margin-top: 18px;
 
-            img {
-                width: 50px;
-                height: 50px;
-                cursor: pointer;
-                opacity: .8;
+                img {
+                    width: 50px;
+                    height: 50px;
+                    cursor: pointer;
+                    opacity: .8;
 
-                &:hover {
-                    opacity: 1;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                p {
+                    width: 280px;
+                    margin-left: 25px;
+                    color: rgb(219, 210, 210);
+                    font-size: 13px;
+                    line-height: 19px;
                 }
             }
-
-            p {
-                width: 280px;
-                margin-left: 25px;
-                color: rgb(219, 210, 210);
-                font-size: 13px;
-                line-height: 19px;
-            }
         }
+
+
     }
 }
 
@@ -502,6 +511,7 @@
                         overflow: hidden;
                         position: relative;
                         z-index: 5;
+
                         img {
                             width: 120px;
                             height: 80px;
@@ -534,6 +544,8 @@
                                 line-height: 24px;
                                 transform: translate3d(0, 0, 0);
                                 color: #555555;
+                                height: 48px;
+                                overflow: hidden;
                             }
                         }
 
@@ -724,6 +736,7 @@
                             overflow: hidden;
                             position: relative;
                             z-index: 5;
+
                             img {
                                 width: 91.8px;
                                 height: 61.2px;
@@ -756,7 +769,6 @@
                                     color: #000;
                                     line-height: 24px;
                                     height: 50px;
-                                    overflow: hidden;
                                     overflow: hidden;
                                     // transform: translate3d(0, 0, 0);
                                     // color: #555555;
@@ -1362,20 +1374,21 @@
         width: 1230px;
         margin: auto;
         padding-bottom: 90px;
+
         .hezuo_head {
             height: 86px;
             width: 100%;
             position: relative;
 
-            .head_w {
-                position: absolute;
-                width: 114px;
-                height: 41px;
-                background: #fff;
-                transform: skewX(-25deg);
-                top: 45px;
-                left: 9.5px;
-            }
+            // .head_w {
+            //     position: absolute;
+            //     width: 114px;
+            //     height: 41px;
+            //     background: #fff;
+            //     transform: skewX(-25deg);
+            //     top: 45px;
+            //     left: 9.5px;
+            // }
 
             .head_b {
                 position: absolute;
@@ -1384,7 +1397,7 @@
                 background: #2AD9FE;
                 transform: skewX(-25deg);
                 top: -41px;
-                left: 77px;
+                left: 50px;
 
                 img {
                     display: block;
@@ -1404,7 +1417,7 @@
                 background: #676767;
                 transform: skewX(-25deg);
                 bottom: 17px;
-                left: 328px;
+                left: 300px;
 
                 .head_til_box {
                     transform: skewX(25deg);
@@ -1508,20 +1521,21 @@
             width: 922px;
             margin: auto;
             padding-bottom: 80px;
+
             .hezuo_head {
                 height: 73px;
                 width: 100%;
                 position: relative;
 
-                .head_w {
-                    position: absolute;
-                    width: 90px;
-                    height: 35px;
-                    background: #fff;
-                    transform: skewX(-25deg);
-                    top: 38px;
-                    left: 8px;
-                }
+                // .head_w {
+                //     position: absolute;
+                //     width: 90px;
+                //     height: 35px;
+                //     background: #fff;
+                //     transform: skewX(-25deg);
+                //     top: 38px;
+                //     left: 8px;
+                // }
 
                 .head_b {
                     position: absolute;
@@ -1530,7 +1544,7 @@
                     background: #2AD9FE;
                     transform: skewX(-25deg);
                     top: -35px;
-                    left: 65px;
+                    left: 40px;
 
                     img {
                         display: block;
@@ -1545,12 +1559,12 @@
 
                 .head_til {
                     position: absolute;
-                    width: 673px;
+                    width: 656px;
                     height: 39px;
                     background: #676767;
                     transform: skewX(-25deg);
                     bottom: 15px;
-                    left: 270px;
+                    left: 245px;
 
                     .head_til_box {
                         transform: skewX(25deg);

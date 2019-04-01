@@ -185,12 +185,14 @@ export default class Home extends Component {
                 <div className='banner_box' style={{ background: "url('https://jdi.cocosbcx.net/image/cocosbcx/bg_banner.jpg') no-repeat center" }}>
                     <Nav choose={this.props.choose}></Nav>
                     <div className='home_btn_box'>
-                        <h5>COCOS</h5>
-                        <h5>BLOCKCHAIN EXPEDITION</h5>
-                        <h6><FormattedMessage id='next' /></h6>
-                        <div className='play_btn'>
-                            <img src={play} alt="" className='lt' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
-                            <p className='lt'><FormattedMessage id='nextex' /></p>
+                        <div className='home_btn_box_mask'>
+                            <h5>COCOS</h5>
+                            <h5>BLOCKCHAIN EXPEDITION</h5>
+                            <h6><FormattedMessage id='next' /></h6>
+                            <div className='play_btn'>
+                                <img src={play} alt="" className='lt' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
+                                <p className='lt'><FormattedMessage id='nextex' /></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -318,7 +320,7 @@ export default class Home extends Component {
                     </div>
                     <div className='map_main_box'>
                         {this.state.mapList.map((item, index) => {
-                            return <div className='map_s_box lt' key={index} style={lang === 'en' ? { height: '180px' } : { height: '130px' }}>
+                            return <div className='map_s_box lt' key={index} style={lang === 'en' ? { height: '200px' } : { height: '130px' }}>
                                 <p><FormattedMessage id={item.til1} /></p>
                                 <p><FormattedMessage id={item.til2} /></p>
                                 {/* <h5><FormattedMessage id={item.til3} /></h5> */}
@@ -348,7 +350,7 @@ export default class Home extends Component {
                             <div className='head_b'>
                                 <img src={logow} alt="" />
                             </div>
-                            <div className='head_w'></div>
+                            {/* <div className='head_w'></div> */}
                             <div className='head_til'>
                                 <div className='head_til_box'>
                                     <FormattedMessage id='hz' />

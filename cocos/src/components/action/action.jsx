@@ -17,7 +17,7 @@ export default class Footer extends Component {
         let lang = localStorage.getItem('lang_type');
         return (
             <div className='action'>
-                <div className='banne_n_box'>
+                <div className='banne_n_box' style={{ background: "url('https://jdi.cocosbcx.net/image/cocosbcx/active_banner.jpg') no-repeat center" }}>
                     <Nav></Nav>
                     <div className='a_nav'>
                         <NavLink to="/action/news" activeClassName="active"

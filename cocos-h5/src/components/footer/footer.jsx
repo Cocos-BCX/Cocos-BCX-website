@@ -75,7 +75,7 @@ export default class Footer extends Component {
                             <div className='f_line'></div>
                             <div className='email lt' >
                                 <img src={email} alt="" />
-                                <p>Email:Support@cocosbcx.io</p>
+                                <p><a href="mailto:Support@cocosbcx.io">Email: Support@cocosbcx.io</a></p>
                             </div>
                             <div className='file lt' >
                                 <img src={file} alt="" />

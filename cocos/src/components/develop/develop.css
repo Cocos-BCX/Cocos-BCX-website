@@ -1,8 +1,7 @@
 .develop .banner_box {
   margin: auto;
-  height: 568px;
-  background: url('../../images/d_banner.png') no-repeat center;
-  background-color: #0D0D0D;
+  height: 336px;
+  background: url('../../images/develop_banner.jpg') no-repeat center;
 }
 .develop .dev_box {
   margin-top: 14px;
@@ -83,9 +82,6 @@
 @media screen and (max-width: 1400px) {
   .develop .banner_box {
     margin: auto;
-    height: 430px;
-    background: url('../../images/d_banner.png') no-repeat center;
-    background-color: #0D0D0D;
   }
   .develop .dev_box {
     margin-top: 14px;

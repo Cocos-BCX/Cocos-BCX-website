@@ -29,7 +29,7 @@ export default class Product extends Component {
         let lang = localStorage.getItem('lang_type');
         return (
             <div className='product'>
-                <div className="banner_s_box">
+                <div className="banner_s_box" style={{ background: "url('https://jdi.cocosbcx.net/image/cocosbcx/product_banner.jpg') no-repeat center" }}>
                     <Nav></Nav>
                 </div>
                 <div className='dev_plan'>

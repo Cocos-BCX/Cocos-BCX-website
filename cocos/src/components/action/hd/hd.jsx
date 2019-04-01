@@ -80,16 +80,21 @@ export default class Hd extends Component {
                             </a>
                         })}
                     </div>
-                    <div className='yg_box'>
-                        <div className='yg_text lt'><FormattedMessage id='yg' /></div>
-                        <div className='line1 lt'>--------------------</div>
-                        <div className='ball lt'></div>
-                        <div className='line2 lt'>----------------------------------</div>
-                        <div className='ball lt'></div>
-                        <div className='line3 lt'>---------------------------------------</div>
-                        <div className='ball lt'></div>
-                        <div className='line4 lt'>-----------------------</div>
-                    </div>
+                    {
+                        this.state.forList.length > 0 ?
+                            <div className='yg_box'>
+                                <div className='yg_text lt'><FormattedMessage id='yg' /></div>
+                                <div className='line1 lt'>--------------------</div>
+                                <div className='ball lt'></div>
+                                <div className='line2 lt'>----------------------------------</div>
+                                <div className='ball lt'></div>
+                                <div className='line3 lt'>---------------------------------------</div>
+                                <div className='ball lt'></div>
+                                <div className='line4 lt'>-----------------------</div>
+                            </div>
+                            : null
+                    }
+
                 </div>
                 <div className='hd_list_box'>
                     {this.state.hdList.map((item, index) => {

@@ -71,8 +71,10 @@
   float: left;
   margin-left: 7px;
   font-size: 15px;
-  color: #ffffff;
   line-height: 17px;
+}
+.footer .footer_box .footer_con .footer_con_l .email p a {
+  color: #ffffff;
 }
 .footer .footer_box .footer_con .footer_con_l .file {
   display: block;

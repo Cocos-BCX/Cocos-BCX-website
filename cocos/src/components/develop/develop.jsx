@@ -35,7 +35,7 @@ export default class Develop extends Component {
                             </div>
                         </div>
                     </a>
-                    <a href={lang === 'zh' ? "https://dev.cocosbcx.io" : 'https://doc.cocosbcx.io'} target="_blank" rel="noopener noreferrer" className='dev_m'>
+                    <a href={lang === 'zh' ? "https://cn-dev.cocosbcx.io" : 'https://dev.cocosbcx.io'} target="_blank" rel="noopener noreferrer" className='dev_m'>
                         <div className='dev_img lt'>
                             <img src={dev2} alt="" />
                         </div>

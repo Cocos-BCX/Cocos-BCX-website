@@ -79,15 +79,14 @@
 }
 .new .new_list .new_list_box {
   overflow: hidden;
-  height: 690px;
+  height: 700px;
 }
 .new .new_list .new_list_box li {
-  width: 267px;
+  width: 265px;
   height: 300px;
   border: 1px solid #e2e2e2;
   margin-top: 44px;
   margin-left: 33px;
-  box-sizing: border-box;
 }
 .new .new_list .new_list_box li:nth-child(1) {
   margin-left: 0;
@@ -96,7 +95,7 @@
   margin-left: 0;
 }
 .new .new_list .new_list_box li .img_box {
-  width: 267px;
+  width: 265px;
   height: 150px;
   overflow: hidden;
 }
@@ -211,15 +210,14 @@
   }
   .new .new_list .new_list_box {
     overflow: hidden;
-    height: 550px;
+    height: 560px;
   }
   .new .new_list .new_list_box li {
-    width: 200px;
+    width: 198px;
     height: 230px;
     border: 1px solid #e2e2e2;
     margin-top: 44px;
     margin-left: 25px;
-    box-sizing: border-box;
   }
   .new .new_list .new_list_box li:nth-child(1) {
     margin-left: 0;
@@ -228,7 +226,7 @@
     margin-left: 0;
   }
   .new .new_list .new_list_box li .img_box {
-    width: 200px;
+    width: 198px;
     height: 114px;
     overflow: hidden;
   }
