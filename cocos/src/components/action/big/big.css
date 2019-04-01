@@ -113,7 +113,7 @@
 }
 .big .big_list_box .s1_box .s1_content {
   width: 1059px;
-  height: 182px;
+  height: 192px;
   border: 1px solid #e2e2e2;
   padding: 0px 32px 0px 36px;
   -moz-box-sizing: border-box;
@@ -178,7 +178,7 @@
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   color: #323232;
   line-height: 26px;
@@ -264,7 +264,7 @@
   }
   .big .big_list_box .s1_box .s1_content {
     width: 800px;
-    height: 182px;
+    height: 195px;
     border: 1px solid #e2e2e2;
     padding: 0px 25px 0px 20px;
     -moz-box-sizing: border-box;

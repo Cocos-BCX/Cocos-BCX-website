@@ -7,7 +7,8 @@ export default class Big extends Component {
     constructor() {
         super();
         this.state = {
-            year:'2019',
+            lang: localStorage.getItem('lang_type'),
+            year: '2019',
             s1action: false,
             s2action: false,
             s3action: false,
@@ -67,39 +68,39 @@ export default class Big extends Component {
 
         }
     }
-    showYbtn=()=>{
-        this.sbtn.style.display='block';
-        this.ebtn.style.display='block';
-        this.nbtn.style.display='block';
+    showYbtn = () => {
+        this.sbtn.style.display = 'block';
+        this.ebtn.style.display = 'block';
+        this.nbtn.style.display = 'block';
     }
     //点击2017
     cliclSeven = () => {
         this.eight.style.display = 'none'
         this.seven.style.display = 'block'
         this.nine.style.display = 'none'
-        this.sbtn.style.display='none';
-        this.ebtn.style.display='none';
-        this.nbtn.style.display='none';
-        this.setState({year:'2017'})
+        this.sbtn.style.display = 'none';
+        this.ebtn.style.display = 'none';
+        this.nbtn.style.display = 'none';
+        this.setState({ year: '2017' })
     }
     //点击2018
     cliclEight = () => {
         this.eight.style.display = 'block'
         this.seven.style.display = 'none'
         this.nine.style.display = 'none'
-        this.sbtn.style.display='none';
-        this.ebtn.style.display='none';
-        this.nbtn.style.display='none';
-        this.setState({year:'2018'})
+        this.sbtn.style.display = 'none';
+        this.ebtn.style.display = 'none';
+        this.nbtn.style.display = 'none';
+        this.setState({ year: '2018' })
     }
     cliclNine = () => {
         this.eight.style.display = 'none'
         this.seven.style.display = 'none'
         this.nine.style.display = 'block'
-        this.sbtn.style.display='none';
-        this.ebtn.style.display='none';
-        this.nbtn.style.display='none';
-        this.setState({year:'2019'})
+        this.sbtn.style.display = 'none';
+        this.ebtn.style.display = 'none';
+        this.nbtn.style.display = 'none';
+        this.setState({ year: '2019' })
     }
     //收起/打开s1
     s1action = () => {
@@ -111,6 +112,7 @@ export default class Big extends Component {
         } else {
             this.setState({ s1action: true });
             this.s1.style.height = '1463px';
+            // this.s1.style.height = 'auto';
             list1.style.marginBottom = '0'
         }
     }
@@ -123,7 +125,13 @@ export default class Big extends Component {
             this.s2.style.height = ''
         } else {
             this.setState({ s2action: true });
-            this.s2.style.height = '1463px';
+            if (this.state.lang === 'zh') {
+                // this.s2.style.height = '1533px';
+                this.s2.style.height = 'auto';
+            } else {
+                // this.s2.style.height = '1920px';
+                this.s2.style.height = 'auto';
+            }
             list2.style.marginBottom = '0'
         }
     }
@@ -136,7 +144,8 @@ export default class Big extends Component {
             this.s3.style.height = ''
         } else {
             this.setState({ s3action: true });
-            this.s3.style.height = '1265px';
+            // this.s3.style.height = '1265px';
+            this.s3.style.height = 'auto';
             list3.style.marginBottom = '0'
         }
     }
@@ -149,7 +158,8 @@ export default class Big extends Component {
             this.s4.style.height = '182px'
         } else {
             this.setState({ s4action: true });
-            this.s4.style.height = '1223px';
+            // this.s4.style.height = '1223px';
+            this.s4.style.height = 'auto';
             list4.style.marginBottom = '0'
         }
     }
