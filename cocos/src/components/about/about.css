@@ -37,12 +37,12 @@
 .about .news_til_box .news_til h3 {
   transform: skewX(20deg);
   letter-spacing: 1px;
-  font-size: 26px;
+  font-size: 20px;
   color: #ffffff;
   font-weight: normal;
   line-height: 54px;
   text-align: center;
-  margin-left: -10px;
+  margin-left: -4px;
 }
 .about .news_til_box .news_til .news_line {
   width: 1168px;

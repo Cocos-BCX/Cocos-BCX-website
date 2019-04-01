@@ -22,7 +22,7 @@
   margin: auto;
   height: 50px;
   margin-top: 23px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: #585858;
   line-height: 25px;
@@ -39,9 +39,8 @@
   margin-left: 30px;
 }
 .hd .hd_for .hd_box .hd_every .every_b .e_address p {
-  width: 130px;
   padding: 0 20px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: #ffffff;
   line-height: 29px;
@@ -51,11 +50,12 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   box-sizing: border-box;
+  max-width: 150px;
 }
 .hd .hd_for .hd_box .hd_every .every_b .e_date {
   height: 29px;
   margin-right: 35px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: #787878;
   line-height: 29px;
@@ -146,7 +146,7 @@
   width: 710px;
 }
 .hd .hd_list_box .hd_list_e .e_text_box h5 {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: bold;
   color: #323232;
   overflow: hidden;
@@ -155,7 +155,7 @@
 }
 .hd .hd_list_box .hd_list_e .e_text_box p {
   margin-top: 26px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: #323232;
   line-height: 25px;
@@ -168,8 +168,8 @@
   height: 37px;
   background: #2ad9fe;
   border-radius: 3px;
-  margin-top: 10px;
-  font-size: 18px;
+  margin-top: 16px;
+  font-size: 16px;
   font-weight: 400;
   color: #ffffff;
   line-height: 37px;
@@ -205,7 +205,7 @@
     width: 190px;
     margin: auto;
     margin-top: 18px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     color: #585858;
     overflow: hidden;
@@ -222,8 +222,7 @@
     margin-left: 20px;
   }
   .hd .hd_for .hd_box .hd_every .every_b .e_address p {
-    width: 80px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     color: #ffffff;
     line-height: 27px;
@@ -233,11 +232,12 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     box-sizing: border-box;
+    max-width: 120px;
   }
   .hd .hd_for .hd_box .hd_every .every_b .e_date {
     height: 27px;
     margin-right: 16px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     color: #787878;
     line-height: 29px;
@@ -328,7 +328,7 @@
     width: 530px;
   }
   .hd .hd_list_box .hd_list_e .e_text_box h5 {
-    font-size: 22px;
+    font-size: 17px;
     font-weight: bold;
     color: #323232;
     overflow: hidden;
@@ -338,7 +338,7 @@
   .hd .hd_list_box .hd_list_e .e_text_box p {
     height: 48px;
     margin-top: 15px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
     color: #323232;
     line-height: 25px;
@@ -350,7 +350,7 @@
     height: 28px;
     background: #2ad9fe;
     border-radius: 3px;
-    margin-top: 12px;
+    margin-top: 15px;
     font-size: 16px;
     font-weight: 400;
     color: #ffffff;

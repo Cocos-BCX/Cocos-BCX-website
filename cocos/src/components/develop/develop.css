@@ -45,12 +45,12 @@
 }
 .develop .dev_box .dev_m .dev_main .dev_main_til h4 {
   transform: skewX(22deg);
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   color: #ffffff;
   line-height: 54px;
   text-align: center;
-  margin-left: -5px;
+  margin-left: -3px;
 }
 .develop .dev_box .dev_m .dev_main p {
   height: 127px;
@@ -128,7 +128,7 @@
   }
   .develop .dev_box .dev_m .dev_main .dev_main_til h4 {
     transform: skewX(22deg);
-    font-size: 19px;
+    font-size: 17px;
     font-weight: bold;
     color: #ffffff;
     line-height: 41px;
