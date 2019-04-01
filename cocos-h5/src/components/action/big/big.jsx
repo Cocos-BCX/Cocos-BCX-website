@@ -7,7 +7,8 @@ export default class Big extends Component {
     constructor() {
         super();
         this.state = {
-            year:'2018',
+            lang: localStorage.getItem('lang_type'),
+            year: '2019',
             s1action: false,
             s2action: false,
             s3action: false,
@@ -67,52 +68,52 @@ export default class Big extends Component {
 
         }
     }
-    showYbtn=()=>{
-        this.sbtn.style.display='block';
-        this.ebtn.style.display='block';
-        this.nbtn.style.display='block';
+    showYbtn = () => {
+        this.sbtn.style.display = 'block';
+        this.ebtn.style.display = 'block';
+        this.nbtn.style.display = 'block';
     }
     //点击2017
     cliclSeven = () => {
         this.eight.style.display = 'none'
         this.seven.style.display = 'block'
         this.nine.style.display = 'none'
-        this.sbtn.style.display='none';
-        this.ebtn.style.display='none';
-        this.nbtn.style.display='none';
-        this.setState({year:'2017'})
+        this.sbtn.style.display = 'none';
+        this.ebtn.style.display = 'none';
+        this.nbtn.style.display = 'none';
+        this.setState({ year: '2017' })
     }
     //点击2018
     cliclEight = () => {
         this.eight.style.display = 'block'
         this.seven.style.display = 'none'
         this.nine.style.display = 'none'
-        this.sbtn.style.display='none';
-        this.ebtn.style.display='none';
-        this.nbtn.style.display='none';
-        this.setState({year:'2018'})
+        this.sbtn.style.display = 'none';
+        this.ebtn.style.display = 'none';
+        this.nbtn.style.display = 'none';
+        this.setState({ year: '2018' })
     }
     cliclNine = () => {
         this.eight.style.display = 'none'
         this.seven.style.display = 'none'
         this.nine.style.display = 'block'
-        this.sbtn.style.display='none';
-        this.ebtn.style.display='none';
-        this.nbtn.style.display='none';
-        this.setState({year:'2019'})
+        this.sbtn.style.display = 'none';
+        this.ebtn.style.display = 'none';
+        this.nbtn.style.display = 'none';
+        this.setState({ year: '2019' })
     }
     //收起/打开s1
     s1action = () => {
-        let list1 = document.getElementsByClassName('s1_list')[0]
-        if (this.state.s1action) {
-            this.setState({ s1action: false });
-            // list1.style.marginBottom = '100px'
-            this.s1.style.height = ''
-        } else {
-            this.setState({ s1action: true });
-            this.s1.style.height = '1463px';
-            list1.style.marginBottom = '0'
-        }
+        // let list1 = document.getElementsByClassName('s1_list')[0]
+        // if (this.state.s1action) {
+        //     this.setState({ s1action: false });
+        //     // list1.style.marginBottom = '100px'
+        //     this.s1.style.height = ''
+        // } else {
+        //     this.setState({ s1action: true });
+        //     this.s1.style.height = '1463px';
+        //     list1.style.marginBottom = '0'
+        // }
     }
     //收起/打开s2
     s2action = () => {
@@ -124,8 +125,11 @@ export default class Big extends Component {
 
         } else {
             this.setState({ s2action: true });
-            this.s2.style.height = '20rem'
-
+            if (this.state.lang === 'zh') {
+                this.s2.style.height = '20rem'
+            } else {
+                this.s2.style.height = '28.44rem'
+            }
         }
     }
     //收起/打开s3
@@ -136,7 +140,12 @@ export default class Big extends Component {
             this.s3.style.height = '1.65rem';
         } else {
             this.setState({ s3action: true });
-            this.s3.style.height = '16.6rem';
+            if (this.state.lang === 'zh') {
+                this.s3.style.height = '16.6rem';
+            } else {
+                this.s3.style.height = '22.9rem';
+
+            }
         }
     }
     //收起/打开s4
@@ -147,7 +156,11 @@ export default class Big extends Component {
             this.s4.style.height = '2.2rem';
         } else {
             this.setState({ s4action: true });
-            this.s4.style.height = '17.92rem';
+            if (this.state.lang === 'zh') {
+                this.s4.style.height = '17.92rem';
+            } else {
+                this.s4.style.height = '23.12rem';
+            }
         }
     }
     render() {
@@ -162,12 +175,12 @@ export default class Big extends Component {
                     <div className="news_til_mask"></div>
                     <div className='choose_year'>
                         <div className='sy' onClick={this.showYbtn}><span>{this.state.year}</span></div>
-                        <div className='ey' onClick={this.cliclSeven} ref={(x)=>{this.sbtn=x}}><span>2017</span></div>
-                        <div className='ey' onClick={this.cliclEight} ref={(x)=>{this.ebtn=x}}>2018</div>
-                        <div className='ny' onClick={this.cliclNine} ref={(x)=>{this.nbtn=x}}>2019</div>
+                        <div className='ey' onClick={this.cliclSeven} ref={(x) => { this.sbtn = x }}><span>2017</span></div>
+                        <div className='ey' onClick={this.cliclEight} ref={(x) => { this.ebtn = x }}>2018</div>
+                        <div className='ny' onClick={this.cliclNine} ref={(x) => { this.nbtn = x }}>2019</div>
                     </div>
                 </div>
-                <div style={{ display: 'block' }} ref={(x) => { this.eight = x }}>
+                <div style={{ display: 'none' }} ref={(x) => { this.eight = x }}>
                     <div className='big_list_box'>
                         <div className='s1_box'>
                             <div className='s1_til lt'>
@@ -193,7 +206,7 @@ export default class Big extends Component {
                             <div className='s1_til lt'>
                                 <FormattedMessage id='s2' />
                             </div>
-                            <div className='s1_content rt'style={{height:'1.65rem'}} ref={(x) => { this.s2 = x }}>
+                            <div className='s1_content rt' style={{ height: '1.65rem' }} ref={(x) => { this.s2 = x }}>
                                 <div className='s1_more' onClick={this.s2action}>
                                     <img src={this.state.s2action ? shang : xia} alt="" />
                                 </div>
@@ -211,7 +224,7 @@ export default class Big extends Component {
                             <div className='s1_til lt'>
                                 <FormattedMessage id='s3' />
                             </div>
-                            <div className='s1_content rt' style={{height:'1.65rem'}} ref={(x) => { this.s3 = x }}>
+                            <div className='s1_content rt' style={{ height: '1.65rem' }} ref={(x) => { this.s3 = x }}>
                                 <div className='s1_more' onClick={this.s3action}>
                                     <img src={this.state.s3action ? shang : xia} alt="" />
                                 </div>
@@ -229,7 +242,7 @@ export default class Big extends Component {
                             <div className='s1_til lt'>
                                 <FormattedMessage id='s4' />
                             </div>
-                            <div className='s1_content rt' style={{height:'2.2rem'}} ref={(x) => { this.s4 = x }}>
+                            <div className='s1_content rt' style={{ height: '2.2rem' }} ref={(x) => { this.s4 = x }}>
                                 <div className='s1_more' onClick={this.s4action}>
                                     <img src={this.state.s4action ? shang : xia} alt="" />
                                 </div>
@@ -243,7 +256,7 @@ export default class Big extends Component {
                         </div>
                     </div>
                 </div>
-                <div style={{ height: '9.7rem', display: 'none' }} ref={(x) => { this.seven = x }}>
+                <div style={{ height: '10rem', display: 'none' }} ref={(x) => { this.seven = x }}>
                     <div className='big_list_box'>
                         <div className='s1_box'>
                             <div className='s1_til lt'>
@@ -266,7 +279,7 @@ export default class Big extends Component {
                             </div>
                             <div className='s1_content rt' style={{ height: 'auto' }}>
                                 {this.state.ss4.map((item, index) => {
-                                    return <div className='s1_list s3_list'  key={index}>
+                                    return <div className='s1_list s3_list' key={index}>
                                         <div className='s1_time lt'>{item.date}</div>
                                         <div className='s1_text lt'><FormattedMessage id={item.til} /></div>
                                     </div>
@@ -275,7 +288,7 @@ export default class Big extends Component {
                         </div>
                     </div>
                 </div>
-                <div style={{ height: 'auto', display: 'none' }} ref={(x) => { this.nine = x }}>
+                <div style={{ height: 'auto', display: 'block' }} ref={(x) => { this.nine = x }}>
                     <div className='big_list_box'>
                         <div className='s1_box'>
                             <div className='s1_til lt'>
@@ -283,7 +296,7 @@ export default class Big extends Component {
                             </div>
                             <div className='s1_content rt' style={{ height: 'auto' }} >
                                 {this.state.ns1.map((item, index) => {
-                                    return <div className='s1_list s3_list'  key={index}>
+                                    return <div className='s1_list s3_list' key={index}>
                                         <div className='s1_time lt' >{item.date}</div>
                                         <div className='s1_text lt' ><FormattedMessage id={item.til} /></div>
                                     </div>
