@@ -115,6 +115,9 @@
 .about .team_box .team_pic_box .team_every:nth-child(1) {
   margin-left: 0;
 }
+.about .team_box .team_pic_box .team_every:nth-child(4) p {
+  font-size: 15px;
+}
 .about .team_box .team_pic_box .team_every:nth-child(6) {
   margin-left: 0;
 }
@@ -193,6 +196,9 @@
   padding-right: 26px;
 }
 .about .team_box .team_pic_box .team_every:nth-child(5) .ext_en {
+  margin-top: 378px;
+}
+.about .team_box .team_pic_box .team_every:nth-child(4) .ext_en {
   margin-top: 378px;
 }
 .about .adviser_box {
@@ -413,6 +419,9 @@
   .about .team_box .team_pic_box .team_every:nth-child(1) {
     margin-left: 0;
   }
+  .about .team_box .team_pic_box .team_every:nth-child(4) p:nth-child(3) {
+    font-size: 10px;
+  }
   .about .team_box .team_pic_box .team_every:nth-child(6) {
     margin-left: 0;
   }
@@ -490,6 +499,9 @@
     padding-bottom: 20px;
     padding-left: 18px;
     padding-right: 18px;
+  }
+  .about .team_box .team_pic_box .team_every:nth-child(4) .ext_en {
+    margin-top: 298px;
   }
   .about .team_box .team_pic_box .team_every:nth-child(5) .ext_en {
     margin-top: 290px;

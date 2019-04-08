@@ -130,7 +130,7 @@ const en_US = {
     fqr1: 'Founder of Cocos-BCX',
     fqr2: 'Founder of Cocos-BCX',
     fqr3: 'Chief Technical Expert',
-    fqr4: 'Executive Director',
+    fqr4: 'Partner, Global Marketing and Community Operations',
     fqr5: 'Operating Director of Chinese Community',
     fqr6: 'Co-Director of Korea Operations',
     fqr7: 'Co-Director of Korea Operations',
