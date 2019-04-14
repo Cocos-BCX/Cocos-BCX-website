@@ -45,7 +45,7 @@
 .banner_box .home_btn_box .home_btn_box_mask {
   padding-left: 20px;
   padding-top: 10px;
-  height: 220px;
+  padding-bottom: 16px;
   width: 500px;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.46) 0%, rgba(0, 0, 0, 0) 100%);
 }

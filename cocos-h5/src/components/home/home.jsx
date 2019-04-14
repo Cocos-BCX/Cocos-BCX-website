@@ -73,9 +73,11 @@ export default class Home extends Component {
             }, {
                 til1: 'map4',
                 til3: 'md4',
+                til33: 'md44',
             }, {
                 til1: 'map5',
                 til3: 'md5',
+                til33: 'md55',
             }],
             newsTopList: [],
             newsBottomList: []
@@ -164,7 +166,7 @@ export default class Home extends Component {
                 <div className='banner_box'>
                     <Nav></Nav>
                     <img src={logow} className='wlogo' alt="" />
-                    <div className='home_btn_box'>
+                    <div className={lang==='zh'?'home_btn_box':'home_btn_box home_btn_box_en'}>
                         <h5>COCOS</h5>
                         <h5>BLOCKCHAIN EXPEDITION</h5>
                         <h6><FormattedMessage id='next' /></h6>

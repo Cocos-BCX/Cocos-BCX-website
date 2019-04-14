@@ -133,7 +133,7 @@ const zh_CN = {
     fqr1: '发起人',
     fqr2: '发起人',
     fqr3: '首席技术专家',
-    fqr4: '中文合伙人&全球市场和运营负责人',
+    fqr4: '中文合伙人&全球市场负责人',
     fqr5: '中国社区运营负责人',
     fqr6: '韩国业务联席负责人',
     fqr7: '韩国业务联席负责人',
@@ -195,7 +195,7 @@ const zh_CN = {
     ns12: '区块链游戏行业盛会 Blockchain Gamer Connects 第三届会议在伦敦举行，Cocos-BCX 联合创始人 Richard Yang 受邀出席并与来自 EOS Block.One 等同行嘉宾圆桌畅谈区块链行业与技术的未来。',
     ns13: '由韩国区块链内容协会主办，韩国手游协会承办，以“Next Game Crypto,We are Blockchain Contents”为主题的韩国区块链游戏大会(Korea Blockchain Game Show)在韩国举办。Cocos-BCX 韩国公司负责人 Frederick LIM 作为代表参加并发表演讲。他表示 Cocos-BCX 作为下一代游戏数字经济平台，非常看好并重视韩国市场，希望与更多韩国优秀项目和开发团队合作，共同建设区块链游戏未来。',
     ns14: 'Cocos-BCX 日本代表 Fujita Hirokuni以「ブロックチェーンゲームの総合ソルーションからみるクリプトエコノミーの可能性についてーCocos-BCXを例として」（以 Cocos-BCX 为例从区块链游戏综合解决方案来看加密货币经济的可能性）为题，与微软日本等一同受邀前往SQEX公司进行社内研习会演讲。',
-    ns15: 'Cocos-BCX 链系统更新，本次更新进行了包括事务ID(哈希串)长度扩展，合约注册表递归深度限制等一系列的优化。',
+    ns15: 'Cocos-BCX 、TRON 和 BlockchainGamer.biz 在旧金山市中心 Bespoke 联合举办 Blockchain Games Next 会议。此次区块链游戏会议深入探讨了行业的现状与潜在机会，参会者在轻松愉快的氛围中对此展开了讨论。',
     //月报周报
     month:'月报/周报',
     //活动
