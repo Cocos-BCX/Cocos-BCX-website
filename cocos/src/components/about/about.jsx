@@ -65,7 +65,7 @@ export default class About extends Component {
         this.state = {
             teamList: [
                 { pic: p1, ly: ly, ex: 'p1ex1', name: 'p1', position: 'fqr1', url: 'https://www.linkedin.com/in/%E6%98%8A%E8%8A%9D-%E9%99%88-51b805108/', icon: ly },
-                { pic: p2, ly: ly, ex: 'plex2', name: 'p2', position: 'fqr2', url: 'https://www.linkedin.com/in/xiaolong/', icon: ly },
+                { pic: p2, ly: ly, ex: 'plex2', name: 'p2', position: 'fqr2', url: 'https://www.linkedin.com/in/richardyangr/', icon: ly },
                 { pic: p3, ex: 'plex3', name: 'p3', position: 'fqr3' },
                 { pic: p4, ex: 'plex4', name: 'p4', position: 'fqr4' },
                 { pic: p5, ex: 'plex5', name: 'p5', position: 'fqr5' },

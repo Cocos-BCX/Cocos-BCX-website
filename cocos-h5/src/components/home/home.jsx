@@ -200,7 +200,7 @@ export default class Home extends Component {
                                 <img src={daohang} className='ex_l_img' alt="" />
                             </div>
                             <div className='ex_l_r lt'>
-                                <h4 className='ex_img_til' style={lang === 'en' ? { fontSize: '.22rem' } : null}><FormattedMessage id='ex_tel2' /></h4>
+                                <h4 className='ex_img_til' /* style={lang === 'en' ? { fontSize: '.22rem' } : null} */><FormattedMessage id='ex_tel2' /></h4>
                                 <p style={{"WebkitBoxOrient": "vertical"}} className='ex_img_text' ><FormattedMessage id='ex_text2' /></p>
                             </div>
                         </div>

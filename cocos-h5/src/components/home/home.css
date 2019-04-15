@@ -118,7 +118,7 @@
 }
 .explane .explane_img .ex_l_box .ex_l_w {
   margin-left: .28rem;
-  width: 2.4rem;
+  width: 2.2rem;
   height: 1.17rem;
   transform: skewX(-25deg);
   border: 1px solid #dddddd;
@@ -132,8 +132,8 @@
   transform: skewX(25deg);
 }
 .explane .explane_img .ex_l_box .ex_l_r {
-  width: 3.5rem;
-  margin-left: .7rem;
+  width: 3.8rem;
+  margin-left: .5rem;
 }
 .explane .explane_img .ex_l_box .ex_l_r .ex_img_til {
   font-size: .3rem;
