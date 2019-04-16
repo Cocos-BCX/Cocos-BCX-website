@@ -761,7 +761,7 @@
   }
   .system .sys_img .sys_img_box {
     width: 108px;
-    height: 102px;
+    height: 108px;
     transform: skewX(-17deg);
     background: #585858;
     margin-left: 57px;
@@ -798,7 +798,7 @@
     margin-top: 20px;
   }
   .system .sys_img .sys_img_box p {
-    margin-top: 18px;
+    margin-top: 14px;
     font-size: 13px;
     font-weight: normal;
     color: #ffffff;

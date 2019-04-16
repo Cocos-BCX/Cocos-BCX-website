@@ -149,10 +149,35 @@ export default class Home extends Component {
         e.stopPropagation();
         e.nativeEvent.stopImmediatePropagation();
     }
+    //引擎动画
+    yqTransition(){
+        let yq = document.getElementsByClassName('explane_img');
+        let toTop = this.offset(yq[0]).top;
+        console.log(toTop);
+        
+    }
+    //计算到页面顶部的距离
+     offset(ele) {
+        let l = ele.offsetLeft;// 先保存元素外边框到上级参照物的内边框的距离
+        let t = ele.offsetTop;
+        let temp = ele.offsetParent;// 用 temp去存储上级参照物
+        while (temp && temp.nodeName.toLowerCase() !== "body") {
+            //判断上级参照物是不是存在,不存在的话说明 ele 就是body;
+            // 如果存在，并且不是body,就接着向上累加 offset值
+            l += temp.offsetLeft + temp.clientLeft;
+            t += temp.offsetTop + temp.clientTop;
+            temp = temp.offsetParent;
+        }
+        return {
+            top: t,
+            left: l
+        };
+    }
     componentDidMount() {
         this.getNews();
         this.getTopNews()
-        this.closeVideo()
+        this.closeVideo();
+        this.yqTransition()
     }
     componentWillUnmount = () => {
         this.setState = (state, callback) => {
@@ -160,7 +185,6 @@ export default class Home extends Component {
         };
     }
     componentWillMount() {
-        console.log(this.props.choose);
     }
 
     render() {
