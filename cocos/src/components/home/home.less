@@ -50,6 +50,7 @@
     // background: url('../../images/bg_banner.jpg') no-repeat;
     background-size: cover;
     overflow: hidden;
+    transition: all .5s;
 
     .home_btn_box {
         width: 1150px;
@@ -110,7 +111,7 @@
     .banner_box {
         // width: 1600px;
         width: 100%;
-        height: 677px;
+        height: 800px;
         margin: auto;
         // background: url('../../images/bg_banner.jpg') no-repeat;
         background-size: cover;
@@ -119,7 +120,7 @@
         .home_btn_box {
             width: 862px;
             margin: auto;
-            margin-top: 265px;
+            margin-top: 365px;
 
             // h5 {
             //     color: #fff;
@@ -209,7 +210,8 @@
 
         .ex_l_box {
             margin-left: 86px;
-
+            opacity: 0;
+            transition: all .3s;
             .ex_l_w {
                 margin-left: 34px;
                 width: 214px;
@@ -282,7 +284,7 @@
             width: 134px;
             height: 12px;
             margin: auto;
-            margin-top: 36px;
+            margin-top: 46px;
         }
 
         .explane_img {
@@ -822,7 +824,15 @@
         height: 166px;
         margin: auto;
         margin-top: -68px;
-
+        animation: m2 1.5s alternate infinite;
+        @keyframes m2{
+            0% {
+                transform: translate(0,0);
+            }
+            100% {
+                transform: translate(0,-20px);
+            }
+        }
         img {
             width: 100%;
             height: 100%;
@@ -1143,6 +1153,8 @@
             box-sizing: border-box;
             position: relative;
             overflow: hidden;
+            transform: translateY(140px);
+            transition: all .4s ease-out;
 
 
             &:nth-child(1) {
@@ -1445,7 +1457,10 @@
 
             .hezuo_top {
                 overflow: hidden;
-
+                .hezuo_pic{
+                    transform: translateY(100px);
+                    transition: all .4s;
+                }
                 a {
                     display: block;
                     width: 202px;
@@ -1473,7 +1488,10 @@
 
             .hezuo_bottom {
                 overflow: hidden;
-
+                .hz_picd{
+                    transform: translateY(100px);
+                    transition: all .4s;
+                }
                 a {
                     display: block;
                     width: 202px;

@@ -50,7 +50,9 @@ import jia from '../../images/jia.png'
 import close from '../../images/close.png'
 import dline from '../../images/dline.png'
 import './home.css'
-
+let style = {
+    bounce: 'bounce delay-2s',
+}
 export default class Home extends Component {
     constructor(props) {
         super(props);
@@ -99,7 +101,7 @@ export default class Home extends Component {
         let url = 'news/recommend';
         let params = { lang: lang, };
         get(url, params).then(response => {
-            console.log(response.data.data);
+            console.log(response);
             this.setState({ newsTopList: response.data.data })
         })
     }
@@ -150,14 +152,69 @@ export default class Home extends Component {
         e.nativeEvent.stopImmediatePropagation();
     }
     //引擎动画
-    yqTransition(){
-        let yq = document.getElementsByClassName('explane_img');
-        let toTop = this.offset(yq[0]).top;
-        console.log(toTop);
-        
+    yqt() {
+        let box = document.getElementsByClassName('explane_img')[0];
+        let ele = document.getElementsByClassName('ex_l_box');
+        let to = () => {
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            if (scrollTop > (box.offsetTop - cHeight)) {
+                for (let i = 0; i < ele.length; i++) {
+                    setTimeout(() => {
+                        ele[i].style.opacity = '1';
+                    }, 0 + i * 200)
+                }
+            }
+        }
+        document.addEventListener('scroll', to)
+
+    }
+    //技术进展动画
+    jst() {
+        let box = document.getElementsByClassName('map_main_box')[0];
+        let ele = document.getElementsByClassName('map_s_box');
+        let to = () => {
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            if (scrollTop > (box.offsetTop - cHeight)) {
+                for (let i = 0; i < ele.length; i++) {
+                    setTimeout(() => {
+                        ele[i].style.transform='translateY(0)';
+                    }, 0 + i * 200)
+                }
+            }
+        }
+        document.addEventListener('scroll', to)
+    }
+    //合作伙伴动画
+    hzt(){
+        let box = document.getElementsByClassName('hezuo_pic');
+        let to = () => {
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            for (let j = 0; j < box.length; j++) {
+                if (scrollTop-50 > (box[j].offsetTop- cHeight)) {
+                    box[j].style.transform='translateY(0)';
+                }
+            }
+        }
+        document.addEventListener('scroll', to)
+    }
+    hzdt(){
+        let box = document.getElementsByClassName('hz_picd');
+        let to = () => {
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            for (let j = 0; j < box.length; j++) {
+                if (scrollTop-50 > (box[j].offsetTop- cHeight)) {
+                    box[j].style.transform='translateY(0)';
+                }
+            }
+        }
+        document.addEventListener('scroll', to)
     }
     //计算到页面顶部的距离
-     offset(ele) {
+    offset(ele) {
         let l = ele.offsetLeft;// 先保存元素外边框到上级参照物的内边框的距离
         let t = ele.offsetTop;
         let temp = ele.offsetParent;// 用 temp去存储上级参照物
@@ -173,11 +230,28 @@ export default class Home extends Component {
             left: l
         };
     }
+    //banner动画
+    bannerTrans() {
+
+        this.banner.onmousemove = (() => {
+            // this.banner.style.transform='rotateY(20deg)'
+        })
+        this.banner.onmouseleave = (() => {
+            // this.banner.style.transform='rotateY(0deg)'
+        })
+    }
+
     componentDidMount() {
         this.getNews();
         this.getTopNews()
         this.closeVideo();
-        this.yqTransition()
+        this.yqt()
+        this.jst()
+        this.hzt()
+        this.hzdt()
+        //banner动画
+        this.bannerTrans()
+
     }
     componentWillUnmount = () => {
         this.setState = (state, callback) => {
@@ -206,10 +280,10 @@ export default class Home extends Component {
 
                     </div>
                 </div>
-                <div className='banner_box' style={{ background: "url('https://jdi.cocosbcx.net/image/cocosbcx/bg_banner.jpg') no-repeat center" }}>
+                <div key="amache" className='banner_box animated ' ref={(x) => { this.banner = x }} style={{ background: "url('https://jdi.cocosbcx.net/image/cocosbcx/bg_banner.jpg') no-repeat center" }}>
                     <Nav choose={this.props.choose}></Nav>
                     <div className='home_btn_box'>
-                        <div className='home_btn_box_mask'>
+                        <div className='home_btn_box_mask animated tada delay-1s'>
                             <h5>COCOS</h5>
                             <h5>BLOCKCHAIN EXPEDITION</h5>
                             <h6><FormattedMessage id='next' /></h6>
@@ -344,7 +418,7 @@ export default class Home extends Component {
                     </div>
                     <div className='map_main_box'>
                         {this.state.mapList.map((item, index) => {
-                            return <div className='map_s_box lt' key={index} style={lang === 'en' ? { height: '200px' } : { height: '130px' }}>
+                            return <div className='map_s_box lt ' key={index} style={lang === 'en' ? { height: '200px' } : { height: '130px' }}>
                                 <p><FormattedMessage id={item.til1} /></p>
                                 <p><FormattedMessage id={item.til2} /></p>
                                 {/* <h5><FormattedMessage id={item.til3} /></h5> */}
@@ -385,7 +459,7 @@ export default class Home extends Component {
                         <div className='hezuo_com'>
                             <div className="hezuo_top">
                                 {this.state.black1.map((item, index) => {
-                                    return <a href={item.url} rel="noopener noreferrer" target="_blank" key={index} className='lt' style={{ background: `url(${item.b})`, }}
+                                    return <a href={item.url} rel="noopener noreferrer" target="_blank" key={index} className='hezuo_pic lt' style={{ background: `url(${item.b})`, }}
                                         onMouseEnter={(e) => { e.target.style.background = `url(${item.w})` }}
                                         onMouseLeave={(e) => { e.target.style.background = `url(${item.b})` }}
                                     >
@@ -397,7 +471,7 @@ export default class Home extends Component {
                             </div>
                             <div className="hezuo_bottom">
                                 {this.state.black2.map((item, index) => {
-                                    return <a href={item.url} rel="noopener noreferrer" target="_blank" key={index} className='lt' style={{ background: `url(${item.b})`, }}
+                                    return <a href={item.url} rel="noopener noreferrer" target="_blank" key={index} className='hz_picd lt' style={{ background: `url(${item.b})`, }}
                                         onMouseEnter={(e) => { e.target.style.background = `url(${item.w})` }}
                                         onMouseLeave={(e) => { e.target.style.background = `url(${item.b})` }}
                                     >

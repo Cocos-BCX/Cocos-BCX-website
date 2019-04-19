@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 // const baseUrl = "http://192.168.15.37:10086/api/v1/"; //测试
-const baseUrl = "http://api-test.cocosbcx.io/";
+const baseUrl = "http://api-test.cocosbcx.io/api/v1/";
 
 export const explorer = 'http://explorer.test.cjfan.net/'
 export function get(url, msg, header) {
