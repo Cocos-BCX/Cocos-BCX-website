@@ -283,7 +283,7 @@ export default class Home extends Component {
                 <div key="amache" className='banner_box animated ' ref={(x) => { this.banner = x }} style={{ background: "url('https://jdi.cocosbcx.net/image/cocosbcx/bg_banner.jpg') no-repeat center" }}>
                     <Nav choose={this.props.choose}></Nav>
                     <div className='home_btn_box'>
-                        <div className='home_btn_box_mask animated tada delay-1s'>
+                        <div className='home_btn_box_mask  tada delay-1s'>
                             <h5>COCOS</h5>
                             <h5>BLOCKCHAIN EXPEDITION</h5>
                             <h6><FormattedMessage id='next' /></h6>

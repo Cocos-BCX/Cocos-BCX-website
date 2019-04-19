@@ -299,6 +299,9 @@
   border: 1px solid #ECEDEF;
   overflow: hidden;
 }
+.about .hezuo .hezuo_box .hezuo_imgs div:hover {
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+}
 .about .hezuo .hezuo_box .hezuo_imgs div:nth-child(5n-4) {
   margin-left: 0;
 }

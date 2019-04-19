@@ -93,7 +93,7 @@ export default class Nav extends Component {
     render() {
         let lang = localStorage.getItem('lang_type');
         return (
-            <div className='nav_box animated bounceInLeft' >
+            <div className='nav_box  bounceInLeft' >
                 <div className='nav_logo_box'>
                     <img src={logo} alt="" />
                 </div>

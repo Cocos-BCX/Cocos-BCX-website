@@ -25,6 +25,14 @@ export default class Product extends Component {
             ],
         }
     }
+    componentDidMount(){
+        this.devbtn.onmouseenter=()=>{
+            this.devbtn.classList.add('bounceIn');
+        }
+        this.devbtn.onmouseleave=()=>{
+            this.devbtn.classList.remove('bounceIn');
+        }
+    }
     render() {
         let lang = localStorage.getItem('lang_type');
         return (
@@ -32,9 +40,12 @@ export default class Product extends Component {
                 <div className="banner_s_box" style={{ background: "url('https://jdi.cocosbcx.net/image/cocosbcx/product_banner.jpg') no-repeat center" }}>
                     <Nav></Nav>
                 </div>
-                <div className='dev_plan'>
-                    <a href={lang==='zh'?"https://cn-ecosystem.cocosbcx.io":' https://ecosystem.cocosbcx.io '} className='ljdev' target='_blank' rel="noopener noreferrer">
-                        <FormattedMessage id='ljdev' />
+                <div className='dev_plan' >
+                    <a  href={lang==='zh'?"https://cn-ecosystem.cocosbcx.io":' https://ecosystem.cocosbcx.io '} className='ljdev animated' target='_blank' rel="noopener noreferrer">
+                        <span ref={(x)=>{this.devbtn=x}} className='animated' >
+                        <FormattedMessage  id='ljdev' />
+                        </span>
+                      
                     </a>
                 </div>
                 <div className='dev_list_box'>

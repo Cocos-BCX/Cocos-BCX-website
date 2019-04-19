@@ -67,6 +67,9 @@
   height: 50px;
   margin-left: 538px;
 }
+.develop .dev_box .dev_m .dev_main .dev_go:hover {
+  background: #0088ac;
+}
 .develop .dev_box .dev_m .dev_main .dev_go div {
   font-size: 29px;
   font-weight: 400;

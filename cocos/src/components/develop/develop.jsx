@@ -21,7 +21,7 @@ export default class Develop extends Component {
                     <Nav></Nav>
                 </div>
                 <div className='dev_box'>
-                    <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7'} target="_blank" rel="noopener noreferrer" className='dev_m'>
+                    <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7'} target="_blank" rel="noopener noreferrer" className='dev_m animated bounceInRight'>
                         <div className='dev_img lt'>
                             <img src={dev1} alt="" />
                         </div>
@@ -35,7 +35,7 @@ export default class Develop extends Component {
                             </div>
                         </div>
                     </a>
-                    <a href={lang === 'zh' ? "https://cn-dev.cocosbcx.io" : 'https://dev.cocosbcx.io'} target="_blank" rel="noopener noreferrer" className='dev_m'>
+                    <a href={lang === 'zh' ? "https://cn-dev.cocosbcx.io" : 'https://dev.cocosbcx.io'} target="_blank" rel="noopener noreferrer " className='dev_m animated bounceInRight'>
                         <div className='dev_img lt'>
                             <img src={dev2} alt="" />
                         </div>
@@ -49,7 +49,7 @@ export default class Develop extends Component {
                             </div>
                         </div>
                     </a>
-                    <a href="https://forum.cocos.com/c/bcx" target="_blank" rel="noopener noreferrer" className='dev_m'>
+                    <a href="https://forum.cocos.com/c/bcx" target="_blank" rel="noopener noreferrer" className='dev_m animated bounceInRight'>
                         <div className='dev_img lt'>
                             <img src={dev3} alt="" />
                         </div>
