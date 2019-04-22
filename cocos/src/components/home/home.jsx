@@ -101,7 +101,6 @@ export default class Home extends Component {
         let url = 'news/recommend';
         let params = { lang: lang, };
         get(url, params).then(response => {
-            console.log(response);
             this.setState({ newsTopList: response.data.data })
         })
     }
@@ -279,8 +278,6 @@ export default class Home extends Component {
           let onMouseMoveHandler = function(event) {
             if (isTimeToUpdate()) {
               update(event);
-        console.log(mouse.show());
-              
             }
           };
         

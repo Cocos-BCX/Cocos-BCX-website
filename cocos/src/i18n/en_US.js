@@ -197,9 +197,9 @@ const en_US = {
     ns14: 'Fujita Hirokuni, Cocos-BCX Advisor for Japanese Market was invited to attend the internal workshop at SQEX, together with guests from Microsoft. Fujita gave a speech themed "Take Cocos-BCX as an example to see the possibilities of cryptocurrency economy from the perspective of comprehensive solutions for blockchain gaming".',
     ns15: 'Cocos-BCX, Tron and BlockchainGamer.biz jointly presented "BlockchainGamesNext" in Bespoke, SanFrancisco. Topics covering current status and potential opportunities of blockchain gaming industry were lively discussed in  an enjoyable atmosphere.',
     //月报周报
-    month: '月报/周报',
+    month: 'Report',
     //活动
-    yg: '活动预告',
+    yg: 'Activity Notice',
 
 }
 export default en_US;

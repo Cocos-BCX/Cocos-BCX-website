@@ -22,7 +22,6 @@ export default class Yb extends Component {
         let url = 'reports/list';
         let params = { lang: lang, limit: 8, page: page, };
         get(url, params).then(response => {
-            console.log(response.data.data);
             this.setState({ newList: response.data.data.data })
             this.setState({ newmsg: response.data.data })
         })

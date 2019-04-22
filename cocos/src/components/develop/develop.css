@@ -2,6 +2,7 @@
   margin: auto;
   height: 336px;
   background: url('../../images/develop_banner.jpg') no-repeat center;
+  overflow: hidden;
 }
 .develop .dev_box {
   margin-top: 14px;
@@ -85,6 +86,7 @@
 @media screen and (max-width: 1400px) {
   .develop .banner_box {
     margin: auto;
+    overflow: hidden;
   }
   .develop .dev_box {
     margin-top: 14px;
