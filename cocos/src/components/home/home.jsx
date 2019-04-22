@@ -295,7 +295,7 @@ export default class Home extends Component {
           };
         
           let updateTransformStyle = function(x, y) {
-            let style = "rotateX(" + x/10 + "deg) rotateY(" + y/10 + "deg)";
+            let style = "rotateX(" + x/5 + "deg) rotateY(" + y/5 + "deg)";
             inner.style.transform = style;
             inner.style.webkitTransform = style;
             inner.style.mozTransform = style;
