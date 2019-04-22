@@ -247,7 +247,7 @@ export default class Home extends Component {
             },
             setOrigin: function(e) {
               this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
-              this._y = e.offsetTop + Math.floor(e.offsetHeight / 2)-650;
+              this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
             },
             show: function() {
               return "(" + this.x + ", " + this.y + ")";
