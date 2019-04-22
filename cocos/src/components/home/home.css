@@ -30,52 +30,59 @@
 .video_box .video .iframe {
   margin: auto;
 }
-.banner_box {
+.container {
+  perspective: 25px;
+}
+.container .banner_box {
   width: 100%;
   height: 902px;
   margin: auto;
+  background: url('https://jdi.cocosbcx.net/image/cocosbcx/bg_banner.jpg') no-repeat center;
   background-size: cover;
   overflow: hidden;
-  transition: all .5s;
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
 }
-.banner_box .home_btn_box {
+.container .banner_box .home_btn_box {
   width: 1150px;
   margin: auto;
   margin-top: 353px;
 }
-.banner_box .home_btn_box .home_btn_box_mask {
+.container .banner_box .home_btn_box .home_btn_box_mask {
   padding-left: 20px;
   padding-top: 10px;
   padding-bottom: 16px;
   width: 500px;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.46) 0%, rgba(0, 0, 0, 0) 100%);
 }
-.banner_box .home_btn_box .home_btn_box_mask h5 {
+.container .banner_box .home_btn_box .home_btn_box_mask h5 {
   color: #fff;
   font-size: 38px;
   font-family: FjallaOne;
   font-weight: 400;
 }
-.banner_box .home_btn_box .home_btn_box_mask h6 {
+.container .banner_box .home_btn_box .home_btn_box_mask h6 {
   color: #fff;
   font-size: 29px;
   font-family: FjallaOne;
   font-weight: bold;
 }
-.banner_box .home_btn_box .home_btn_box_mask .play_btn {
+.container .banner_box .home_btn_box .home_btn_box_mask .play_btn {
   overflow: hidden;
   margin-top: 18px;
 }
-.banner_box .home_btn_box .home_btn_box_mask .play_btn img {
+.container .banner_box .home_btn_box .home_btn_box_mask .play_btn img {
   width: 50px;
   height: 50px;
   cursor: pointer;
   opacity: .8;
 }
-.banner_box .home_btn_box .home_btn_box_mask .play_btn img:hover {
+.container .banner_box .home_btn_box .home_btn_box_mask .play_btn img:hover {
   opacity: 1;
 }
-.banner_box .home_btn_box .home_btn_box_mask .play_btn p {
+.container .banner_box .home_btn_box .home_btn_box_mask .play_btn p {
   width: 280px;
   margin-left: 25px;
   color: #dbd2d2;
@@ -83,14 +90,19 @@
   line-height: 19px;
 }
 @media screen and (max-width: 1400px) {
-  .banner_box {
+  .container .banner_box {
     width: 100%;
     height: 800px;
     margin: auto;
+    background: url('https://jdi.cocosbcx.net/image/cocosbcx/bg_banner.jpg') no-repeat center;
     background-size: cover;
     overflow: hidden;
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
   }
-  .banner_box .home_btn_box {
+  .container .banner_box .home_btn_box {
     width: 862px;
     margin: auto;
     margin-top: 365px;

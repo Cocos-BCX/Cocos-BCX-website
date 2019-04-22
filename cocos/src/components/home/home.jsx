@@ -233,12 +233,81 @@ export default class Home extends Component {
     //banner动画
     bannerTrans() {
 
-        this.banner.onmousemove = (() => {
-            // this.banner.style.transform='rotateY(20deg)'
-        })
-        this.banner.onmouseleave = (() => {
-            // this.banner.style.transform='rotateY(0deg)'
-        })
+        let container =  document.getElementsByClassName('container')[0];
+        let inner = this.banner;
+        let mouse = {
+            _x: 0,
+            _y: 0,
+            x: 0,
+            y: 0,
+            updatePosition: function(event) {
+                let e = event || window.event;
+              this.x = e.clientX - this._x;
+              this.y = (e.clientY - this._y) * -1;
+            },
+            setOrigin: function(e) {
+              this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
+              this._y = e.offsetTop + Math.floor(e.offsetHeight / 2)-650;
+            },
+            show: function() {
+              return "(" + this.x + ", " + this.y + ")";
+            },
+          };
+        
+          
+          // Track the mouse position relative to the center of the container.
+          mouse.setOrigin(this.banner);
+        
+          //-----------------------------------------
+        
+          let counter = 0;
+          let updateRate = 10;
+          let isTimeToUpdate = function() {
+            return counter++ % updateRate === 0;
+          };
+        
+          //-----------------------------------------
+        
+          let onMouseEnterHandler = function(event) {
+            update(event);
+          };
+        
+          let onMouseLeaveHandler = function() {
+            inner.style = "";
+          };
+        
+          let onMouseMoveHandler = function(event) {
+            if (isTimeToUpdate()) {
+              update(event);
+        console.log(mouse.show());
+              
+            }
+          };
+        
+          //-----------------------------------------
+        
+          let update = function(event) {
+            mouse.updatePosition(event);
+            updateTransformStyle(
+              (mouse.y / inner.offsetHeight / 2).toFixed(2),
+              (mouse.x / inner.offsetWidth / 2).toFixed(2)
+            );
+          };
+        
+          let updateTransformStyle = function(x, y) {
+            let style = "rotateX(" + x/10 + "deg) rotateY(" + y/10 + "deg)";
+            inner.style.transform = style;
+            inner.style.webkitTransform = style;
+            inner.style.mozTransform = style;
+            inner.style.msTransform = style;
+            inner.style.oTransform = style;
+          };
+        
+          //-----------------------------------------
+        
+          container.onmouseenter = onMouseEnterHandler;
+          container.onmouseleave = onMouseLeaveHandler;
+          container.onmousemove = onMouseMoveHandler;
     }
 
     componentDidMount() {
@@ -251,6 +320,7 @@ export default class Home extends Component {
         this.hzdt()
         //banner动画
         this.bannerTrans()
+        
 
     }
     componentWillUnmount = () => {
@@ -280,7 +350,8 @@ export default class Home extends Component {
 
                     </div>
                 </div>
-                <div key="amache" className='banner_box animated ' ref={(x) => { this.banner = x }} style={{ background: "url('https://jdi.cocosbcx.net/image/cocosbcx/bg_banner.jpg') no-repeat center" }}>
+                <div className='container'>
+                <div key="amache" className='banner_box animated ' ref={(x) => { this.banner = x }} >
                     <Nav choose={this.props.choose}></Nav>
                     <div className='home_btn_box'>
                         <div className='home_btn_box_mask  tada delay-1s'>
@@ -294,6 +365,8 @@ export default class Home extends Component {
                         </div>
                     </div>
                 </div>
+                </div>
+                
                 <div className='explane'>
                     <div className="expplane_til"><FormattedMessage id='explane' /></div>
                     <div className="expplane_main">
