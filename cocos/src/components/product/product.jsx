@@ -29,7 +29,7 @@ export default class Product extends Component {
         this.devbtn.onmouseenter=()=>{
             this.devbtn.classList.add('bounceIn');
         }
-        this.devbtn.onmouseleave=()=>{
+        this.devplan.onmouseleave=()=>{
             this.devbtn.classList.remove('bounceIn');
         }
     }
@@ -40,7 +40,7 @@ export default class Product extends Component {
                 <div className="banner_s_box" style={{ background: "url('https://jdi.cocosbcx.net/image/cocosbcx/product_banner.jpg') no-repeat center" }}>
                     <Nav></Nav>
                 </div>
-                <div className='dev_plan' >
+                <div className='dev_plan' ref={(x)=>{this.devplan=x}}>
                     <a  href={lang==='zh'?"https://cn-ecosystem.cocosbcx.io":' https://ecosystem.cocosbcx.io '} className='ljdev animated' target='_blank' rel="noopener noreferrer">
                         <span ref={(x)=>{this.devbtn=x}} className='animated' >
                         <FormattedMessage  id='ljdev' />
