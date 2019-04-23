@@ -63,7 +63,7 @@ export default class Big extends Component {
                 { date: '2019-01-21~22', til: 'ns12' },
                 { date: '2019-01-30~31', til: 'ns13' },
                 { date: '2019-01-28', til: 'ns14' },
-                { date: '2019-02-22', til: 'ns15' },
+                { date: '2019-03-19', til: 'ns15' },
             ],
 
         }

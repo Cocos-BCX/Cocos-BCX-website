@@ -42,6 +42,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   box-sizing: border-box;
+  max-width: 1.35rem;
 }
 .hd .hd_for .hd_box .hd_every .every_b .e_date {
   height: .29rem;
@@ -94,9 +95,6 @@
   font-size: .26rem;
   line-height: .29rem;
   height: .29rem;
-}
-.hd .hd_list_box {
-  height: 13.76rem;
 }
 .hd .hd_list_box .hd_list_e {
   overflow: hidden;
