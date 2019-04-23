@@ -134,10 +134,107 @@ export default class Home extends Component {
         e.stopPropagation();
         e.nativeEvent.stopImmediatePropagation();
     }
+    //引擎动画
+    yqt() {
+        // let box = document.getElementsByClassName('explane_img')[0];
+        let ele = document.getElementsByClassName('ex_l_r');
+        let to = () => {
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            for (let i = 0; i < ele.length; i++) {
+                setTimeout(() => {
+                    ele[i].style.opacity = '1';
+                    ele[i].style.transform = 'translateX(0)';
+                }, 0 + i * 300)
+            }
+        }
+        setTimeout(() => {
+            to()
+        }, 300)
+    }
+    //技术进展动画
+    jst() {
+        let ele = document.getElementsByClassName('jishu');
+        let to = () => {
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            if (scrollTop > (this.offset(ele[0]).top - cHeight)) {
+                ele[0].style.transform = 'translateX(0)';
+                ele[0].style.opacity = '1';
+            }
+            if (scrollTop > (this.offset(ele[1]).top  - cHeight)) {
+                ele[1].style.transform = 'translateX(0)';
+                ele[1].style.opacity = '1';
+            }
+            if (scrollTop > (this.offset(ele[2]).top  - cHeight)) {
+                ele[2].style.transform = 'translateX(0)';
+                ele[2].style.opacity = '1';
+            }
+            if (scrollTop > (this.offset(ele[3]).top  - cHeight)) {
+                ele[3].style.transform = 'translateX(0)';
+                ele[3].style.opacity = '1';
+            }
+            if (scrollTop > (this.offset(ele[4]).top  - cHeight)) {
+                ele[4].style.transform = 'translateX(0)';
+                ele[4].style.opacity = '1';
+            }
+        }
+        document.addEventListener('scroll', to)
+    }
+        //合作伙伴动画
+        hzt(){
+            let box = document.getElementsByClassName('hezuo_pic');
+            let to = () => {
+                let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+                for (let j = 0; j < box.length; j++) {
+                    if (scrollTop-50 > (this.offset(box[j]).top- cHeight)) {
+                        box[j].style.transform='translateY(0)';
+                        box[j].style.opacity = '1';
+                    }
+                }
+            }
+            document.addEventListener('scroll', to)
+        }
+        hzdt(){
+            let box = document.getElementsByClassName('hz_picd');
+            let to = () => {
+                let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+                for (let j = 0; j < box.length; j++) {
+                    if (scrollTop-50 > (this.offset(box[j]).top- cHeight)) {
+                        box[j].style.transform='translateY(0)';
+                        box[j].style.opacity = '1';
+                    }
+                }
+            }
+            document.addEventListener('scroll', to)
+        }
+    //计算到页面顶部的距离
+    offset(ele) {
+        let l = ele.offsetLeft;// 先保存元素外边框到上级参照物的内边框的距离
+        let t = ele.offsetTop;
+        let temp = ele.offsetParent;// 用 temp去存储上级参照物
+        while (temp && temp.nodeName.toLowerCase() !== "body") {
+            //判断上级参照物是不是存在,不存在的话说明 ele 就是body;
+            // 如果存在，并且不是body,就接着向上累加 offset值
+            l += temp.offsetLeft + temp.clientLeft;
+            t += temp.offsetTop + temp.clientTop;
+            temp = temp.offsetParent;
+        }
+        return {
+            top: t,
+            left: l
+        };
+    }
     componentDidMount() {
         this.getNews();
         this.getTopNews()
         this.closeVideo()
+        this.yqt()
+        this.jst()
+        this.hzt()
+        this.hzdt() 
     }
     componentWillUnmount = () => {
         this.setState = (state, callback) => {
@@ -166,13 +263,13 @@ export default class Home extends Component {
                 <div className='banner_box'>
                     <Nav></Nav>
                     <img src={logow} className='wlogo' alt="" />
-                    <div className={lang==='zh'?'home_btn_box':'home_btn_box home_btn_box_en'}>
+                    <div className={lang === 'zh' ? 'home_btn_box' : 'home_btn_box home_btn_box_en'}>
                         <h5>COCOS</h5>
                         <h5>BLOCKCHAIN EXPEDITION</h5>
                         <h6><FormattedMessage id='next' /></h6>
                         <div className='play_btn'>
                             <img src={play} className='play_btn lt' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
-                            <p style={{"WebkitBoxOrient": "vertical"}} className='lt'><FormattedMessage id='nextex' /></p>
+                            <p style={{ "WebkitBoxOrient": "vertical" }} className='lt'><FormattedMessage id='nextex' /></p>
                         </div>
                     </div>
                 </div>
@@ -201,7 +298,7 @@ export default class Home extends Component {
                             </div>
                             <div className='ex_l_r lt'>
                                 <h4 className='ex_img_til' /* style={lang === 'en' ? { fontSize: '.22rem' } : null} */><FormattedMessage id='ex_tel2' /></h4>
-                                <p style={{"WebkitBoxOrient": "vertical"}} className='ex_img_text' ><FormattedMessage id='ex_text2' /></p>
+                                <p style={{ "WebkitBoxOrient": "vertical" }} className='ex_img_text' ><FormattedMessage id='ex_text2' /></p>
                             </div>
                         </div>
                         <div className='ex_l_box lt' >
@@ -240,7 +337,7 @@ export default class Home extends Component {
                                     </div>
                                     <div className='news_top_til lt'>
                                         <h5>{item.title}</h5>
-                                        <div className='news_top_content lt' style={{"WebkitBoxOrient": "vertical"}}>{item.summary}</div>
+                                        <div className='news_top_content lt' style={{ "WebkitBoxOrient": "vertical" }}>{item.summary}</div>
                                     </div>
                                 </a>
                             })}
@@ -252,7 +349,7 @@ export default class Home extends Component {
                                         <img src={item.image} className='img_box lt' />
                                         <div className='img_box_text lt'>
                                             <div>
-                                                <h5 style={{"WebkitBoxOrient": "vertical"}}>{item.title}</h5>
+                                                <h5 style={{ "WebkitBoxOrient": "vertical" }}>{item.title}</h5>
                                             </div>
                                         </div>
                                     </a>
@@ -281,7 +378,7 @@ export default class Home extends Component {
                 <div className='map'>
                     <div className="news_til_box">
                         <div className="news_til">
-                            <h3 style={lang==='en'?{fontSize:'.16rem'}:null}><FormattedMessage id='map' /></h3>
+                            <h3 style={lang === 'en' ? { fontSize: '.16rem' } : null}><FormattedMessage id='map' /></h3>
                             <div className='news_line'></div>
                         </div>
                         <div className="news_til_mask"></div>
@@ -298,7 +395,7 @@ export default class Home extends Component {
                         {this.state.mapList.map((item, index) => {
                             return <div className='map_s_box lt' key={index}>
                                 <h5 className='lt'><FormattedMessage id={item.til3} /></h5>
-                                <p style={{"WebkitBoxOrient": "vertical"}}  className='lt'><FormattedMessage id={item.til1} /></p>
+                                <p style={{ "WebkitBoxOrient": "vertical" }} className='jishu lt'><FormattedMessage id={item.til1} /></p>
                             </div>
                         })}
                         <div className='line_box'>
@@ -328,7 +425,7 @@ export default class Home extends Component {
                         <div className='hezuo_com'>
                             <div className="hezuo_top">
                                 {this.state.black1.map((item, index) => {
-                                    return <a href={item.url} target="_blank" rel="noopener noreferrer" key={index} className='lt' style={{ background: `url(${item.b}) no-repeat center`, backgroundSize: '1.26rem .86rem' }}
+                                    return <a href={item.url} target="_blank" rel="noopener noreferrer" key={index} className='hezuo_pic lt' style={{ background: `url(${item.b}) no-repeat center`, backgroundSize: '1.26rem .86rem' }}
                                     /*     onMouseEnter={(e) => { e.target.style.background = `url(${item.w})no-repeat center` }}
                                         onMouseLeave={(e) => { e.target.style.background = `url(${item.b})no-repeat center` }} */
                                     >
@@ -338,7 +435,7 @@ export default class Home extends Component {
                             <img src={jia} alt="" className="hezuo_middle" />
                             <div className="hezuo_bottom">
                                 {this.state.black2.map((item, index) => {
-                                    return <a href={item.url} target="_blank" rel="noopener noreferrer" key={index} className='lt' style={{ background: `url(${item.b}) no-repeat center`, backgroundSize: '1.26rem .86rem' }}
+                                    return <a href={item.url} target="_blank" rel="noopener noreferrer" key={index} className='hz_picd lt' style={{ background: `url(${item.b}) no-repeat center`, backgroundSize: '1.26rem .86rem' }}
                                     /* onMouseEnter={(e) => { e.target.style.background = `url(${item.w})` }}
                                     onMouseLeave={(e) => { e.target.style.background = `url(${item.b})` }} */
                                     >

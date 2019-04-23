@@ -166,7 +166,6 @@ export default class Home extends Component {
             }
         }
         document.addEventListener('scroll', to)
-
     }
     //技术进展动画
     jst() {
@@ -298,7 +297,6 @@ export default class Home extends Component {
             inner.style.mozTransform = style;
             inner.style.msTransform = style;
             inner.style.oTransform = style;
-            // inner.style.backgroundPosition=`${x*10}px ${y*10}px`
           };
         
           //-----------------------------------------
@@ -317,7 +315,7 @@ export default class Home extends Component {
         this.hzt()
         this.hzdt()
         //banner动画
-        this.bannerTrans()
+        // this.bannerTrans()
         
 
     }

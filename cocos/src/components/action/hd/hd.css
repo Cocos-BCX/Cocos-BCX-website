@@ -5,6 +5,7 @@
   margin-left: 139px;
   overflow: hidden;
   margin-top: 45px;
+  padding-bottom: 5px;
 }
 .hd .hd_for .hd_box .hd_every {
   display: block;
@@ -13,6 +14,12 @@
   background: #ffffff;
   border: 1px solid #e2e2e2;
   margin-left: 48px;
+  opacity: 0;
+  transform: translateY(150px);
+  transition: all .5s;
+}
+.hd .hd_for .hd_box .hd_every:hover {
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
 }
 .hd .hd_for .hd_box .hd_every:nth-child(1) {
   margin-left: 0;

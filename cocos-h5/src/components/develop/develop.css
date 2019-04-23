@@ -7,6 +7,7 @@
 .develop .dev_box {
   overflow: hidden;
   margin: auto;
+  padding-bottom: .4rem;
 }
 .develop .dev_box .dev_m {
   display: block;
@@ -18,6 +19,9 @@
   margin-top: .5rem;
   overflow: hidden;
   color: #000;
+  transform: translateX(7rem);
+  opacity: .2;
+  transition: all .7s;
 }
 .develop .dev_box .dev_m .dev_img {
   width: 3.06rem;

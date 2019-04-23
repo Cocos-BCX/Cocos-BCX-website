@@ -13,6 +13,17 @@ export default class Develop extends Component {
 
         }
     }
+    componentDidMount(){
+        setTimeout(()=>{
+            let box = document.getElementsByClassName('dev_m');
+            for (let i = 0; i < box.length; i++) {
+                setTimeout(() => {
+               box[i].style.opacity = '1';
+               box[i].style.transform='translateX(0)';
+            }, 0 + i * 200)
+            }
+        },100)
+    }
     render() {
         let lang = localStorage.getItem('lang_type');
         return (

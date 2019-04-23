@@ -134,6 +134,9 @@
 .explane .explane_img .ex_l_box .ex_l_r {
   width: 3.8rem;
   margin-left: .5rem;
+  opacity: 0;
+  transform: translateX(4rem);
+  transition: all .5s;
 }
 .explane .explane_img .ex_l_box .ex_l_r .ex_img_til {
   font-size: .3rem;
@@ -329,6 +332,15 @@
   height: 1.04rem;
   margin: auto;
   display: block;
+  animation: m2 1.5s alternate infinite;
+}
+@keyframes m2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -0.2rem);
+  }
 }
 .system .sys_logo img {
   width: 100%;
@@ -499,6 +511,9 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+  transition: all .8s;
+  opacity: 0;
+  transform: translateX(5.6rem);
 }
 .map .line_box {
   position: absolute;
@@ -584,6 +599,9 @@
   height: .86rem;
   margin-left: .18rem;
   margin-top: .2rem;
+  transform: translateY(1rem);
+  opacity: 0;
+  transition: all .5s;
 }
 .hezuo .hezuo_box .hezuo_com .hezuo_top a:nth-child(1) {
   margin-left: 0;
@@ -607,6 +625,9 @@
   height: .86rem;
   margin-left: .18rem;
   margin-top: .13rem;
+  transform: translateY(0.5rem);
+  opacity: 0;
+  transition: all .5s;
 }
 .hezuo .hezuo_box .hezuo_com .hezuo_bottom a:nth-child(1) {
   margin-left: 0;

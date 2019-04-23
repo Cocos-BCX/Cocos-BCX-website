@@ -29,7 +29,8 @@ export default class Hd extends Component {
         let params = { lang: lang, };
         get(url, params).then(response => {
             // console.log(response);
-            this.setState({ forList: response.data.data })
+            this.setState({ forList: response.data.data });
+                this.tjt()
         })
     }
     //获取活动列表
@@ -48,6 +49,17 @@ export default class Hd extends Component {
             this.setState({ newmsg: response.data.data })
         })
     }
+        //推荐动画
+        tjt() {
+            let ele = document.getElementsByClassName('hd_every');
+                    for (let i = 0; i < ele.length; i++) {
+                        setTimeout(() => {
+                            ele[i].style.transform='translateY(0)';
+                            ele[i].style.opacity = '1';
+                        }, 0 + i * 200)
+                    }
+              
+        }
     componentDidMount() {
         this.forList()
     }
