@@ -232,7 +232,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     box-sizing: border-box;
-    max-width: 120px;
+    max-width: 110px;
   }
   .hd .hd_for .hd_box .hd_every .every_b .e_date {
     height: 27px;

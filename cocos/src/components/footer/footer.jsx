@@ -11,6 +11,16 @@ import git from '../../images/github.png'
 import zs from  '../../images/zs.png'
 import reddit from '../../images/reddit.png'
 import discord from '../../images/discord.png'
+
+import mediumb from '../../images/mediumb.png'
+import twitterb from '../../images/Twitterb.png'
+import wechetb from '../../images/wechatb.png'
+import weibob from '../../images/weibob.png'
+import teleb from '../../images/telegramb.png'
+import gitb from '../../images/githubb.png'
+import zsb from  '../../images/zsb.png'
+import redditb from '../../images/redditb.png'
+import discordb from '../../images/discordb.png'
 import zsma from '../../images/zsma.jpg'
 import wx from '../../images/wxma.jpg'
 import terms from '../../file/terms.pdf'
@@ -34,8 +44,73 @@ export default class Footer extends Component {
         }
         window.onscroll = () => { getScrollTop() - 400 > 0 ? this.toTomDom.style.display = "block" : this.toTomDom.style.display = "none"; }
     }
+    changeimg(){
+        this.mediuma.onmouseenter=(()=>{
+            this.mediuma.src = mediumb
+        });
+        this.mediuma.onmouseleave=(()=>{
+            this.mediuma.src = medium
+        });
+
+        this.twittera.onmouseenter=(()=>{
+            this.twittera.src = twitterb
+        });
+        this.twittera.onmouseleave=(()=>{
+            this.twittera.src =  twitter
+        });
+
+        this.wecheta.onmouseenter=(()=>{
+            this.wecheta.src = wechetb
+        });
+        this.wecheta.onmouseleave=(()=>{
+            this.wecheta.src = wechet
+        });
+
+        this.zsa.onmouseenter=(()=>{
+            this.zsa.src = zsb
+        });
+        this.zsa.onmouseleave=(()=>{
+            this.zsa.src = zs
+        });
+
+        this.weiboa.onmouseenter=(()=>{
+            this.weiboa.src = weibob
+        });
+        this.weiboa.onmouseleave=(()=>{
+            this.weiboa.src = weibo
+        });
+
+        this.telea.onmouseenter=(()=>{
+            this.telea.src = teleb
+        });
+        this.telea.onmouseleave=(()=>{
+            this.telea.src = tele
+        });
+
+        this.gita.onmouseenter=(()=>{
+            this.gita.src = gitb
+        });
+        this.gita.onmouseleave=(()=>{
+            this.gita.src = git
+        });
+
+        this.reddita.onmouseenter=(()=>{
+            this.reddita.src = redditb
+        });
+        this.reddita.onmouseleave=(()=>{
+            this.reddita.src = reddit
+        });
+
+        this.discorda.onmouseenter=(()=>{
+            this.discorda.src = discordb
+        });
+        this.discorda.onmouseleave=(()=>{
+            this.discorda.src = discord
+        });
+    }
     componentDidMount() {
-        this.goTopEx()
+        this.goTopEx();
+        this.changeimg()
     }
     render() {
         let lang = localStorage.getItem('lang_type');
@@ -89,35 +164,35 @@ export default class Footer extends Component {
                     </div>
                     <div className='footer_img'>
                         <a href="https://medium.com/cocosbcx" target='_blank' rel="noopener noreferrer">
-                            <img src={medium} alt="" />
+                            <img src={medium} alt="" ref={(x)=>{this.mediuma = x}} />
                         </a>
-                        <a href="https://twitter.com/CocosBCX" target='_blank' rel="noopener noreferrer">
-                            <img src={twitter} alt="" />
+                        <a href="https://twitter.com/CocosBCX"  target='_blank' rel="noopener noreferrer">
+                            <img src={twitter} ref={(x)=>{this.twittera = x}} alt="" />
                         </a>
                         <div className='wechet_box' onMouseEnter={() => { this.wxma.style.display = 'block' }}
                             onMouseLeave={() => { this.wxma.style.display = 'none' }}>
-                            <img className='biao' src={wechet} alt="" />
+                            <img className='biao' src={wechet} ref={(x)=>{this.wecheta = x}} alt="" />
                             <img className='ma' src={wx} ref={(x) => { this.wxma = x }} alt="" />
                         </div>
                         <div className='zs_box' onMouseEnter={() => { this.zsma.style.display = 'block' }}
                             onMouseLeave={() => { this.zsma.style.display = 'none' }}>
-                            <img className='biao' src={zs} alt="" />
+                            <img className='biao' ref={(x)=>{this.zsa = x}} src={zs} alt="" />
                             <img className='ma' src={zsma} ref={(x) => { this.zsma = x }} alt="" />
                         </div>
                         <a href="https://www.weibo.com/p/1006062183715773" target='_blank' rel="noopener noreferrer">
-                            <img src={weibo} alt="" />
+                            <img src={weibo} ref={(x)=>{this.weiboa = x}} alt="" />
                         </a>
                         <a href={lang === 'zh' ? "https://t.me/CocosBCX" : 'https://t.me/cocosblockchainexpedition'} target='_blank' rel="noopener noreferrer">
-                            <img src={tele} alt="" />
+                            <img src={tele} ref={(x)=>{this.telea = x}} alt="" />
                         </a>
                         <a href="https://github.com/cocos-bcx" target='_blank' rel="noopener noreferrer">
-                            <img src={git} alt="" />
+                            <img src={git} ref={(x)=>{this.gita = x}} alt="" />
                         </a>
                         <a href="https://www.reddit.com/user/cocos-bcx/" target='_blank' rel="noopener noreferrer">
-                            <img src={reddit} alt="" />
+                            <img src={reddit} ref={(x)=>{this.reddita = x}} alt="" />
                         </a>
                         <a href="https://discord.gg/jdJMNtC" target='_blank' rel="noopener noreferrer">
-                            <img src={discord} alt="" />
+                            <img src={discord} ref={(x)=>{this.discorda = x}}  alt="" />
                         </a>
                     </div>
                     <div className='footer_bottom'>2018 Cocos-BCX All rights reserved.</div>

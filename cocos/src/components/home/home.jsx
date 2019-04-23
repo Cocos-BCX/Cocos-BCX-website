@@ -298,6 +298,7 @@ export default class Home extends Component {
             inner.style.mozTransform = style;
             inner.style.msTransform = style;
             inner.style.oTransform = style;
+            // inner.style.backgroundPosition=`${x*10}px ${y*10}px`
           };
         
           //-----------------------------------------
