@@ -665,6 +665,7 @@
 .system .sys_logo img {
   width: 100%;
   height: 100%;
+  margin-left: -10px;
 }
 .system .sys_line {
   width: 884px;
