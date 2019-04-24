@@ -3,6 +3,8 @@ import { FormattedMessage } from 'react-intl';
 import { NavLink } from "react-router-dom";
 import { explorer } from '../../api/api'
 import logo from '../../images/logow.png'
+import booken from '../../file/whiteBooken.pdf'
+import bookzh from '../../file/whiteBookzh.pdf'
 import './nav.css'
 
 export default class Nav extends Component {
@@ -57,6 +59,24 @@ export default class Nav extends Component {
         }, 300)
 
     }
+    //打开关于我们菜单
+    showAboutList = (e) => {
+        this.aboutListBox.style.display = 'block'
+        this.setState({ aboutListSwitch: true })
+        this.abouttil.style.color = '#2AD9FE'
+        setTimeout(() => {
+            this.aboutList.style.transform = 'translateY(0)'
+        })
+    }
+    //关闭关于我们菜单
+    closeAboutList = (e) => {
+        this.setState({ aboutListSwitch: false })
+        this.abouttil.style.color = ''
+        this.aboutList.style.transform = 'translateY(-88px)'
+        setTimeout(() => {
+            this.aboutListBox.style.display = 'none'
+        }, 300)
+    }
 
 
     //给DOM绑定事件
@@ -70,11 +90,11 @@ export default class Nav extends Component {
         e.stopPropagation();
         e.nativeEvent.stopImmediatePropagation();
     }
-    toDev = () => {
-        console.log(window.location);
+    // toDev = () => {
+    //     console.log(window.location);
 
-        window.location.hash = '/develop'
-    }
+    //     window.location.hash = '/develop'
+    // }
 
     componentWillMount() {
 
@@ -139,7 +159,7 @@ export default class Nav extends Component {
                             </NavLink>
                         </div>
                         <div className='nav_jl lt'>
-                        <a href={lang === 'zh' ? "https://bcx.cocos.com" : 'https://bcx.cocos.com/en'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'><FormattedMessage id='jili' /></a>
+                            <a href={lang === 'zh' ? "https://bcx.cocos.com" : 'https://bcx.cocos.com/en'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'><FormattedMessage id='jili' /></a>
 
                         </div>
                         <div className='nav_st lt' >
@@ -158,9 +178,31 @@ export default class Nav extends Component {
                                 className='nav_browser_click' ><FormattedMessage id='browser' />
                             </NavLink> */}
                         </div>
-                        <div className='nav_about lt' /* onMouseEnter={this.showAboutList} onMouseLeave={this.closeAboutList} */>
+                        {/* <div className='nav_about lt' >
                             <NavLink to="/about" exact={true} activeClassName="active"
                                 className='nav_about_click' > <span  ><FormattedMessage id='about' />  </span>
+                            </NavLink>
+                        </div> */}
+                        <div className='nav_about lt' onMouseEnter={this.showAboutList} onMouseLeave={this.closeAboutList}>
+                            <NavLink to="/about"  activeClassName="active"
+                                className='nav_about_click' > <span ref={(x) => { this.abouttil = x }} ><FormattedMessage id='about' /></span>
+                            </NavLink>
+                            {this.state.aboutListSwitch ?
+                                <div className='nav_about_more_close' ></div> :
+                                <div className='nav_about_more' ></div>
+                            }
+                                <NavLink to="/about"  activeClassName="active">
+                            <div className='nav_about_list' ref={(x) => { this.aboutListBox = x }}
+                                onClick={() => {  }}>
+                                <div className='nav_about_list_box' >
+                                    <div className='nav_about_list_trans' ref={(x) => { this.aboutList = x }}>
+                                        <div className='dev_a' onClick={(e) => { this.stopImmediate(e); }}> <a href={lang === 'zh' ? bookzh : booken} target="_blank" style={{lineHeight:'normal'}} className='w_book ' rel="noopener noreferrer"><FormattedMessage id='whiteBook' /></a></div>
+                                        <NavLink to="/about"  activeClassName="active">
+                                        <div className='dev_a'  ><FormattedMessage id='team' /></div>
+                                           </NavLink>
+                                    </div>
+                                </div>
+                            </div>
                             </NavLink>
                         </div>
                     </div>
