@@ -85,8 +85,9 @@
   margin-top: .35rem;
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .img_box {
-  width: 2.55rem;
-  height: 2.55rem;
+  margin-top: .1rem;
+  width: 2.2rem;
+  height: 2.2rem;
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .img_box img {
   width: 100%;

@@ -146,7 +146,7 @@ export default class Footer extends Component {
                             <img src={discord} alt="" />
                         </a>
                     </div>
-                    <div className='footer_bottom'>2018 Cocos-BCX All rights reserved.</div>
+                    <div className='footer_bottom'>Copyright © 2018-2019 Cocos-BCX. All Rights Reserved.</div>
                 </div>
             </div>
         );
