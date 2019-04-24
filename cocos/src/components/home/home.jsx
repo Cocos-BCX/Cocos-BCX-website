@@ -123,7 +123,7 @@ export default class Home extends Component {
         if (this.state.lang === 'en') {
             this.youku.src = 'https://www.youtube.com/embed/KiKc3FG9Auc?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1'
         } else {
-            this.youku.src = 'http://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1'
+            this.youku.src = 'https://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1'
         }
         this.videoBox.style.display = 'flex';
 
@@ -132,7 +132,7 @@ export default class Home extends Component {
         if (this.state.lang === 'en') {
             this.youku.src = 'https://www.youtube.com/embed/KiKc3FG9Auc?autoplay=0&loop=1&playlist=EMfebeQg2Z4&muted=1'
         } else {
-            this.youku.src = 'http://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=0&loop=1&playlist=EMfebeQg2Z4&muted=1'
+            this.youku.src = 'https://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=0&loop=1&playlist=EMfebeQg2Z4&muted=1'
         }
         this.videoBox.style.display = 'none';
     }
@@ -339,7 +339,7 @@ export default class Home extends Component {
                         {
                             lang === 'en' ?
                                 <iframe type="text/html" width="1200px" height="688px" ref={(x) => { this.youku = x }} src="https://www.youtube.com/embed/KiKc3FG9Auc?autoplay=0&loop=1&playlist=EMfebeQg2Z4&muted=1" frameBorder="0" allowFullScreen allowtransparency='yes' allow="autoplay"></iframe> :
-                                <iframe width="1200px" height="688px" ref={(x) => { this.youku = x }} src='http://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=0&loop=1&playlist=EMfebeQg2Z4&muted=1' frameBorder='0' allowtransparency='yes' flashvars="isAutoPlay=true" allow="autoplay" >
+                                <iframe width="1200px" height="688px" ref={(x) => { this.youku = x }} src='https://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=0&loop=1&playlist=EMfebeQg2Z4&muted=1' frameBorder='0' allowtransparency='yes' flashvars="isAutoPlay=true" allow="autoplay" >
                                 </iframe>
                             // <embed src='http://player.youku.com/player.php/sid/XNDA4NjA1NDAwMA==/v.swf' allowFullScreen={true} flashvars="isAutoPlay=true" quality='high' width='480' height='400' align='middle' allowscriptaccess='always' type='application/x-shockwave-flash'></embed>
                         }

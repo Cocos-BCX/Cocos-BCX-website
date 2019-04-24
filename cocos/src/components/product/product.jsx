@@ -41,7 +41,7 @@ export default class Product extends Component {
                     <Nav></Nav>
                 </div>
                 <div className='dev_plan' ref={(x)=>{this.devplan=x}}>
-                    <a  href={lang==='zh'?"https://cn-ecosystem.cocosbcx.io":' https://ecosystem.cocosbcx.io '} className='ljdev animated' target='_blank' rel="noopener noreferrer">
+                    <a  href={lang==='zh'?"https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA":'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7'} className='ljdev animated' target='_blank' rel="noopener noreferrer">
                         <span ref={(x)=>{this.devbtn=x}} className='animated' >
                         <FormattedMessage  id='ljdev' />
                         </span>

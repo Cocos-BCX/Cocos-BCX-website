@@ -255,7 +255,7 @@ export default class Home extends Component {
                             lang === 'en' ?
                                 <iframe type="text/html" height={document.body.clientWidth * 9 / 16} width={document.body.clientWidth} src="https://www.youtube.com/embed/KiKc3FG9Auc?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1" allowtransparency='yes' allow="autoplay" frameBorder="0" ></iframe> :
                                 <iframe className='video_play' height={document.body.clientWidth * 9 / 16} width={document.body.clientWidth}
-                                    allow="autoplay; fullscreen" src='http://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1'
+                                    allow="autoplay; fullscreen" src='https://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1'
                                     ref={(x) => { this.videoBox = x }} frameBorder='0' allowtransparency='yes' flashvars="isAutoPlay=true" allow="autoplay" ></iframe>
                         }
                     </div>
