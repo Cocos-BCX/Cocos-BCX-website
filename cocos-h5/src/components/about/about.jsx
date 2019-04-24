@@ -48,7 +48,6 @@ export default class About extends Component {
             adviser: [
                 { pic: p13, ly: ly, url: 'https://www.linkedin.com/in/zhe-wang-ba18831b/', ex: 'plex13', name: 'p13', position: 'fqr13' },
                 { pic: p14, ex: 'plex14', name: 'p14', position: 'fqr14' },
-                { pic: p15, ex: 'plex15', name: 'p15', position: 'fqr15' },
                 { pic: p16, ly: ly, url: 'https://www.linkedin.com/in/edithyeung/', ex: 'plex16', name: 'p16', position: 'fqr16' },
                 { pic: p17, ly: ly, url: 'https://www.linkedin.com/in/mccannatron/', ex: 'plex17', name: 'p17', position: 'fqr17' },
                 { pic: p18, ex: 'plex18', name: 'p18', position: 'fqr18' },

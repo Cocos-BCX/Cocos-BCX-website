@@ -182,7 +182,7 @@ export default class Footer extends Component {
                         <a href="https://www.weibo.com/p/1006062183715773" target='_blank' rel="noopener noreferrer">
                             <img src={weibo} ref={(x)=>{this.weiboa = x}} alt="" />
                         </a>
-                        <a href={lang === 'zh' ? "https://t.me/CocosBCX" : 'https://t.me/cocosblockchainexpedition'} target='_blank' rel="noopener noreferrer">
+                        <a href={lang === 'zh' ? "https://t.me/cocosbcxen" : 'https://t.me/cocosblockchainexpedition'} target='_blank' rel="noopener noreferrer">
                             <img src={tele} ref={(x)=>{this.telea = x}} alt="" />
                         </a>
                         <a href="https://github.com/cocos-bcx" target='_blank' rel="noopener noreferrer">
