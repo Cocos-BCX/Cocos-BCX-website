@@ -87,7 +87,7 @@ const en_US = {
     tex3:'Developed based on the Cocos-BCX JS SDK, the dApp contains game market, wallet, order system and access to game center. In the market, players can purchase or sell the props(character, item, and treasure box , etc) for his beloved games. Players can deposit or withdraw in the market. Meanwhile, the props market is also an important social platform at which players can discuss about gameplay and strategy, etc. ',
 
     //关于我们
-    lookBook:'Check the White Paper',
+    lookBook:'Check',
     teamextil: 'Our Team',
     teamex: 'Cocos-BCX team has complete skills, know-how and industry experience required for project development, covering a good mixture of blockchain technology development, game engine, IDE, developer community operations, game production & release, entertainment community operations, financial market mechanism, assets valuation and multinational enterprise operations. Core founders of Cocos BCX project experienced two business cycles of startup,  with a worldwide range of business network and recognition in the fields of information technology entrepreneurship and gaming, as well as decision making, execution experience and industry resources required to establish an ecological platform.',
     teamPerson: 'Members',
@@ -151,7 +151,7 @@ const en_US = {
     video: 'Video',
 
     //大事记
-    bigsj: 'Project Events',
+    bigsj: 'Project',
     s1: 'First quarter',
     s2: 'Second quarter',
     s3: 'Third quarter',

@@ -38,7 +38,7 @@ export default class Yb extends Component {
             <div className='new yb'>
                 <div className="news_til_box">
                     <div className="news_til">
-                        <h3 className={lang === 'en' ? 'yb_en' : ''}><FormattedMessage id='yb' /></h3>
+                        <h3 ><FormattedMessage id='yb' /></h3>
                         <div className='news_line'></div>
                     </div>
                     <div className="news_til_mask"></div>
