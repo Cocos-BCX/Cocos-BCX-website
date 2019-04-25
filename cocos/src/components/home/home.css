@@ -401,14 +401,14 @@
   overflow: hidden;
 }
 .news_box .news_main .news_bottom li a .img_box {
-  width: 120px;
+  width: 135px;
   height: 80px;
   overflow: hidden;
   position: relative;
   z-index: 5;
 }
 .news_box .news_main .news_bottom li a .img_box img {
-  width: 120px;
+  width: 135px;
   height: 80px;
   transition: all .6s;
 }
@@ -416,7 +416,7 @@
   transform: scale(1.2);
 }
 .news_box .news_main .news_bottom li a .img_box_text {
-  width: 250px;
+  width: 235px;
   height: 80px;
   border: 1px solid #eeeeee;
   border-left: 0;
@@ -429,12 +429,11 @@
 }
 .news_box .news_main .news_bottom li a .img_box_text div h5 {
   margin-top: 12px;
-  margin-left: 20px;
+  margin-left: 16px;
   font-size: 14px;
   font-weight: 400;
   color: #666666;
   line-height: 24px;
-  transform: translate3d(0, 0, 0);
   color: #555555;
   height: 48px;
   overflow: hidden;
@@ -588,14 +587,14 @@
     overflow: hidden;
   }
   .news_box .news_main .news_bottom li a .img_box {
-    width: 91.8px;
+    width: 104px;
     height: 61.2px;
     overflow: hidden;
     position: relative;
     z-index: 5;
   }
   .news_box .news_main .news_bottom li a .img_box img {
-    width: 91.8px;
+    width: 104px;
     height: 61.2px;
     transition: all .6s;
   }
@@ -603,7 +602,7 @@
     transform: scale(1.1);
   }
   .news_box .news_main .news_bottom li a .img_box_text {
-    width: 180px;
+    width: 170px;
     height: 61.2px;
     border: 1px solid #eeeeee;
     border-left: 0;
@@ -684,6 +683,7 @@
   margin-top: 8px;
 }
 .system .sys_img .sys_img_box {
+  position: relative;
   width: 145px;
   height: 136px;
   transform: skewX(-17deg);
@@ -722,13 +722,16 @@
   margin-top: 27px;
 }
 .system .sys_img .sys_img_box p {
-  margin-top: 24px;
   font-size: 14px;
   font-weight: normal;
   color: #ffffff;
   text-align: center;
   transform: skewX(17deg);
-  margin-left: 15px;
+  position: absolute;
+  left: 5px;
+  top: 96px;
+  width: 145px;
+  transform: translate3d(0, 0, 0);
 }
 @media screen and (max-width: 1400px) {
   .system {
@@ -790,6 +793,7 @@
     transform: skewX(-17deg);
     background: #585858;
     margin-left: 57px;
+    position: relative;
   }
   .system .sys_img .sys_img_box:nth-child(1) {
     margin-left: 7px;
@@ -823,13 +827,15 @@
     margin-top: 20px;
   }
   .system .sys_img .sys_img_box p {
-    margin-top: 14px;
+    position: absolute;
     font-size: 13px;
     font-weight: normal;
     color: #ffffff;
     text-align: center;
     transform: skewX(17deg);
-    margin-left: 15px;
+    width: 108px;
+    left: 3px;
+    top: 74px;
   }
 }
 .map {
