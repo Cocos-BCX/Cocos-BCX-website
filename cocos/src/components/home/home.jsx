@@ -121,25 +121,22 @@ export default class Home extends Component {
     //打开播放器
     showVideo = () => {
         if (this.state.lang === 'en') {
-            this.youku.src = 'https://www.youtube.com/embed/KiKc3FG9Auc?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1'
+            this.youku.src = 'https://video.cocosbcx.net/Cocos-BCX%20en.mp4'
         } else {
-            this.youku.src = 'https://cocosbcx.s3-accelerate.amazonaws.com/Cocos-BCX+cn.mp4'
+            this.youku.src = 'https://video.cocosbcx.net/Cocos-BCX%20cn.mp4'
         }
         this.videoBox.style.display = 'flex';
 
     }
     hideVideo = () => {
-        if (this.state.lang === 'en') {
-            this.youku.src = 'https://www.youtube.com/embed/KiKc3FG9Auc?autoplay=0&loop=1&playlist=EMfebeQg2Z4&muted=1'
-        } else {
             this.youku.src = ''
-        }
         this.videoBox.style.display = 'none';
     }
     //隐藏播放器
     closeVideo = () => {
         document.addEventListener('click', () => {
             if (this.videoBox) {
+                this.youku.src = ''
                 this.videoBox.style.display = 'none';
             }
         }, false)
@@ -338,7 +335,7 @@ export default class Home extends Component {
                         </div>
                         {
                             lang === 'en' ?
-                                <iframe type="text/html" width="1200px" height="688px" ref={(x) => { this.youku = x }} src="https://www.youtube.com/embed/KiKc3FG9Auc?autoplay=0&loop=1&playlist=EMfebeQg2Z4&muted=1" frameBorder="0" allowFullScreen allowtransparency='yes' allow="autoplay"></iframe> :
+                                <iframe type="text/html" width="1200px" height="688px" ref={(x) => { this.youku = x }} src="" frameBorder="0" allowFullScreen allowtransparency='yes' allow="autoplay"></iframe> :
                                 <iframe width="1200px" height="688px" ref={(x) => { this.youku = x }} src='' frameBorder='0' allowtransparency='yes' flashvars="isAutoPlay=true" allow="autoplay" >
                                 </iframe>
                             // <embed src='http://player.youku.com/player.php/sid/XNDA4NjA1NDAwMA==/v.swf' allowFullScreen={true} flashvars="isAutoPlay=true" quality='high' width='480' height='400' align='middle' allowscriptaccess='always' type='application/x-shockwave-flash'></embed>

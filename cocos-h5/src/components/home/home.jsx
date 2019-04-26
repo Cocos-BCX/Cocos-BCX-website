@@ -116,8 +116,10 @@ export default class Home extends Component {
     //打开播放器
     showVideo = () => {
         this.videoBox.style.transform = ' translateY(0)';
-        if (this.state.lang === 'zh')  {
-            this.youku.src = 'https://cocosbcx.s3-accelerate.amazonaws.com/Cocos-BCX+cn.mp4'
+        if (this.state.lang === 'en') {
+            this.youku.src = 'https://video.cocosbcx.net/Cocos-BCX%20en.mp4'
+        } else {
+            this.youku.src = 'https://video.cocosbcx.net/Cocos-BCX%20cn.mp4'
         }
     }
     hideVideo = (e) => {
@@ -259,7 +261,7 @@ export default class Home extends Component {
                         </div> */}
                         {
                             lang === 'en' ?
-                                <iframe type="text/html" height={document.body.clientWidth * 9 / 16} ref={(x) => { this.youku = x }} width={document.body.clientWidth} src="https://www.youtube.com/embed/KiKc3FG9Auc?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1" allowtransparency='yes' allow="autoplay" frameBorder="0" ></iframe> :
+                                <iframe type="text/html" height={document.body.clientWidth * 9 / 16} ref={(x) => { this.youku = x }} width={document.body.clientWidth} src="" allowtransparency='yes' allow="autoplay" frameBorder="0" ></iframe> :
                                 <iframe ref={(x) => { this.youku = x }} className='video_play' height={document.body.clientWidth * 9 / 16} width={document.body.clientWidth}
                                     allow="autoplay; fullscreen" src=''
                                     ref={(x) => { this.youku = x }} frameBorder='0' allowtransparency='yes' flashvars="isAutoPlay=true" allow="autoplay" ></iframe>
