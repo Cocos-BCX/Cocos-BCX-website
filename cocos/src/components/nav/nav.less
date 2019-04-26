@@ -4,6 +4,9 @@
     margin-top: 15px;
     font-size: 14px;
     position: relative;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+
     .nav_logo_box {
         width: 388px;
         height: 110px;
@@ -26,7 +29,7 @@
         position: absolute;
         width: 600px;
         height: 5px;
-        transform: skewX(-30deg);
+        transform: skewX(-30deg) ;
         background: #2AD9FE;
         top: 41px;
         left: 350px;
@@ -36,14 +39,15 @@
         width: 683px;
         height: 41px;
         background: rgba(103, 103, 103, 1);
-        transform: skewX(-30deg);
+        transform: skewX(-30deg) ;
         margin-left: 324px;
 
         .nav_list_box {
             transform: skewX(30deg);
             margin-left: 45px;
             z-index: 5;
-
+            // overflow: hidden;
+            height: 41px;
             .active {
                 color: #2AD9FE;
             }

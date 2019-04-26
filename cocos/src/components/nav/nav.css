@@ -4,6 +4,8 @@
   margin-top: 15px;
   font-size: 14px;
   position: relative;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 .nav_box .nav_logo_box {
   width: 388px;
@@ -41,6 +43,7 @@
   transform: skewX(30deg);
   margin-left: 45px;
   z-index: 5;
+  height: 41px;
 }
 .nav_box .nav .nav_list_box .active {
   color: #2AD9FE;

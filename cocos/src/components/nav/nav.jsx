@@ -184,25 +184,25 @@ export default class Nav extends Component {
                             </NavLink>
                         </div> */}
                         <div className='nav_about lt' onMouseEnter={this.showAboutList} onMouseLeave={this.closeAboutList}>
-                            <NavLink to="/about"  activeClassName="active"
+                            <NavLink to="/about" activeClassName="active"
                                 className='nav_about_click' > <span ref={(x) => { this.abouttil = x }} ><FormattedMessage id='about' /></span>
                             </NavLink>
                             {this.state.aboutListSwitch ?
                                 <div className='nav_about_more_close' ></div> :
                                 <div className='nav_about_more' ></div>
                             }
-                                <NavLink to="/about"  activeClassName="active">
-                            <div className='nav_about_list' ref={(x) => { this.aboutListBox = x }}
-                                onClick={() => {  }}>
-                                <div className='nav_about_list_box' >
-                                    <div className='nav_about_list_trans' ref={(x) => { this.aboutList = x }}>
-                                        <div className='dev_a' onClick={(e) => { this.stopImmediate(e); }}> <a href={lang === 'zh' ? bookzh : booken} target="_blank" style={{lineHeight:'normal'}} className='w_book ' rel="noopener noreferrer"><FormattedMessage id='whiteBook' /></a></div>
-                                        <NavLink to="/about"  activeClassName="active">
-                                        <div className='dev_a'  ><FormattedMessage id='team' /></div>
-                                           </NavLink>
+                            <NavLink to="/about" activeClassName="active">
+                                <div className='nav_about_list' ref={(x) => { this.aboutListBox = x }}
+                                    onClick={() => { }}>
+                                    <div className='nav_about_list_box' >
+                                        <div className='nav_about_list_trans' ref={(x) => { this.aboutList = x }}>
+                                            <div className='dev_a' onClick={(e) => { this.stopImmediate(e); }}> <a href={lang === 'zh' ? bookzh : booken} target="_blank" style={{ lineHeight: 'normal' }} className='w_book ' rel="noopener noreferrer"><FormattedMessage id='whiteBook' /></a></div>
+                                            <NavLink to="/about" activeClassName="active">
+                                                <div className='dev_a'  ><FormattedMessage id='team' /></div>
+                                            </NavLink>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             </NavLink>
                         </div>
                     </div>
