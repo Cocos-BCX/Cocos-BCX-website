@@ -54,6 +54,7 @@ export default class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            lang: localStorage.getItem('lang_type'),
             black1: [{ b: b, w: w, url: 'http://www.ngc.fund/' }, { b: b1, w: w1, url: 'https://labs.binance.com/' }, { b: b2, w: w2, url: 'http://www.inblockchain.com/' }, { b: b3, w: w3, }, { b: b4, w: w4, url: 'https://500.co/' }, { b: b5, w: w5, url: 'https://www.blockvc.com/' }, { b: b6, w: w6, url: 'https://www.okcoin.com/capital' }, { b: b7, w: w7, url: 'http://yisucapital.com/' }, { b: b8, w: w8, url: 'http://gs.holdings/' }, { b: b9, w: w9, url: 'https://ont.io/' }],
             black2: [{ b: b10, w: w10, url: 'https://www.helloeos.com.cn/' }, { b: b11, w: w11, url: 'https://slowmist.io/' }, { b: b12, w: w12, url: 'https://nebulas.io/cn/' }, { b: b13, w: w13, url: 'https://loomx.io/' }, { b: b14, w: w14, url: 'https://www.imeos.one/' }],
             sysImg: [{ img: cocos1, text: 'system1' },
@@ -115,14 +116,19 @@ export default class Home extends Component {
     //打开播放器
     showVideo = () => {
         this.videoBox.style.transform = ' translateY(0)';
+        if (this.state.lang === 'zh')  {
+            this.youku.src = 'https://cocosbcx.s3-accelerate.amazonaws.com/Cocos-BCX+cn.mp4'
+        }
     }
     hideVideo = (e) => {
         this.stopImmediate(e)
+        this.youku.src = ''
         this.videoBox.style.transform = 'translateY(-30rem)';
     }
     //隐藏播放器
     closeVideo = () => {
         document.addEventListener('click', () => {
+            this.youku.src = ''
             if (this.videoBox) {
                 this.videoBox.style.display = 'translateY(-30rem)';
             }
@@ -253,10 +259,10 @@ export default class Home extends Component {
                         </div> */}
                         {
                             lang === 'en' ?
-                                <iframe type="text/html" height={document.body.clientWidth * 9 / 16} width={document.body.clientWidth} src="https://www.youtube.com/embed/KiKc3FG9Auc?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1" allowtransparency='yes' allow="autoplay" frameBorder="0" ></iframe> :
-                                <iframe className='video_play' height={document.body.clientWidth * 9 / 16} width={document.body.clientWidth}
-                                    allow="autoplay; fullscreen" src='https://player.youku.com/embed/XNDA4NjA1NDAwMA==?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1'
-                                    ref={(x) => { this.videoBox = x }} frameBorder='0' allowtransparency='yes' flashvars="isAutoPlay=true" allow="autoplay" ></iframe>
+                                <iframe type="text/html" height={document.body.clientWidth * 9 / 16} ref={(x) => { this.youku = x }} width={document.body.clientWidth} src="https://www.youtube.com/embed/KiKc3FG9Auc?autoplay=1&loop=1&playlist=EMfebeQg2Z4&muted=1" allowtransparency='yes' allow="autoplay" frameBorder="0" ></iframe> :
+                                <iframe ref={(x) => { this.youku = x }} className='video_play' height={document.body.clientWidth * 9 / 16} width={document.body.clientWidth}
+                                    allow="autoplay; fullscreen" src=''
+                                    ref={(x) => { this.youku = x }} frameBorder='0' allowtransparency='yes' flashvars="isAutoPlay=true" allow="autoplay" ></iframe>
                         }
                     </div>
                 </div>
