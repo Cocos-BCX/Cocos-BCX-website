@@ -5,6 +5,8 @@ import { NavLink } from "react-router-dom";
 import { explorer } from '../../api/api'
 import clogo from '../../images/clogo.png'
 import close from '../../images/bclose.png'
+import booken from '../../file/whiteBooken.pdf'
+import bookzh from '../../file/whiteBookzh.pdf'
 import './nav.css'
 
 export default class Nav extends Component {
@@ -113,6 +115,13 @@ export default class Nav extends Component {
 
                             <NavLink to="/about" exact={true} activeClassName="active"
                                 className='nav_about_click navBox' > <span ref={(x) => { this.abouttil = x }} ><FormattedMessage id='about' />  </span>
+                            </NavLink>
+                            <div className=' navBox'>
+                            <a href={lang==='zh'?bookzh:booken} style={{color:'#585858'}}>    <FormattedMessage id='whiteBook' /></a>
+                            
+                            </div>
+                            <NavLink to="/about" exact={true} activeClassName="active"
+                                className='nav_about_click navBox' > <span ref={(x) => { this.abouttil = x }} ><FormattedMessage id='team' />  </span>
                             </NavLink>
                         </div>
                     </div>
