@@ -108,7 +108,7 @@ export default class About extends Component {
                     <div className="banner_a_box">
                         <Nav></Nav>
                         <div className='white_book'>
-                            <a href={lang === 'zh' ? 'https://www.cocosbcx.io/static/whiteBookzh.pdf': 'https://www.cocosbcx.io/static/whiteBooken.pdf'} target="_blank" className='w_book rt' rel="noopener noreferrer">
+                            <a href={lang === 'zh' ? 'https://www.cocosbcx.io/static/Whitepaper_zh.pdf': 'https://www.cocosbcx.io/static/Whitepaper_en.pdf'} target="_blank" className='w_book rt' rel="noopener noreferrer">
                                 <FormattedMessage id='lookBook' />
                             </a>
                         </div>

@@ -160,7 +160,7 @@ export default class About extends Component {
                                 <img src={logow} alt="" />
                                 <p><FormattedMessage id='whiteBook' /></p>
                             </div>
-                            <a href={lang === 'zh' ? 'https://www.cocosbcx.io/static/whiteBookzh.pdf': 'https://www.cocosbcx.io/static/whiteBooken.pdf'} target="_blank" className='w_book ' rel="noopener noreferrer">
+                            <a href={lang === 'zh' ? 'https://www.cocosbcx.io/static/Whitepaper_zh.pdf': 'https://www.cocosbcx.io/static/Whitepaper_en.pdf'} target="_blank" className='w_book ' rel="noopener noreferrer">
                                 <FormattedMessage id='lookBook' />
                             </a>
                         </div>
