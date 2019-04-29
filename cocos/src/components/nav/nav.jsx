@@ -194,7 +194,7 @@ export default class Nav extends Component {
                                 onClick={() => {  }}>
                                 <div className='nav_about_list_box' >
                                     <div className='nav_about_list_trans' ref={(x) => { this.aboutList = x }}>
-                                        <div className='dev_a' onClick={(e) => { this.stopImmediate(e); }}> <a href={lang === 'zh' ? 'https://www.cocosbcx.io/static/whiteBookzh.pdf': 'https://www.cocosbcx.io/static/whiteBooken.pdf'} target="_blank" style={{lineHeight:'normal'}} className='w_book ' rel="noopener noreferrer"><FormattedMessage id='whiteBook' /></a></div>
+                                        <div className='dev_a' onClick={(e) => { this.stopImmediate(e); }}> <a href={lang === 'zh' ? 'https://www.cocosbcx.io/static/Whitepaper_zh.pdf': 'https://www.cocosbcx.io/static/Whitepaper_en.pdf'} target="_blank" style={{lineHeight:'normal'}} className='w_book ' rel="noopener noreferrer"><FormattedMessage id='whiteBook' /></a></div>
                                         <NavLink to="/about"  activeClassName="active">
                                         <div className='dev_a'  ><FormattedMessage id='team' /></div>
                                            </NavLink>
