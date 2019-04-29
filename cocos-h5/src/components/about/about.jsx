@@ -23,8 +23,6 @@ import p17 from '../../images/p17.png'
 import p18 from '../../images/p18.png'
 import ly from '../../images/lingying.png'
 import hezuo from '../../images/hezuopic.png'
-import booken from '../../file/whiteBooken.pdf'
-import bookzh from '../../file/whiteBookzh.pdf'
 import './about.css'
 
 export default class About extends Component {
@@ -110,7 +108,7 @@ export default class About extends Component {
                     <div className="banner_a_box">
                         <Nav></Nav>
                         <div className='white_book'>
-                            <a href={lang === 'zh' ? bookzh : booken} target="_blank" className='w_book rt' rel="noopener noreferrer">
+                            <a href={lang === 'zh' ? 'https://www.cocosbcx.io/static/whiteBookzh.pdf': 'https://www.cocosbcx.io/static/whiteBooken.pdf'} target="_blank" className='w_book rt' rel="noopener noreferrer">
                                 <FormattedMessage id='lookBook' />
                             </a>
                         </div>

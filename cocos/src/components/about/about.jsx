@@ -55,8 +55,6 @@ import i32 from '../../images/logoi32.png'
 import i33 from '../../images/logoi33.png'
 import ly from '../../images/lingying.png'
 import hezuo from '../../images/hezuopic.png'
-import booken from '../../file/whiteBooken.pdf'
-import bookzh from '../../file/whiteBookzh.pdf'
 import './about.css'
 
 export default class About extends Component {
@@ -162,7 +160,7 @@ export default class About extends Component {
                                 <img src={logow} alt="" />
                                 <p><FormattedMessage id='whiteBook' /></p>
                             </div>
-                            <a href={lang === 'zh' ? bookzh : booken} target="_blank" className='w_book ' rel="noopener noreferrer">
+                            <a href={lang === 'zh' ? 'https://www.cocosbcx.io/static/whiteBookzh.pdf': 'https://www.cocosbcx.io/static/whiteBooken.pdf'} target="_blank" className='w_book ' rel="noopener noreferrer">
                                 <FormattedMessage id='lookBook' />
                             </a>
                         </div>
