@@ -116,6 +116,7 @@ export default class Home extends Component {
     //打开播放器
     showVideo = () => {
         this.videoBox.style.transform = ' translateY(0)';
+<<<<<<< HEAD
         // if (this.state.lang === 'en') {
         //     this.youku.src = 'https://video.cocosbcx.net/Cocos-BCX%20en.mp4'
         // } else {
@@ -125,12 +126,22 @@ export default class Home extends Component {
     hideVideo = (e) => {
         this.stopImmediate(e)
         // this.youku.src = ''
+=======
+      this.video.play();
+    }
+    hideVideo = (e) => {
+        this.stopImmediate(e)
+        this.video.pause()
+>>>>>>> master
         this.videoBox.style.transform = 'translateY(-30rem)';
     }
     //隐藏播放器
     closeVideo = () => {
         document.addEventListener('click', () => {
+<<<<<<< HEAD
             // this.youku.src = ''
+=======
+>>>>>>> master
             if (this.videoBox) {
                 this.videoBox.style.display = 'translateY(-30rem)';
             }
@@ -170,54 +181,54 @@ export default class Home extends Component {
                 ele[0].style.transform = 'translateX(0)';
                 ele[0].style.opacity = '1';
             }
-            if (scrollTop > (this.offset(ele[1]).top  - cHeight)) {
+            if (scrollTop > (this.offset(ele[1]).top - cHeight)) {
                 ele[1].style.transform = 'translateX(0)';
                 ele[1].style.opacity = '1';
             }
-            if (scrollTop > (this.offset(ele[2]).top  - cHeight)) {
+            if (scrollTop > (this.offset(ele[2]).top - cHeight)) {
                 ele[2].style.transform = 'translateX(0)';
                 ele[2].style.opacity = '1';
             }
-            if (scrollTop > (this.offset(ele[3]).top  - cHeight)) {
+            if (scrollTop > (this.offset(ele[3]).top - cHeight)) {
                 ele[3].style.transform = 'translateX(0)';
                 ele[3].style.opacity = '1';
             }
-            if (scrollTop > (this.offset(ele[4]).top  - cHeight)) {
+            if (scrollTop > (this.offset(ele[4]).top - cHeight)) {
                 ele[4].style.transform = 'translateX(0)';
                 ele[4].style.opacity = '1';
             }
         }
         document.addEventListener('scroll', to)
     }
-        //合作伙伴动画
-        hzt(){
-            let box = document.getElementsByClassName('hezuo_pic');
-            let to = () => {
-                let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-                let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-                for (let j = 0; j < box.length; j++) {
-                    if (scrollTop-50 > (this.offset(box[j]).top- cHeight)) {
-                        box[j].style.transform='translateY(0)';
-                        box[j].style.opacity = '1';
-                    }
+    //合作伙伴动画
+    hzt() {
+        let box = document.getElementsByClassName('hezuo_pic');
+        let to = () => {
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            for (let j = 0; j < box.length; j++) {
+                if (scrollTop - 50 > (this.offset(box[j]).top - cHeight)) {
+                    box[j].style.transform = 'translateY(0)';
+                    box[j].style.opacity = '1';
                 }
             }
-            document.addEventListener('scroll', to)
         }
-        hzdt(){
-            let box = document.getElementsByClassName('hz_picd');
-            let to = () => {
-                let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-                let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-                for (let j = 0; j < box.length; j++) {
-                    if (scrollTop-50 > (this.offset(box[j]).top- cHeight)) {
-                        box[j].style.transform='translateY(0)';
-                        box[j].style.opacity = '1';
-                    }
+        document.addEventListener('scroll', to)
+    }
+    hzdt() {
+        let box = document.getElementsByClassName('hz_picd');
+        let to = () => {
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            for (let j = 0; j < box.length; j++) {
+                if (scrollTop - 50 > (this.offset(box[j]).top - cHeight)) {
+                    box[j].style.transform = 'translateY(0)';
+                    box[j].style.opacity = '1';
                 }
             }
-            document.addEventListener('scroll', to)
         }
+        document.addEventListener('scroll', to)
+    }
     //计算到页面顶部的距离
     offset(ele) {
         let l = ele.offsetLeft;// 先保存元素外边框到上级参照物的内边框的距离
@@ -242,7 +253,7 @@ export default class Home extends Component {
         this.yqt()
         this.jst()
         this.hzt()
-        this.hzdt() 
+        this.hzdt()
     }
     componentWillUnmount = () => {
         this.setState = (state, callback) => {
@@ -261,6 +272,7 @@ export default class Home extends Component {
                         </div> */}
                         {
                             lang === 'en' ?
+<<<<<<< HEAD
                                 <iframe type="text/html" height={document.body.clientWidth * 9 / 16} ref={(x) => { this.youku = x }} width={document.body.clientWidth} src="" allowtransparency='yes' allow="autoplay" frameBorder="0" ></iframe> :
                                 // <iframe ref={(x) => { this.youku = x }} className='video_play' height={document.body.clientWidth * 9 / 16} width={document.body.clientWidth}
                                 //     allow="autoplay; fullscreen" src=''
@@ -271,6 +283,16 @@ export default class Home extends Component {
                                 你的浏览器不支持H5播放器
                             </video>
                    
+=======
+                                <video controls="controls" ref={(x)=>{this.video=x}}  style={{ width: '7.5rem' }}>
+                                    <source src="https://video.cocosbcx.net/Cocos-BCX%20en.mp4" type="video/mp4" />
+                                    你的浏览器不支持H5播放器
+                        </video> :
+                                <video controls="controls" ref={(x)=>{this.video=x}}   style={{ width: '7.5rem' }}>
+                                    <source src="https://video.cocosbcx.net/Cocos-BCX%20cn.mp4" type="video/mp4" />
+                                    你的浏览器不支持H5播放器
+                            </video>
+>>>>>>> master
                         }
                     </div>
                 </div>

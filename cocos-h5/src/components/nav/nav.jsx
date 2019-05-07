@@ -114,6 +114,13 @@ export default class Nav extends Component {
                             <NavLink to="/about" exact={true} activeClassName="active"
                                 className='nav_about_click navBox' > <span ref={(x) => { this.abouttil = x }} ><FormattedMessage id='about' />  </span>
                             </NavLink>
+                            <div className=' navBox'>
+                            <a href={lang==='zh'?'https://www.cocosbcx.io/static/Whitepaper_zh.pdf': 'https://www.cocosbcx.io/static/Whitepaper_en.pdf'} style={{color:'#585858'}}>    <FormattedMessage id='whiteBook' /></a>
+                            
+                            </div>
+                            <NavLink to="/about" exact={true} activeClassName="active"
+                                className='nav_about_click navBox' > <span ref={(x) => { this.abouttil = x }} ><FormattedMessage id='team' />  </span>
+                            </NavLink>
                         </div>
                     </div>
                 </div>
