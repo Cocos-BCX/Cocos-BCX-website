@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { getLang } from '../../../utils/chooselang'
 import xia from '../../../images/xia.png'
 import shang from '../../../images/shang.png'
 import './big.css'
@@ -164,11 +164,12 @@ export default class Big extends Component {
         }
     }
     render() {
+        let t = getLang();
         return (
             <div className='big'>
                 <div className="news_til_box">
                     <div className="news_til">
-                        <h3><FormattedMessage id='bigsj' /></h3>
+                        <h3>{t.bigsj}</h3>
                         <div className='news_line'></div>
 
                     </div>
@@ -184,7 +185,7 @@ export default class Big extends Component {
                     <div className='big_list_box'>
                         <div className='s1_box'>
                             <div className='s1_til lt'>
-                                <FormattedMessage id='s1' />
+                                {t.s1}
                             </div>
                             <div className='s1_content rt' ref={(x) => { this.s1 = x }}>
                                 {
@@ -195,7 +196,7 @@ export default class Big extends Component {
                                 {this.state.es1.map((item, index) => {
                                     return <div className='s1_list' key={index}>
                                         <div className='s1_time lt'>{item.date}</div>
-                                        <div className='s1_text lt'><FormattedMessage id={item.til} /></div>
+                                        <div className='s1_text lt'>{t[item.til]}</div>
                                     </div>
                                 })}
                             </div>
@@ -204,7 +205,7 @@ export default class Big extends Component {
                     <div className='big_list_box'>
                         <div className='s1_box'>
                             <div className='s1_til lt'>
-                                <FormattedMessage id='s2' />
+                             {t.s2}
                             </div>
                             <div className='s1_content rt' ref={(x) => { this.s2 = x }}>
                                 <div className='s1_more' onClick={this.s2action}>
@@ -213,7 +214,7 @@ export default class Big extends Component {
                                 {this.state.es2.map((item, index) => {
                                     return <div className='s1_list s2_list' key={index}>
                                         <div className='s1_time lt'>{item.date}</div>
-                                        <div className='s1_text lt'><FormattedMessage id={item.til} /></div>
+                                        <div className='s1_text lt'>{t[item.til]}</div>
                                     </div>
                                 })}
                             </div>
@@ -222,7 +223,7 @@ export default class Big extends Component {
                     <div className='big_list_box' >
                         <div className='s1_box'>
                             <div className='s1_til lt'>
-                                <FormattedMessage id='s3' />
+                               {t.s3}
                             </div>
                             <div className='s1_content rt' ref={(x) => { this.s3 = x }}>
                                 <div className='s1_more' onClick={this.s3action}>
@@ -231,7 +232,7 @@ export default class Big extends Component {
                                 {this.state.es3.map((item, index) => {
                                     return <div className='s1_list s3_list' key={index}>
                                         <div className='s1_time lt'>{item.date}</div>
-                                        <div className='s1_text lt'><FormattedMessage id={item.til} /></div>
+                                        <div className='s1_text lt'>{t[item.til]}</div>
                                     </div>
                                 })}
                             </div>
@@ -240,7 +241,7 @@ export default class Big extends Component {
                     <div className='big_list_box'>
                         <div className='s1_box'>
                             <div className='s1_til lt'>
-                                <FormattedMessage id='s4' />
+                               {t.s4}
                             </div>
                             <div className='s1_content rt' ref={(x) => { this.s4 = x }}>
                                 <div className='s1_more' onClick={this.s4action}>
@@ -249,7 +250,7 @@ export default class Big extends Component {
                                 {this.state.es4.map((item, index) => {
                                     return <div className='s1_list s4_list' key={index}>
                                         <div className='s1_time lt'>{item.date}</div>
-                                        <div className='s1_text lt'><FormattedMessage id={item.til} /></div>
+                                        <div className='s1_text lt'>{t[item.til]}</div>
                                     </div>
                                 })}
                             </div>
@@ -260,13 +261,13 @@ export default class Big extends Component {
                     <div className='big_list_box'>
                         <div className='s1_box'>
                             <div className='s1_til lt'>
-                                <FormattedMessage id='s3' />
+                               {t.s3}
                             </div>
                             <div className='s1_content rt' style={{ height: 'auto' }} >
                                 {this.state.ss3.map((item, index) => {
                                     return <div className='s1_list s3_list' style={{ marginBottom: 'auto' }} key={index}>
                                         <div className='s1_time lt'>{item.date}</div>
-                                        <div className='s1_text lt'><FormattedMessage id={item.til} /></div>
+                                        <div className='s1_text lt'>{t[item.til]}</div>
                                     </div>
                                 })}
                             </div>
@@ -275,13 +276,13 @@ export default class Big extends Component {
                     <div className='big_list_box'>
                         <div className='s1_box'>
                             <div className='s1_til lt'>
-                                <FormattedMessage id='s4' />
+                                {t.s4}
                             </div>
                             <div className='s1_content rt' style={{ height: 'auto' }}>
                                 {this.state.ss4.map((item, index) => {
                                     return <div className='s1_list s3_list' style={{ marginBottom: 'auto' }} key={index}>
                                         <div className='s1_time lt'>{item.date}</div>
-                                        <div className='s1_text lt'><FormattedMessage id={item.til} /></div>
+                                        <div className='s1_text lt'>{t[item.til]}</div>
                                     </div>
                                 })}
                             </div>
@@ -292,13 +293,13 @@ export default class Big extends Component {
                     <div className='big_list_box'>
                         <div className='s1_box'>
                             <div className='s1_til lt'>
-                                <FormattedMessage id='s1' />
+                                {t.s1}
                             </div>
                             <div className='s1_content rt' style={{ height: 'auto' }} >
                                 {this.state.ns1.map((item, index) => {
                                     return <div className='s1_list s3_list' style={{ marginBottom: 'auto' }} key={index}>
                                         <div className='s1_time lt' >{item.date}</div>
-                                        <div className='s1_text lt' ><FormattedMessage id={item.til} /></div>
+                                        <div className='s1_text lt' >{t[item.til]}</div>
                                     </div>
                                 })}
                             </div>

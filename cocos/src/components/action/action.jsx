@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { FormattedMessage } from 'react-intl';
 import { NavLink } from "react-router-dom";
 import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
+import { getLang } from '../../utils/chooselang'
 import Nav from '../nav/nav'
 import New from './new/new'
 import Hd from './hd/hd'
@@ -15,22 +15,23 @@ export default class Footer extends Component {
     }
     render() {
         let lang = localStorage.getItem('lang_type');
+        let t = getLang();
         return (
             <div className='action'>
                 <div className='banne_n_box' style={{ background: "url('https://jdi.cocosbcx.net/image/cocosbcx/active_banner.jpg') no-repeat center" }}>
                     <Nav></Nav>
                     <div className='a_nav'>
                         <NavLink to="/action/news" activeClassName="active"
-                            className='a_nav_new' ><FormattedMessage id='a_news' />
+                            className='a_nav_new' ><span>{t.a_news}</span>
                         </NavLink>
                         <NavLink to="/action/hd" activeClassName="active"
-                            className='a_nav_new' ><FormattedMessage id='hd' />
+                            className='a_nav_new' ><span>{t.hd}</span>
                         </NavLink>
                         <NavLink to="/action/yb" exact={true} activeClassName="active"
-                            className='a_nav_new' ><FormattedMessage id='yb' />
+                            className='a_nav_new' ><span>{t.yb}</span>
                         </NavLink>
                         <NavLink to="/action/big" exact={true} activeClassName="active"
-                            className='a_nav_big' ><FormattedMessage id='big' />
+                            className='a_nav_big' ><span>{t.big}</span>
                         </NavLink>
                     </div>
                 </div>

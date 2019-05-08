@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { FormattedMessage } from 'react-intl';
 import { NavLink } from "react-router-dom";
 import { explorer } from '../../api/api'
+import { getLang } from '../../utils/chooselang'
 import logo from '../../images/logow.png'
 import './nav.css'
 
@@ -20,7 +20,6 @@ export default class Nav extends Component {
         if (url.indexOf("?") != -1) {
             url = url.split("?")[0];
         }
-        console.log(url);
         // window.chooseLocale()
         window.location.href = url
         // window.history.go(0);
@@ -28,7 +27,6 @@ export default class Nav extends Component {
     }
     chooseEN = () => {
         localStorage.setItem('lang_type', 'en');
-        window.chooseLocale()
         window.history.go(0);
     }
     showLang = (e) => {
@@ -110,6 +108,7 @@ export default class Nav extends Component {
     }
     render() {
         let lang = localStorage.getItem('lang_type');
+        let t = getLang();
         return (
             <div className='nav_box  bounceInLeft' >
                 <div className='nav_logo_box'>
@@ -120,14 +119,14 @@ export default class Nav extends Component {
                     <div className={lang === 'zh' ? 'nav_list_box' : ' nav_list_en'}>
                         <div className='nav_home lt'  >
                             <NavLink to="/home" exact={true} activeClassName="active"
-                                className='nav_home_click' ><FormattedMessage id='homepage' />
+                                className='nav_home_click' >{t.homepage}
                             </NavLink>
                         </div>
                         <div className='nav_develop lt' onMouseEnter={this.showDevList} onMouseLeave={this.closeDevList} >
                             <NavLink to="/develop" activeClassName="active"
                                 className='nav_develop_click'  >
                                 <span ref={(x) => { this.devtil = x }} >
-                                    <FormattedMessage id='develop' />
+                                  {t.develop}
                                 </span>
                             </NavLink>
                             {this.state.devListSwitch ?
@@ -141,15 +140,15 @@ export default class Nav extends Component {
                                         <div className='nav_develop_list_trans' ref={(x) => { this.devList = x }}>
                                             <div className='dev_a'
                                                 onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7', '_blank'); }}>
-                                                <FormattedMessage id='developPlan' />
+                                              {t.developPlan}
                                             </div>
                                             <div className='dev_a'
                                                 onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://cn-dev.cocosbcx.io" : 'https://dev.cocosbcx.io', '_blank'); }} >
-                                                <FormattedMessage id='developApi' />
+                                               {t.developApi}
                                             </div>
                                             <div className='dev_a'
                                                 onClick={(e) => { this.stopImmediate(e); window.open("https://forum.cocos.com/c/bcx", '_blank'); }} >
-                                                <FormattedMessage id='developsq' />
+                                                {t.developsq}
                                             </div>
                                         </div>
                                     </div>
@@ -157,21 +156,21 @@ export default class Nav extends Component {
                             </NavLink>
                         </div>
                         <div className='nav_jl lt'>
-                            <a href={lang === 'zh' ? "https://bcx.cocos.com" : 'https://bcx.cocos.com/en'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'><FormattedMessage id='jili' /></a>
+                            <a href={lang === 'zh' ? "https://bcx.cocos.com" : 'https://bcx.cocos.com/en'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'>{t.jili}</a>
 
                         </div>
                         <div className='nav_st lt' >
                             <NavLink to="/product" exact={true} activeClassName="active"
-                                className='nav_st_click' ><FormattedMessage id='stproduct' />
+                                className='nav_st_click' >{t.stproduct}
                             </NavLink>
                         </div>
                         <div className='nav_action lt'>
                             <NavLink to="/action/" activeClassName="active"
-                                className='nav_action_click' ><FormattedMessage id='action' />
+                                className='nav_action_click' >{t.action}
                             </NavLink>
                         </div>
                         <div className='nav_browser lt'>
-                            <a href={lang === 'zh' ? explorer : `${explorer}?language=en`} rel="noopener noreferrer" className='nav_browser_click' ><FormattedMessage id='browser' /></a>
+                            <a href={lang === 'zh' ? explorer : `${explorer}?language=en`} rel="noopener noreferrer" className='nav_browser_click' >{t.browser}</a>
                             {/* <NavLink to="/browser" exact={true} activeClassName="active"
                                 className='nav_browser_click' ><FormattedMessage id='browser' />
                             </NavLink> */}
@@ -183,7 +182,7 @@ export default class Nav extends Component {
                         </div> */}
                         <div className='nav_about lt' onMouseEnter={this.showAboutList} onMouseLeave={this.closeAboutList}>
                             <NavLink to="/about" activeClassName="active"
-                                className='nav_about_click' > <span ref={(x) => { this.abouttil = x }} ><FormattedMessage id='about' /></span>
+                                className='nav_about_click' > <span ref={(x) => { this.abouttil = x }} >{t.about}</span>
                             </NavLink>
                             {this.state.aboutListSwitch ?
                                 <div className='nav_about_more_close' ></div> :
@@ -194,9 +193,9 @@ export default class Nav extends Component {
                                     onClick={() => { }}>
                                     <div className='nav_about_list_box' >
                                         <div className='nav_about_list_trans' ref={(x) => { this.aboutList = x }}>
-                                            <div className='dev_a' onClick={(e) => { this.stopImmediate(e); }}> <a href={lang === 'zh' ? 'https://www.cocosbcx.io/static/Whitepaper_zh.pdf' : 'https://www.cocosbcx.io/static/Whitepaper_en.pdf'} target="_blank" style={{ lineHeight: 'normal' }} className='w_book ' rel="noopener noreferrer"><FormattedMessage id='whiteBook' /></a></div>
+                                            <div className='dev_a' onClick={(e) => { this.stopImmediate(e); }}> <a href={lang === 'zh' ? 'https://www.cocosbcx.io/static/Whitepaper_zh.pdf' : 'https://www.cocosbcx.io/static/Whitepaper_en.pdf'} target="_blank" style={{ lineHeight: 'normal' }} className='w_book ' rel="noopener noreferrer">{t.whiteBook}</a></div>
                                             <NavLink to="/about" activeClassName="active">
-                                                <div className='dev_a'  ><FormattedMessage id='team' /></div>
+                                                <div className='dev_a'  >{t.team}</div>
                                             </NavLink>
                                         </div>
                                     </div>

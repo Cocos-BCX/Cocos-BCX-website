@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { FormattedMessage } from 'react-intl';
 import { NavLink } from "react-router-dom";
 import Nav from '../nav/nav'
 import { get, } from '../../api/api'
+import { getLang } from '../../utils/chooselang'
 import play from '../../images/play.png'
 import fenge from '../../images/fenge.png'
 import game from '../../images/icon_game.png'
@@ -50,9 +50,7 @@ import jia from '../../images/jia.png'
 import close from '../../images/close.png'
 import dline from '../../images/dline.png'
 import './home.css'
-let style = {
-    bounce: 'bounce delay-2s',
-}
+
 export default class Home extends Component {
     constructor(props) {
         super(props);
@@ -326,6 +324,7 @@ export default class Home extends Component {
 
     render() {
         let lang = localStorage.getItem('lang_type');
+        let t = getLang();
         return (
             <div className='homepage_index'>
                 <div className='video_box' ref={(x) => { this.videoBox = x }}>
@@ -350,10 +349,10 @@ export default class Home extends Component {
                         <div className='home_btn_box_mask  tada delay-1s'>
                             <h5>COCOS</h5>
                             <h5>BLOCKCHAIN EXPEDITION</h5>
-                            <h6><FormattedMessage id='next' /></h6>
+                            <h6>{t.next}</h6>
                             <div className='play_btn'>
                                 <img src={play} alt="" className='lt' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
-                                <p className='lt'><FormattedMessage id='nextex' /></p>
+                                <p className='lt'>{t.nextex}</p>
                             </div>
                         </div>
                     </div>
@@ -361,11 +360,11 @@ export default class Home extends Component {
                 </div>
                 
                 <div className='explane'>
-                    <div className="expplane_til"><FormattedMessage id='explane' /></div>
+                    <div className="expplane_til">{t.explane}</div>
                     <div className="expplane_main">
                         <ul>
-                            <li><FormattedMessage id='exf' /></li>
-                            <li><FormattedMessage id='exs' /></li>
+                            <li>{t.exf}</li>
+                            <li>{t.exs}</li>
                         </ul>
                     </div>
                     <img className='fenge' src={fenge} alt="" />
@@ -374,36 +373,36 @@ export default class Home extends Component {
                             <div className='ex_l_w'>
                                 <img src={game} className='ex_l_img' alt="" />
                             </div>
-                            <h4 className='ex_img_til'><FormattedMessage id='ex_tel1' /></h4>
-                            <p className='ex_img_text'><FormattedMessage id='ex_text1' /></p>
+                            <h4 className='ex_img_til'>{t.ex_tel1}</h4>
+                            <p className='ex_img_text'>{t.ex_text1}</p>
                         </div>
                         <div className='ex_l_box lt' >
                             <div className='ex_l_w'>
                                 <img src={daohang} className='ex_l_img' alt="" />
                             </div>
-                            <h4 className='ex_img_til'><FormattedMessage id='ex_tel2' /></h4>
-                            <p className='ex_img_text' ><FormattedMessage id='ex_text2' /></p>
+                            <h4 className='ex_img_til'>{t.ex_tel2}</h4>
+                            <p className='ex_img_text' >{t.ex_text2}</p>
                         </div>
                         <div className='ex_l_box lt' >
                             <div className='ex_l_w'>
                                 <img src={eye} className='ex_l_img' alt="" />
                             </div>
-                            <h4 className='ex_img_til'><FormattedMessage id='ex_tel3' /></h4>
-                            <p className='ex_img_text'><FormattedMessage id='ex_text3' /></p>
+                            <h4 className='ex_img_til'>{t.ex_tel3}</h4>
+                            <p className='ex_img_text'>{t.ex_text3}</p>
                         </div>
                     </div>
                 </div>
                 <div className='news_box'>
                     <div className="news_til_box">
                         <div className="news_til">
-                            <h3><FormattedMessage id='news' /></h3>
+                            <h3>{t.news}</h3>
                             <div className='news_line'></div>
                         </div>
                         <div className="news_til_mask"></div>
                         <div className='news_til_more' >
                             <NavLink to="action/news" exact={true}>
                                 <div>
-                                    <FormattedMessage id='more' />
+                                  {t.more}
                                 </div>
                             </NavLink>
 
@@ -446,7 +445,7 @@ export default class Home extends Component {
                 <div className='system'>
                     <div className="system_til_box">
                         <div className="sys_til_our">
-                            <h4><FormattedMessage id='system' /></h4>
+                            <h4>{t.system}</h4>
                         </div>
                     </div>
                     <div className='sys_logo'>
@@ -459,7 +458,7 @@ export default class Home extends Component {
                         {this.state.sysImg.map((item, index) => {
                             return <div className='sys_img_box lt' key={index}>
                                 <img src={item.img} alt="" />
-                                <p><FormattedMessage id={item.text} /></p>
+                                <p>{t[item.text]}</p>
                             </div>
                         })}
                     </div>
@@ -467,7 +466,7 @@ export default class Home extends Component {
                 <div className='map'>
                     <div className="news_til_box">
                         <div className="news_til">
-                            <h3><FormattedMessage id='map' /></h3>
+                            <h3>{t.map}</h3>
                             <div className='news_line'></div>
                         </div>
                         <div className="news_til_mask"></div>
@@ -475,7 +474,7 @@ export default class Home extends Component {
                         <div className='news_til_more' >
                             <NavLink to="action/yb" exact={true}>
                                 <div>
-                                    <FormattedMessage id='more' />
+                                    {t.more}
                                 </div>
                             </NavLink>
 
@@ -485,8 +484,8 @@ export default class Home extends Component {
                     <div className='map_main_box'>
                         {this.state.mapList.map((item, index) => {
                             return <div className='map_s_box lt ' key={index} style={lang === 'en' ? { height: '200px' } : { height: '130px' }}>
-                                <p><FormattedMessage id={item.til1} /></p>
-                                <p><FormattedMessage id={item.til2} /></p>
+                                <p>{t[item.til1]}</p>
+                                <p>{t[item.til2]}</p>
                                 {/* <h5><FormattedMessage id={item.til3} /></h5> */}
                             </div>
                         })}
@@ -502,7 +501,7 @@ export default class Home extends Component {
                     <div className='map_date'>
                         {this.state.mapList.map((item, index) => {
                             return <div className='map_date_box' key={index}>
-                                <FormattedMessage id={item.til3} />
+                               {t[item.til3]}
                             </div>
                         })}
                     </div>
@@ -517,7 +516,7 @@ export default class Home extends Component {
                             {/* <div className='head_w'></div> */}
                             <div className='head_til'>
                                 <div className='head_til_box'>
-                                    <FormattedMessage id='hz' />
+                                   {t.hz}
                                 </div>
                                 <div className='head_til_b'></div>
                             </div>
@@ -546,8 +545,8 @@ export default class Home extends Component {
                             </div>
                         </div>
                         <div className='hezuo_sm'>
-                            <h6> <FormattedMessage id='hzsm' /></h6>
-                            <p> <FormattedMessage id='hzsmex' /></p>
+                            <h6>{t.hzsm}</h6>
+                            <p> {t.hzsmex}</p>
                         </div>
                     </div>
                 </div>

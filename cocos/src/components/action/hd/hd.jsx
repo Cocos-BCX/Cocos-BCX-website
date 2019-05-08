@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { getLang } from '../../../utils/chooselang'
 import { get } from '../../../api/api'
 import Page from '../../../common/pagecomponent/Pagecontainer'
 import './hd.css'
@@ -69,11 +69,12 @@ export default class Hd extends Component {
         };
     }
     render() {
+        let t = getLang();
         return (
             <div className='new hd'>
                 <div className="news_til_box">
                     <div className="news_til">
-                        <h3><FormattedMessage id='hd' /></h3>
+                        <h3>{t.hd}</h3>
                         <div className='news_line'></div>
                     </div>
                     <div className="news_til_mask"></div>
@@ -95,7 +96,7 @@ export default class Hd extends Component {
                     {
                         this.state.forList.length > 0 ?
                             <div className='yg_box'>
-                                <div className='yg_text lt'><FormattedMessage id='yg' /></div>
+                                <div className='yg_text lt'><span>{t.yg}</span></div>
                                 <div className='line1 lt'>--------------------</div>
                                 <div className='ball lt'></div>
                                 <div className='line2 lt'>----------------------------------</div>

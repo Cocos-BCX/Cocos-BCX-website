@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { FormattedMessage } from 'react-intl';
 import { get } from '../../../api/api'
+import { getLang } from '../../../utils/chooselang'
 import Page from '../../../common/pagecomponent/Pagecontainer'
 import './new.css'
 export default class New extends Component {
@@ -53,17 +53,18 @@ export default class New extends Component {
         };
     }
     render() {
+        let t = getLang();
         return (
             <div className='new'>
                 <div className="news_til_box">
                     <div className="news_til">
-                        <h3><FormattedMessage id='news' /></h3>
+                        <h3>{t.news}</h3>
                         <div className='news_line'></div>
                     </div>
                     <div className="news_til_mask"></div>
                     <div className='news_til_more'>
-                        <div className='zx_btn active lt' ref={(x) => { this.articleBtn = x }} onClick={this.showarticle}><FormattedMessage id='zx' /></div>
-                        <div className='sp_btn lt' ref={(x) => { this.videoBtn = x }} onClick={this.showVideo}><FormattedMessage id='video' /></div>
+                        <div className='zx_btn active lt' ref={(x) => { this.articleBtn = x }} onClick={this.showarticle}><span>{t.zx}</span></div>
+                        <div className='sp_btn lt' ref={(x) => { this.videoBtn = x }} onClick={this.showVideo}><span>{t.video}</span></div>
                     </div>
                 </div>
                 <div className='new_list'>
@@ -76,7 +77,7 @@ export default class New extends Component {
                                     </div>
                                     <div className='new_til'>{item.title}</div>
                                     <div className='new_bottom'>
-                                        <div className='new_bottom_l lt'><FormattedMessage id='news' /></div>
+                                        <div className='new_bottom_l lt'>{t.news}</div>
                                         <div className='new_bottom_R rt'>{item.published_at}</div>
                                     </div>
                                 </a>

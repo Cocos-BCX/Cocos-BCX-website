@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import { getLang } from '../../utils/chooselang'
 import Nav from '../nav/nav'
-import { FormattedMessage } from 'react-intl';
 import logow from '../../images/logow.png'
 import p1 from '../../images/p1.png'
 import p2 from '../../images/p2.png'
@@ -150,6 +150,7 @@ export default class About extends Component {
     }
     render() {
         let lang = localStorage.getItem('lang_type');
+        let t = getLang();
         return (
             <div className='about'>
                 <div className="banner_a_box" style={{ background: "url('https://jdi.cocosbcx.net/image/cocosbcx/about_banner.jpg') no-repeat center" }}>
@@ -158,10 +159,10 @@ export default class About extends Component {
                         <div className='white_logo_box rt'>
                             <div className='white_logo '>
                                 <img src={logow} alt="" />
-                                <p><FormattedMessage id='whiteBook' /></p>
+                                <p>{t.whiteBook}</p>
                             </div>
                             <a href={lang === 'zh' ? 'https://www.cocosbcx.io/static/Whitepaper_zh.pdf': 'https://www.cocosbcx.io/static/Whitepaper_en.pdf'} target="_blank" className='w_book ' rel="noopener noreferrer">
-                                <FormattedMessage id='lookBook' />
+                               {t.lookBook}
                             </a>
                         </div>
 
@@ -170,17 +171,17 @@ export default class About extends Component {
                 <div className='team_ex'>
                     <div className="news_til_box">
                         <div className="news_til">
-                            <h3><FormattedMessage id='teamextil' /></h3>
+                            <h3>{t.teamextil}</h3>
                             <div className='news_line'></div>
                         </div>
                         <div className="news_til_mask"></div>
                     </div>
-                    <p><FormattedMessage id='teamex' /></p>
+                    <p>{t.teamex}</p>
                 </div>
                 <div className='team_box'>
                     <div className="news_til_box">
                         <div className="news_til">
-                            <h3><FormattedMessage id='teamPerson' /></h3>
+                            <h3>{t.teamPerson}</h3>
                             <div className='news_line'></div>
                         </div>
                         <div className="news_til_mask"></div>
@@ -192,8 +193,8 @@ export default class About extends Component {
                                     onMouseEnter={() => { this.showPeople(index) }}>
                                     <img src={item.pic} alt="" />
                                 </div>
-                                <p className='name'><FormattedMessage id={item.name} /></p>
-                                <p className='ex'><FormattedMessage id={item.position} /></p>
+                                <p className='name'>{t[item.name]}</p>
+                                <p className='ex'>{t[item.position]}</p>
                                 <div className='people_ex_box' onMouseLeave={() => { this.hidePeople(index) }}>
                                     {
                                         item.url ? <a href={item.url} target="_blank" rel="noopener noreferrer">
@@ -201,7 +202,7 @@ export default class About extends Component {
                                         </a> : null
                                     }
 
-                                    <p className={lang === 'zh' ? 'ext' : 'ext_en'}><FormattedMessage id={item.ex} /></p>
+                                    <p className={lang === 'zh' ? 'ext' : 'ext_en'}>{t[item.ex]}</p>
                                 </div>
                             </div>
                         })}
@@ -210,7 +211,7 @@ export default class About extends Component {
                 <div className='adviser_box'>
                     <div className="news_til_box">
                         <div className="news_til">
-                            <h3><FormattedMessage id='adviser' /></h3>
+                            <h3>{t.adviser}</h3>
                             <div className='news_line'></div>
                         </div>
                         <div className="news_til_mask"></div>
@@ -221,7 +222,7 @@ export default class About extends Component {
                                 <div className='pic_box' onMouseEnter={() => { this.showPeopleTwo(index) }}>
                                     <img src={item.pic} alt="" />
                                 </div>
-                                <p className='name'><FormattedMessage id={item.name} /></p>
+                                <p className='name'>{t[item.name]}</p>
                                 <div className='people_ex_two' onMouseLeave={() => { this.hidePeopleTwo(index) }}>
                                     {
                                         item.url ? <a href={item.url} target="_blank" rel="noopener noreferrer">
@@ -229,7 +230,7 @@ export default class About extends Component {
                                         </a> : null
                                     }
 
-                                    <p><FormattedMessage id={item.ex} /></p>
+                                    <p>{t[item.ex]}</p>
                                 </div>
                             </div>
                         })}
@@ -244,7 +245,7 @@ export default class About extends Component {
                             <div className='head_w'></div>
                             <div className='head_til'>
                                 <div className='head_til_box'>
-                                    <FormattedMessage id='hezuojg' />
+                                   {t.hezuojg}
                                 </div>
                                 <div className='head_til_b'></div>
                             </div>
