@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Nav from '../nav/nav'
-import { FormattedMessage } from 'react-intl';
+import { getLang } from '../../utils/chooselang'
 import fruit from '../../images/fruit.png'
 import luck from '../../images/luck.png'
 import shotting from '../../images/shooting.png'
@@ -27,6 +27,7 @@ export default class Product extends Component {
     }
     render() {
         let lang = localStorage.getItem('lang_type');
+        let t = getLang();
         return (
             <div className='product'>
                 <div className="banner_s_box">
@@ -34,14 +35,14 @@ export default class Product extends Component {
                 </div>
                 <div className='dev_plan'>
                 <a href={lang==='zh'?"https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA":'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7'} className='ljdev' target='_blank' rel="noopener noreferrer">
-                        <FormattedMessage id='ljdev' />
+                {t.ljdev}
                     </a>
                 </div>
                 <div className='dev_list_box'>
                     <div className='dev_game'>
                         <div className="news_til_box">
                             <div className="news_til">
-                                <h3><FormattedMessage id='gamedapps' /></h3>
+                            <h3>{t.gamedapps}</h3>
                                 <div className='news_line'></div>
                             </div>
                             <div className="news_til_mask"></div>
@@ -53,9 +54,9 @@ export default class Product extends Component {
                                 <img src={item.img} alt="" />
                             </div>
                             <div className='dev_text_box lt'>
-                                <h4><FormattedMessage id={item.til} /></h4>
-                                <div className='wordroom'><FormattedMessage id={item.auther} /></div>
-                                <p style={{"WebkitBoxOrient": "vertical"}}><FormattedMessage id={item.gex} /></p>
+                            <h4>{t[item.til]}</h4>
+                                <div className='wordroom'>{t[item.auther]}</div>
+                                <p style={{"WebkitBoxOrient": "vertical"}}>{t[item.gex]}</p>
                             </div>
                         </a>
                         })}
@@ -65,7 +66,7 @@ export default class Product extends Component {
                     <div className='dev_game'>
                         <div className="news_til_box">
                             <div className="news_til">
-                                <h3><FormattedMessage id='tool' /></h3>
+                            <h3>{t.tool}</h3>
                                 <div className='news_line'></div>
                             </div>
                             <div className="news_til_mask"></div>
@@ -77,9 +78,9 @@ export default class Product extends Component {
                                 <img src={item.img} alt="" />
                             </div>
                             <div className='dev_text_box lt'>
-                                <h4><FormattedMessage id={item.til} /></h4>
-                                <div className='wordroom'><FormattedMessage id={item.auther} /></div>
-                                <p style={{"WebkitBoxOrient": "vertical"}}><FormattedMessage id={item.gex} /></p>
+                                <h4>{t[item.til]}</h4>
+                                <div className='wordroom'>{t[item.auther]}</div>
+                                <p style={{"WebkitBoxOrient": "vertical"}}>{t[item.gex]}</p>
                             </div>
                         </a>
                         })}

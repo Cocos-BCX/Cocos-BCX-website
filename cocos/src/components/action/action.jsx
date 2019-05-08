@@ -14,7 +14,6 @@ export default class Footer extends Component {
         window.scrollTo(0, 0)
     }
     render() {
-        let lang = localStorage.getItem('lang_type');
         let t = getLang();
         return (
             <div className='action'>

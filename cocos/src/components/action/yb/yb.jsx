@@ -32,7 +32,6 @@ export default class Yb extends Component {
         };
     }
     render() {
-        let lang = localStorage.getItem('lang_type');
         let t = getLang();
         return (
             <div className='new yb'>

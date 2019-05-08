@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { getLang } from '../../utils/chooselang'
 import email from '../../images/email.png'
 import file from '../../images/file.png'
 import face from '../../images/medium.png'
@@ -61,6 +61,7 @@ export default class Footer extends Component {
     }
     render() {
         let lang = localStorage.getItem('lang_type');
+        let t = getLang();
         return (
             <div className='footer'>
                 <div className='footer_box'>
@@ -71,7 +72,7 @@ export default class Footer extends Component {
                     </div>
                     <div className='footer_con'>
                         <div className="footer_con_l ">
-                            <div className='f_til'><FormattedMessage id='tel' /></div>
+                        <div className='f_til'>{t.tel}</div>
                             <div className='f_line'></div>
                             <div className='email lt' >
                                 <img src={email} alt="" />
@@ -83,7 +84,7 @@ export default class Footer extends Component {
                             </div>
                         </div>
                         <div className="footer_con_r ">
-                            <div className='r_til'><FormattedMessage id='footUpdate' /></div>
+                        <div className='r_til'>{t.footUpdate}</div>
                             <div className='r_line'></div>
                             <div className='footer_dy' id="mc_embed_signup">
                                 <form action="https://cocosbcx.us20.list-manage.com/subscribe/post?u=9907dfea800bf6f37eccb2e9c&amp;id=5d769877f3"
@@ -96,7 +97,7 @@ export default class Footer extends Component {
                                             <p onClick={(e) => {
                                                 e.target.style.display = 'none';
                                                 this.int.focus()
-                                            }}><FormattedMessage id='int_email' /></p>
+                                            }}>{t.int_email}</p>
 
                                         </div>
                                         <div className='input_l_box'></div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { getLang } from '../../../utils/chooselang'
 import { get } from '../../../api/api'
 import Page from '../../../common/pagecomponent/Pagecontainer'
 import './yb.css'
@@ -33,12 +33,12 @@ export default class Yb extends Component {
         };
     }
     render() {
-        let lang = localStorage.getItem('lang_type');
+        let t = getLang();
         return (
             <div className='new yb'>
                 <div className="news_til_box">
                     <div className="news_til">
-                        <h3 ><FormattedMessage id='yb' /></h3>
+                    <h3 className=''>{t.yb}</h3>
                         <div className='news_line'></div>
                     </div>
                     <div className="news_til_mask"></div>
@@ -53,7 +53,7 @@ export default class Yb extends Component {
                                     </div>
                                     <div className='new_til'>{item.title}</div>
                                     <div className='new_bottom'>
-                                        <div className='new_bottom_l lt'><FormattedMessage id='month' /></div>
+                                        <div className='new_bottom_l lt'>{t.month}</div>
                                         <div className='new_bottom_R rt'>{item.published_at}</div>
                                     </div>
                                 </a>

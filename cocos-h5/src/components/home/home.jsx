@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { getLang } from '../../utils/chooselang'
 import { NavLink } from "react-router-dom";
 import Nav from '../nav/nav'
 import { get, } from '../../api/api'
@@ -116,32 +116,16 @@ export default class Home extends Component {
     //打开播放器
     showVideo = () => {
         this.videoBox.style.transform = ' translateY(0)';
-<<<<<<< HEAD
-        // if (this.state.lang === 'en') {
-        //     this.youku.src = 'https://video.cocosbcx.net/Cocos-BCX%20en.mp4'
-        // } else {
-        //     this.youku.src = 'https://video.cocosbcx.net/Cocos-BCX%20cn.mp4'
-        // }
-    }
-    hideVideo = (e) => {
-        this.stopImmediate(e)
-        // this.youku.src = ''
-=======
-      this.video.play();
+        this.video.play();
     }
     hideVideo = (e) => {
         this.stopImmediate(e)
         this.video.pause()
->>>>>>> master
         this.videoBox.style.transform = 'translateY(-30rem)';
     }
     //隐藏播放器
     closeVideo = () => {
         document.addEventListener('click', () => {
-<<<<<<< HEAD
-            // this.youku.src = ''
-=======
->>>>>>> master
             if (this.videoBox) {
                 this.videoBox.style.display = 'translateY(-30rem)';
             }
@@ -262,6 +246,7 @@ export default class Home extends Component {
     }
     render() {
         let lang = localStorage.getItem('lang_type');
+        let t = getLang();
         return (
             <div className='homepage_index'>
                 <div className='video_box '
@@ -272,27 +257,14 @@ export default class Home extends Component {
                         </div> */}
                         {
                             lang === 'en' ?
-<<<<<<< HEAD
-                                <iframe type="text/html" height={document.body.clientWidth * 9 / 16} ref={(x) => { this.youku = x }} width={document.body.clientWidth} src="" allowtransparency='yes' allow="autoplay" frameBorder="0" ></iframe> :
-                                // <iframe ref={(x) => { this.youku = x }} className='video_play' height={document.body.clientWidth * 9 / 16} width={document.body.clientWidth}
-                                //     allow="autoplay; fullscreen" src=''
-                                //     ref={(x) => { this.youku = x }} frameBorder='0' allowtransparency='yes' flashvars="isAutoPlay=true" allow="autoplay" ></iframe>
-
-                                <video  controls="controls" style={{width:'7.5rem'}}>
-                                <source src="https://video.cocosbcx.net/Cocos-BCX%20cn.mp4" type="video/mp4" />
-                                你的浏览器不支持H5播放器
-                            </video>
-                   
-=======
-                                <video controls="controls" ref={(x)=>{this.video=x}}  style={{ width: '7.5rem' }}>
+                                <video controls="controls" ref={(x) => { this.video = x }} style={{ width: '7.5rem' }}>
                                     <source src="https://video.cocosbcx.net/Cocos-BCX%20en.mp4" type="video/mp4" />
                                     你的浏览器不支持H5播放器
                         </video> :
-                                <video controls="controls" ref={(x)=>{this.video=x}}   style={{ width: '7.5rem' }}>
+                                <video controls="controls" ref={(x) => { this.video = x }} style={{ width: '7.5rem' }}>
                                     <source src="https://video.cocosbcx.net/Cocos-BCX%20cn.mp4" type="video/mp4" />
                                     你的浏览器不支持H5播放器
                             </video>
->>>>>>> master
                         }
                     </div>
                 </div>
@@ -302,19 +274,19 @@ export default class Home extends Component {
                     <div className={lang === 'zh' ? 'home_btn_box' : 'home_btn_box home_btn_box_en'}>
                         <h5>COCOS</h5>
                         <h5>BLOCKCHAIN EXPEDITION</h5>
-                        <h6><FormattedMessage id='next' /></h6>
+                        <h6>{t.next}</h6>
                         <div className='play_btn'>
                             <img src={play} className='play_btn lt' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
-                            <p style={{ "WebkitBoxOrient": "vertical" }} className='lt'><FormattedMessage id='nextex' /></p>
+                            <p style={{ "WebkitBoxOrient": "vertical" }} className='lt'>{t.nextex}</p>
                         </div>
                     </div>
                 </div>
                 <div className='explane'>
-                    <div className="expplane_til"><FormattedMessage id='explane' /></div>
+                    <div className="expplane_til">{t.explane}</div>
                     <div className="expplane_main">
                         <ul>
-                            <li><FormattedMessage id='exf' /></li>
-                            <li><FormattedMessage id='exs' /></li>
+                            <li>{t.exf}</li>
+                            <li>{t.exs}</li>
                         </ul>
                     </div>
                     <img className='fenge' src={fenge} alt="" />
@@ -324,8 +296,8 @@ export default class Home extends Component {
                                 <img src={game} className='ex_l_img' alt="" />
                             </div>
                             <div className='ex_l_r lt'>
-                                <h4 className='ex_img_til'><FormattedMessage id='ex_tel1' /></h4>
-                                <p className='ex_img_text'><FormattedMessage id='ex_text1' /></p>
+                                <h4 className='ex_img_til'>{t.ex_tel1}</h4>
+                                <p className='ex_img_text'>{t.ex_text1}</p>
                             </div>
                         </div>
                         <div className='ex_l_box lt' >
@@ -333,8 +305,8 @@ export default class Home extends Component {
                                 <img src={daohang} className='ex_l_img' alt="" />
                             </div>
                             <div className='ex_l_r lt'>
-                                <h4 className='ex_img_til' /* style={lang === 'en' ? { fontSize: '.22rem' } : null} */><FormattedMessage id='ex_tel2' /></h4>
-                                <p style={{ "WebkitBoxOrient": "vertical" }} className='ex_img_text' ><FormattedMessage id='ex_text2' /></p>
+                                <h4 className='ex_img_til' /* style={lang === 'en' ? { fontSize: '.22rem' } : null} */>{t.ex_tel2}</h4>
+                                <p style={{ "WebkitBoxOrient": "vertical" }} className='ex_img_text' >{t.ex_text2}</p>
                             </div>
                         </div>
                         <div className='ex_l_box lt' >
@@ -342,8 +314,8 @@ export default class Home extends Component {
                                 <img src={eye} className='ex_l_img' alt="" />
                             </div>
                             <div className='ex_l_r lt'>
-                                <h4 className='ex_img_til'><FormattedMessage id='ex_tel3' /></h4>
-                                <p className='ex_img_text'><FormattedMessage id='ex_text3' /></p>
+                                <h4 className='ex_img_til'>{t.ex_tel3}</h4>
+                                <p className='ex_img_text'>{t.ex_text3}</p>
                             </div>
                         </div>
                     </div>
@@ -351,14 +323,14 @@ export default class Home extends Component {
                 <div className='news_box'>
                     <div className="news_til_box">
                         <div className="news_til">
-                            <h3><FormattedMessage id='news' /></h3>
+                        <h3>{t.news}</h3>
                             <div className='news_line'></div>
                         </div>
                         <div className="news_til_mask"></div>
                         <div className='news_til_more' >
                             <NavLink to="action/news" exact={true}>
                                 <div>
-                                    <FormattedMessage id='more' />
+                                {t.more}
                                 </div>
                             </NavLink>
 
@@ -397,7 +369,7 @@ export default class Home extends Component {
                 <div className='system'>
                     <div className="system_til_box">
                         <div className="sys_til_our">
-                            <h4><FormattedMessage id='system' /></h4>
+                        <h4>{t.system}</h4>
                         </div>
                     </div>
                     <img src={cocoslogo} alt="" className='sys_logo' />
@@ -406,7 +378,7 @@ export default class Home extends Component {
                         {this.state.sysImg.map((item, index) => {
                             return <div className='sys_img_box lt' key={index}>
                                 <img src={item.img} alt="" />
-                                <p><FormattedMessage id={item.text} /></p>
+                                <p>{t[item.text]}</p>
                             </div>
                         })}
                     </div>
@@ -414,14 +386,14 @@ export default class Home extends Component {
                 <div className='map'>
                     <div className="news_til_box">
                         <div className="news_til">
-                            <h3 style={lang === 'en' ? { fontSize: '.16rem' } : null}><FormattedMessage id='map' /></h3>
+                            <h3 style={lang === 'en' ? { fontSize: '.16rem' } : null}>{t.map}</h3>
                             <div className='news_line'></div>
                         </div>
                         <div className="news_til_mask"></div>
                         <div className='news_til_more' >
                             <NavLink to="action/yb" exact={true}>
                                 <div>
-                                    <FormattedMessage id='more' />
+                                {t.more}
                                 </div>
                             </NavLink>
 
@@ -430,8 +402,8 @@ export default class Home extends Component {
                     <div className='map_main_box'>
                         {this.state.mapList.map((item, index) => {
                             return <div className='map_s_box lt' key={index}>
-                                <h5 className='lt'><FormattedMessage id={item.til3} /></h5>
-                                <p style={{ "WebkitBoxOrient": "vertical" }} className='jishu lt'><FormattedMessage id={item.til1} /></p>
+                                <h5 className='lt'>{t[item.til3]}</h5>
+                                <p style={{ "WebkitBoxOrient": "vertical" }} className='jishu lt'>{t[item.til1]}</p>
                             </div>
                         })}
                         <div className='line_box'>
@@ -453,7 +425,7 @@ export default class Home extends Component {
                             </div>
                             <div className='head_til'>
                                 <div className='head_til_box'>
-                                    <FormattedMessage id='hz' />
+                                {t.hz}
                                 </div>
                                 <div className='head_til_b'></div>
                             </div>
@@ -480,8 +452,8 @@ export default class Home extends Component {
                             </div>
                         </div>
                         <div className='hezuo_sm'>
-                            <h6> <FormattedMessage id='hzsm' /></h6>
-                            <p> <FormattedMessage id='hzsmex' /></p>
+                        <h6>{t.hzsm}</h6>
+                            <p> {t.hzsmex}</p>
                         </div>
                     </div>
                 </div>

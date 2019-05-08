@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { getLang } from '../../utils/chooselang'
 import FastClick from 'react-fastclick-alt'
 import { NavLink } from "react-router-dom";
 import { explorer } from '../../api/api'
@@ -18,13 +18,11 @@ export default class Nav extends Component {
     //选择中文
     chooseCH = () => {
         localStorage.setItem('lang_type', 'zh');
-        window.chooseLocale()
         window.history.go(0);
 
     }
     chooseEN = () => {
         localStorage.setItem('lang_type', 'en');
-        window.chooseLocale()
         window.history.go(0);
     }
     //显示导航
@@ -61,6 +59,7 @@ export default class Nav extends Component {
     }
     render() {
         let lang = localStorage.getItem('lang_type');
+        let t = getLang();
         return (
             <FastClick>
                 <div className='nav_box'>
@@ -79,47 +78,47 @@ export default class Nav extends Component {
                                 <img className='close' src={close} alt="" />
                             </div>
                             <NavLink to="/home" exact={true} activeClassName="active"
-                                className='nav_home_click navBox' ><FormattedMessage id='homepage' />
+                                className='nav_home_click navBox' >{t.homepage}
                             </NavLink>
 
                             <NavLink to="/develop" exact={true} activeClassName="active"
                                 className='nav_develop_click navBox'  >
-                                <FormattedMessage id='develop' />
+                                 {t.develop}
                             </NavLink>
 
                             <div className='dev_a navBox'
                                 onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7', '_blank'); }}>
-                                <FormattedMessage id='developPlan' />
+                                 {t.developPlan}
                             </div>
                             <div className='dev_a navBox'
                                 onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://cn-dev.cocosbcx.io" : 'https://dev.cocosbcx.io', '_blank'); }} >
-                                <FormattedMessage id='developApi' />
+                                 {t.developApi}
                             </div>
                             <div className='dev_a navBox'
                                 onClick={(e) => { this.stopImmediate(e); window.open("https://discuss.cocos2d-x.org/c/cocos-bcx", '_blank'); }} >
-                                <FormattedMessage id='developsq' />
+                                {t.developsq}
                             </div>
 
-                            <a href={lang === 'zh' ? "https://bcx.cocos.com" : 'https://bcx.cocos.com/en'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'><FormattedMessage id='jili' /></a>
+                            <a href={lang === 'zh' ? "https://bcx.cocos.com" : 'https://bcx.cocos.com/en'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'>{t.jili}</a>
 
                             <NavLink to="/product" exact={true} activeClassName="active"
-                                className='nav_st_click navBox' ><FormattedMessage id='stproduct' />
+                                className='nav_st_click navBox' >{t.stproduct}
                             </NavLink>
 
                             <NavLink to="/action/news" exact={true} activeClassName="active"
-                                className='nav_action_click navBox' ><FormattedMessage id='action' />
+                                className='nav_action_click navBox' >{t.action}
                             </NavLink>
-                            <a href={lang === 'zh' ? explorer : `${explorer}?language=en`} className='nav_browser_click navBox' ><FormattedMessage id='browser' /></a>
+                            <a href={lang === 'zh' ? explorer : `${explorer}?language=en`} className='nav_browser_click navBox' >{t.browser}</a>
 
                             <NavLink to="/about" exact={true} activeClassName="active"
-                                className='nav_about_click navBox' > <span ref={(x) => { this.abouttil = x }} ><FormattedMessage id='about' />  </span>
+                                className='nav_about_click navBox' > <span ref={(x) => { this.abouttil = x }} >{t.about}  </span>
                             </NavLink>
                             <div className=' navBox'>
-                            <a href={lang==='zh'?'https://www.cocosbcx.io/static/Whitepaper_zh.pdf': 'https://www.cocosbcx.io/static/Whitepaper_en.pdf'} style={{color:'#585858'}}>    <FormattedMessage id='whiteBook' /></a>
+                            <a href={lang==='zh'?'https://www.cocosbcx.io/static/Whitepaper_zh.pdf': 'https://www.cocosbcx.io/static/Whitepaper_en.pdf'} style={{color:'#585858'}}>{t.whiteBook}</a>
                             
                             </div>
                             <NavLink to="/about" exact={true} activeClassName="active"
-                                className='nav_about_click navBox' > <span ref={(x) => { this.abouttil = x }} ><FormattedMessage id='team' />  </span>
+                                className='nav_about_click navBox' > <span ref={(x) => { this.abouttil = x }} >{t.team} </span>
                             </NavLink>
                         </div>
                     </div>

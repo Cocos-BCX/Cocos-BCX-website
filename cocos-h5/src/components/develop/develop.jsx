@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Nav from '../nav/nav'
-import { FormattedMessage } from 'react-intl';
+import { getLang } from '../../utils/chooselang'
 import dev1 from '../../images/dev1.png'
 import dev2 from '../../images/dev2.png'
 import dev3 from '../../images/dev3.png'
@@ -26,6 +26,7 @@ export default class Develop extends Component {
     }
     render() {
         let lang = localStorage.getItem('lang_type');
+        let t = getLang();
         return (
             <div className='develop'>
                 <div className="banner_box">
@@ -38,9 +39,9 @@ export default class Develop extends Component {
                         </div>
                         <div className='dev_main lt'>
                             <div className='dev_main_til'>
-                                <h4><FormattedMessage id='developPlan' /></h4>
+                            <h4>{t.developPlan}</h4>
                             </div>
-                            <p style={{ "WebkitBoxOrient": "vertical" }}><FormattedMessage id='devjh' /></p>
+                            <p style={{ "WebkitBoxOrient": "vertical" }}>{t.devjh}</p>
                             <div className='dev_go'>
                                 <div>GO</div>
                             </div>
@@ -52,9 +53,9 @@ export default class Develop extends Component {
                         </div>
                         <div className='dev_main lt'>
                             <div className='dev_main_til'>
-                                <h4><FormattedMessage id='developApi' /></h4>
+                            <h4>{t.developApi}</h4>
                             </div>
-                            <p><FormattedMessage id='devwd' /></p>
+                            <p>{t.devwd}</p>
                             <div className='dev_go'>
                                 <div>GO</div>
                             </div>
@@ -66,9 +67,9 @@ export default class Develop extends Component {
                         </div>
                         <div className='dev_main lt'>
                             <div className='dev_main_til'>
-                                <h4><FormattedMessage id='developsq' /></h4>
+                            <h4>{t.developsq}</h4>
                             </div>
-                            <p><FormattedMessage id='devsq' /></p>
+                            <p>{t.devsq}</p>
                             <div className='dev_go'>
                                 <div>GO</div>
                             </div>
