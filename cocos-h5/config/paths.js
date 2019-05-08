@@ -34,7 +34,7 @@ const getPublicUrl = appPackageJson =>
 function getServedPath(appPackageJson) {
   const publicUrl = getPublicUrl(appPackageJson);
   const servedUrl =
-    envPublicUrl || (publicUrl ? url.parse(publicUrl).pathname : 'http://static.cocosbcx.net/webh5/');
+    envPublicUrl || (publicUrl ? url.parse(publicUrl).pathname : 'https://static.cocosbcx.net/webh5/');
   return ensureSlash(servedUrl, true);
 }
 
