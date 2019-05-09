@@ -112,13 +112,15 @@ export default class Nav extends Component {
         return (
             <div className='nav_box  bounceInLeft' >
                 <div className='nav_logo_box'>
-                    <img src={logo} alt="" />
+                    <NavLink to="/" exact={true} activeClassName="active">
+                        <img src={logo} alt="" />
+                    </NavLink>
                 </div>
                 <div className='nav_line'></div>
                 <div className="nav lt" >
                     <div className={lang === 'zh' ? 'nav_list_box' : ' nav_list_en'}>
                         <div className='nav_home lt'  >
-                            <NavLink to="/home" exact={true} activeClassName="active"
+                            <NavLink to="/" exact={true} activeClassName="active"
                                 className='nav_home_click' >{t.homepage}
                             </NavLink>
                         </div>
@@ -126,7 +128,7 @@ export default class Nav extends Component {
                             <NavLink to="/develop" activeClassName="active"
                                 className='nav_develop_click'  >
                                 <span ref={(x) => { this.devtil = x }} >
-                                  {t.develop}
+                                    {t.develop}
                                 </span>
                             </NavLink>
                             {this.state.devListSwitch ?
@@ -140,11 +142,11 @@ export default class Nav extends Component {
                                         <div className='nav_develop_list_trans' ref={(x) => { this.devList = x }}>
                                             <div className='dev_a'
                                                 onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7', '_blank'); }}>
-                                              {t.developPlan}
+                                                {t.developPlan}
                                             </div>
                                             <div className='dev_a'
                                                 onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://cn-dev.cocosbcx.io" : 'https://dev.cocosbcx.io', '_blank'); }} >
-                                               {t.developApi}
+                                                {t.developApi}
                                             </div>
                                             <div className='dev_a'
                                                 onClick={(e) => { this.stopImmediate(e); window.open("https://forum.cocos.com/c/bcx", '_blank'); }} >
