@@ -20,18 +20,27 @@ class App extends Component {
       localStorage.setItem('lang_type', 'en')
     }
     if (!localStorage.getItem('lang_type')) {
-      localStorage.setItem('lang_type', 'zh');
+      if (this.getlang() === 'zh') {
+        localStorage.setItem('lang_type', 'zh');
+      }else{
+        localStorage.setItem('lang_type', 'en');
+      }
     }
 
+  }
+  getlang = () => {
+    let lang = navigator.language || navigator.userLanguage;//常规浏览器语言和IE浏览器
+    lang = lang.substr(0, 2);//截取lang前2位字符
+    return lang
   }
   componentWillMount() {
     this.chooseLocale()
   }
   render() {
     return (
-        <div className="App" style={{ fontFamily: 'PingFangSC-Regular, sans-serif' }}>
-          <Routermy />
-        </div>
+      <div className="App" style={{ fontFamily: 'PingFangSC-Regular, sans-serif' }}>
+        <Routermy />
+      </div>
     );
   }
 }

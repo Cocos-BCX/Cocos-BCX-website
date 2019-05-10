@@ -300,15 +300,7 @@ export default class Home extends Component {
           container.onmouseleave = onMouseLeaveHandler;
           container.onmousemove = onMouseMoveHandler;
     }
-    getlang= ()=> {
-        let lang = navigator.language||navigator.userLanguage;//常规浏览器语言和IE浏览器
-        console.log(lang);
-        
-        lang = lang.substr(0, 2);//截取lang前2位字符
-        if(lang == 'zh'){
-        }else{
-        }
-      }
+  
     componentDidMount() {
         this.getNews();
         this.getTopNews()
@@ -330,7 +322,6 @@ export default class Home extends Component {
         };
     }
     componentWillMount() {
-        this.getlang()
     }
 
     render() {
