@@ -77,7 +77,7 @@ export default class Nav extends Component {
                                 <img className='logo' src={clogo} alt="" />
                                 <img className='close' src={close} alt="" />
                             </div>
-                            <NavLink to="/home" exact={true} activeClassName="active"
+                            <NavLink to="/" exact={true} activeClassName="active"
                                 className='nav_home_click navBox' >{t.homepage}
                             </NavLink>
 

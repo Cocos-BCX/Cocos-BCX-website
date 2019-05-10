@@ -403,7 +403,9 @@ export default class Home extends Component {
                         {this.state.mapList.map((item, index) => {
                             return <div className='map_s_box lt' key={index}>
                                 <h5 className='lt'>{t[item.til3]}</h5>
-                                <p style={{ "WebkitBoxOrient": "vertical" }} className='jishu lt'>{t[item.til1]}</p>
+                                <p style={{ "WebkitBoxOrient": "vertical" }} className='jishu lt'>
+                                {t[item.til1]}
+                                </p>
                             </div>
                         })}
                         <div className='line_box'>

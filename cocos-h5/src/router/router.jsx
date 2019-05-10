@@ -20,13 +20,13 @@ export default class Homepage extends Component {
                     <Router>
                         <Switch>
                             {/* <Nav></Nav> */}
-                            <Route path="/home" component={Home} />
+                            <Route path="/" exact component={Home} />
                             <Route path="/develop" component={Develop} />
                             <Route path="/about" component={About} />
                             <Route path="/product" component={Product} />
                             <Route path="/action" component={Action} />
                             <Route path='/'  render={() => (
-                                <Redirect to='/home' />
+                                <Redirect to='/' />
                             )} />
                         </Switch>
                     </Router>
