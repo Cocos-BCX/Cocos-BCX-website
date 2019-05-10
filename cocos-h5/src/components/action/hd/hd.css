@@ -30,13 +30,15 @@
   background: #585858;
   transform: skewX(-20deg);
   margin-left: .3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .hd .hd_for .hd_box .hd_every .every_b .e_address p {
   padding: 0 .2rem;
   font-size: .18rem;
   color: #ffffff;
   transform: skewX(20deg);
-  line-height: .29rem;
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -62,6 +64,9 @@
   height: .29rem;
   background: #2AD9FE;
   transform: skewX(-25deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hd .hd_for .yg_box .yg_text span {
   display: block;
@@ -69,7 +74,6 @@
   font-size: .16rem;
   font-weight: 400;
   color: #ffffff;
-  line-height: .29rem;
   text-align: center;
 }
 .hd .hd_for .yg_box .line1 {
@@ -121,8 +125,9 @@
   box-sizing: border-box;
 }
 .hd .hd_list_box .hd_list_e .e_text_box h5 {
-  font-size: .24rem;
+  font-size: .23rem;
   height: .6rem;
+  line-height: .31rem;
   color: #323232;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -140,7 +145,7 @@
   overflow: hidden;
 }
 .hd .hd_list_box .hd_list_e .e_text_box .e_address {
-  display: inline-block;
+  display: flex;
   padding: 0 .2rem;
   height: .37rem;
   background: #2ad9fe;
@@ -149,8 +154,9 @@
   font-size: .18rem;
   font-weight: 400;
   color: #ffffff;
-  line-height: .37rem;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 .hd .hd_list_box .hd_list_e .e_text_box .e_date {
   margin-top: .24rem;

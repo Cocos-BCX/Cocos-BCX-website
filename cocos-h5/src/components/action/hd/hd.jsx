@@ -79,7 +79,7 @@ export default class Hd extends Component {
                 </div>
                 <div className='hd_for'>
                     <div className='hd_box'>
-                        <div className="swiper-container" style={{ width: '6rem' }}>
+                        <div className="swiper-container" >
                             <div className="swiper-wrapper" >
                                 {this.state.forList.map((item, index) => {
                                     return <div className='swiper-slide' key={index}>
@@ -96,8 +96,8 @@ export default class Hd extends Component {
                                 })}
 
                             </div>
-                            <div className="swiper-button-prev swiper-button-black" ></div>
-                            <div className="swiper-button-next swiper-button-black"></div>
+                            <div className="swiper-button-prev swiper-button-black" style={{left:'0',backgroundSize:'.25rem'}}></div>
+                            <div className="swiper-button-next swiper-button-black" style={{right:'0',backgroundSize:'.25rem'}} ></div>
                         </div>
 
                     </div>
@@ -118,7 +118,7 @@ export default class Hd extends Component {
                             <div className='e_text_box lt'>
                                 <h5 style={{"WebkitBoxOrient": "vertical"}}>{item.title}</h5>
                                 <p>{item.summary}</p>
-                                <div className='e_address lt'>{item.address}</div>
+                                <div className='e_address lt'><span>{item.address}</span></div>
                                 <div className="e_date rt">{item.published_at}</div>
                             </div>
                         </a>

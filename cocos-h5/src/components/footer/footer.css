@@ -50,13 +50,14 @@
 .footer .footer_box .footer_con .footer_con_l .email {
   overflow: hidden;
   margin-top: .34rem;
+  display: flex;
+  align-items: center;
 }
 .footer .footer_box .footer_con .footer_con_l .email img {
   display: block;
   float: left;
   width: .22rem;
   height: .16rem;
-  margin-top: .07rem;
 }
 .footer .footer_box .footer_con .footer_con_l .email p {
   float: left;
@@ -71,6 +72,8 @@
   display: block;
   overflow: hidden;
   margin-top: .34rem;
+  display: flex;
+  align-items: center;
 }
 .footer .footer_box .footer_con .footer_con_l .file img {
   display: block;
@@ -78,13 +81,13 @@
   width: .16rem;
   height: .22rem;
   margin-left: .76rem;
-  margin-top: .02rem;
 }
 .footer .footer_box .footer_con .footer_con_l .file p {
   float: left;
   font-size: .20rem;
   margin-left: .12rem;
   font-weight: 400;
+  color: #676767;
 }
 .footer .footer_box .footer_con .footer_con_l .file p a {
   color: #676767;
