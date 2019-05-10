@@ -35,7 +35,7 @@ export default class Product extends Component {
                 </div>
                 <div className='dev_plan'>
                 <a href={lang==='zh'?"https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA":'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7'} className='ljdev' target='_blank' rel="noopener noreferrer">
-                {t.ljdev}
+                <span>{t.ljdev}</span>
                     </a>
                 </div>
                 <div className='dev_list_box'>

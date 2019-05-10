@@ -5,7 +5,6 @@ import About from '../components/about/about'
 import Product from '../components/product/product'
 import Footer from '../components/footer/footer'
 import Action from '../components/action/action'
-import Nav from '../components/nav/nav'
 import { BrowserRouter as Router, Route, Redirect,Switch } from "react-router-dom";
 import './router.css'
 export default class Homepage extends Component {

@@ -117,7 +117,6 @@ export default class Big extends Component {
     }
     //收起/打开s2
     s2action = () => {
-        let list2 = document.getElementsByClassName('s2_list')[0]
         if (this.state.s2action) {
             this.setState({ s2action: false });
             // list2.style.marginBottom = '100px'
@@ -134,7 +133,6 @@ export default class Big extends Component {
     }
     //收起/打开s3
     s3action = () => {
-        let list3 = document.getElementsByClassName('s3_list')[0]
         if (this.state.s3action) {
             this.setState({ s3action: false });
             this.s3.style.height = '1.65rem';
@@ -150,7 +148,6 @@ export default class Big extends Component {
     }
     //收起/打开s4
     s4action = () => {
-        let list4 = document.getElementsByClassName('s4_list')[0]
         if (this.state.s4action) {
             this.setState({ s4action: false });
             this.s4.style.height = '2.2rem';

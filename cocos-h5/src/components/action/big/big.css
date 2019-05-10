@@ -19,7 +19,7 @@
 .big .news_til_box .news_til h3 {
   transform: skewX(20deg);
   letter-spacing: 2px;
-  font-size: .25rem;
+  font-size: .23rem;
   color: #ffffff;
   font-weight: normal;
   line-height: .44rem;
@@ -103,6 +103,8 @@
   color: #ffffff;
   line-height: .37rem;
   text-align: center;
+  border: 1px solid transparent;
+  box-sizing: border-box;
 }
 .big .big_list_box .s1_box .s1_content {
   width: 5.5rem;

@@ -59,7 +59,7 @@ export default class New extends Component {
             <div className='new'>
                 <div className="news_til_box">
                     <div className="news_til">
-                    <h3>{t.news}</h3>
+                    <h3><span>{t.news}</span></h3>
                         <div className='news_line'></div>
                     </div>
                     <div className="news_til_mask"></div>

@@ -18,11 +18,14 @@
 .new .news_til_box .news_til h3 {
   transform: skewX(20deg);
   letter-spacing: 2px;
-  font-size: .26rem;
+  font-size: .24rem;
   color: #ffffff;
   font-weight: normal;
-  line-height: .44rem;
   text-align: center;
+  height: .44rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .new .news_til_box .news_til .news_line {
   width: 6.45rem;

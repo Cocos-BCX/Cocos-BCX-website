@@ -104,12 +104,11 @@
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .wordroom {
   margin-top: .16rem;
   background: url('../../images/people.png') 0 0rem no-repeat;
-  background-size: .2rem auto;
+  background-size: auto .2rem;
   padding-left: .3rem;
   font-size: .2rem;
   font-weight: 400;
   color: #696969;
-  line-height: 20px;
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box p {
   width: 3.55rem;

@@ -34,7 +34,7 @@
   height: 100%;
 }
 .develop .dev_box .dev_m .dev_main {
-  width: 3rem;
+  width: 3.1rem;
   margin-left: .15rem;
   margin-top: .4rem;
 }
@@ -54,7 +54,7 @@
   text-align: center;
 }
 .develop .dev_box .dev_m .dev_main p {
-  height: 1.98rem;
+  height: 2.02rem;
   font-size: .16rem;
   font-weight: 400;
   line-height: .29rem;
@@ -62,12 +62,13 @@
 }
 .develop .dev_box .dev_m .dev_main .dev_go {
   display: block;
-  margin-top: .33rem;
+  margin-top: .25rem;
   width: 1.2rem;
   background: #2AD9FE;
   transform: skewX(-22deg);
   height: .41rem;
   margin-left: 1.56rem;
+  font-family: FjallaOne;
 }
 .develop .dev_box .dev_m .dev_main .dev_go div {
   font-size: .29rem;
@@ -76,6 +77,8 @@
   line-height: .41rem;
   text-align: center;
   transform: skewX(22deg);
+  border: 1px solid transparent;
+  box-sizing: border-box;
 }
 .develop .dev_box .dev_m:nth-child(1) p {
   display: -webkit-box;

@@ -7,7 +7,7 @@ class App extends Component {
     let url = window.location.search; //获取url中"?"符后的字串  
 
     let theRequest = new Object();
-    if (url.indexOf("?") != -1) {
+    if (url.indexOf("?") !== -1) {
       let str = url.substr(1);
       let strs = str.split("&");
       for (let i = 0; i < strs.length; i++) {

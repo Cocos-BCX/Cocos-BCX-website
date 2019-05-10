@@ -103,7 +103,7 @@ export default class About extends Component {
         let lang = localStorage.getItem('lang_type');
         let t = getLang();
         return (
-            // <FastClick>
+            <FastClick>
                 <div className='about'>
                     <div className="banner_a_box">
                         <Nav></Nav>
@@ -202,7 +202,7 @@ export default class About extends Component {
                         </div>
                     </div>
                 </div>
-            // </FastClick>
+            </FastClick>
         );
     }
 }

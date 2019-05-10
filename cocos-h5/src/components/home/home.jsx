@@ -95,7 +95,6 @@ export default class Home extends Component {
         let url = 'news/recommend';
         let params = { lang: lang, };
         get(url, params).then(response => {
-            console.log(response.data.data);
             this.setState({ newsTopList: response.data.data })
         })
     }
@@ -142,8 +141,6 @@ export default class Home extends Component {
         // let box = document.getElementsByClassName('explane_img')[0];
         let ele = document.getElementsByClassName('ex_l_r');
         let to = () => {
-            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
             for (let i = 0; i < ele.length; i++) {
                 setTimeout(() => {
                     ele[i].style.opacity = '1';
@@ -276,7 +273,7 @@ export default class Home extends Component {
                         <h5>BLOCKCHAIN EXPEDITION</h5>
                         <h6>{t.next}</h6>
                         <div className='play_btn'>
-                            <img src={play} className='play_btn lt' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
+                            <img src={play} className='play_btn lt' alt='' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
                             <p style={{ "WebkitBoxOrient": "vertical" }} className='lt'>{t.nextex}</p>
                         </div>
                     </div>
@@ -354,7 +351,7 @@ export default class Home extends Component {
                             {this.state.newsBottomList.map((item, index) => {
                                 return <li className='lt' key={index}>
                                     <a href={item.resource} target="_blank" rel="noopener noreferrer">
-                                        <img src={item.image} className='img_box lt' />
+                                        <img src={item.image} alt='' className='img_box lt' />
                                         <div className='img_box_text lt'>
                                             <div>
                                                 <h5 style={{ "WebkitBoxOrient": "vertical" }}>{item.title}</h5>

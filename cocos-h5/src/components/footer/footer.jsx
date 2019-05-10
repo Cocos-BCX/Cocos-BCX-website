@@ -30,9 +30,6 @@ export default class Footer extends Component {
         let getScrollTop = () => {
             return document.documentElement.scrollTop;
         }
-        let setScrollTop = (value) => {
-            document.documentElement.scrollTop = value;
-        }
         window.onscroll = () => { getScrollTop() - 400 > 0 ? this.toTomDom.style.display = "block" : this.toTomDom.style.display = "none"; }
     }
     wxshow = (e) => {
