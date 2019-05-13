@@ -209,7 +209,7 @@ exports.lang = {
         developApi: 'DOC',
         developsq: 'FORUM',
         jili: 'BOUNTY',
-        stproduct: 'ECOSYSYEM',
+        stproduct: 'ECOSYSTEM',
         action: 'NEWS',
         browser: 'EXPLORER',
         about: 'ABOUT',

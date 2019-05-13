@@ -33,7 +33,7 @@
   position: absolute;
 }
 .banner_box .home_btn_box {
-  width: 6rem;
+  width: 6.2rem;
   margin: auto;
   margin-top: 1.6rem;
 }
@@ -46,7 +46,7 @@
 .banner_box .home_btn_box h6 {
   color: #fff;
   font-weight: normal;
-  font-size: .4rem;
+  font-size: .38rem;
   margin-top: .1rem;
 }
 .banner_box .home_btn_box .play_btn {
