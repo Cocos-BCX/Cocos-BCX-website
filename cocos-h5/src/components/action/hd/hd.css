@@ -33,6 +33,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 1.2rem;
 }
 .hd .hd_for .hd_box .hd_every .every_b .e_address p {
   padding: 0 .2rem;
@@ -44,11 +45,10 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   box-sizing: border-box;
-  max-width: 1.35rem;
 }
 .hd .hd_for .hd_box .hd_every .every_b .e_date {
   height: .29rem;
-  margin-right: .35rem;
+  margin-right: .2rem;
   font-size: .18rem;
   font-weight: 400;
   color: #787878;

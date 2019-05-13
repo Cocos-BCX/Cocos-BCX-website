@@ -77,7 +77,9 @@ export default class Hd extends Component {
                     </div>
                     <div className="news_til_mask"></div>
                 </div>
-                <div className='hd_for'>
+                {
+                    this.state.forList.length>0?
+                     <div className='hd_for'>
                     <div className='hd_box'>
                         <div className="swiper-container" >
                             <div className="swiper-wrapper" >
@@ -109,6 +111,9 @@ export default class Hd extends Component {
                         <div className='ball lt'></div>
                     </div>
                 </div>
+                    :null
+                }
+               
                 <div className='hd_list_box'>
                     {this.state.hdList.map((item, index) => {
                         return <a href={item.resource} target="_blank" className=' hd_list_e' style={{ display: 'block' }} key={index} rel="noopener noreferrer" >

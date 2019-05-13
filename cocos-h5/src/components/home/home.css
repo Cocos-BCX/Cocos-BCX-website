@@ -146,6 +146,7 @@
   color: #555;
   text-align: left;
   height: .4rem;
+  overflow: hidden;
 }
 .explane .explane_img .ex_l_box .ex_l_r .ex_img_text {
   margin-top: .17rem;
