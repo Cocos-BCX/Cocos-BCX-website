@@ -48,7 +48,7 @@ export default class Yb extends Component {
                         {this.state.newList.map((item, index) => {
                             return <li className='lt' key={index}>
                                 <a href={item.resource} target="_blank"  rel="noopener noreferrer" >
-                                    <div className='img_box'>
+                                    <div className='img_box' style={{height:'1.75rem'}}>
                                         <img src={item.image} alt="" />
                                     </div>
                                     <div className='new_til'>{item.title}</div>

@@ -91,6 +91,8 @@
   width: 3rem;
   height: 2rem;
   overflow: hidden;
+  padding-right: 1px;
+  box-sizing: border-box;
 }
 .new .new_list .new_list_box li .img_box img {
   width: 100%;

@@ -325,7 +325,7 @@
 }
 .system .system_til_box .sys_til_our h4 {
   transform: skewX(22deg);
-  font-size: .30rem;
+  font-size: .26rem;
   font-weight: 400;
   color: #ffffff;
   line-height: .53rem;
@@ -380,7 +380,7 @@
   height: .36rem;
   transform: skewX(17deg);
   margin: auto;
-  margin-top: .28rem;
+  margin-top: .15rem;
 }
 .system .sys_img .sys_img_box:nth-child(2) img {
   width: .49rem;
