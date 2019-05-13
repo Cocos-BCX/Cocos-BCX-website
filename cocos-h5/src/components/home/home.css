@@ -131,6 +131,9 @@
   margin-top: .32rem;
   transform: skewX(25deg);
 }
+.explane .explane_img .ex_l_box:nth-child(2) img {
+  width: .55rem;
+}
 .explane .explane_img .ex_l_box .ex_l_r {
   width: 3.8rem;
   margin-left: .5rem;
