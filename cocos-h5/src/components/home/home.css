@@ -371,6 +371,9 @@
   background: #585858;
   margin-left: .18rem;
 }
+.system .sys_img .sys_img_box p {
+  line-height: .16rem;
+}
 .system .sys_img .sys_img_box:nth-child(1) {
   margin-left: .38rem;
 }
@@ -380,7 +383,7 @@
   height: .36rem;
   transform: skewX(17deg);
   margin: auto;
-  margin-top: .15rem;
+  margin-top: .3rem;
 }
 .system .sys_img .sys_img_box:nth-child(2) img {
   width: .49rem;
@@ -509,7 +512,7 @@
   color: #555;
   line-height: .38rem;
   border: 1px solid #dddddd;
-  padding: .22rem .2rem  0 .2rem;
+  padding: .22rem .2rem 0 .2rem;
   box-sizing: border-box;
   display: -webkit-box;
   -webkit-box-orient: vertical;
