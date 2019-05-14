@@ -232,7 +232,7 @@ exports.lang = {
         more: 'MORE',
         system: 'OUR ECOSYSTEM',
         sysex: 'Cocos-BCX connects the gaming and blockchain ecosystems',
-        system1: 'Core Ecosystem Segments',
+        system1: 'Core Segments',
         system2: 'Blockchain System',
         system3: 'Developers',
         system4: 'End-users',
