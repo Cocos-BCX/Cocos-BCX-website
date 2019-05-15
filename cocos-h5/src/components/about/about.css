@@ -14,7 +14,6 @@
 }
 .about .banner_a_box .white_book .w_book {
   width: .9rem;
-  height: .25rem;
   background: rgba(255, 255, 255, 0);
   border: 1px solid #ffffff;
   margin-right: 1.015rem;
@@ -117,7 +116,7 @@
   margin-top: .21rem;
 }
 .about .team_box .team_pic_box .team_every .ex {
-  font-size: .18rem;
+  font-size: .16rem;
   color: #767676;
   margin: auto;
   text-align: center;
