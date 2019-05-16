@@ -34,7 +34,7 @@ class Pagecomponent extends Component {
         //上一页
         pages.push(<li className={currentPage === 1 ? "nomore" : null} onClick={this.prePageHandeler.bind(this)}
                        key={0}>
-            上一页</li>)
+            &lt;</li>)
 
         if (totalPage <= 5) {
             /*总页码小于等于10时，全部显示出来*/
@@ -77,7 +77,7 @@ class Pagecomponent extends Component {
         //下一页
         pages.push(<li className={currentPage === totalPage ? "nomore" : null}
                        onClick={this.nextPageHandeler.bind(this)}
-                       key={totalPage + 1}>下一页</li>)
+                       key={totalPage + 1}>&gt;</li>)
         return pages;
 
     }
