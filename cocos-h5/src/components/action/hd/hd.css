@@ -1,3 +1,6 @@
+.hd {
+  min-height: 9rem;
+}
 .hd .hd_for .hd_box {
   overflow: hidden;
   margin-top: .35rem;
