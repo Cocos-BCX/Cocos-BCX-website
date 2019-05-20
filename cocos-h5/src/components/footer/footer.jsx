@@ -8,12 +8,12 @@ import wechet from '../../images/wechat.png'
 import weibo from '../../images/weibo.png'
 import tele from '../../images/telegram.png'
 import git from '../../images/github.png'
-import zs from  '../../images/zs.png'
+import zs from '../../images/zs.png'
 import reddit from '../../images/reddit.png'
 import discord from '../../images/discord.png'
-import zsma from '../../images/zsma.png'
+import wx from '../../images/zsma.png'
 import totop from '../../images/totop.png'
-import wx from '../../images/wxma.jpg'
+import zsma from '../../images/wxma.jpg'
 import terms from '../../file/terms.pdf'
 import privacy from '../../file/privacy.pdf'
 import './footer.css'
@@ -64,12 +64,12 @@ export default class Footer extends Component {
                 <div className='footer_box'>
                     <div className='totop' ref={(x) => { this.toTomDom = x }} onClick={this.toTop}>
                         <div className='tojt'>
-                           <img src={totop} alt=""/>
+                            <img src={totop} alt="" />
                         </div>
                     </div>
                     <div className='footer_con'>
                         <div className="footer_con_l ">
-                        <div className='f_til'>{t.tel}</div>
+                            <div className='f_til'>{t.tel}</div>
                             <div className='f_line'></div>
                             <div className='email lt' >
                                 <img src={email} alt="" />
@@ -81,7 +81,7 @@ export default class Footer extends Component {
                             </div>
                         </div>
                         <div className="footer_con_r ">
-                        <div className='r_til'>{t.footUpdate}</div>
+                            <div className='r_til'>{t.footUpdate}</div>
                             <div className='r_line'></div>
                             <div className='footer_dy' id="mc_embed_signup">
                                 <form action="https://cocosbcx.us20.list-manage.com/subscribe/post?u=9907dfea800bf6f37eccb2e9c&amp;id=5d769877f3"
@@ -117,15 +117,17 @@ export default class Footer extends Component {
                         <div className='wechet_box lt' onClick={(e) => { this.wxshow(e) }}
                             onMouseLeave={() => { this.wxma.style.display = 'none' }}>
                             <img className='biao' src={wechet} alt="" />
-                            <div className='ma' onClick={(e)=>{this.mahide(e)}} ref={(x) => { this.wxma = x }} style={{ width: '7.5rem', height: document.body.clientHeight || document.documentElement.clientHeight  }}>
+                            <div className='ma' onClick={(e) => { this.mahide(e) }} ref={(x) => { this.wxma = x }} style={{ width: '7.5rem', height: document.body.clientHeight || document.documentElement.clientHeight }}>
                                 <img src={wx} alt="" onClick={this.stop} />
+                                <p>{t.kf}</p>
                             </div>
                         </div>
                         <div className='zs_box lt' onClick={(e) => { this.zsshow(e) }}
                             onMouseLeave={() => { this.zsma.style.display = 'none' }}>
                             <img className='biao' src={zs} alt="" />
-                            <div className='ma' onClick={(e)=>{this.mahide(e)}} ref={(x) => { this.zsma = x }} style={{ width: '7.5rem', height: document.documentElement.clientHeight || document.body.clientHeight }}>
+                            <div className='ma' onClick={(e) => { this.mahide(e) }} ref={(x) => { this.zsma = x }} style={{ width: '7.5rem', height: document.documentElement.clientHeight || document.body.clientHeight }}>
                                 <img src={zsma} alt="" onClick={this.stop} />
+                                <p>{t.kf}</p>
                             </div>
                         </div>
                         <a href="https://www.weibo.com/p/1006062183715773" target='_blank' rel="noopener noreferrer">

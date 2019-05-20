@@ -208,10 +208,20 @@
   align-items: center;
   justify-content: center;
   display: none;
+  flex-direction: row;
 }
 .footer .footer_box .footer_img .wechet_box .ma img {
   width: 3rem;
   height: 3rem;
+  display: block;
+}
+.footer .footer_box .footer_img .wechet_box .ma p {
+  position: absolute;
+  width: 100%;
+  color: #ccc;
+  text-align: center;
+  bottom: 1rem;
+  height: .5rem;
 }
 .footer .footer_box .footer_img .zs_box {
   position: relative;
@@ -231,10 +241,20 @@
   align-items: center;
   justify-content: center;
   display: none;
+  flex-direction: row;
 }
 .footer .footer_box .footer_img .zs_box .ma img {
   width: 3rem;
   height: 3rem;
+  display: block;
+}
+.footer .footer_box .footer_img .zs_box .ma p {
+  position: absolute;
+  width: 100%;
+  color: #ccc;
+  text-align: center;
+  bottom: 1rem;
+  height: .5rem;
 }
 .footer .footer_box .footer_img a {
   display: block;
