@@ -8,7 +8,7 @@ import wechet from '../../images/wechat.png'
 import weibo from '../../images/weibo.png'
 import tele from '../../images/telegram.png'
 import git from '../../images/github.png'
-import zs from  '../../images/zs.png'
+import zs from '../../images/zs.png'
 import reddit from '../../images/reddit.png'
 import discord from '../../images/discord.png'
 
@@ -18,11 +18,11 @@ import wechetb from '../../images/wechatb.png'
 import weibob from '../../images/weibob.png'
 import teleb from '../../images/telegramb.png'
 import gitb from '../../images/githubb.png'
-import zsb from  '../../images/zsb.png'
+import zsb from '../../images/zsb.png'
 import redditb from '../../images/redditb.png'
 import discordb from '../../images/discordb.png'
-import zsma from '../../images/zsma.jpg'
-import wx from '../../images/wxma.jpg'
+import wx from '../../images/zsma.png'
+import zsma from '../../images/wxma.jpg'
 import terms from '../../file/terms.pdf'
 import privacy from '../../file/privacy.pdf'
 import './footer.css'
@@ -44,67 +44,67 @@ export default class Footer extends Component {
         }
         window.onscroll = () => { getScrollTop() - 400 > 0 ? this.toTomDom.style.display = "block" : this.toTomDom.style.display = "none"; }
     }
-    changeimg(){
-        this.mediuma.onmouseenter=(()=>{
+    changeimg() {
+        this.mediuma.onmouseenter = (() => {
             this.mediuma.src = mediumb
         });
-        this.mediuma.onmouseleave=(()=>{
+        this.mediuma.onmouseleave = (() => {
             this.mediuma.src = medium
         });
 
-        this.twittera.onmouseenter=(()=>{
+        this.twittera.onmouseenter = (() => {
             this.twittera.src = twitterb
         });
-        this.twittera.onmouseleave=(()=>{
-            this.twittera.src =  twitter
+        this.twittera.onmouseleave = (() => {
+            this.twittera.src = twitter
         });
 
-        this.wecheta.onmouseenter=(()=>{
+        this.wecheta.onmouseenter = (() => {
             this.wecheta.src = wechetb
         });
-        this.wecheta.onmouseleave=(()=>{
+        this.wecheta.onmouseleave = (() => {
             this.wecheta.src = wechet
         });
 
-        this.zsa.onmouseenter=(()=>{
+        this.zsa.onmouseenter = (() => {
             this.zsa.src = zsb
         });
-        this.zsa.onmouseleave=(()=>{
+        this.zsa.onmouseleave = (() => {
             this.zsa.src = zs
         });
 
-        this.weiboa.onmouseenter=(()=>{
+        this.weiboa.onmouseenter = (() => {
             this.weiboa.src = weibob
         });
-        this.weiboa.onmouseleave=(()=>{
+        this.weiboa.onmouseleave = (() => {
             this.weiboa.src = weibo
         });
 
-        this.telea.onmouseenter=(()=>{
+        this.telea.onmouseenter = (() => {
             this.telea.src = teleb
         });
-        this.telea.onmouseleave=(()=>{
+        this.telea.onmouseleave = (() => {
             this.telea.src = tele
         });
 
-        this.gita.onmouseenter=(()=>{
+        this.gita.onmouseenter = (() => {
             this.gita.src = gitb
         });
-        this.gita.onmouseleave=(()=>{
+        this.gita.onmouseleave = (() => {
             this.gita.src = git
         });
 
-        this.reddita.onmouseenter=(()=>{
+        this.reddita.onmouseenter = (() => {
             this.reddita.src = redditb
         });
-        this.reddita.onmouseleave=(()=>{
+        this.reddita.onmouseleave = (() => {
             this.reddita.src = reddit
         });
 
-        this.discorda.onmouseenter=(()=>{
+        this.discorda.onmouseenter = (() => {
             this.discorda.src = discordb
         });
-        this.discorda.onmouseleave=(()=>{
+        this.discorda.onmouseleave = (() => {
             this.discorda.src = discord
         });
     }
@@ -165,35 +165,41 @@ export default class Footer extends Component {
                     </div>
                     <div className='footer_img'>
                         <a href="https://medium.com/cocosbcx" target='_blank' rel="noopener noreferrer">
-                            <img src={medium} alt="" ref={(x)=>{this.mediuma = x}} />
+                            <img src={medium} alt="" ref={(x) => { this.mediuma = x }} />
                         </a>
-                        <a href="https://twitter.com/CocosBCX"  target='_blank' rel="noopener noreferrer">
-                            <img src={twitter} ref={(x)=>{this.twittera = x}} alt="" />
+                        <a href="https://twitter.com/CocosBCX" target='_blank' rel="noopener noreferrer">
+                            <img src={twitter} ref={(x) => { this.twittera = x }} alt="" />
                         </a>
                         <div className='wechet_box' onMouseEnter={() => { this.wxma.style.display = 'block' }}
                             onMouseLeave={() => { this.wxma.style.display = 'none' }}>
-                            <img className='biao' src={wechet} ref={(x)=>{this.wecheta = x}} alt="" />
-                            <img className='ma' src={wx} ref={(x) => { this.wxma = x }} alt="" />
+                            <img className='biao' src={wechet} ref={(x) => { this.wecheta = x }} alt="" />
+                            <div className='ma' ref={(x) => { this.wxma = x }} >
+                                <img src={wx} alt="" />
+                                <p>{t.kf}</p>
+                            </div>
                         </div>
                         <div className='zs_box' onMouseEnter={() => { this.zsma.style.display = 'block' }}
                             onMouseLeave={() => { this.zsma.style.display = 'none' }}>
-                            <img className='biao' ref={(x)=>{this.zsa = x}} src={zs} alt="" />
-                            <img className='ma' src={zsma} ref={(x) => { this.zsma = x }} alt="" />
+                            <img className='biao' ref={(x) => { this.zsa = x }} src={zs} alt="" />
+                            <div className='ma' ref={(x) => { this.zsma = x }}>
+                                <img src={zsma} alt="" />
+                                <p>{t.gzh}</p>
+                            </div>
                         </div>
                         <a href="https://www.weibo.com/p/1006062183715773" target='_blank' rel="noopener noreferrer">
-                            <img src={weibo} ref={(x)=>{this.weiboa = x}} alt="" />
+                            <img src={weibo} ref={(x) => { this.weiboa = x }} alt="" />
                         </a>
                         <a href={lang === 'zh' ? "https://t.me/CocosBCX" : 'https://t.me/cocosbcxen'} target='_blank' rel="noopener noreferrer">
-                            <img src={tele} ref={(x)=>{this.telea = x}} alt="" />
+                            <img src={tele} ref={(x) => { this.telea = x }} alt="" />
                         </a>
                         <a href="https://github.com/cocos-bcx" target='_blank' rel="noopener noreferrer">
-                            <img src={git} ref={(x)=>{this.gita = x}} alt="" />
+                            <img src={git} ref={(x) => { this.gita = x }} alt="" />
                         </a>
                         <a href="https://www.reddit.com/user/cocos-bcx/" target='_blank' rel="noopener noreferrer">
-                            <img src={reddit} ref={(x)=>{this.reddita = x}} alt="" />
+                            <img src={reddit} ref={(x) => { this.reddita = x }} alt="" />
                         </a>
                         <a href="https://discord.gg/jdJMNtC" target='_blank' rel="noopener noreferrer">
-                            <img src={discord} ref={(x)=>{this.discorda = x}}  alt="" />
+                            <img src={discord} ref={(x) => { this.discorda = x }} alt="" />
                         </a>
                     </div>
                     <div className='footer_bottom'>Copyright © 2018-2019 Cocos-BCX. All Rights Reserved.</div>

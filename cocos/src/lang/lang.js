@@ -199,6 +199,8 @@ exports.lang = {
         month:'月报/周报',
         //活动
         yg:'活动预告',
+        kf:'官方客服',
+        gzh:'官方公众号',
     },
 
 
@@ -402,5 +404,7 @@ exports.lang = {
         month: 'Report',
         //活动
         yg: 'Activity Notice',
+        kf:'官方客服',
+        gzh:'官方公众号',
     }
 }

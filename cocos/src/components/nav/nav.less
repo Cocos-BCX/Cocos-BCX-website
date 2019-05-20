@@ -29,7 +29,7 @@
         position: absolute;
         width: 600px;
         height: 5px;
-        transform: skewX(-30deg) ;
+        transform: skewX(-30deg);
         background: #2AD9FE;
         top: 41px;
         left: 350px;
@@ -39,7 +39,7 @@
         width: 683px;
         height: 41px;
         background: rgba(103, 103, 103, 1);
-        transform: skewX(-30deg) ;
+        transform: skewX(-30deg);
         margin-left: 324px;
 
         .nav_list_box {
@@ -48,6 +48,7 @@
             z-index: 5;
             // overflow: hidden;
             height: 41px;
+
             .active {
                 color: #2AD9FE;
             }
@@ -420,13 +421,24 @@
             margin-left: 10px;
 
             .now {
-                background: url(../../images/langjt.png) 2px 5px no-repeat;
+                // background: url(../../images/langjt.png) 2px 5px no-repeat;
                 margin-top: 13px;
                 font-size: 11px;
-                width: 100%;
                 font-weight: 400;
                 color: rgba(255, 255, 255, 1);
                 text-align: center;
+                margin-left: -16px;
+            }
+
+            .now_jt {
+                width: 0;
+                height: 0;
+                border-width: 6px 4px 0;
+                border-style: solid;
+                border-color: #fff transparent transparent;
+                position: absolute;
+                top: 7px;
+                right: 6px;
             }
         }
 

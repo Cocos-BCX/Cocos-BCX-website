@@ -201,16 +201,20 @@
   cursor: pointer;
   position: relative;
 }
-.footer .footer_box .footer_img .wechet_box .biao {
-  height: 26px;
-}
 .footer .footer_box .footer_img .wechet_box .ma {
   display: none;
   position: absolute;
-  left: -38px;
+  left: -35px;
   top: 28px;
   width: 100px;
-  height: 100px;
+}
+.footer .footer_box .footer_img .wechet_box .ma img {
+  width: 100%;
+}
+.footer .footer_box .footer_img .wechet_box .ma p {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
 }
 .footer .footer_box .footer_img .zs_box {
   display: inline-block;
@@ -218,16 +222,20 @@
   cursor: pointer;
   position: relative;
 }
-.footer .footer_box .footer_img .zs_box .biao {
-  width: 20px;
-}
 .footer .footer_box .footer_img .zs_box .ma {
   display: none;
   position: absolute;
-  left: -38px;
+  left: -35px;
   top: 28px;
   width: 100px;
-  height: 100px;
+}
+.footer .footer_box .footer_img .zs_box .ma img {
+  width: 100%;
+}
+.footer .footer_box .footer_img .zs_box .ma p {
+  color: #999999;
+  text-align: center;
+  font-size: 14px;
 }
 .footer .footer_box .footer_img a {
   margin-left: 52px;
@@ -450,16 +458,20 @@
     cursor: pointer;
     position: relative;
   }
-  .footer .footer_box .footer_img .wechet_box .biao {
-    height: 26px;
-  }
   .footer .footer_box .footer_img .wechet_box .ma {
     display: none;
     position: absolute;
-    left: -38px;
+    left: -26px;
     top: 28px;
-    width: 100px;
-    height: 100px;
+    width: 75px;
+  }
+  .footer .footer_box .footer_img .wechet_box .ma img {
+    width: 100%;
+  }
+  .footer .footer_box .footer_img .wechet_box .ma p {
+    text-align: center;
+    color: #999;
+    font-size: 12px;
   }
   .footer .footer_box .footer_img .zs_box {
     display: inline-block;
@@ -467,16 +479,20 @@
     cursor: pointer;
     position: relative;
   }
-  .footer .footer_box .footer_img .zs_box .biao {
-    width: 20px;
-  }
   .footer .footer_box .footer_img .zs_box .ma {
     display: none;
     position: absolute;
-    left: -38px;
+    left: -26px;
     top: 28px;
-    width: 100px;
-    height: 100px;
+    width: 75px;
+  }
+  .footer .footer_box .footer_img .zs_box .ma img {
+    width: 100%;
+  }
+  .footer .footer_box .footer_img .zs_box .ma p {
+    text-align: center;
+    color: #999;
+    font-size: 12px;
   }
   .footer .footer_box .footer_img a {
     margin-left: 52px;

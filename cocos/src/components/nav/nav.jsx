@@ -210,6 +210,7 @@ export default class Nav extends Component {
                 <div className='lang_box lt' onClick={(e) => { this.showLang(e) }}>
                     <div className='lang' >
                         <div className='now'>{lang === 'en' ? '中文' : 'English'}</div>
+                        <div className='now_jt'></div>
                     </div>
                     <div className='choose_lang_box' ref={(x) => { this.langBox = x }}>
                         <div className='chinese' onClick={this.chooseCH}>中文</div>

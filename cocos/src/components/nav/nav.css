@@ -358,13 +358,22 @@
   margin-left: 10px;
 }
 .nav_box .lang_box .lang .now {
-  background: url(../../images/langjt.png) 2px 5px no-repeat;
   margin-top: 13px;
   font-size: 11px;
-  width: 100%;
   font-weight: 400;
   color: #ffffff;
   text-align: center;
+  margin-left: -16px;
+}
+.nav_box .lang_box .lang .now_jt {
+  width: 0;
+  height: 0;
+  border-width: 6px 4px 0;
+  border-style: solid;
+  border-color: #fff transparent transparent;
+  position: absolute;
+  top: 7px;
+  right: 6px;
 }
 .nav_box .lang_box .choose_lang_box {
   display: none;
