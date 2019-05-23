@@ -72,7 +72,6 @@ export default class About extends Component {
                 { pic: p8, ex: 'plex8', name: 'p8', position: 'fqr8' },
                 { pic: p9, ex: 'plex9', name: 'p9', position: 'fqr9' },
                 { pic: p10, ex: 'plex10', name: 'p10', position: 'fqr10' },
-                { pic: p11, ex: 'plex11', name: 'p11', position: 'fqr11' },
                 { pic: p12, ex: 'plex12', name: 'p12', position: 'fqr12' },
             ],
             adviser: [

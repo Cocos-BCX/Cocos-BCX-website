@@ -64,10 +64,6 @@ export default class Home extends Component {
             { img: cocos4, text: 'system4' },
             { img: cocos5, text: 'system5' },],
             mapList: [{
-                til1: 'map1',
-                til2: 'map11',
-                til3: 'md1',
-            }, {
                 til1: 'map2',
                 til2: 'map22',
                 til3: 'md2',
@@ -83,7 +79,11 @@ export default class Home extends Component {
                 til1: 'map5',
                 til2: 'map55',
                 til3: 'md5',
-            }],
+            },{
+                til1: 'map1',
+                til2: 'map11',
+                til3: 'md1',
+            },],
             newsTopList: [],
             newsBottomList: []
         }
@@ -127,7 +127,7 @@ export default class Home extends Component {
 
     }
     hideVideo = () => {
-            this.youku.src = ''
+        this.youku.src = ''
         this.videoBox.style.display = 'none';
     }
     //隐藏播放器
@@ -172,7 +172,7 @@ export default class Home extends Component {
             if (scrollTop > (box.offsetTop - cHeight)) {
                 for (let i = 0; i < ele.length; i++) {
                     setTimeout(() => {
-                        ele[i].style.transform='translateY(0)';
+                        ele[i].style.transform = 'translateY(0)';
                     }, 0 + i * 200)
                 }
             }
@@ -180,27 +180,27 @@ export default class Home extends Component {
         document.addEventListener('scroll', to)
     }
     //合作伙伴动画
-    hzt(){
+    hzt() {
         let box = document.getElementsByClassName('hezuo_pic');
         let to = () => {
             let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
             for (let j = 0; j < box.length; j++) {
-                if (scrollTop-50 > (box[j].offsetTop- cHeight)) {
-                    box[j].style.transform='translateY(0)';
+                if (scrollTop - 50 > (box[j].offsetTop - cHeight)) {
+                    box[j].style.transform = 'translateY(0)';
                 }
             }
         }
         document.addEventListener('scroll', to)
     }
-    hzdt(){
+    hzdt() {
         let box = document.getElementsByClassName('hz_picd');
         let to = () => {
             let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
             for (let j = 0; j < box.length; j++) {
-                if (scrollTop-50 > (box[j].offsetTop- cHeight)) {
-                    box[j].style.transform='translateY(0)';
+                if (scrollTop - 50 > (box[j].offsetTop - cHeight)) {
+                    box[j].style.transform = 'translateY(0)';
                 }
             }
         }
@@ -226,81 +226,81 @@ export default class Home extends Component {
     //banner动画
     bannerTrans() {
 
-        let container =  document.getElementsByClassName('container')[0];
+        let container = document.getElementsByClassName('container')[0];
         let inner = this.banner;
         let mouse = {
             _x: 0,
             _y: 0,
             x: 0,
             y: 0,
-            updatePosition: function(event) {
+            updatePosition: function (event) {
                 let e = event || window.event;
-              this.x = e.clientX - this._x;
-              this.y = (e.clientY - this._y) * -1;
+                this.x = e.clientX - this._x;
+                this.y = (e.clientY - this._y) * -1;
             },
-            setOrigin: function(e) {
-              this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
-              this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
+            setOrigin: function (e) {
+                this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
+                this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
             },
-            show: function() {
-              return "(" + this.x + ", " + this.y + ")";
+            show: function () {
+                return "(" + this.x + ", " + this.y + ")";
             },
-          };
-        
-          
-          // Track the mouse position relative to the center of the container.
-          mouse.setOrigin(this.banner);
-        
-          //-----------------------------------------
-        
-          let counter = 0;
-          let updateRate = 10;
-          let isTimeToUpdate = function() {
+        };
+
+
+        // Track the mouse position relative to the center of the container.
+        mouse.setOrigin(this.banner);
+
+        //-----------------------------------------
+
+        let counter = 0;
+        let updateRate = 10;
+        let isTimeToUpdate = function () {
             return counter++ % updateRate === 0;
-          };
-        
-          //-----------------------------------------
-        
-          let onMouseEnterHandler = function(event) {
+        };
+
+        //-----------------------------------------
+
+        let onMouseEnterHandler = function (event) {
             update(event);
-          };
-        
-          let onMouseLeaveHandler = function() {
+        };
+
+        let onMouseLeaveHandler = function () {
             inner.style = "";
-          };
-        
-          let onMouseMoveHandler = function(event) {
+        };
+
+        let onMouseMoveHandler = function (event) {
             if (isTimeToUpdate()) {
-              update(event);
+                update(event);
             }
-          };
-        
-          //-----------------------------------------
-        
-          let update = function(event) {
+        };
+
+        //-----------------------------------------
+
+        let update = function (event) {
             mouse.updatePosition(event);
             updateTransformStyle(
-              (mouse.y / inner.offsetHeight / 2).toFixed(2),
-              (mouse.x / inner.offsetWidth / 2).toFixed(2)
+                (mouse.y / inner.offsetHeight / 2).toFixed(2),
+                (mouse.x / inner.offsetWidth / 2).toFixed(2)
             );
-          };
-        
-          let updateTransformStyle = function(x, y) {
-            let style = "rotateX(" + x/5 + "deg) rotateY(" + y/5 + "deg)";
+        };
+
+        let updateTransformStyle = function (x, y) {
+            let style = "rotateX(" + x / 5 + "deg) rotateY(" + y / 5 + "deg)";
             inner.style.transform = style;
             inner.style.webkitTransform = style;
             inner.style.mozTransform = style;
             inner.style.msTransform = style;
             inner.style.oTransform = style;
-          };
-        
-          //-----------------------------------------
-        
-          container.onmouseenter = onMouseEnterHandler;
-          container.onmouseleave = onMouseLeaveHandler;
-          container.onmousemove = onMouseMoveHandler;
+        };
+
+        //-----------------------------------------
+
+        container.onmouseenter = onMouseEnterHandler;
+        container.onmouseleave = onMouseLeaveHandler;
+        container.onmousemove = onMouseMoveHandler;
     }
-  
+
     componentDidMount() {
         this.getNews();
         this.getTopNews()
@@ -312,7 +312,7 @@ export default class Home extends Component {
 
         //banner动画
         // this.bannerTrans()
-        
+
 
     }
 
@@ -345,22 +345,22 @@ export default class Home extends Component {
                     </div>
                 </div>
                 <div className='container'>
-                <div key="amache" className='banner_box animated ' ref={(x) => { this.banner = x }} >
-                    <Nav choose={this.props.choose}></Nav>
-                    <div className='home_btn_box'>
-                        <div className='home_btn_box_mask  tada delay-1s'>
-                            <h5>COCOS</h5>
-                            <h5>BLOCKCHAIN EXPEDITION</h5>
-                            <h6>{t.next}</h6>
-                            <div className='play_btn'>
-                                <img src={play} alt="" className='lt' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
-                                <p className='lt'>{t.nextex}</p>
+                    <div key="amache" className='banner_box animated ' ref={(x) => { this.banner = x }} >
+                        <Nav choose={this.props.choose}></Nav>
+                        <div className='home_btn_box'>
+                            <div className='home_btn_box_mask  tada delay-1s'>
+                                <h5>COCOS</h5>
+                                <h5>BLOCKCHAIN EXPEDITION</h5>
+                                <h6>{t.next}</h6>
+                                <div className='play_btn'>
+                                    <img src={play} alt="" className='lt' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
+                                    <p className='lt'>{t.nextex}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                </div>
-                
+
                 <div className='explane'>
                     <div className="expplane_til">{t.explane}</div>
                     <div className="expplane_main">
@@ -404,7 +404,7 @@ export default class Home extends Component {
                         <div className='news_til_more' >
                             <NavLink to="action/news" exact={true}>
                                 <div>
-                                  {t.more}
+                                    {t.more}
                                 </div>
                             </NavLink>
 
@@ -503,7 +503,7 @@ export default class Home extends Component {
                     <div className='map_date'>
                         {this.state.mapList.map((item, index) => {
                             return <div className='map_date_box' key={index}>
-                               {t[item.til3]}
+                                {t[item.til3]}
                             </div>
                         })}
                     </div>
@@ -518,7 +518,7 @@ export default class Home extends Component {
                             {/* <div className='head_w'></div> */}
                             <div className='head_til'>
                                 <div className='head_til_box'>
-                                   {t.hz}
+                                    {t.hz}
                                 </div>
                                 <div className='head_til_b'></div>
                             </div>
