@@ -241,7 +241,7 @@ exports.lang = {
         system5: 'Copyrights & IPs',
     
         map: 'Technical Updates',
-        map1:"Optimized the authority requirements for the transfer of non-homogeneous assets;Optimized the node transaction mechanism;",
+        map1:"Optimized the authority requirements for the transfer of non-homogeneous assets; Optimized the node transaction mechanism;",
         map11:' ',
         map2:'Adjusted the rules of splitting fees for on-chain transactions.Rebuilt the voting mechanism.Adjusted the authorities of the council.',
         map22:' ',

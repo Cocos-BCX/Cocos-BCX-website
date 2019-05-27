@@ -7,6 +7,10 @@ import shotting from '../../images/shooting.png'
 import tool1 from '../../images/tool1.png'
 import tool2 from '../../images/tool2.png'
 import tool3 from '../../images/tool3.png'
+import tool4 from '../../images/chrome.png'
+import tool5 from '../../images/ios.png'
+import tool6 from '../../images/az.png'
+import tool7 from '../../images/desk.png'
 import './product.css'
 
 export default class Product extends Component {
@@ -22,6 +26,10 @@ export default class Product extends Component {
                 {img:tool1,url:'https://explorer.cocosbcx.io/',til:'tname1',auther:'tauther1',gex:'tex1'},
                 {img:tool2,url:'http://www.easywallet.pro/',til:'tname2',auther:'tauther2',gex:'tex2'},
                 {img:tool3,url:'http://gpe.famegame.com.cn/',til:'tname3',auther:'tauther3',gex:'tex3'},
+                {img:tool4,url:'http://gpe.famegame.com.cn/',til:'tname4',auther:'tauther4',gex:'tex4'},
+                {img:tool5,url:'http://gpe.famegame.com.cn/',til:'tname5',auther:'tauther5',gex:'tex5'},
+                {img:tool6,url:'http://gpe.famegame.com.cn/',til:'tname6',auther:'tauther6',gex:'tex6'},
+                {img:tool7,url:'http://gpe.famegame.com.cn/',til:'tname7',auther:'tauther7',gex:'tex7'},
             ],
         }
     }
