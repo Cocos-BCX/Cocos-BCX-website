@@ -141,7 +141,7 @@ export default class Nav extends Component {
                                     <div className='nav_develop_list_box' >
                                         <div className='nav_develop_list_trans' ref={(x) => { this.devList = x }}>
                                             <div className='dev_a'
-                                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7', '_blank'); }}>
+                                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://mp.weixin.qq.com/s/n5FGEBOGYN4P-nknsa1l6g" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7', '_blank'); }}>
                                                 {t.developPlan}
                                             </div>
                                             <div className='dev_a'

@@ -83,16 +83,16 @@ export default class Nav extends Component {
 
                             <NavLink to="/develop" exact={true} activeClassName="active"
                                 className='nav_develop_click navBox'  >
-                                 {t.develop}
+                                {t.develop}
                             </NavLink>
 
                             <div className='dev_a navBox'
-                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://mp.weixin.qq.com/s/EuM8mGfXh3QpwKLN7i9ITA" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7', '_blank'); }}>
-                                 {t.developPlan}
+                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://mp.weixin.qq.com/s/n5FGEBOGYN4P-nknsa1l6g" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7', '_blank'); }}>
+                                {t.developPlan}
                             </div>
                             <div className='dev_a navBox'
                                 onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://cn-dev.cocosbcx.io" : 'https://dev.cocosbcx.io', '_blank'); }} >
-                                 {t.developApi}
+                                {t.developApi}
                             </div>
                             <div className='dev_a navBox'
                                 onClick={(e) => { this.stopImmediate(e); window.open("https://discuss.cocos2d-x.org/c/cocos-bcx", '_blank'); }} >
@@ -114,8 +114,8 @@ export default class Nav extends Component {
                                 className='nav_about_click navBox' > <span ref={(x) => { this.abouttil = x }} >{t.about}  </span>
                             </NavLink>
                             <div className=' navBox'>
-                            <a href={lang==='zh'?'https://www.cocosbcx.io/static/Whitepaper_zh.pdf': 'https://www.cocosbcx.io/static/Whitepaper_en.pdf'} style={{color:'#585858'}}>{t.whiteBook}</a>
-                            
+                                <a href={lang === 'zh' ? 'https://www.cocosbcx.io/static/Whitepaper_zh.pdf' : 'https://www.cocosbcx.io/static/Whitepaper_en.pdf'} style={{ color: '#585858' }}>{t.whiteBook}</a>
+
                             </div>
                             <NavLink to="/about" exact={true} activeClassName="active"
                                 className='nav_about_click navBox' > <span ref={(x) => { this.abouttil = x }} >{t.team} </span>
