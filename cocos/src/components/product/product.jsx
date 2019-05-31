@@ -20,7 +20,7 @@ export default class Product extends Component {
             gameList: [
                 { img: fruit, url: 'http://game.cocos-bcx.io/fruit/', til: 'gname1', auther: 'gauther1', gex: 'gex1' },
                 { img: luck, url: 'http://tyche-bcx.oriongaming.club/', til: 'gname2', auther: 'gauther2', gex: 'gex2' },
-                { img: shotting, url: 'http://ccshooter.oriongaming.club/', til: 'gname3', auther: 'gauther3', gex: 'gex3' },
+                { img: shotting, url: 'http://shooter.cocosbcx.net/', til: 'gname3', auther: 'gauther3', gex: 'gex3' },
             ],
             toolList: [
                 { img: tool1, url: 'https://explorer.cocosbcx.io/', til: 'tname1', auther: 'tauther1', gex: 'tex1' },
