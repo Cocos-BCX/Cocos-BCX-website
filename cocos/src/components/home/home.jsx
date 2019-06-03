@@ -64,6 +64,10 @@ export default class Home extends Component {
             { img: cocos4, text: 'system4' },
             { img: cocos5, text: 'system5' },],
             mapList: [{
+                til1: 'map1',
+                til2: 'map11',
+                til3: 'md1',
+            }, {
                 til1: 'map2',
                 til2: 'map22',
                 til3: 'md2',
@@ -79,10 +83,6 @@ export default class Home extends Component {
                 til1: 'map5',
                 til2: 'map55',
                 til3: 'md5',
-            },{
-                til1: 'map1',
-                til2: 'map11',
-                til3: 'md1',
             },],
             newsTopList: [],
             newsBottomList: []

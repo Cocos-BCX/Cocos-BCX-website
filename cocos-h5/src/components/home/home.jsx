@@ -63,6 +63,10 @@ export default class Home extends Component {
             { img: cocos4, text: 'system4' },
             { img: cocos5, text: 'system5' },],
             mapList: [{
+                til1: 'map1',
+                til2: 'map11',
+                til3: 'md1',
+            }, {
                 til1: 'map2',
                 til2: 'map22',
                 til3: 'md2',
@@ -78,10 +82,6 @@ export default class Home extends Component {
                 til1: 'map5',
                 til2: 'map55',
                 til3: 'md5',
-            },{
-                til1: 'map1',
-                til2: 'map11',
-                til3: 'md1',
             },],
             newsTopList: [],
             newsBottomList: []
@@ -323,14 +323,14 @@ export default class Home extends Component {
                 <div className='news_box'>
                     <div className="news_til_box">
                         <div className="news_til">
-                        <h3>{t.news}</h3>
+                            <h3>{t.news}</h3>
                             <div className='news_line'></div>
                         </div>
                         <div className="news_til_mask"></div>
                         <div className='news_til_more' >
                             <NavLink to="action/news" exact={true}>
                                 <div>
-                                {t.more}
+                                    {t.more}
                                 </div>
                             </NavLink>
 
@@ -369,7 +369,7 @@ export default class Home extends Component {
                 <div className='system'>
                     <div className="system_til_box">
                         <div className="sys_til_our">
-                        <h4>{t.system}</h4>
+                            <h4>{t.system}</h4>
                         </div>
                     </div>
                     <img src={cocoslogo} alt="" className='sys_logo' />
@@ -393,7 +393,7 @@ export default class Home extends Component {
                         <div className='news_til_more' >
                             <NavLink to="action/yb" exact={true}>
                                 <div>
-                                {t.more}
+                                    {t.more}
                                 </div>
                             </NavLink>
 
@@ -404,7 +404,7 @@ export default class Home extends Component {
                             return <div className='map_s_box lt' key={index}>
                                 <h5 className='lt'>{t[item.til3]}</h5>
                                 <p style={{ "WebkitBoxOrient": "vertical" }} className='jishu lt'>
-                                {t[item.til1]}
+                                    {t[item.til1]}
                                 </p>
                             </div>
                         })}
@@ -427,7 +427,7 @@ export default class Home extends Component {
                             </div>
                             <div className='head_til'>
                                 <div className='head_til_box'>
-                                {t.hz}
+                                    {t.hz}
                                 </div>
                                 <div className='head_til_b'></div>
                             </div>
@@ -454,7 +454,7 @@ export default class Home extends Component {
                             </div>
                         </div>
                         <div className='hezuo_sm'>
-                        <h6>{t.hzsm}</h6>
+                            <h6>{t.hzsm}</h6>
                             <p> {t.hzsmex}</p>
                         </div>
                     </div>
