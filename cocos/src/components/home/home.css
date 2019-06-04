@@ -45,7 +45,7 @@
 }
 .container .banner_box {
   width: 100%;
-  height: 714px;
+  height: 914px;
   margin: auto;
   background: url('https://jdi.cocosbcx.net/image/cocosbcx/banner24.jpg') no-repeat center;
   background-size: cover;
@@ -58,7 +58,7 @@
 .container .banner_box .home_btn_box {
   width: 1150px;
   margin: auto;
-  margin-top: 313px;
+  margin-top: 413px;
 }
 .container .banner_box .home_btn_box .home_btn_box_mask {
   padding-left: 20px;
@@ -131,7 +131,7 @@
 @media screen and (max-width: 1400px) {
   .container .banner_box {
     width: 100%;
-    height: 600px;
+    height: 700px;
     margin: auto;
     background: url('https://jdi.cocosbcx.net/image/cocosbcx/banner24.jpg') no-repeat center;
     background-size: cover;
@@ -144,7 +144,7 @@
   .container .banner_box .home_btn_box {
     width: 862px;
     margin: auto;
-    margin-top: 265px;
+    margin-top: 315px;
   }
   .container .bannerg_box {
     background: url('https://jdi.cocosbcx.net/image/cocosbcx/bannergg.png') no-repeat center;
