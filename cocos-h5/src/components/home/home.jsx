@@ -3,6 +3,8 @@ import { getLang } from '../../utils/chooselang'
 import { NavLink } from "react-router-dom";
 import Nav from '../nav/nav'
 import { get, } from '../../api/api'
+import Swiper from 'swiper'
+import 'swiper/dist/css/swiper.min.css'
 import play from '../../images/play.png'
 import fenge from '../../images/fenge.png'
 import game from '../../images/icon_game.png'
@@ -86,6 +88,26 @@ export default class Home extends Component {
             newsTopList: [],
             newsBottomList: []
         }
+    }
+    //banner轮播
+    runbanner = () => {
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            lazy: {
+                //loadPrevNext: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
     }
     //获取指定3篇新闻
     getTopNews = () => {
@@ -231,6 +253,9 @@ export default class Home extends Component {
         };
     }
     componentDidMount() {
+        window.onload = (() => {
+            this.runbanner()
+        })
         this.getNews();
         this.getTopNews()
         this.closeVideo()
@@ -268,18 +293,38 @@ export default class Home extends Component {
                         }
                     </div>
                 </div>
-                <div className='banner_box'>
+                <div className='nav-box'>
                     <Nav></Nav>
-                    <img src={logow} className='wlogo' alt="" />
-                    <div className={lang === 'zh' ? 'home_btn_box' : 'home_btn_box home_btn_box_en'}>
-                        <h5>COCOS</h5>
-                        <h5>BLOCKCHAIN EXPEDITION</h5>
-                        <h6>{t.next}</h6>
-                        <div className='play_btn'>
-                            <img src={play} className='play_btn lt' alt='' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
-                            <p style={{ "WebkitBoxOrient": "vertical" }} className='lt'>{t.nextex}</p>
+                </div>
+                <div className="swiper-container" >
+                    <div className="swiper-wrapper" >
+                        <div className="swiper-slide slide-1">
+                            <div className='banner_box banner_box_g'>
+                                <img src={logow} className='wlogo' alt="" />
+                                <div className={lang === 'zh' ? 'home_btn_box' : 'home_btn_box home_btn_box_en'}>
+                                    <div className='til'>{t.gtil}</div>
+                                    <div className='line'></div>
+                                    <p className='dh'>{t.gdh}</p>
+                                    <p className='date'>{t.gdate}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="swiper-slide slide-2">
+                            <div className='banner_box'>
+                                <img src={logow} className='wlogo' alt="" />
+                                <div className={lang === 'zh' ? 'home_btn_box' : 'home_btn_box home_btn_box_en'}>
+                                    <h5>COCOS</h5>
+                                    <h5>BLOCKCHAIN EXPEDITION</h5>
+                                    <h6>{t.next}</h6>
+                                    <div className='play_btn'>
+                                        <img src={play} className='play_btn lt' alt='' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
+                                        <p style={{ "WebkitBoxOrient": "vertical" }} className='lt'>{t.nextex}</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div className="swiper-pagination"></div>
                 </div>
                 <div className='explane'>
                     <div className="expplane_til">{t.explane}</div>

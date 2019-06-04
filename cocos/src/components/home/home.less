@@ -43,11 +43,23 @@
 
 .container {
     perspective: 25px;
+    position: relative;
+    width: 100%;
+
+    .nav-box {
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        top: 0;
+        left: 0;
+        z-index: 20;
+    }
+
 
     .banner_box {
         // width: 1600px;
         width: 100%;
-        height: 902px;
+        height: 714px;
         margin: auto;
         background: url('https://jdi.cocosbcx.net/image/cocosbcx/banner24.jpg') no-repeat center;
         background-size: cover;
@@ -60,7 +72,7 @@
         .home_btn_box {
             width: 1150px;
             margin: auto;
-            margin-top: 353px;
+            margin-top: 313px;
 
             .home_btn_box_mask {
                 padding-left: 20px;
@@ -111,6 +123,40 @@
 
 
         }
+
+    }
+
+    .bannerg_box {
+        background: url('https://jdi.cocosbcx.net/image/cocosbcx/bannergg.png') no-repeat center;
+        background-size: cover;
+
+        .home_btn_box_g {
+            width: 1120px;
+            margin: auto;
+            margin-top: 243px;
+            color: #fff;
+            text-align: right;
+
+            .til {
+                font-size: 38px;
+            }
+
+            .line {
+                width: 50px;
+                height: 4px;
+                background: rgba(255, 255, 255, 1);
+                float: right;
+                margin-top: 38px;
+            }
+            .dh{
+                font-size: 38px;
+                margin-top: 80px;
+            }
+            .date{
+                margin-top: 46px;
+                font-size: 32px;
+            }
+        }
     }
 }
 
@@ -120,7 +166,7 @@
         .banner_box {
             // width: 1600px;
             width: 100%;
-            height: 800px;
+            height: 600px;
             margin: auto;
             background: url('https://jdi.cocosbcx.net/image/cocosbcx/banner24.jpg') no-repeat center;
             background-size: cover;
@@ -133,7 +179,7 @@
             .home_btn_box {
                 width: 862px;
                 margin: auto;
-                margin-top: 365px;
+                margin-top: 265px;
 
                 // h5 {
                 //     color: #fff;
@@ -172,6 +218,39 @@
                 //         line-height: 15px;
                 //     }
                 // }
+            }
+        }
+        .bannerg_box {
+            background: url('https://jdi.cocosbcx.net/image/cocosbcx/bannergg.png') no-repeat center;
+            background-size: cover;
+    
+            .home_btn_box_g {
+                width: 1120px;
+                margin: auto;
+                margin-top: 263px;
+                color: #fff;
+                text-align: right;
+    
+                .til {
+                    font-size: 38px;
+                }
+    
+                .line {
+                    width: 50px;
+                    height: 4px;
+                    background: rgba(255, 255, 255, 1);
+                    float: right;
+                    margin-top: 38px;
+                }
+                .dh{
+                    font-size: 38px;
+                    margin-top: 80px;
+                }
+                .date{
+                    margin-top: 46px;
+                    font-size: 32px;
+                }
+                zoom: .75;
             }
         }
     }
@@ -244,8 +323,9 @@
                     margin-top: 30px;
                 }
             }
-            &:nth-child(2){
-                img{
+
+            &:nth-child(2) {
+                img {
                     width: 55px;
                 }
             }
@@ -333,8 +413,9 @@
                         margin-top: 26px;
                     }
                 }
-                &:nth-child(2){
-                    img{
+
+                &:nth-child(2) {
+                    img {
                         width: 46px;
                     }
                 }
@@ -896,11 +977,11 @@
             transform: skewX(-17deg);
             background: #585858;
             margin-left: 75px;
-          
+
 
             &:nth-child(1) {
                 margin-left: 8px;
-             
+
             }
 
             img {
@@ -960,7 +1041,7 @@
                 left: 5px;
                 top: 96px;
                 width: 145px;
-            
+
             }
         }
     }

@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import Nav from '../nav/nav'
 import { get, } from '../../api/api'
 import { getLang } from '../../utils/chooselang'
+import Swiper from 'swiper'
+import 'swiper/dist/css/swiper.min.css'
 import play from '../../images/play.png'
 import fenge from '../../images/fenge.png'
 import game from '../../images/icon_game.png'
@@ -87,6 +89,26 @@ export default class Home extends Component {
             newsTopList: [],
             newsBottomList: []
         }
+    }
+    //banner轮播
+    runbanner = () => {
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+              },
+            lazy: {
+                //loadPrevNext: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
     }
     //获取指定3篇新闻
     getTopNews = () => {
@@ -301,7 +323,14 @@ export default class Home extends Component {
         container.onmousemove = onMouseMoveHandler;
     }
 
+    //计算轮播尺寸
+    addSize = () => {
+
+    }
     componentDidMount() {
+        window.onload = (() => {
+            this.runbanner()
+        })
         this.getNews();
         this.getTopNews()
         this.closeVideo();
@@ -309,9 +338,8 @@ export default class Home extends Component {
         this.jst()
         this.hzt()
         this.hzdt()
+        this.addSize()
 
-        //banner动画
-        // this.bannerTrans()
 
 
     }
@@ -345,19 +373,41 @@ export default class Home extends Component {
                     </div>
                 </div>
                 <div className='container'>
-                    <div key="amache" className='banner_box animated ' ref={(x) => { this.banner = x }} >
+                    <div className="nav-box">
                         <Nav choose={this.props.choose}></Nav>
-                        <div className='home_btn_box'>
-                            <div className='home_btn_box_mask  tada delay-1s'>
-                                <h5>COCOS</h5>
-                                <h5>BLOCKCHAIN EXPEDITION</h5>
-                                <h6>{t.next}</h6>
-                                <div className='play_btn'>
-                                    <img src={play} alt="" className='lt' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
-                                    <p className='lt'>{t.nextex}</p>
+                    </div>
+                    <div className="swiper-container" >
+                        <div className="swiper-wrapper" >
+
+                            <div className="swiper-slide slide-2" ref={(x) => { this.bannerBox1 = x }}>
+                                <div key="amache" className='banner_box bannerg_box full' ref={(x) => { this.banner = x }} >
+                                    <div className='home_btn_box_g'>
+                                        <div className='til'>{t.gtil}</div>
+                                        <div className='line'></div>
+                                        <p className='dh'>{t.gdh}</p>
+                                        <p className='date'>{t.gdate}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="swiper-slide slide-1" ref={(x) => { this.bannerBox = x }}>
+                                <div key="amache" className='banner_box animated full' ref={(x) => { this.banner = x }} >
+                                    <div className='home_btn_box'>
+                                        <div className='home_btn_box_mask  tada delay-1s'>
+                                            <h5>COCOS</h5>
+                                            <h5>BLOCKCHAIN EXPEDITION</h5>
+                                            <h6>{t.next}</h6>
+                                            <div className='play_btn'>
+                                                <img src={play} alt="" className='lt' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
+                                                <p className='lt'>{t.nextex}</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div className="swiper-pagination"></div>
+                        <div className="swiper-button-prev swiper-button-white"></div>
+                        <div className="swiper-button-next swiper-button-white"></div>
                     </div>
                 </div>
 

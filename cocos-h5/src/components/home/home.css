@@ -15,6 +15,14 @@
   display: flex;
   align-items: center;
 }
+.nav-box {
+  position: absolute;
+  width: 100%;
+  height: 1rem;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
 .banner_box {
   width: 100%;
   margin: auto;
@@ -67,6 +75,35 @@
 }
 .banner_box .home_btn_box_en {
   margin-top: 1.1rem;
+}
+.banner_box_g {
+  background: url('https://jdi.cocosbcx.net/image/cocosbcx/bannerggh5.png') no-repeat center;
+  background-size: 7.5rem 5.47rem;
+}
+.banner_box_g .home_btn_box {
+  width: 5.6rem;
+  margin: auto;
+  color: #fff;
+  text-align: right;
+  margin-top: 1.8rem;
+}
+.banner_box_g .home_btn_box .til {
+  font-size: .36rem;
+}
+.banner_box_g .home_btn_box .line {
+  width: 50px;
+  height: 4px;
+  background: #ffffff;
+  float: right;
+  margin-top: 38px;
+}
+.banner_box_g .home_btn_box .dh {
+  font-size: .36rem;
+  margin-top: 80px;
+}
+.banner_box_g .home_btn_box .date {
+  margin-top: 46px;
+  font-size: .32rem;
 }
 .explane {
   overflow: hidden;

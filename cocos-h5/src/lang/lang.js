@@ -12,6 +12,10 @@ exports.lang = {
         about: '关于我们',
         whiteBook: '白皮书',
         team: '团队与合作单位',
+
+        gtil:'Cocos-BCX 测试网 1.0 正式发布',
+        gdh:'代号"冈仁波齐"',
+        gdate:'2019.06.06',
         //首页
         next:'下一代游戏数字经济平台',
         nextex:'Cocos-BCX是下一代游戏数字经济平台，提供完整游戏开发工具同时提供完善公链生态，致力于让区块链游戏开发更简单',
@@ -217,6 +221,10 @@ exports.lang = {
         about: 'ABOUT',
         whiteBook: 'WHITE PAPER',
         team: 'TEAM & PARTNERS',
+
+        gtil:'COCOS-BCX TESTNET 1.0 "GANG RINPOCHE"',
+        gdh:'PUBLIC TESTING',
+        gdate:'LAUNCHING ON 06.06.2019',
         //首页
         next:'Next-Gen Digital Game Economy',
         nextex:'Cocos-BCX is committed to facilitate the development of blockchain gaming. As the platform for the next generation of digital game economy, Cocos-BCX provides a complete set of development tools, as well as an integrated ecosystem',
