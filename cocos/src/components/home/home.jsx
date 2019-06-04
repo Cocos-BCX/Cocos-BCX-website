@@ -51,6 +51,7 @@ import w14 from '../../images/white(14).png'
 import jia from '../../images/jia.png'
 import close from '../../images/close.png'
 import dline from '../../images/dline.png'
+import bgaaa from '../../images/bgaaa.png'
 import './home.css'
 
 export default class Home extends Component {
@@ -97,7 +98,7 @@ export default class Home extends Component {
             autoplay: {
                 delay: 4000,
                 disableOnInteraction: false,
-              },
+            },
             lazy: {
                 //loadPrevNext: true,
             },
@@ -328,9 +329,9 @@ export default class Home extends Component {
 
     }
     componentDidMount() {
-        // window.onload = (() => {
-        //     this.runbanner()
-        // })
+        window.onload = (() => {
+            this.runbanner()
+        })
         this.getNews();
         this.getTopNews()
         this.closeVideo();
@@ -379,7 +380,7 @@ export default class Home extends Component {
                     <div className="swiper-container" >
                         <div className="swiper-wrapper" >
 
-                            {/* <div className="swiper-slide slide-2" ref={(x) => { this.bannerBox1 = x }}>
+                            <div className="swiper-slide slide-2" ref={(x) => { this.bannerBox1 = x }}>
                                 <div key="amache" className='banner_box bannerg_box full' ref={(x) => { this.banner = x }} >
                                     <div className='home_btn_box_g'>
                                         <div className='til'>{t.gtil}</div>
@@ -388,7 +389,7 @@ export default class Home extends Component {
                                         <p className='date'>{t.gdate}</p>
                                     </div>
                                 </div>
-                            </div> */}
+                            </div>
                             <div className="swiper-slide slide-1" ref={(x) => { this.bannerBox = x }}>
                                 <div key="amache" className='banner_box animated full' ref={(x) => { this.banner = x }} >
                                     <div className='home_btn_box'>
@@ -405,9 +406,9 @@ export default class Home extends Component {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="swiper-pagination"></div>
+                        <div className="swiper-pagination"></div>
                         <div className="swiper-button-prev swiper-button-white"></div>
-                        <div className="swiper-button-next swiper-button-white"></div> */}
+                        <div className="swiper-button-next swiper-button-white"></div>
                     </div>
                 </div>
 

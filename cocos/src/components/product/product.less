@@ -112,6 +112,8 @@
                         img {
                             width: 100%;
                             height: 100%;
+                            border-radius: 20px;
+
                         }
                     }
 
@@ -124,7 +126,11 @@
                             color: rgba(105, 105, 105, 1);
                             line-height: 31px;
                         }
-
+                        .w-box{
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                        }
                         .wordroom {
                             margin-top: 16px;
                             background: url('../../images/cocos3.png') no-repeat;
@@ -134,6 +140,27 @@
                             font-weight: 400;
                             color: rgba(105, 105, 105, 1);
                             line-height: 20px;
+                        }
+
+                        .img-icon {
+                            width: 25px;
+                            height: 25px;
+                            margin-left: 20px;
+                            position: relative;
+                            cursor: pointer;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .iosma{
+                                position: absolute;
+                                width: 120px;
+                                height: 120px;
+                                top: 0;
+                                left: -40px;
+                                z-index: 10;
+                            }
                         }
 
                         p {
@@ -197,7 +224,7 @@
                 font-size: 18px;
                 // font-weight: normal;
                 color: rgba(255, 255, 255, 1);
-                line-height:  48px;
+                line-height: 48px;
 
                 span {
                     display: inline-block;
@@ -221,7 +248,7 @@
                 .news_til_box {
                     height: 48px;
                     position: relative;
-        
+
                     .news_til {
                         width: 151px;
                         height: 46px;
@@ -229,7 +256,7 @@
                         transform: skewX(-20deg);
                         position: relative;
                         margin-left: 11.6px;
-        
+
                         h3 {
                             transform: skewX(20deg);
                             letter-spacing: 1px;
@@ -240,16 +267,16 @@
                             text-align: center;
                             margin-left: -5px;
                         }
-        
-        
-        
+
+
+
                         .news_line {
                             width: 876px;
                             height: 4px;
                             background: rgba(42, 217, 254, 1);
                         }
                     }
-        
+
                     .news_til_mask {
                         position: absolute;
                         width: 150px;
@@ -260,7 +287,7 @@
                         z-index: -2;
                         transform: skewX(-20deg);
                     }
-        
+
                     .news_til_more {
                         position: absolute;
                         top: 9px;
@@ -271,7 +298,7 @@
                         border: 1px solid rgba(221, 221, 221, 1);
                         transform: skewX(10deg);
                         cursor: pointer;
-        
+
                         div {
                             transform: skewX(-10deg);
                             font-size: 11px;
@@ -281,7 +308,7 @@
                             text-align: center;
                         }
                     }
-        
+
                 }
 
                 .dev_game_box {

@@ -64,14 +64,11 @@ export default class About extends Component {
             teamList: [
                 { pic: p1, ly: ly, ex: 'p1ex1', name: 'p1', position: 'fqr1', url: 'https://www.linkedin.com/in/%E6%98%8A%E8%8A%9D-%E9%99%88-51b805108/', icon: ly },
                 { pic: p2, ly: ly, ex: 'plex2', name: 'p2', position: 'fqr2', url: 'https://www.linkedin.com/in/richardyangr/', icon: ly },
-                { pic: p3, ex: 'plex3', name: 'p3', position: 'fqr3' },
+                { pic: p3, ly: ly, ex: 'plex3', name: 'p3', position: 'fqr3', url: 'https://www.linkedin.com/in/hongzhixiong/', icon: ly },
                 { pic: p4, ex: 'plex4', name: 'p4', position: 'fqr4' },
                 { pic: p5, ex: 'plex5', name: 'p5', position: 'fqr5' },
                 { pic: p6, ex: 'plex6', name: 'p6', position: 'fqr6' },
                 { pic: p7, ex: 'plex7', name: 'p7', position: 'fqr7' },
-                { pic: p8, ex: 'plex8', name: 'p8', position: 'fqr8' },
-                { pic: p9, ex: 'plex9', name: 'p9', position: 'fqr9' },
-                { pic: p10, ex: 'plex10', name: 'p10', position: 'fqr10' },
                 { pic: p12, ex: 'plex12', name: 'p12', position: 'fqr12' },
             ],
             adviser: [
@@ -80,6 +77,7 @@ export default class About extends Component {
                 { pic: p16, ly: ly, url: 'https://www.linkedin.com/in/edithyeung/', ex: 'plex16', name: 'p16', position: 'fqr16' },
                 { pic: p17, ly: ly, url: 'https://www.linkedin.com/in/mccannatron/', ex: 'plex17', name: 'p17', position: 'fqr17' },
                 { pic: p18, ex: 'plex18', name: 'p18', position: 'fqr18' },
+                { pic: p8, ex: 'plex8', name: 'p8', position: 'fqr8' },
 
             ],
             img: [
@@ -160,14 +158,14 @@ export default class About extends Component {
                                 <img src={logow} alt="" />
                                 <p>{t.whiteBook}</p>
                             </div>
-                            <a href={lang === 'zh' ? 'https://www.cocosbcx.io/static/Whitepaper_zh.pdf': 'https://www.cocosbcx.io/static/Whitepaper_en.pdf'} target="_blank" className='w_book ' rel="noopener noreferrer">
-                               {t.lookBook}
+                            <a href={lang === 'zh' ? 'https://www.cocosbcx.io/static/Whitepaper_zh.pdf' : 'https://www.cocosbcx.io/static/Whitepaper_en.pdf'} target="_blank" className='w_book ' rel="noopener noreferrer">
+                                {t.lookBook}
                             </a>
                         </div>
 
                     </div>
                 </div>
-                <div className='team_ex'>
+                {/* <div className='team_ex'>
                     <div className="news_til_box">
                         <div className="news_til">
                             <h3>{t.teamextil}</h3>
@@ -176,7 +174,7 @@ export default class About extends Component {
                         <div className="news_til_mask"></div>
                     </div>
                     <p>{t.teamex}</p>
-                </div>
+                </div> */}
                 <div className='team_box'>
                     <div className="news_til_box">
                         <div className="news_til">
@@ -244,7 +242,7 @@ export default class About extends Component {
                             <div className='head_w'></div>
                             <div className='head_til'>
                                 <div className='head_til_box'>
-                                   {t.hezuojg}
+                                    {t.hezuojg}
                                 </div>
                                 <div className='head_til_b'></div>
                             </div>

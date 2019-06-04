@@ -253,9 +253,9 @@ export default class Home extends Component {
         };
     }
     componentDidMount() {
-        // window.onload = (() => {
-        //     this.runbanner()
-        // })
+        window.onload = (() => {
+            this.runbanner()
+        })
         this.getNews();
         this.getTopNews()
         this.closeVideo()
@@ -298,7 +298,7 @@ export default class Home extends Component {
                 </div>
                 <div className="swiper-container" >
                     <div className="swiper-wrapper" >
-                        {/* <div className="swiper-slide slide-1">
+                        <div className="swiper-slide slide-1">
                             <div className='banner_box banner_box_g'>
                                 <img src={logow} className='wlogo' alt="" />
                                 <div className={lang === 'zh' ? 'home_btn_box' : 'home_btn_box home_btn_box_en'}>
@@ -308,7 +308,7 @@ export default class Home extends Component {
                                     <p className='date'>{t.gdate}</p>
                                 </div>
                             </div>
-                        </div> */}
+                        </div>
                         <div className="swiper-slide slide-2">
                             <div className='banner_box'>
                                 <img src={logow} className='wlogo' alt="" />

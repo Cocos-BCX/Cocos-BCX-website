@@ -91,18 +91,18 @@
   font-size: .36rem;
 }
 .banner_box_g .home_btn_box .line {
-  width: 50px;
-  height: 4px;
+  width: .5rem;
+  height: 2px;
   background: #ffffff;
   float: right;
-  margin-top: 38px;
+  margin-top: .38rem;
 }
 .banner_box_g .home_btn_box .dh {
   font-size: .36rem;
-  margin-top: 80px;
+  margin-top: .8rem;
 }
 .banner_box_g .home_btn_box .date {
-  margin-top: 46px;
+  margin-top: .46rem;
   font-size: .32rem;
 }
 .explane {

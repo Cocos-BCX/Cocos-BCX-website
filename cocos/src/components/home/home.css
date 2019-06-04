@@ -45,7 +45,7 @@
 }
 .container .banner_box {
   width: 100%;
-  height: 914px;
+  height: 675px;
   margin: auto;
   background: url('https://jdi.cocosbcx.net/image/cocosbcx/banner24.jpg') no-repeat center;
   background-size: cover;
@@ -58,7 +58,7 @@
 .container .banner_box .home_btn_box {
   width: 1150px;
   margin: auto;
-  margin-top: 413px;
+  margin-top: 313px;
 }
 .container .banner_box .home_btn_box .home_btn_box_mask {
   padding-left: 20px;
@@ -100,7 +100,7 @@
   line-height: 19px;
 }
 .container .bannerg_box {
-  background: url('https://jdi.cocosbcx.net/image/cocosbcx/bannergg.png') no-repeat center;
+  background: url('../../images/bgaaa.jpg') no-repeat center;
   background-size: cover;
 }
 .container .bannerg_box .home_btn_box_g {
@@ -108,30 +108,30 @@
   margin: auto;
   margin-top: 243px;
   color: #fff;
-  text-align: right;
+  text-align: left;
 }
 .container .bannerg_box .home_btn_box_g .til {
-  font-size: 38px;
+  font-size: 36px;
 }
 .container .bannerg_box .home_btn_box_g .line {
   width: 50px;
   height: 4px;
   background: #ffffff;
-  float: right;
+  float: left;
   margin-top: 38px;
 }
 .container .bannerg_box .home_btn_box_g .dh {
-  font-size: 38px;
+  font-size: 36px;
   margin-top: 80px;
 }
 .container .bannerg_box .home_btn_box_g .date {
   margin-top: 46px;
-  font-size: 32px;
+  font-size: 30px;
 }
 @media screen and (max-width: 1400px) {
   .container .banner_box {
     width: 100%;
-    height: 700px;
+    height: 560px;
     margin: auto;
     background: url('https://jdi.cocosbcx.net/image/cocosbcx/banner24.jpg') no-repeat center;
     background-size: cover;
@@ -144,10 +144,10 @@
   .container .banner_box .home_btn_box {
     width: 862px;
     margin: auto;
-    margin-top: 315px;
+    margin-top: 265px;
   }
   .container .bannerg_box {
-    background: url('https://jdi.cocosbcx.net/image/cocosbcx/bannergg.png') no-repeat center;
+    background: url('../../images/bgaaa.jpg') no-repeat center;
     background-size: cover;
   }
   .container .bannerg_box .home_btn_box_g {
@@ -155,7 +155,7 @@
     margin: auto;
     margin-top: 263px;
     color: #fff;
-    text-align: right;
+    text-align: left;
     zoom: .75;
   }
   .container .bannerg_box .home_btn_box_g .til {
@@ -165,7 +165,7 @@
     width: 50px;
     height: 4px;
     background: #ffffff;
-    float: right;
+    float: left;
     margin-top: 38px;
   }
   .container .bannerg_box .home_btn_box_g .dh {

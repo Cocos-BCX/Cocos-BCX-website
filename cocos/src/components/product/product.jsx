@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import Nav from '../nav/nav'
 import { getLang } from '../../utils/chooselang'
-import fruit from '../../images/fruit.png'
 import luck from '../../images/luck.png'
 import shotting from '../../images/shooting.png'
+import dice from '../../images/dice.png'
 import tool1 from '../../images/tool1.png'
 import tool2 from '../../images/tool2.png'
-import tool3 from '../../images/tool3.png'
-import tool4 from '../../images/chrome.png'
+// import tool3 from '../../images/tool3.png'
+// import tool4 from '../../images/chrome.png'
 import tool5 from '../../images/ios.png'
-import tool6 from '../../images/az.png'
-import tool7 from '../../images/desk.png'
+import ios from '../../images/iosicon.png'
+import az from '../../images/azicon.png'
+import iosma from '../../images/iosma.png'
 import './product.css'
 
 export default class Product extends Component {
@@ -18,14 +19,15 @@ export default class Product extends Component {
         super(props);
         this.state = {
             gameList: [
-                { img: fruit, url: 'http://game.cocos-bcx.io/fruit/', til: 'gname1', auther: 'gauther1', gex: 'gex1' },
                 { img: luck, url: 'http://tyche-bcx.oriongaming.club/', til: 'gname2', auther: 'gauther2', gex: 'gex2' },
                 { img: shotting, url: 'http://shooter.cocosbcx.net/', til: 'gname3', auther: 'gauther3', gex: 'gex3' },
+                { img: dice, url: 'http://dice.yezi.one/', til: 'gname4', auther: 'gauther4', gex: 'gex4' },
             ],
             toolList: [
                 { img: tool1, url: 'https://explorer.cocosbcx.io/', til: 'tname1', auther: 'tauther1', gex: 'tex1' },
-                { img: tool2, url: 'http://www.easywallet.pro/', til: 'tname2', auther: 'tauther2', gex: 'tex2' },
-                { img: tool3, url: 'http://gpe.famegame.com.cn/', til: 'tname3', auther: 'tauther3', gex: 'tex3' },
+                { img: tool2, url: 'http://cocos-terminal.com/', til: 'tname2', auther: 'tauther2', gex: 'tex2' },
+                // { img: tool5, url: 'http://www.easywallet.pro/', til: 'tname5', auther: 'tauther5', gex: 'tex5' },
+                // { img: tool3, url: 'http://gpe.famegame.com.cn/', til: 'tname3', auther: 'tauther3', gex: 'tex3' },
             ],
         }
     }
@@ -99,6 +101,26 @@ export default class Product extends Component {
                                     </div>
                                 </a>
                             })}
+                            {/* <div className='dev_game_left lt' >
+                                <div className='img_box lt'>
+                                    <img src={tool5} alt="" />
+                                </div>
+                                <div className='dev_text_box lt'>
+                                    <h4>{t.tname5}</h4>
+                                    <div className='w-box'>
+                                        <div className='wordroom'>{t.tauther5}</div>
+                                        <div className='img-icon'>
+                                            <img src={ios} alt="" />
+                                            <img className="iosma" src={iosma} alt="" />
+                                        </div>
+                                        <div className='img-icon'>
+                                            <img src={az} alt="" />
+                                        </div>
+                                    </div>
+
+                                    <p>{t.tex5}</p>
+                                </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

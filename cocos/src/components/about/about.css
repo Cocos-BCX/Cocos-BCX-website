@@ -102,7 +102,7 @@
 }
 .about .team_box .team_pic_box {
   margin: auto;
-  height: 1100px;
+  height: 700px;
   padding-bottom: 40px;
 }
 .about .team_box .team_pic_box .team_every {
@@ -202,7 +202,7 @@
 }
 .about .adviser_box .team_pic_box {
   margin: auto;
-  height: 346px;
+  height: 700px;
   padding-bottom: 20px;
 }
 .about .adviser_box .team_pic_box .team_every {
@@ -388,7 +388,7 @@
   }
   .about .team_box .team_pic_box {
     margin: auto;
-    height: 825px;
+    height: 520px;
     padding-bottom: 40px;
   }
   .about .team_box .team_pic_box .team_every {
@@ -489,7 +489,7 @@
   }
   .about .adviser_box .team_pic_box {
     margin: auto;
-    height: 265px;
+    height: 500px;
     padding-bottom: 20px;
   }
   .about .adviser_box .team_pic_box .team_every {

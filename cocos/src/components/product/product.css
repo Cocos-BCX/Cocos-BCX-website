@@ -96,6 +96,7 @@
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .img_box img {
   width: 100%;
   height: 100%;
+  border-radius: 20px;
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box {
   margin-left: 39px;
@@ -106,6 +107,11 @@
   color: #696969;
   line-height: 31px;
 }
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .w-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .wordroom {
   margin-top: 16px;
   background: url('../../images/cocos3.png') no-repeat;
@@ -115,6 +121,25 @@
   font-weight: 400;
   color: #696969;
   line-height: 20px;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .img-icon {
+  width: 25px;
+  height: 25px;
+  margin-left: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .img-icon img {
+  width: 100%;
+  height: 100%;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .img-icon .iosma {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 0;
+  left: -40px;
+  z-index: 10;
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box p {
   width: 323px;
