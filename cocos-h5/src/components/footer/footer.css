@@ -231,6 +231,9 @@
   margin-top: .6rem;
   font-size: 0;
 }
+.footer .footer_box .footer_img .zs_box img {
+  width: .35rem;
+}
 .footer .footer_box .footer_img .zs_box .ma {
   position: fixed;
   top: 0;

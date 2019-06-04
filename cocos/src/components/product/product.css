@@ -142,6 +142,21 @@
   z-index: 10;
   display: none;
 }
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .img-icon .azma {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 25px;
+  left: -48px;
+  z-index: 10;
+  display: none;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .ios:hover .iosma {
+  display: block;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .az:hover .azma {
+  display: block;
+}
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box p {
   width: 323px;
   height: 106px;

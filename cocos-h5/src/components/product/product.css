@@ -101,6 +101,11 @@
   font-weight: bold;
   color: #696969;
 }
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .w-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .wordroom {
   margin-top: .16rem;
   background: url('../../images/people.png') 0 0rem no-repeat;
@@ -109,6 +114,42 @@
   font-size: .2rem;
   font-weight: 400;
   color: #696969;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .img-icon {
+  width: .4rem;
+  height: .4rem;
+  margin-left: .2rem;
+  position: relative;
+  cursor: pointer;
+  font-size: 0;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .img-icon img {
+  width: 100%;
+  height: 100%;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .img-icon .iosma {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 25px;
+  left: -48px;
+  z-index: 10;
+  display: none;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .img-icon .azma {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 25px;
+  left: -48px;
+  z-index: 10;
+  display: none;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .ios:hover .iosma {
+  display: block;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .az:hover .azma {
+  display: block;
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box p {
   width: 3.55rem;

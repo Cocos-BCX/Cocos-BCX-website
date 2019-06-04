@@ -12,6 +12,7 @@ import tool5 from '../../images/ios.png'
 import ios from '../../images/iosicon.png'
 import az from '../../images/azicon.png'
 import iosma from '../../images/iosma.png'
+import azma from '../../images/azma.png'
 import './product.css'
 
 export default class Product extends Component {
@@ -101,7 +102,7 @@ export default class Product extends Component {
                                     </div>
                                 </a>
                             })}
-                            {/* <div className='dev_game_left lt' >
+                            <div className='dev_game_left lt' >
                                 <div className='img_box lt'>
                                     <img src={tool5} alt="" />
                                 </div>
@@ -109,18 +110,19 @@ export default class Product extends Component {
                                     <h4>{t.tname5}</h4>
                                     <div className='w-box'>
                                         <div className='wordroom'>{t.tauther5}</div>
-                                        <div className='img-icon'>
+                                        <div className='img-icon ios'>
                                             <img src={ios} alt="" />
                                             <img className="iosma" src={iosma} alt="" />
                                         </div>
-                                        <div className='img-icon'>
+                                        <div className='img-icon az'>
                                             <img src={az} alt="" />
+                                            <img className="azma" src={azma} alt="" />
                                         </div>
                                     </div>
 
                                     <p>{t.tex5}</p>
                                 </div>
-                            </div> */}
+                            </div>
                         </div>
                     </div>
                 </div>

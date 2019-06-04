@@ -92,12 +92,13 @@
             .dev_game_box {
                 overflow: hidden;
                 padding-bottom: .5rem;
+
                 .dev_game_left {
                     overflow: hidden;
                     margin-top: .35rem;
 
                     .img_box {
-                            margin-top: .1rem;
+                        margin-top: .1rem;
                         width: 2.2rem;
                         height: 2.2rem;
 
@@ -116,23 +117,69 @@
                             color: rgba(105, 105, 105, 1);
                         }
 
+                        .w-box {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                        }
+
                         .wordroom {
                             margin-top: .16rem;
                             background: url('../../images/people.png') 0 0rem no-repeat;
-                            background-size:  auto .2rem;
+                            background-size: auto .2rem;
                             padding-left: .3rem;
                             font-size: .2rem;
                             font-weight: 400;
                             color: rgba(105, 105, 105, 1);
                         }
+                        .img-icon {
+                            width: .4rem;
+                            height:.4rem;
+                            margin-left: .2rem;
+                            position: relative;
+                            cursor: pointer;
+                            font-size: 0;
 
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+
+                            .iosma {
+                                position: absolute;
+                                width: 120px;
+                                height: 120px;
+                                top: 25px;
+                                left: -48px;
+                                z-index: 10;
+                                display: none;
+                            }
+
+                            .azma {
+                                position: absolute;
+                                width: 120px;
+                                height: 120px;
+                                top: 25px;
+                                left: -48px;
+                                z-index: 10;
+                                display: none;
+                            }
+                        }
+
+                        .ios:hover .iosma {
+                            display: block;
+                        }
+
+                        .az:hover .azma {
+                            display: block;
+                        }
                         p {
                             width: 3.55rem;
                             height: 1.3rem;
                             margin-top: .3rem;
                             font-size: .22rem;
                             font-weight: 300;
-                            line-height:.27rem;
+                            line-height: .27rem;
                             position: relative;
                             color: #000;
                             display: -webkit-box;

@@ -13,12 +13,12 @@ exports.lang = {
         whiteBook: '白皮书',
         team: '团队与合作单位',
 
-        gtil:'Cocos-BCX 测试网 1.0 正式发布',
-        gdh:'代号"冈仁波齐"',
-        gdate:'2019.06.06',
+        gtil: 'Cocos-BCX 测试网 1.0 正式发布',
+        gdh: '代号"冈仁波齐"',
+        gdate: '2019.06.06',
         //首页
-        next:'下一代游戏数字经济平台',
-        nextex:'Cocos-BCX是下一代游戏数字经济平台，提供完整游戏开发工具同时提供完善公链生态，致力于让区块链游戏开发更简单',
+        next: '下一代游戏数字经济平台',
+        nextex: 'Cocos-BCX是下一代游戏数字经济平台，提供完整游戏开发工具同时提供完善公链生态，致力于让区块链游戏开发更简单',
         explane: '什么是Cocos-BCX',
         exf: 'Cocos-BCX下一代游戏数字经济平台',
         exs: 'Cocos BlockChain Expedition，简称"Cocos-BCX"，它的目标是打造一个完整的多平台游戏运行环境，即为区块链游戏开发者提供开发过程中的便利性和完善性，同时也为区块链游戏用户带来全新的游戏体验和超越以往的游戏形态，所有在游戏内获得的资产将完全属于用户。',
@@ -28,17 +28,17 @@ exports.lang = {
         ex_text1: '在多区块链环境和设备上运行游戏',
         ex_text2: '可视化、脚本化和数据驱动的开发工具',
         ex_text3: '支持高性能应用的区块链系统',
-    
+
         news: '新闻',
         more: '更多',
         system: '商业生态结构',
         sysex: '连接全球游戏生态',
-        system1:'关键生态环节',
-        system2:'区块链系统',
-        system3:'开发者',
-        system4:'用户',
-        system5:'创作内容',
-    
+        system1: '关键生态环节',
+        system2: '区块链系统',
+        system3: '开发者',
+        system4: '用户',
+        system5: '创作内容',
+
         map: '技术进展',
         map1: '更新 Cocos-BCX 链系统；',
         map11: '重构同质资产黑白名单体系及机制；',
@@ -55,7 +55,7 @@ exports.lang = {
         md3: '2019.04.29',
         md4: '2019.05.13',
         md5: '2019.05.26',
-    
+
         hz: '战略投资机构 & 合作伙伴',
         hzsm: '严正声明',
         hzsmex: 'Cocos-BCX 没有也无计划进行任何形式的公开代币募集和销售',
@@ -63,40 +63,52 @@ exports.lang = {
         footUpdate: '订阅我们的报告',
         int_email: '输入您的电子邮件地址...',
         subscribe: '订阅',
-    
+
         //开发者
         devjh: 'Cocos-BCX 于2018年12月21日14:00正式上线内测，这标志 Cocos-BCX 公链的基础设施已经初具成果，更标志着 Cocos-BCX 向正式网络发布迈进一大步！在此之际，Cocos-BCX 推出《开发者计划》，面向全球开放30名内测资格，诚意邀请有想法参与内测的开发者个人或者团队加入内测。',
         devwd: '欢迎使用 Cocos BlockChain Expedition（Cocos-BCX）技术文档集！本合集包括详尽的Cococs-BCX 链网络技术框架和特性说明，合约系统简介与使用教程，以及 BCX-NHAS-1808 非同质数字资产标准和世界观系统的介绍、范例。能够帮您快速掌握 Cococs-BCX 链网络的相关知识并进行链游戏开发方法。',
         devsq: '欢迎进入 Cocos BlockChain Expedition（Cocos-BCX）开发者社区。Cocos 目前在全球拥有 130 万的注册开发者，30 万的月活跃开发者，遍布全球超过 203 个国家和地区，8 亿玩家。',
-    
+
         //生态产品
         ljdev: '了解开发者扶持计划',
         gamedapps: '游戏',
-        tool:'工具',
-        gname1:'开心水果机',
-        gname2:'幸运女神',
-        gname3:'Cocos Shooting',
+        tool: '工具',
+        gname1: '开心水果机',
+        gname2: '幸运女神',
+        gname3: 'Cocos Shooting',
         gname4: 'Dice',
-        gauther1:'名游天下',
-        gauther2:'Orion Group',
-        gauther3:'Orion Group',
+        gauther1: '名游天下',
+        gauther2: 'Orion Group',
+        gauther3: 'Orion Group',
         gauther4: 'Cocos-BCX',
-        gex1:'经典街机游戏，三个相同水果你就可以获得大奖哟。游戏界面由9个方格拼接成一个正方形，每个方格中都有一个不同的水果图形。',
-        gex2:'经典摇骰子类百家乐游戏，可在线多人对局。该游戏使用Cocos-BCX链的链内源随机数，使得公平性得以体现。',
-        gex3:'一款飞行射击类游戏。在 Cocos Shooting 中，玩家可以操纵自己的飞机，通过不断击落敌机来获取资源，以此来强化飞机，战胜每一个BOSS。',
-        gex4:'经典掷骰子类游戏Demo',
-        tname1:'Cocos-BCX 浏览器',
-        tname2:'Cocos Terminal',
-        tname3:'Game props exchange',
-        tauther1:'Cocos-BCX',
-        tauther2:'联合实验室',
-        tauther3:'FameGame',
-        tex1:'官方检简版浏览器。可实时查看区块高度，链上交易情况和节点等Cocos-BCX链上详情。',
-        tex2:'基于Cocos-BCX的dApp，集成钱包、区块链浏览器、资产交易所和订单管理功能。用户可在上面查看合约信息，并进行道具买卖交易。',
-        tex3:'基于 Cocos-BCX JS SDK 开发，集成游戏市场、钱包、订单系统和游戏中心入口。',
-    
+        gex1: '经典街机游戏，三个相同水果你就可以获得大奖哟。游戏界面由9个方格拼接成一个正方形，每个方格中都有一个不同的水果图形。',
+        gex2: '经典摇骰子类百家乐游戏，可在线多人对局。该游戏使用Cocos-BCX链的链内源随机数，使得公平性得以体现。',
+        gex3: '一款飞行射击类游戏。在 Cocos Shooting 中，玩家可以操纵自己的飞机，通过不断击落敌机来获取资源，以此来强化飞机，战胜每一个BOSS。',
+        gex4: '经典掷骰子类游戏Demo',
+        tname1: 'Cocos-BCX 浏览器',
+        tname2: 'Cocos Terminal',
+        tname3: 'Game props exchange',
+        tname4: 'CocosPay',
+        tname5: 'CocosWallet',
+        tname6: 'CocosWallet',
+        tname7: 'CocosDesktop',
+        tauther1: 'Cocos-BCX',
+        tauther2: '联合实验室',
+        tauther3: 'FameGame',
+        tauther4: 'Cocos-BCX',
+        tauther5: 'Cocos-BCX',
+        tauther6: 'Cocos-BCX',
+        tauther7: 'Cocos-BCX',
+        tex1: '官方检简版浏览器。可实时查看区块高度，链上交易情况和节点等Cocos-BCX链上详情。',
+        tex2: '基于Cocos-BCX的dApp，集成钱包、区块链浏览器、资产交易所和订单管理功能。用户可在上面查看合约信息，并进行道具买卖交易。',
+        tex3: '基于 Cocos-BCX JS SDK 开发，集成游戏市场、钱包、订单系统和游戏中心入口。',
+        tex4: '官方浏览器插件钱包。支持基本钱包功能和 DApp 调用，使用起来方便简洁，可在谷歌商店下载体验。',
+        tex5: '官方手机端钱包。支持秘钥管理，支持签名转账、管理账号资源等所有操作。CocosWallet 支持多账号登陆。',
+        tex6: '官方手机端钱包。支持秘钥管理，支持签名转账、管理账号资源等所有操作。CocosWallet 支持多账号登陆。',
+        tex7: '官方钱包PC 端桌面钱包。支持钱包的基础功能，支持签名转账、管理账号资源等操作。钱包备份完毕后，不会因计算机或浏览器崩溃丢失数据。',
+
         //关于我们
-        lookBook:'查看白皮书',
+        lookBook: '查看白皮书',
         teamextil: '团队介绍',
         teamex: 'Cocos-BCX 团队具备项目所需要的完整技能、知识和行业经验，即区块链技术开发、游戏引擎与IDE、开发者社区运营、游戏制作与发行、娱乐社区运营、金融市场机制、资产定价和跨国企业运营。项目的核心发起人具备两个商业周期的创业经验，在全球的信息科技创业、游戏领域拥有广泛的业务网络与知名度，具备建立生态级平台的决策力、执行经验和行业资源。',
         teamPerson: '团队成员',
@@ -123,7 +135,7 @@ exports.lang = {
         plex6: '负责项目的韩国业务发展策略和执行。2012-2015年服务于触控科技，任韩国子公司Gurum Company 首席执行官，为韩国公司从零实现了超过3,000万美元年的收入，并带领韩国子公司上市。在触控前任韩国著名游戏公司Nexon中国区负责人，在游戏行业积累了丰富的专业知识和经验，对于市场研究及战略发展有较深入的理解。',
         plex7: '负责项目的韩国业务发展策略和执行。2014-2015年服务于触控，任韩国子公司Gurum Company 联席首席执行官。并曾任韩国现代集团战略投资部负责人，负责互联网、通信、电信等领域的投资。韩国成均馆大学工程技术专业博士。',
         plex8: '原触控科技日本子公司负责人。东京大学大学院总合文化研究科超域文化科学博士课程。出身学术界，擁有学术领域的广大人脉及独特观点，同时也实际参与了信息科技产业的创业行列，拥有丰富的游戏科技产业知识与经验，以及学术领域的广大人脉及独特观点。',
-  
+
         plex12: '2012年加入触控科技，历任Cocos 用户系统、PunchBox 广告平台质量及项目总监。曾供职于饭统网、开拓天际等多家互联网公司，参与广发&民生&华夏等多家银行信贷决策CRF/反欺诈系统的构建及SAS 方案的设计，参与浙江移动GIS 系统的构建及精准营销方案的设计，也是国内早期O2O外卖业务的开拓者。在项目管理、质量及流程控制、数据分析等方面积累了丰富的经验。',
         plex13: '2011年创立了Cocos游戏引擎，2012年加入触控科技任副总裁，负责开发者平台业务。2016年，Cocos游戏引擎在国内手机游戏引擎领域市场占有率50%排名第一，全球15%排名第二，服务于国内外百万游戏开发者，是国产游戏引擎的历史最佳成绩。Cocos引擎备受海内外平台厂商关注，目前和Microsoft, Google, ARM, Intel，Qualcomm，Samsung, 华为，腾讯等均建立长期合作关系。Cocos引擎目前已经具备了完善游戏引擎生态，实现了引擎研发、引擎定制、多渠道打包、HTML5游戏渠道、引擎教育培训、众创空间和孵化器的产业上下游布局。',
         plex14: '早期CocoaChina 社区贡献者，NOI 获奖选手、ACM 嘉宾。区块链资深开发者，多年编译和分布式计算领域经验。区块链技术投资人。',
@@ -142,7 +154,7 @@ exports.lang = {
         fqr12: '项目管理负责人',
         adviser: '顾问',
         hezuojg: '战略投资机构 & 合作伙伴',
-    
+
         //动态
         a_news: '新闻',
         hd: '活动',
@@ -150,16 +162,16 @@ exports.lang = {
         big: '大事记',
         zx: '资讯',
         video: '视频',
-    
+
         //大事记
         bigsj: '项目大事记',
         s1: '第一季度',
         s2: '第二季度',
         s3: '第三季度',
         s4: '第四季度',
-        ss31:'Cocos 区块链项目正式立项，项目全称： Cocos Block Chain Expedition，简写 Cocos-BCX。项目目标：打造去中心化应用与数字资产的生产、管理和交易平台，项目愿景：让数字世界的内容资产化，内容生产者可以与内容消费者建立一致的价值体系。',
-        ss32:'分析现有主链项目使用的技术优缺点，预研数字资产上链逻辑，智能合约逻辑架构，合约并发承载能力。',
-        ss41:'对ETH上的Dapp进行分析，确定Cocos链支持的业务模型，根据业务模型的实现需求进行技术选型。制定开发计划，搭建底层实验环境，构建基础链技术架构。',
+        ss31: 'Cocos 区块链项目正式立项，项目全称： Cocos Block Chain Expedition，简写 Cocos-BCX。项目目标：打造去中心化应用与数字资产的生产、管理和交易平台，项目愿景：让数字世界的内容资产化，内容生产者可以与内容消费者建立一致的价值体系。',
+        ss32: '分析现有主链项目使用的技术优缺点，预研数字资产上链逻辑，智能合约逻辑架构，合约并发承载能力。',
+        ss41: '对ETH上的Dapp进行分析，确定Cocos链支持的业务模型，根据业务模型的实现需求进行技术选型。制定开发计划，搭建底层实验环境，构建基础链技术架构。',
         es11: 'Cocos区块链游戏技术大会召开，会上发布并演示了Cocos-BCX项目，未来将提供直观、可预期的区块链开发环境及工具 Cocos-BCX（Cocos Block Chain Expedition）平台，随后将开始进行小规模的 beta 测试。',
         es21: ' Cocos-BCX 中文白皮书发布，白皮书中详细阐述了在Cocos在区块链游戏生态的构想和布局。',
         es22: '由 Cocos 引擎主办的“小游戏，大学问”—— 2018 Cocos 开发者巡回沙龙首发站在广州天河公园贝塔咖啡拉开帷幕。数百名一线核心开发者齐聚广州，与诸多游戏圈重量级嘉宾共同探讨Cocos游戏的开发。',
@@ -195,11 +207,11 @@ exports.lang = {
         ns14: 'Cocos-BCX 日本代表 Fujita Hirokuni以「ブロックチェーンゲームの総合ソルーションからみるクリプトエコノミーの可能性についてーCocos-BCXを例として」（以 Cocos-BCX 为例从区块链游戏综合解决方案来看加密货币经济的可能性）为题，与微软日本等一同受邀前往SQEX公司进行社内研习会演讲。',
         ns15: 'Cocos-BCX 、TRON 和 BlockchainGamer.biz 在旧金山市中心 Bespoke 联合举办 Blockchain Games Next 会议。此次区块链游戏会议深入探讨了行业的现状与潜在机会，参会者在轻松愉快的氛围中对此展开了讨论。',
         //月报周报
-        month:'月报/周报',
+        month: '月报/周报',
         //活动
-        yg:'活动预告',
-        kf:'官方客服',
-        gzh:'官方公众号',
+        yg: '活动预告',
+        kf: '官方客服',
+        gzh: '官方公众号',
     },
 
 
@@ -217,12 +229,12 @@ exports.lang = {
         whiteBook: 'WHITE PAPER',
         team: 'TEAM & PARTNERS',
 
-        gtil:'COCOS-BCX TESTNET 1.0 "GANG RINPOCHE"',
-        gdh:'PUBLIC TESTING',
-        gdate:'LAUNCHING ON 06.06.2019',
+        gtil: 'COCOS-BCX TESTNET 1.0 "GANG RINPOCHE"',
+        gdh: 'PUBLIC TESTING',
+        gdate: 'LAUNCHING ON 06.06.2019',
         //首页
-        next:'Next-Gen Digital Game Economy',
-        nextex:'Cocos-BCX is committed to facilitate the development of blockchain gaming. As the platform for the next generation of digital game economy, Cocos-BCX provides a complete set of development tools, as well as an integrated ecosystem',
+        next: 'Next-Gen Digital Game Economy',
+        nextex: 'Cocos-BCX is committed to facilitate the development of blockchain gaming. As the platform for the next generation of digital game economy, Cocos-BCX provides a complete set of development tools, as well as an integrated ecosystem',
         explane: 'What is Cocos-BCX?',
         exf: 'The platform for the next generation of digital game economy ',
         exs: "Cocos-BCX' , fully named 'Cocos BlockChain Expedition', aims to create an integrated multi-platform runtime environment for games, providing developers with the convenience and completeness in game development, while bringing users a whole new gaming experience, unprecedented gaming status, and with all the assets obtained in the games being wholly owned by the users. ",
@@ -232,7 +244,7 @@ exports.lang = {
         ex_text1: 'Create, build, and test blockchain games across multi-blockchain platforms.',
         ex_text2: 'Cocos-BCX creates a complete development environment for blockchain games which is visual, script-based, and data-oriented.',
         ex_text3: 'Built for high-performance applications.',
-    
+
         news: 'NEWS',
         more: 'MORE',
         system: 'OUR ECOSYSTEM',
@@ -242,9 +254,9 @@ exports.lang = {
         system3: 'Developers',
         system4: 'End-users',
         system5: 'Copyrights & IPs',
-    
+
         map: 'Technical Updates',
-        
+
         map1: "Updated Cocos-BCX blockchain system.",
         map11: 'Rebuilt the system and mechanism of homogenous assets blacklist and whitelist.',
         map2: 'Adjusted account information attributes;',
@@ -260,7 +272,7 @@ exports.lang = {
         md3: '2019.04.29',
         md4: '2019.05.13',
         md5: '2019.05.26',
-    
+
         hz: 'STRATEGIC PARTNERS',
         hzsm: 'STATEMENT',
         hzsmex: 'Cocos-BCX currently has NO plan to conduct any form of public token sale.',
@@ -268,40 +280,52 @@ exports.lang = {
         footUpdate: 'Subscribe to our community updates.',
         int_email: 'Enter your email address...',
         subscribe: 'SUBSCRIBE',
-    
+
         //开发者
         devjh: '14:00 PM, December 21, 2018, Cocos-BCX TestNet was officially launched. Together with the TestNet launched, Cocos-BCX opened up the Developer Program with 30 spots offered to developers in China region to join Alpha testing on Cocos-BCX TestNet. Now with the English version technical documentations ready in place, Cocos-BCX further invites developers (individual or team) globally to join Alpha testing on the platform!',
         devwd: 'Welcome to the technical documentation of Cocos Blockchain Expedition! This collection introduces the Cocos-BCX architecture and its features, the contract system including tutorials, non-homogenous assets standard (BCX-NHAS-1808) and world views.',
         devsq: 'Welcome to the technical forum of Cocos Blockchain Expedition! Currently, Cocos has 1.3 million registered developers worldwide, with a monthly active developers of 300 thousand, as well as 800 million players in 203 countries and regions around the world.',
-    
+
         //生态产品
         ljdev: 'Learn about the Developer Support Program',
         gamedapps: 'Game',
-        tool:'Tool',
-        gname1:'Happy Fruit',
-        gname2:'Tyche',
-        gname3:'Cocos Shooting',
+        tool: 'Tool',
+        gname1: 'Happy Fruit',
+        gname2: 'Tyche',
+        gname3: 'Cocos Shooting',
         gname4: 'Dice',
-        gauther1:'FameGama',
-        gauther2:'Orion Group',
-        gauther3:'Orion Group',
+        gauther1: 'FameGama',
+        gauther2: 'Orion Group',
+        gauther3: 'Orion Group',
         gauther4: 'Cocos-BCX',
-        gex1:'A classic arcade game. If the three fruits are the same, the player wins a big prize. The spinning reel is a big square consists of 9  small grids that each contains a fruit image. This game uses the on-chain random numbers of Cocos-BCX chain to guarantee fairness.',
-        gex2:'A classic dice-type of Baccarat game that supports multi-player online gaming. This game uses the on-chain random numbers of Cocos-BCX chain to guarantee fairness.',
-        gex3:'A flying shooting game. In Cocos Shooting, players can manipulate their aircraft and gain resources by constantly shooting down enemy aircraft to enhance the aircraft and defeat every BOSS. The game has implemented the props-crossing feature unique to the Cocos-BCX chain, and players can use props from other games.',
-        gex4:'Classic dice rolling game Demo',
-        tname1:'Cocos-BCX  Explorer',
-        tname2:'Cocos Terminal',
-        tname3:'Game props exchange',
-        tauther1:'Cocos-BCX',
-        tauther2:'United Labs of BCTech',
-        tauther3:'FameGame',
-        tex1:'A simplified version of the official explorer. You can view the the on-chain details of block height, transactions and node in real time.',
-        tex2:'A Cocos-BCX based dApp that integrates the features of wallet, blockchain explorer, assets transaction and order management. The users can check contract information, and conduct props trading.',
-        tex3:'Developed based on the Cocos-BCX JS SDK, the dApp contains game market, wallet, order system and access to game center. In the market, players can purchase or sell the props(character, item, and treasure box , etc) for his beloved games. Players can deposit or withdraw in the market. Meanwhile, the props market is also an important social platform at which players can discuss about gameplay and strategy, etc. ',
-    
+        gex1: 'A classic arcade game. If the three fruits are the same, the player wins a big prize. The spinning reel is a big square consists of 9  small grids that each contains a fruit image. This game uses the on-chain random numbers of Cocos-BCX chain to guarantee fairness.',
+        gex2: 'A classic dice-type of Baccarat game that supports multi-player online gaming. This game uses the on-chain random numbers of Cocos-BCX chain to guarantee fairness.',
+        gex3: 'A flying shooting game. In Cocos Shooting, players can manipulate their aircraft and gain resources by constantly shooting down enemy aircraft to enhance the aircraft and defeat every BOSS. The game has implemented the props-crossing feature unique to the Cocos-BCX chain, and players can use props from other games.',
+        gex4: 'Classic dice rolling game Demo',
+        tname1: 'Cocos-BCX  Explorer',
+        tname2: 'Cocos Terminal',
+        tname3: 'Game props exchange',
+        tname4: 'CocosPay',
+        tname5: 'CocosWallet',
+        tname6: 'CocosWallet',
+        tname7: 'CocosDesktop',
+        tauther1: 'Cocos-BCX',
+        tauther2: 'United Labs of BCTech',
+        tauther3: 'FameGame',
+        tauther4: 'Cocos-BCX',
+        tauther5: 'Cocos-BCX',
+        tauther6: 'Cocos-BCX',
+        tauther7: 'Cocos-BCX',
+        tex1: 'A simplified version of the official explorer. You can view the the on-chain details of block height, transactions and node in real time.',
+        tex2: 'A Cocos-BCX based dApp that integrates the features of wallet, blockchain explorer, assets transaction and order management. The users can check contract information, and conduct props trading.',
+        tex3: 'Developed based on the Cocos-BCX JS SDK, the dApp contains game market, wallet, order system and access to game center. In the market, players can purchase or sell the props(character, item, and treasure box , etc) for his beloved games. Players can deposit or withdraw in the market. Meanwhile, the props market is also an important social platform at which players can discuss about gameplay and strategy, etc. ',
+        tex4: 'CocosPay is the official browser plug-in wallet that supports basic wallet functions and DApp calls. Clean and easy to use, the user-friendly app is now available on Google Play.',
+        tex5: 'CocosWallet is the official mobile wallet that supports all the features like private key management, signature transfer, account management, and multiple account login.',
+        tex6: 'CocosWallet is the official mobile wallet that supports all the features like private key management, signature transfer, account management, and multiple account login.',
+        tex7: 'CocosDesktop is the official PC wallet that supports signature transfer, account management, and basic wallet functions. No data will be lost due to a computer or browser crash after the wallet is backed up.',
+
         //关于我们
-        lookBook:'Check the White Paper',
+        lookBook: 'Check the White Paper',
         teamextil: 'Our Team',
         teamex: 'Cocos-BCX team has complete skills, know-how and industry experience required for project development, covering a good mixture of blockchain technology development, game engine, IDE, developer community operations, game production & release, entertainment community operations, financial market mechanism, assets valuation and multinational enterprise operations. Core founders of Cocos BCX project experienced two business cycles of startup,  with a worldwide range of business network and recognition in the fields of information technology entrepreneurship and gaming, as well as decision making, execution experience and industry resources required to establish an ecological platform.',
         teamPerson: 'Members',
@@ -331,7 +355,7 @@ exports.lang = {
         plex6: 'James is a seasoned executive in gaming before co-heading Cocos-BCX’s Korean operations. Previously, he established the Korean operation of Chukong Technology, led its expansion to an annual revenue of USD 30 million, and completed its IPO. Before Chukong, James served as Business Lead for NEXON Mobile, one of the prominent game companies in Korea. He was also a Consultant specializing in the market research and strategy development in Chinese market at KBB. James received his MBA from KHU, and B.A. degree in business and economics from CNU. He is fluent in Korean and Mandarin Chinese.',
         plex7: 'Frederick has 20 years of experience in investments, management and consulting. He previously served as Co-CEO at Chukong Korea, and was heavily involved in the commercialization and marketing of Cocos2d-x game engine and various mobile games. Before Chukong, Frederick was with Hyundai Group in charge of Internet,communication and telecom (“ICT”) investments. He also worked extensively with government agencies such as World Bank and WeGo to develop ICT projects. Inprior, Frederick led the marketing team at the Korean subsidiary of Friedhelm LohGroup (German). He started his career as a member at KOTRA Zagreb office as a marketing specialist and foreign investment consultant. Frederick holds MBA andB.A. from HUFS in business and South Slavic languages. He is fluent in Korean,English and South Slavic languages.',
         plex8: 'H. Fujita has been active in the technology startup and gaming community in Japan for 10 years. Mr. Fujita is the founder of a game company, and worked with a leading Chinese game publisher as its Chief Representative in Japan. He studied at the University of Tokyo as a Ph.D. candidate in Cultural Anthropology.',
-        
+
         plex12: 'Jennie has extensive experience in technology project management, quality control and data analysis. She worked at various leading Internet companies including Chukong, Fantong and KaiTone. She led and participated in the implementation of large-scale systems in financial and telecom industries.',
         plex13: 'He is CEO of Xiamen Yaji Software and Founder of Cocos2d-x game engine. Since its inception in 2011, Cocos2d-x has 1.1 million registered developers in 200 countries and regions. With long-term cooperation with leading enterprises such as Microsoft, Google, ARM, Intel, Qualcomm, Samsung, Huawei and Tencent, Xiamen Yaji has established a gaming ecosystem including engine R&D, game distribution, vocational training and game incubation.',
         plex14: 'K. Yin is a seasoned blockchain system and game developer. He was an award winner of National Olympiad in Informatics, and a guest advisor to regional ACM contests. He has over 15 years of programming experience in compiled language and distributed computing architecture, and has been an active contributor to Cocos code library for 6 years. ',
@@ -350,7 +374,7 @@ exports.lang = {
         fqr12: 'Project Management',
         adviser: 'Advisor',
         hezuojg: 'STRATEGIC PARTNERS',
-    
+
         //动态
         a_news: 'News',
         hd: 'Events',
@@ -358,7 +382,7 @@ exports.lang = {
         big: 'Chronicles',
         zx: 'Info',
         video: 'Video',
-    
+
         //大事记
         bigsj: 'Project Events',
         s1: 'First quarter',
@@ -406,7 +430,7 @@ exports.lang = {
         month: 'Report',
         //活动
         yg: 'Activity Notice',
-        kf:'官方客服',
-        gzh:'官方公众号',
+        kf: '官方客服',
+        gzh: '官方公众号',
     }
 }

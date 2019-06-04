@@ -126,11 +126,13 @@
                             color: rgba(105, 105, 105, 1);
                             line-height: 31px;
                         }
-                        .w-box{
+
+                        .w-box {
                             display: flex;
                             justify-content: flex-start;
                             align-items: center;
                         }
+
                         .wordroom {
                             margin-top: 16px;
                             background: url('../../images/cocos3.png') no-repeat;
@@ -153,7 +155,8 @@
                                 width: 100%;
                                 height: 100%;
                             }
-                            .iosma{
+
+                            .iosma {
                                 position: absolute;
                                 width: 120px;
                                 height: 120px;
@@ -162,6 +165,24 @@
                                 z-index: 10;
                                 display: none;
                             }
+
+                            .azma {
+                                position: absolute;
+                                width: 120px;
+                                height: 120px;
+                                top: 25px;
+                                left: -48px;
+                                z-index: 10;
+                                display: none;
+                            }
+                        }
+
+                        .ios:hover .iosma {
+                            display: block;
+                        }
+
+                        .az:hover .azma {
+                            display: block;
                         }
 
                         p {
