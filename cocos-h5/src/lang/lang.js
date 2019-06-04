@@ -229,8 +229,8 @@ exports.lang = {
         whiteBook: 'WHITE PAPER',
         team: 'TEAM & PARTNERS',
 
-        gtil: 'COCOS-BCX TESTNET 1.0 "GANG RINPOCHE"',
-        gdh: 'PUBLIC TESTING',
+        gtil: 'COCOS-BCX TESTNET 1.0',
+        gdh: '"GANG RINPOCHE"',
         gdate: 'LAUNCHING ON 06.06.2019',
         //首页
         next: 'Next-Gen Digital Game Economy',

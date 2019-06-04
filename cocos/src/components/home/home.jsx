@@ -407,8 +407,8 @@ export default class Home extends Component {
                             </div>
                         </div>
                         <div className="swiper-pagination"></div>
-                        <div className="swiper-button-prev swiper-button-white"></div>
-                        <div className="swiper-button-next swiper-button-white"></div>
+                        <div className="swiper-button-prev swiper-button-blue" style={{opacity:'.5'}}></div>
+                        <div className="swiper-button-next swiper-button-blue" style={{opacity:'.5'}}></div>
                     </div>
                 </div>
 
