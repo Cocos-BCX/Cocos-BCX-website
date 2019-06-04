@@ -87,7 +87,7 @@ exports.lang = {
         gex1: '经典街机游戏，三个相同水果你就可以获得大奖哟。游戏界面由9个方格拼接成一个正方形，每个方格中都有一个不同的水果图形。',
         gex2: '经典摇骰子类百家乐游戏，可在线多人对局。该游戏使用Cocos-BCX链的链内源随机数，使得公平性得以体现。',
         gex3: '一款飞行射击类游戏。在 Cocos Shooting 中，玩家可以操纵自己的飞机，通过不断击落敌机来获取资源，以此来强化飞机，战胜每一个BOSS。',
-        gex4:'经典掷骰子类游戏Demo',
+        gex4: '经典掷骰子类游戏Demo',
         tname1: 'Cocos-BCX 浏览器',
         tname2: 'Cocos Terminal',
         tname3: 'Game props exchange',
@@ -126,7 +126,7 @@ exports.lang = {
         p9: 'Jason',
         p10: 'Focus Wang',
         p11: '王翔羽',
-        p12: '潘娟',
+        p12: 'Jennie Pan',
         p13: '王哲',
         p14: 'Kevin Yin',
         p15: 'Jane Jin',
@@ -141,7 +141,7 @@ exports.lang = {
         plex6: '负责项目的韩国业务发展策略和执行。2012-2015年服务于触控科技，任韩国子公司Gurum Company 首席执行官，为韩国公司从零实现了超过3,000万美元年的收入，并带领韩国子公司上市。在触控前任韩国著名游戏公司Nexon中国区负责人，在游戏行业积累了丰富的专业知识和经验，对于市场研究及战略发展有较深入的理解。',
         plex7: '负责项目的韩国业务发展策略和执行。2014-2015年服务于触控，任韩国子公司Gurum Company 联席首席执行官。并曾任韩国现代集团战略投资部负责人，负责互联网、通信、电信等领域的投资。韩国成均馆大学工程技术专业博士。',
         plex8: '原触控科技日本子公司负责人。东京大学大学院总合文化研究科超域文化科学博士课程。出身学术界，擁有学术领域的广大人脉及独特观点，同时也实际参与了信息科技产业的创业行列，拥有丰富的游戏科技产业知识与经验，以及学术领域的广大人脉及独特观点。',
-  
+
         plex12: '2012年加入触控科技，历任Cocos 用户系统、PunchBox 广告平台质量及项目总监。曾供职于饭统网、开拓天际等多家互联网公司，参与广发&民生&华夏等多家银行信贷决策CRF/反欺诈系统的构建及SAS 方案的设计，参与浙江移动GIS 系统的构建及精准营销方案的设计，也是国内早期O2O外卖业务的开拓者。在项目管理、质量及流程控制、数据分析等方面积累了丰富的经验。',
         plex13: '2011年创立了Cocos游戏引擎，2012年加入触控科技任副总裁，负责开发者平台业务。2016年，Cocos游戏引擎在国内手机游戏引擎领域市场占有率50%排名第一，全球15%排名第二，服务于国内外百万游戏开发者，是国产游戏引擎的历史最佳成绩。Cocos引擎备受海内外平台厂商关注，目前和Microsoft, Google, ARM, Intel，Qualcomm，Samsung, 华为，腾讯等均建立长期合作关系。Cocos引擎目前已经具备了完善游戏引擎生态，实现了引擎研发、引擎定制、多渠道打包、HTML5游戏渠道、引擎教育培训、众创空间和孵化器的产业上下游布局。',
         plex14: '早期CocoaChina 社区贡献者，NOI 获奖选手、ACM 嘉宾。区块链资深开发者，多年编译和分布式计算领域经验。区块链技术投资人。',
@@ -310,7 +310,7 @@ exports.lang = {
         gex2: 'A classic dice-type of Baccarat game that supports multi-player online gaming. This game uses the on-chain random numbers of Cocos-BCX chain to guarantee fairness.',
         gex3: 'A flying shooting game. In Cocos Shooting, players can manipulate their aircraft and gain resources by constantly shooting down enemy aircraft to enhance the aircraft and defeat every BOSS. The game has implemented the props-crossing feature unique to the Cocos-BCX chain, and players can use props from other games.',
         tname1: 'Cocos-BCX  Explorer',
-        gex4:'Classic dice rolling game Demo',
+        gex4: 'Classic dice rolling game Demo',
         tname2: 'Cocos Terminal',
         tname3: 'Game props exchange',
         tname4: 'CocosPay',
@@ -349,7 +349,7 @@ exports.lang = {
         p9: 'Slack-Moehrle',
         p10: 'Focus Wang',
         p11: 'Xiangyu Wang',
-        p12: 'Juan Pan',
+        p12: 'Jennie Pan',
         p13: 'Zhe Wang',
         p14: 'Kevin Yin',
         p15: 'Jane Jin',
@@ -364,7 +364,7 @@ exports.lang = {
         plex6: 'James is a seasoned executive in gaming before co-heading Cocos-BCX’s Korean operations. Previously, he established the Korean operation of Chukong Technology, led its expansion to an annual revenue of USD 30 million, and completed its IPO. Before Chukong, James served as Business Lead for NEXON Mobile, one of the prominent game companies in Korea. He was also a Consultant specializing in the market research and strategy development in Chinese market at KBB. James received his MBA from KHU, and B.A. degree in business and economics from CNU. He is fluent in Korean and Mandarin Chinese.',
         plex7: 'Frederick has 20 years of experience in investments, management and consulting. He previously served as Co-CEO at Chukong Korea, and was heavily involved in the commercialization and marketing of Cocos2d-x game engine and various mobile games. Before Chukong, Frederick was with Hyundai Group in charge of Internet,communication and telecom (“ICT”) investments. He also worked extensively with government agencies such as World Bank and WeGo to develop ICT projects. Inprior, Frederick led the marketing team at the Korean subsidiary of Friedhelm LohGroup (German). He started his career as a member at KOTRA Zagreb office as a marketing specialist and foreign investment consultant. Frederick holds MBA andB.A. from HUFS in business and South Slavic languages. He is fluent in Korean,English and South Slavic languages.',
         plex8: 'H. Fujita has been active in the technology startup and gaming community in Japan for 10 years. Mr. Fujita is the founder of a game company, and worked with a leading Chinese game publisher as its Chief Representative in Japan. He studied at the University of Tokyo as a Ph.D. candidate in Cultural Anthropology.',
-        
+
         plex12: 'Jennie has extensive experience in technology project management, quality control and data analysis. She worked at various leading Internet companies including Chukong, Fantong and KaiTone. She led and participated in the implementation of large-scale systems in financial and telecom industries.',
         plex13: 'He is CEO of Xiamen Yaji Software and Founder of Cocos2d-x game engine. Since its inception in 2011, Cocos2d-x has 1.1 million registered developers in 200 countries and regions. With long-term cooperation with leading enterprises such as Microsoft, Google, ARM, Intel, Qualcomm, Samsung, Huawei and Tencent, Xiamen Yaji has established a gaming ecosystem including engine R&D, game distribution, vocational training and game incubation.',
         plex14: 'K. Yin is a seasoned blockchain system and game developer. He was an award winner of National Olympiad in Informatics, and a guest advisor to regional ACM contests. He has over 15 years of programming experience in compiled language and distributed computing architecture, and has been an active contributor to Cocos code library for 6 years. ',
