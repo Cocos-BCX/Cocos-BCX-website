@@ -96,7 +96,6 @@
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .img_box img {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box {
   margin-left: 39px;
@@ -126,6 +125,7 @@
   width: 25px;
   height: 25px;
   margin-left: 20px;
+  margin-top: 10px;
   position: relative;
   cursor: pointer;
 }
@@ -303,6 +303,36 @@
     font-weight: 400;
     color: #696969;
     line-height: 15px;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .img-icon {
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    margin-top: 10px;
+    position: relative;
+    cursor: pointer;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .img-icon img {
+    width: 100%;
+    height: 100%;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .img-icon .iosma {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 25px;
+    left: -30px;
+    z-index: 10;
+    display: none;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .img-icon .azma {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 25px;
+    left: -30px;
+    z-index: 10;
+    display: none;
   }
   .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box p {
     width: 242px;

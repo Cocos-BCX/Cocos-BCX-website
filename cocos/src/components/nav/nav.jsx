@@ -149,7 +149,7 @@ export default class Nav extends Component {
                                                 {t.developApi}
                                             </div>
                                             <div className='dev_a'
-                                                onClick={(e) => { this.stopImmediate(e); window.open("https://forum.cocos.com/c/bcx", '_blank'); }} >
+                                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "http://www.cocoachina.com/bbs/thread.php?fid-90.html" : 'https://discord.gg/jdJMNtC', '_blank'); }} >
                                                 {t.developsq}
                                             </div>
                                         </div>
@@ -158,9 +158,11 @@ export default class Nav extends Component {
                             </NavLink>
                         </div>
                         <div className='nav_jl lt'>
-                            <a href={lang === 'zh' ? "https://bcx.cocos.com" : 'https://bcx.cocos.com/en'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'>{t.jili}</a>
-
+                            <a href={lang === 'zh' ? " https://bounty.cocosbcx.io" : ' https://bounty.cocosbcx.io?en'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'>{t.navxs}</a>
                         </div>
+                        {/* <div className='nav_jl lt'>
+                            <a href={lang === 'zh' ? "https://bcx.cocos.com" : 'https://bcx.cocos.com/en'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'>{t.jili}</a>
+                        </div> */}
                         <div className='nav_st lt' >
                             <NavLink to="/product" exact={true} activeClassName="active"
                                 className='nav_st_click' >{t.stproduct}

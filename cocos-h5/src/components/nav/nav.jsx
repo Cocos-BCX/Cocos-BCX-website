@@ -90,15 +90,16 @@ export default class Nav extends Component {
                                 onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://mp.weixin.qq.com/s/n5FGEBOGYN4P-nknsa1l6g" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7', '_blank'); }}>
                                 {t.developPlan}
                             </div>
-                            <div className='dev_a navBox'
+                            {/* <div className='dev_a navBox'
                                 onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://cn-dev.cocosbcx.io" : 'https://dev.cocosbcx.io', '_blank'); }} >
                                 {t.developApi}
-                            </div>
+                            </div> */}
                             <div className='dev_a navBox'
-                                onClick={(e) => { this.stopImmediate(e); window.open("https://discuss.cocos2d-x.org/c/cocos-bcx", '_blank'); }} >
+                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "http://www.cocoachina.com/bbs/thread.php?fid-90.html" : 'https://discord.gg/jdJMNtC', '_blank'); }} >
                                 {t.developsq}
                             </div>
 
+                            <a href={lang === 'zh' ? " https://bounty.cocosbcx.io" : ' https://bounty.cocosbcx.io'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'>{t.navxs}</a>
                             <a href={lang === 'zh' ? "https://bcx.cocos.com" : 'https://bcx.cocos.com/en'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'>{t.jili}</a>
 
                             <NavLink to="/product" exact={true} activeClassName="active"

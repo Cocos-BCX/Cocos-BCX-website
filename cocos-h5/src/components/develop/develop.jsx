@@ -61,7 +61,7 @@ export default class Develop extends Component {
                             </div>
                         </div>
                     </a>
-                    <a href="https://forum.cocos.com/c/bcx" target="_blank" rel="noopener noreferrer" className='dev_m'>
+                    <a href={lang === 'zh' ? "http://www.cocoachina.com/bbs/thread.php?fid-90.html" : ' https://discord.gg/jdJMNtC'} target="_blank" rel="noopener noreferrer" className='dev_m'>
                         <div className='dev_img lt'>
                             <img src={dev3} alt="" />
                         </div>

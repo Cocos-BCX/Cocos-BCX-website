@@ -30,7 +30,7 @@ export default class Develop extends Component {
                             <div className='dev_main_til'>
                                 <h4>{t.developPlan}</h4>
                             </div>
-                            <p className={lang==='en'?'dev_en':null}>{t.devjh}</p>
+                            <p className={lang === 'en' ? 'dev_en' : null}>{t.devjh}</p>
                             <div className='dev_go'>
                                 <div>GO</div>
                             </div>
@@ -50,7 +50,7 @@ export default class Develop extends Component {
                             </div>
                         </div>
                     </a>
-                    <a href="https://forum.cocos.com/c/bcx" target="_blank" rel="noopener noreferrer" className='dev_m animated bounceInRight'>
+                    <a href={lang === 'zh' ? "http://www.cocoachina.com/bbs/thread.php?fid-90.html" : 'https://discord.gg/jdJMNtC'} target="_blank" rel="noopener noreferrer" className='dev_m animated bounceInRight'>
                         <div className='dev_img lt'>
                             <img src={dev3} alt="" />
                         </div>

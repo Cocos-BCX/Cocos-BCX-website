@@ -89,7 +89,7 @@ export default class Product extends Component {
                                     </div>
                                 </a>
                             })}
-                            {/* <div className='dev_game_left lt' >
+                            <div className='dev_game_left lt' >
                                 <div className='img_box lt'>
                                     <img src={tool5} alt="" />
                                 </div>
@@ -98,17 +98,21 @@ export default class Product extends Component {
                                     <div className='w-box'>
                                         <div className='wordroom'>{t.tauther5}</div>
                                         <div className='img-icon ios'>
-                                            <img src={ios} alt="" />
+                                            <a href="https://fir.im/iOSWallet" target='_blank' rel="noopener noreferrer">
+                                                <img src={ios} alt="" />
+                                            </a>
                                             <img className="iosma" src={iosma} alt="" />
                                         </div>
                                         <div className='img-icon az'>
-                                            <img src={az} alt="" />
+                                            <a href="https://fir.im/cocosbcx" target='_blank' rel="noopener noreferrer">
+                                                <img src={az} alt="" />
+                                            </a>
                                             <img className="azma" src={azma} alt="" />
                                         </div>
                                     </div>
                                     <p>{t.tex5}</p>
                                 </div>
-                            </div> */}
+                            </div>
                         </div>
                     </div>
                 </div>

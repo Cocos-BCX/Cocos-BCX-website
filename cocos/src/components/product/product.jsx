@@ -102,7 +102,7 @@ export default class Product extends Component {
                                     </div>
                                 </a>
                             })}
-                            {/* <div className='dev_game_left lt' >
+                            <div className='dev_game_left lt' >
                                 <div className='img_box lt'>
                                     <img src={tool5} alt="" />
                                 </div>
@@ -122,7 +122,7 @@ export default class Product extends Component {
 
                                     <p>{t.tex5}</p>
                                 </div>
-                            </div> */}
+                            </div>
                         </div>
                     </div>
                 </div>
