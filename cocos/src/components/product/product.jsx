@@ -9,10 +9,13 @@ import tool2 from '../../images/tool2.png'
 // import tool3 from '../../images/tool3.png'
 // import tool4 from '../../images/chrome.png'
 import tool5 from '../../images/ios.png'
+import desk from '../../images/deskapp.png'
 import ios from '../../images/iosicon.png'
 import az from '../../images/azicon.png'
 import iosma from '../../images/iosma.png'
 import azma from '../../images/azma.png'
+import mac from '../../images/mac.png'
+import win from '../../images/win.png'
 import './product.css'
 
 export default class Product extends Component {
@@ -119,8 +122,27 @@ export default class Product extends Component {
                                             <img className="azma" src={azma} alt="" />
                                         </div>
                                     </div>
-
                                     <p>{t.tex5}</p>
+                                </div>
+                            </div>
+                            <div className='dev_game_left lt' >
+                                <div className='img_box lt'>
+                                    <img src={desk} alt="" />
+                                </div>
+                                <div className='dev_text_box lt'>
+                                    <h4>{t.tname5}</h4>
+                                    <div className='w-box'>
+                                        <div className='wordroom'>{t.tauther5}</div>
+                                        <div className='img-icon ios'>
+                                            <a href="https://cocosbcx.oss-cn-beijing.aliyuncs.com/CocosDesktop.dmg" >  <img src={mac} alt="" /></a>
+
+                                        </div>
+                                        <div className='img-icon az'>
+                                            <a href="https://cocosbcx.oss-cn-beijing.aliyuncs.com/CocosDesktop.exe"> <img src={win} alt="" /></a>
+
+                                        </div>
+                                    </div>
+                                    <p>{t.tex7}</p>
                                 </div>
                             </div>
                         </div>
