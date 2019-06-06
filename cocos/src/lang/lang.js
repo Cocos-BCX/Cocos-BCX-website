@@ -109,7 +109,7 @@ exports.lang = {
         tex4: '官方浏览器插件钱包。支持基本钱包功能和 DApp 调用，使用起来方便简洁，可在谷歌商店下载体验。',
         tex5: '官方手机端钱包。支持秘钥管理，支持签名转账、管理账号资源等所有操作。CocosWallet 支持多账号登陆。',
         tex6: '官方手机端钱包。支持秘钥管理，支持签名转账、管理账号资源等所有操作。CocosWallet 支持多账号登陆。',
-        tex7: '官方钱包PC 端桌面钱包。支持钱包的基础功能，支持签名转账、管理账号资源等操作。钱包备份完毕后，不会因计算机或浏览器崩溃丢失数据。',
+        tex7: 'CocosDesktop是基于COCOS-BCX开发的桌面版钱包，支持钱包的基本功能，可以帮助我们进行签名转账、管理账号资源，查询历史记录等所有的操作。在钱包安装过程中提示用户必须备份私钥，且保证其安全。',
 
         //关于我们
         lookBook: '查看白皮书',
@@ -333,7 +333,7 @@ exports.lang = {
         tex4: 'CocosPay is the official browser plug-in wallet that supports basic wallet functions and DApp calls. Clean and easy to use, the user-friendly app is now available on Google Play.',
         tex5: 'CocosWallet is the official mobile wallet that supports all the features like private key management, signature transfer, account management, and multiple account login.',
         tex6: 'CocosWallet is the official mobile wallet that supports all the features like private key management, signature transfer, account management, and multiple account login.',
-        tex7: 'CocosDesktop is the official PC wallet that supports signature transfer, account management, and basic wallet functions. No data will be lost due to a computer or browser crash after the wallet is backed up.',
+        tex7: 'CocosDesktop is a desktop wallet based on COCOS-BCX. It supports all basic functions of the wallet and helps users with all operations such as signature transfer, management of account resources, and query history. During the wallet installation process, users will be prompted to backup the private key and keep it safe.',
 
         //关于我们
         lookBook: 'Check the White Paper',
