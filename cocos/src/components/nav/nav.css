@@ -33,11 +33,11 @@
   left: 350px;
 }
 .nav_box .nav {
-  width: 693px;
+  width: 810px;
   height: 41px;
   background: #676767;
   transform: skewX(-30deg);
-  margin-left: 314px;
+  margin-left: 194px;
 }
 .nav_box .nav .nav_list_box {
   transform: skewX(30deg);

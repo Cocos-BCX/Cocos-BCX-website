@@ -141,7 +141,7 @@ export default class Nav extends Component {
                                     <div className='nav_develop_list_box' >
                                         <div className='nav_develop_list_trans' ref={(x) => { this.devList = x }}>
                                             <div className='dev_a'
-                                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://mp.weixin.qq.com/s/n5FGEBOGYN4P-nknsa1l6g" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7', '_blank'); }}>
+                                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "https://mp.weixin.qq.com/s/bbtYU76j26PTxri8ytrxsA" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7', '_blank'); }}>
                                                 {t.developPlan}
                                             </div>
                                             <div className='dev_a'
@@ -160,9 +160,9 @@ export default class Nav extends Component {
                         <div className='nav_jl lt'>
                             <a href={lang === 'zh' ? " https://bounty.cocosbcx.io" : ' https://bounty.cocosbcx.io?en'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'>{t.navxs}</a>
                         </div>
-                        {/* <div className='nav_jl lt'>
-                            <a href={lang === 'zh' ? "https://bcx.cocos.com" : 'https://bcx.cocos.com/en'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'>{t.jili}</a>
-                        </div> */}
+                        <div className='nav_jl lt'>
+                            <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/2bw7_nbtzqvFVZikU6EWBQ" : 'https://bcx.cocos.com/en'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'>{t.jili}</a>
+                        </div>
                         <div className='nav_st lt' >
                             <NavLink to="/product" exact={true} activeClassName="active"
                                 className='nav_st_click' >{t.stproduct}
