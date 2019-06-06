@@ -120,7 +120,7 @@ export default class Product extends Component {
                                         <img src={desk} alt="" />
                                     </div>
                                     <div className='dev_text_box lt'>
-                                        <h4>{t.tname5}</h4>
+                                        <h4>{t.tname7}</h4>
                                         <div className='w-box'>
                                             <div className='wordroom'>{t.tauther5}</div>
                                             <div className='img-icon ios'>
