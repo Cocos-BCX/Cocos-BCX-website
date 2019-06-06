@@ -23,7 +23,7 @@ export default class Product extends Component {
         super(props);
         this.state = {
             gameList: [
-                { img: luck, url: 'http://tyche-bcx.oriongaming.club/', til: 'gname2', auther: 'gauther2', gex: 'gex2' },
+                { img: luck, url: 'http://tyche.yezi.one/', til: 'gname2', auther: 'gauther2', gex: 'gex2' },
                 { img: shotting, url: 'http://shooter.cocosbcx.net/', til: 'gname3', auther: 'gauther3', gex: 'gex3' },
                 { img: dice, url: 'http://dice.yezi.one/', til: 'gname4', auther: 'gauther4', gex: 'gex4' },
             ],
