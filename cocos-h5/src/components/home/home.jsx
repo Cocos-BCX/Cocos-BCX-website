@@ -299,15 +299,17 @@ export default class Home extends Component {
                 <div className="swiper-container" >
                     <div className="swiper-wrapper" >
                         <div className="swiper-slide slide-1">
-                            <div className='banner_box banner_box_g'>
-                                <img src={logow} className='wlogo' alt="" />
-                                <div className={lang === 'zh' ? 'home_btn_box' : 'home_btn_box home_btn_box_en'}>
-                                    <div className='til'>{t.gtil}</div>
-                                    <div className='line'></div>
-                                    <p className='dh'>{t.gdh}</p>
-                                    <p className='date'>{t.gdate}</p>
+                            <a href="https://mp.weixin.qq.com/s/2bw7_nbtzqvFVZikU6EWBQ" target="_blank">
+                                <div className='banner_box banner_box_g'>
+                                    <img src={logow} className='wlogo' alt="" />
+                                    <div className={lang === 'zh' ? 'home_btn_box' : 'home_btn_box home_btn_box_en'}>
+                                        <div className='til'>{t.gtil}</div>
+                                        <div className='line'></div>
+                                        <p className='dh'>{t.gdh}</p>
+                                        <p className='date'>{t.gdate}</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div className="swiper-slide slide-2">
                             <div className='banner_box'>

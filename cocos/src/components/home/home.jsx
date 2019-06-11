@@ -381,14 +381,16 @@ export default class Home extends Component {
                         <div className="swiper-wrapper" >
 
                             <div className="swiper-slide slide-2" ref={(x) => { this.bannerBox1 = x }}>
-                                <div key="amache" className='banner_box bannerg_box full' ref={(x) => { this.banner = x }} >
-                                    <div className='home_btn_box_g'>
-                                        <div className='til'>{t.gtil}</div>
-                                        <div className='line'></div>
-                                        <p className='dh'>{t.gdh}</p>
-                                        <p className='date'>{t.gdate}</p>
+                                <a href="https://mp.weixin.qq.com/s/2bw7_nbtzqvFVZikU6EWBQ" target="_blank">
+                                    <div key="amache" className='banner_box bannerg_box full' ref={(x) => { this.banner = x }} >
+                                        <div className='home_btn_box_g'>
+                                            <div className='til'>{t.gtil}</div>
+                                            <div className='line'></div>
+                                            <p className='dh'>{t.gdh}</p>
+                                            <p className='date'>{t.gdate}</p>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div className="swiper-slide slide-1" ref={(x) => { this.bannerBox = x }}>
                                 <div key="amache" className='banner_box animated full' ref={(x) => { this.banner = x }} >
@@ -407,8 +409,8 @@ export default class Home extends Component {
                             </div>
                         </div>
                         <div className="swiper-pagination"></div>
-                        <div className="swiper-button-prev swiper-button-blue" style={{opacity:'.5'}}></div>
-                        <div className="swiper-button-next swiper-button-blue" style={{opacity:'.5'}}></div>
+                        <div className="swiper-button-prev swiper-button-blue" style={{ opacity: '.5' }}></div>
+                        <div className="swiper-button-next swiper-button-blue" style={{ opacity: '.5' }}></div>
                     </div>
                 </div>
 
