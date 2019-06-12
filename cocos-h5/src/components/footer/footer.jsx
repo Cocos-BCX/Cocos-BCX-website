@@ -136,7 +136,7 @@ export default class Footer extends Component {
                         <a href={lang === 'zh' ? "https://t.me/CocosBCX" : 'https://t.me/cocosbcxen'} target='_blank' rel="noopener noreferrer">
                             <img src={tele} alt="" />
                         </a>
-                        <a href="https://github.com/cocosbcx" target='_blank' rel="noopener noreferrer">
+                        <a href="https://github.com/cocos-bcx" target='_blank' rel="noopener noreferrer">
                             <img src={git} alt="" />
                         </a>
                         <a href="https://www.reddit.com/user/cocos-bcx/" target='_blank' rel="noopener noreferrer">
