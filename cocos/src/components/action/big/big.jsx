@@ -64,7 +64,16 @@ export default class Big extends Component {
                 { date: '2019-01-30~31', til: 'ns13' },
                 { date: '2019-01-28', til: 'ns14' },
                 { date: '2019-03-19', til: 'ns15' },
+                { date: '2019-03-29', til: 'ns16' },
             ],
+            ns2: [
+                { date: '2019-04-24~25', til: 'ns21' },
+                { date: '2019-04-25', til: 'ns22' },
+                { date: '2019-05-13~15', til: 'ns23' },
+                { date: '019-05-18', til: 'ns24' },
+                { date: '2019-05-19', til: 'ns25' },
+                { date: '2019-06-06', til: 'ns26' },
+            ]
 
         }
     }
@@ -100,6 +109,10 @@ export default class Big extends Component {
         this.sbtn.style.display = 'none';
         this.ebtn.style.display = 'none';
         this.nbtn.style.display = 'none';
+        // this.setState({es1:this.state.ns1})
+        // this.setState({es2:this.state.ns2})
+        // this.setState({es3:[]})
+        // this.setState({es4:[]})
         this.setState({ year: '2019' })
     }
     //收起/打开s1
@@ -205,7 +218,7 @@ export default class Big extends Component {
                     <div className='big_list_box'>
                         <div className='s1_box'>
                             <div className='s1_til lt'>
-                             {t.s2}
+                                {t.s2}
                             </div>
                             <div className='s1_content rt' ref={(x) => { this.s2 = x }}>
                                 <div className='s1_more' onClick={this.s2action}>
@@ -223,7 +236,7 @@ export default class Big extends Component {
                     <div className='big_list_box' >
                         <div className='s1_box'>
                             <div className='s1_til lt'>
-                               {t.s3}
+                                {t.s3}
                             </div>
                             <div className='s1_content rt' ref={(x) => { this.s3 = x }}>
                                 <div className='s1_more' onClick={this.s3action}>
@@ -241,7 +254,7 @@ export default class Big extends Component {
                     <div className='big_list_box'>
                         <div className='s1_box'>
                             <div className='s1_til lt'>
-                               {t.s4}
+                                {t.s4}
                             </div>
                             <div className='s1_content rt' ref={(x) => { this.s4 = x }}>
                                 <div className='s1_more' onClick={this.s4action}>
@@ -257,11 +270,11 @@ export default class Big extends Component {
                         </div>
                     </div>
                 </div>
-                <div style={{ height: '1000px', display: 'none' }} ref={(x) => { this.seven = x }}>
+                <div style={{ height: 'auto', display: 'none' }} ref={(x) => { this.seven = x }}>
                     <div className='big_list_box'>
                         <div className='s1_box'>
                             <div className='s1_til lt'>
-                               {t.s3}
+                                {t.s3}
                             </div>
                             <div className='s1_content rt' style={{ height: 'auto' }} >
                                 {this.state.ss3.map((item, index) => {
@@ -289,7 +302,7 @@ export default class Big extends Component {
                         </div>
                     </div>
                 </div>
-                <div style={{ height: '1000px', display: 'block' }} ref={(x) => { this.nine = x }}>
+                <div style={{ height: 'auto', display: 'block' }} ref={(x) => { this.nine = x }}>
                     <div className='big_list_box'>
                         <div className='s1_box'>
                             <div className='s1_til lt'>
@@ -297,6 +310,21 @@ export default class Big extends Component {
                             </div>
                             <div className='s1_content rt' style={{ height: 'auto' }} >
                                 {this.state.ns1.map((item, index) => {
+                                    return <div className='s1_list s3_list' style={{ marginBottom: 'auto' }} key={index}>
+                                        <div className='s1_time lt' >{item.date}</div>
+                                        <div className='s1_text lt' >{t[item.til]}</div>
+                                    </div>
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                    <div className='big_list_box'>
+                        <div className='s1_box'>
+                            <div className='s1_til lt'>
+                                {t.s2}
+                            </div>
+                            <div className='s1_content rt' style={{ height: 'auto' }} >
+                                {this.state.ns2.map((item, index) => {
                                     return <div className='s1_list s3_list' style={{ marginBottom: 'auto' }} key={index}>
                                         <div className='s1_time lt' >{item.date}</div>
                                         <div className='s1_text lt' >{t[item.til]}</div>
