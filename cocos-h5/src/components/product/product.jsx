@@ -107,7 +107,7 @@ export default class Product extends Component {
                                             <img className="iosma" src={iosma} alt="" />
                                         </div>
                                         <div className='img-icon az'>
-                                            <a href="https://fir.im/cocosbcx" target='_blank' rel="noopener noreferrer">
+                                            <a href="https://cocosbcx.oss-cn-beijing.aliyuncs.com/androidWallet.apk" target='_blank' rel="noopener noreferrer">
                                                 <img src={az} alt="" />
                                             </a>
                                             <img className="azma" src={azma} alt="" />
