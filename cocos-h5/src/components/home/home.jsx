@@ -452,6 +452,7 @@ export default class Home extends Component {
                                 <h5 className='lt'>{t[item.til3]}</h5>
                                 <p style={{ "WebkitBoxOrient": "vertical" }} className='jishu lt'>
                                     {t[item.til1]}
+                                    {t[item.til2]}
                                 </p>
                             </div>
                         })}
