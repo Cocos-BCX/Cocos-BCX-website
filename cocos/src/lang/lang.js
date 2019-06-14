@@ -86,9 +86,9 @@ exports.lang = {
         gauther3: 'Orion Group',
         gauther4: 'Cocos-BCX',
         gex1: '经典街机游戏，三个相同水果你就可以获得大奖哟。游戏界面由9个方格拼接成一个正方形，每个方格中都有一个不同的水果图形。',
-        gex2: '经典摇骰子类百家乐游戏，可在线多人对局。该游戏使用Cocos-BCX链的链内源随机数，使得公平性得以体现。',
+        gex2: '经典竞技类游戏，可在线多人对局。该游戏使用Cocos-BCX链的链内源随机数，使得公平性得以体现。',
         gex3: '一款飞行射击类游戏。在 Cocos Shooting 中，玩家可以操纵自己的飞机，通过不断击落敌机来获取资源，以此来强化飞机，战胜每一个BOSS。',
-        gex4: '经典掷骰子类游戏Demo',
+        gex4: '经典竞技类游戏Demo',
         tname1: 'Cocos-BCX 浏览器',
         tname2: 'Cocos Terminal',
         tname3: 'Game props exchange',
@@ -109,7 +109,7 @@ exports.lang = {
         tex4: '官方浏览器插件钱包。支持基本钱包功能和 DApp 调用，使用起来方便简洁，可在谷歌商店下载体验。',
         tex5: '官方手机端钱包。支持秘钥管理，支持签名转账、管理账号资源等所有操作。CocosWallet 支持多账号登陆。',
         tex6: '官方手机端钱包。支持秘钥管理，支持签名转账、管理账号资源等所有操作。CocosWallet 支持多账号登陆。',
-        tex7: 'CocosDesktop是基于COCOS-BCX开发的桌面版钱包，支持钱包的基本功能，可以帮助我们进行签名转账、管理账号资源，查询历史记录等所有的操作。在钱包安装过程中提示用户必须备份私钥，且保证其安全。',
+        tex7: 'CocosDesktop是基于COCOS-BCX开发的桌面版钱包，支持钱包的基本功能，可以帮助我们进行签名转账、管理账号资源，查询历史记录等所有的操作。',
 
         //关于我们
         lookBook: '查看白皮书',
@@ -340,7 +340,7 @@ exports.lang = {
         tex4: 'CocosPay is the official browser plug-in wallet that supports basic wallet functions and DApp calls. Clean and easy to use, the user-friendly app is now available on Google Play.',
         tex5: 'CocosWallet is the official mobile wallet that supports all the features like private key management, signature transfer, account management, and multiple account login.',
         tex6: 'CocosWallet is the official mobile wallet that supports all the features like private key management, signature transfer, account management, and multiple account login.',
-        tex7: 'CocosDesktop is a desktop wallet based on COCOS-BCX. It supports all basic functions of the wallet and helps users with all operations such as signature transfer, management of account resources, and query history. During the wallet installation process, users will be prompted to backup the private key and keep it safe.',
+        tex7: 'CocosDesktop is a desktop wallet based on COCOS-BCX. It supports all basic functions of the wallet and helps users with all operations such as signature transfer, management of account resources, and query history. ',
 
         //关于我们
         lookBook: 'Check the White Paper',
