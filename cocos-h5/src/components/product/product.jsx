@@ -4,6 +4,7 @@ import { getLang } from '../../utils/chooselang'
 import luck from '../../images/luck.png'
 import shotting from '../../images/shooting.png'
 import dice from '../../images/dice.png'
+import snake from '../../images/snake.png'
 import tool1 from '../../images/tool1.png'
 import tool2 from '../../images/tool2.png'
 import tool3 from '../../images/tool3.png'
@@ -25,10 +26,12 @@ export default class Product extends Component {
                 { img: luck, url: 'http://tyche.yezi.one/', til: 'gname2', auther: 'gauther2', gex: 'gex2' },
                 { img: shotting, url: 'http://shooter.cocosbcx.net/', til: 'gname3', auther: 'gauther3', gex: 'gex3' },
                 { img: dice, url: 'http://dice.yezi.one/', til: 'gname4', auther: 'gauther4', gex: 'gex4' },
+                { img: snake, url: 'http://snake-cocosbcx.cjfan.net/', til: 'gname5', auther: 'gauther5', gex: 'gex5' },
             ],
             toolList: [
                 { img: tool1, url: 'https://explorer.cocosbcx.io/', til: 'tname1', auther: 'tauther1', gex: 'tex1' },
                 { img: tool2, url: 'http://cocos-terminal.com/', til: 'tname2', auther: 'tauther2', gex: 'tex2' },
+                { img: tool3, url: 'https://chrome.google.com/webstore/detail/cocospay/ffbhaeoepdfapfjhcihbbhlaigejfack', til: 'tname4', auther: 'tauther4', gex: 'tex2' },
                 // {img:tool3,url:'http://gpe.famegame.com.cn/',til:'tname3',auther:'tauther3',gex:'tex3'},
             ],
         }
