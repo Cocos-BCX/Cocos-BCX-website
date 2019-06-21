@@ -202,7 +202,7 @@
 }
 .about .adviser_box .team_pic_box {
   margin: auto;
-  height: 700px;
+  height: 320px;
   padding-bottom: 20px;
 }
 .about .adviser_box .team_pic_box .team_every {
@@ -388,7 +388,7 @@
   }
   .about .team_box .team_pic_box {
     margin: auto;
-    height: 520px;
+    height: 500px;
     padding-bottom: 40px;
   }
   .about .team_box .team_pic_box .team_every {
@@ -489,7 +489,7 @@
   }
   .about .adviser_box .team_pic_box {
     margin: auto;
-    height: 500px;
+    height: 280px;
     padding-bottom: 20px;
   }
   .about .adviser_box .team_pic_box .team_every {
