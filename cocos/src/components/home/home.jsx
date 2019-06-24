@@ -96,8 +96,8 @@ export default class Home extends Component {
         var swiper = new Swiper('.swiper-container', {
             loop: true,
             autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
+                // delay: 4000,
+                // disableOnInteraction: false,
             },
             lazy: {
                 //loadPrevNext: true,
@@ -324,10 +324,6 @@ export default class Home extends Component {
         container.onmousemove = onMouseMoveHandler;
     }
 
-    //计算轮播尺寸
-    addSize = () => {
-
-    }
     componentDidMount() {
         window.onload = (() => {
             this.runbanner()
@@ -339,7 +335,6 @@ export default class Home extends Component {
         this.jst()
         this.hzt()
         this.hzdt()
-        this.addSize()
 
 
 
@@ -380,8 +375,8 @@ export default class Home extends Component {
                     <div className="swiper-container" >
                         <div className="swiper-wrapper" >
 
-                            <div className="swiper-slide slide-2" ref={(x) => { this.bannerBox1 = x }}>
-                                <a href="https://mp.weixin.qq.com/s/2bw7_nbtzqvFVZikU6EWBQ" target="_blank">
+                            <div className="swiper-slide slide-2" >
+                                <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/2bw7_nbtzqvFVZikU6EWBQ" : 'https://medium.com/@CocosBCX/cocos-bcx-will-launch-testnet-1-0-gang-rinpoche-on-june-6-8cbb0b90e2e0'} target="_blank">
                                     <div key="amache" className='banner_box bannerg_box full' ref={(x) => { this.banner = x }} >
                                         <div className='home_btn_box_g'>
                                             <div className='til'>{t.gtil}</div>
@@ -392,7 +387,18 @@ export default class Home extends Component {
                                     </div>
                                 </a>
                             </div>
-                            <div className="swiper-slide slide-1" ref={(x) => { this.bannerBox = x }}>
+                            {/* <div className="swiper-slide slide-3" >
+                                <a href="https://mp.weixin.qq.com/s/izOYBwMAeeI8byrRicwigw" target="_blank">
+                                    <div key="amache" className='banner_box bannern_box full' ref={(x) => { this.banner = x }} >
+                                        <div className='home_btn_box_g'>
+                                            <div className='til'>210,000,000<span> COCOS</span></div>
+                                            <div className='text'>{t.banner3}</div>
+                                            <div className='line'></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div> */}
+                            <div className="swiper-slide slide-1" >
                                 <div key="amache" className='banner_box animated full' ref={(x) => { this.banner = x }} >
                                     <div className='home_btn_box'>
                                         <div className='home_btn_box_mask  tada delay-1s'>

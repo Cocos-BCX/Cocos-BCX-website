@@ -299,7 +299,7 @@ export default class Home extends Component {
                 <div className="swiper-container" >
                     <div className="swiper-wrapper" >
                         <div className="swiper-slide slide-1">
-                            <a href="https://mp.weixin.qq.com/s/2bw7_nbtzqvFVZikU6EWBQ" target="_blank">
+                            <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/2bw7_nbtzqvFVZikU6EWBQ" : 'https://medium.com/@CocosBCX/cocos-bcx-will-launch-testnet-1-0-gang-rinpoche-on-june-6-8cbb0b90e2e0'} target="_blank">
                                 <div className='banner_box banner_box_g'>
                                     <img src={logow} className='wlogo' alt="" />
                                     <div className={lang === 'zh' ? 'home_btn_box' : 'home_btn_box home_btn_box_en'}>
@@ -311,6 +311,18 @@ export default class Home extends Component {
                                 </div>
                             </a>
                         </div>
+                        {/* <div className="swiper-slide slide-3">
+                            <a href="https://mp.weixin.qq.com/s/izOYBwMAeeI8byrRicwigw" target="_blank">
+                                <div className='banner_box bannern_box_g'>
+                                    <img src={logow} className='wlogo' alt="" />
+                                    <div className='home_btn_box_g'>
+                                        <div className='til'>210,000,000<span> COCOS</span></div>
+                                        <div className='text'>{t.banner3}</div>
+                                        <div className='line'></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div> */}
                         <div className="swiper-slide slide-2">
                             <div className='banner_box'>
                                 <img src={logow} className='wlogo' alt="" />

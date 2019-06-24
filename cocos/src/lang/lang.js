@@ -29,6 +29,7 @@ exports.lang = {
         ex_text1: '在多区块链环境和设备上运行游戏',
         ex_text2: '可视化、脚本化和数据驱动的开发工具',
         ex_text3: '支持高性能应用的区块链系统',
+        banner3: '生态节点激励计划出炉',
 
         news: '新闻',
         more: '更多',
@@ -263,6 +264,7 @@ exports.lang = {
         ex_text1: 'Create, build, and test blockchain games across multi-blockchain platforms.',
         ex_text2: 'Cocos-BCX creates a complete development environment for blockchain games which is visual, script-based, and data-oriented.',
         ex_text3: 'Built for high-performance applications.',
+        banner3: '生态节点激励计划出炉',
 
         news: 'NEWS',
         more: 'MORE',

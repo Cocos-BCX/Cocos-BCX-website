@@ -100,7 +100,7 @@ export default class Nav extends Component {
                             </div>
 
                             <a href={lang === 'zh' ? " https://bounty.cocosbcx.io" : ' https://bounty.cocosbcx.io'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'>{t.navxs}</a>
-                            <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/2bw7_nbtzqvFVZikU6EWBQ" : 'https://bcx.cocos.com/en'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'>{t.jili}</a>
+                            <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/2bw7_nbtzqvFVZikU6EWBQ" : 'https://medium.com/cocosbcx/cocos-bcx-bounty-program-kick-off-8f325ae01f0b'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'>{t.jili}</a>
 
                             <NavLink to="/product" exact={true} activeClassName="active"
                                 className='nav_st_click navBox' >{t.stproduct}
