@@ -296,7 +296,7 @@ exports.lang = {
         subscribe: 'SUBSCRIBE',
 
         //开发者
-        devjh: '14:00 PM, December 21, 2018, Cocos-BCX TestNet was officially launched. Together with the TestNet launched, Cocos-BCX opened up the Developer Program with 30 spots offered to developers in China region to join Alpha testing on Cocos-BCX TestNet. Now with the English version technical documentations ready in place, Cocos-BCX further invites developers (individual or team) globally to join Alpha testing on the platform!',
+        devjh: 'On June 6, Cocos-BCX TestNet 1.0 “Gang Rinpoche” public beta testing was officially launched, representing the happiness of exploring unknowns by the team and community. During the launching event, Cocos-BCX released the $1 million “TestNet Incentive Program”, updated Technical Documentation 2.0, and Pan-node Ecosystem Program, Developer Program, SDK, Wallets, Browser, DEMO game, etc.',
         devwd: 'Welcome to the technical documentation of Cocos Blockchain Expedition! This collection introduces the Cocos-BCX architecture and its features, the contract system including tutorials, non-homogenous assets standard (BCX-NHAS-1808) and world views.',
         devsq: 'Welcome to the technical forum of Cocos Blockchain Expedition! Currently, Cocos has 1.3 million registered developers worldwide, with a monthly active developers of 300 thousand, as well as 800 million players in 203 countries and regions around the world.',
 

@@ -16,6 +16,14 @@ body {
   font-weight: normal;
   font-style: normal;
 
+
+}
+@font-face{
+  font-family: 'ar';
+  src: url('./font/arial_black-webfont.woff2') format('woff2'),
+       url('./font/arial_black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 li{
   list-style: none;
