@@ -13,7 +13,6 @@ import desk from '../../images/deskapp.png'
 import ios from '../../images/iosicon.png'
 import az from '../../images/azicon.png'
 import iosma from '../../images/iosma.png'
-import azma from '../../images/azma.png'
 import mac from '../../images/mac.png'
 import win from '../../images/win.png'
 import './product.css'
@@ -113,7 +112,7 @@ export default class Product extends Component {
                                             <a href="https://cocosbcx.oss-cn-beijing.aliyuncs.com/androidWallet.apk" target='_blank' rel="noopener noreferrer">
                                                 <img src={az} alt="" />
                                             </a>
-                                            <img className="azma" src={azma} alt="" />
+                                            <img className="azma" src={iosma} alt="" />
                                         </div>
                                     </div>
                                     <p>{t.tex5}</p>

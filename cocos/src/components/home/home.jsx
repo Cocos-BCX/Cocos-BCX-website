@@ -66,27 +66,32 @@ export default class Home extends Component {
             { img: cocos3, text: 'system3' },
             { img: cocos4, text: 'system4' },
             { img: cocos5, text: 'system5' },],
-            mapList: [{
-                til1: 'map1',
-                til2: 'map11',
-                til3: 'md1',
-            }, {
-                til1: 'map2',
-                til2: 'map22',
-                til3: 'md2',
-            }, {
-                til1: 'map3',
-                til2: 'map33',
-                til3: 'md3',
-            }, {
-                til1: 'map4',
-                til2: 'map44',
-                til3: 'md4',
-            }, {
-                til1: 'map5',
-                til2: 'map55',
-                til3: 'md5',
-            },],
+            mapList: [
+                {
+                    til1: 'map1',
+                    til2: 'map11',
+                    til3: 'md1',
+                },
+                {
+                    til1: 'map5',
+                    til2: 'map55',
+                    til3: 'md5',
+                },
+                {
+                    til1: 'map4',
+                    til2: 'map44',
+                    til3: 'md4',
+                },
+                {
+                    til1: 'map3',
+                    til2: 'map33',
+                    til3: 'md3',
+                },
+                {
+                    til1: 'map2',
+                    til2: 'map22',
+                    til3: 'md2',
+                },],
             newsTopList: [],
             newsBottomList: []
         }
@@ -374,7 +379,17 @@ export default class Home extends Component {
                     </div>
                     <div className="swiper-container" >
                         <div className="swiper-wrapper" >
-
+                            {lang === 'zh' ? <div className="swiper-slide slide-3" >
+                                <a href="https://mp.weixin.qq.com/s/izOYBwMAeeI8byrRicwigw" target="_blank">
+                                    <div key="amache" className='banner_box bannern_box full' ref={(x) => { this.banner = x }} >
+                                        <div className='home_btn_box_g'>
+                                            <div className='til'>210,000,000<span> COCOS</span></div>
+                                            <div className='text'>{t.banner3}</div>
+                                            <div className='line'></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div> : null}
                             <div className="swiper-slide slide-2" >
                                 <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/2bw7_nbtzqvFVZikU6EWBQ" : 'https://medium.com/@CocosBCX/cocos-bcx-will-launch-testnet-1-0-gang-rinpoche-on-june-6-8cbb0b90e2e0'} target="_blank">
                                     <div key="amache" className='banner_box bannerg_box full' ref={(x) => { this.banner = x }} >
@@ -387,17 +402,8 @@ export default class Home extends Component {
                                     </div>
                                 </a>
                             </div>
-                            {/* <div className="swiper-slide slide-3" >
-                                <a href="https://mp.weixin.qq.com/s/izOYBwMAeeI8byrRicwigw" target="_blank">
-                                    <div key="amache" className='banner_box bannern_box full' ref={(x) => { this.banner = x }} >
-                                        <div className='home_btn_box_g'>
-                                            <div className='til'>210,000,000<span> COCOS</span></div>
-                                            <div className='text'>{t.banner3}</div>
-                                            <div className='line'></div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div> */}
+
+
                             <div className="swiper-slide slide-1" >
                                 <div key="amache" className='banner_box animated full' ref={(x) => { this.banner = x }} >
                                     <div className='home_btn_box'>
