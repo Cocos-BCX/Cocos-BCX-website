@@ -11,6 +11,13 @@ import git from '../../images/github.png'
 import zs from '../../images/zs.png'
 import reddit from '../../images/reddit.png'
 import discord from '../../images/discord.png'
+import mt from '../../images/mt.png'
+import mg from '../../images/mg.png'
+import mm from '../../images/mm.png'
+import md from '../../images/md.png'
+import mwx from '../../images/mwx.png'
+import mtele from '../../images/mtele.png'
+import top from '../../images/top.png'
 
 import mediumb from '../../images/mediumb.png'
 import twitterb from '../../images/Twitterb.png'
@@ -118,6 +125,29 @@ export default class Footer extends Component {
         return (
             <div className='footer'>
                 <div className='footer_box'>
+                    <div className='message'>
+                        <div>
+                            <img src={mt} alt="" />
+                        </div>
+                        <div>
+                            <img src={mg} alt="" />
+                        </div>
+                        <div>
+                            <img src={mm} alt="" />
+                        </div>
+                        <div>
+                            <img src={md} alt="" />
+                        </div>
+                        <div>
+                            <img src={mwx} alt="" />
+                        </div>
+                        <div>
+                            <img src={mtele} alt="" />
+                        </div>
+                        <div>
+                            <img src={top} alt="" />
+                        </div>
+                    </div>
                     <div className='totop' ref={(x) => { this.toTomDom = x }} onClick={this.toTop}>
                         <div className='tojt'>
                             <div></div>

@@ -51,7 +51,6 @@ import w14 from '../../images/white(14).png'
 import jia from '../../images/jia.png'
 import close from '../../images/close.png'
 import dline from '../../images/dline.png'
-import bgaaa from '../../images/bgaaa.png'
 import './home.css'
 
 export default class Home extends Component {
@@ -380,7 +379,7 @@ export default class Home extends Component {
                     <div className="swiper-container" >
                         <div className="swiper-wrapper" >
                             {lang === 'zh' ? <div className="swiper-slide slide-3" >
-                                <a href="https://mp.weixin.qq.com/s/izOYBwMAeeI8byrRicwigw" target="_blank">
+                                <a href="https://mp.weixin.qq.com/s/izOYBwMAeeI8byrRicwigw" target="_blank" rel="noopener noreferrer">
                                     <div key="amache" className='banner_box bannern_box full' ref={(x) => { this.banner = x }} >
                                         <div className='home_btn_box_g'>
                                             <div className='til'>210,000,000<span> COCOS</span></div>
@@ -391,7 +390,7 @@ export default class Home extends Component {
                                 </a>
                             </div> : null}
                             <div className="swiper-slide slide-2" >
-                                <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/2bw7_nbtzqvFVZikU6EWBQ" : 'https://medium.com/@CocosBCX/cocos-bcx-will-launch-testnet-1-0-gang-rinpoche-on-june-6-8cbb0b90e2e0'} target="_blank">
+                                <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/2bw7_nbtzqvFVZikU6EWBQ" : 'https://medium.com/@CocosBCX/cocos-bcx-will-launch-testnet-1-0-gang-rinpoche-on-june-6-8cbb0b90e2e0'} target="_blank" rel="noopener noreferrer">
                                     <div key="amache" className='banner_box bannerg_box full' ref={(x) => { this.banner = x }} >
                                         <div className='home_btn_box_g'>
                                             <div className='til'>{t.gtil}</div>
