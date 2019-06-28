@@ -13,8 +13,9 @@
             height: 350px;
             position: fixed;
             right: 50px;
-            bottom: 200px;
+            bottom: 100px;
             background: rgba(102, 102, 102, 1);
+            border-radius: 2px;
 
             div {
                 height: 50px;
@@ -22,15 +23,39 @@
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
+                position: relative;
+                border-bottom: 1px solid #707070;
+                box-sizing: border-box;
 
                 &:hover {
                     background: #2AD9FE;
                 }
 
-                img {
-                    width: 24px;
-                    height: 24px;
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
                 }
+
+                .kf {
+                    position: absolute;
+                    width: 100px;
+                    height: 100px;
+                    right: 55px;
+                    display: none;
+                }
+
+            }
+
+            .m-kf:hover .kf {
+                display: block;
             }
         }
 

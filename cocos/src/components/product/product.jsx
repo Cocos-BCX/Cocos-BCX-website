@@ -32,15 +32,30 @@ export default class Product extends Component {
                 { img: tool2, url: 'http://cocos-terminal.com/', til: 'tname2', auther: 'tauther2', gex: 'tex2' },
                 { img: tool3, url: 'https://chrome.google.com/webstore/detail/cocospay/ffbhaeoepdfapfjhcihbbhlaigejfack', til: 'tname4', auther: 'tauther4', gex: 'tex2' },
             ],
+            downLoad: '',
         }
     }
     componentDidMount() {
+        this.choose()
         this.devbtn.onmouseenter = () => {
             this.devbtn.classList.add('bounceIn');
         }
         this.devplan.onmouseleave = () => {
             this.devbtn.classList.remove('bounceIn');
         }
+    }
+    choose() {
+        let agent = navigator.userAgent;
+        console.log(agent);
+
+        let isMac = /macintosh|mac os x/i.test(agent);
+        if (isMac) {
+            this.setState({ downLoad: 'https://cocosbcx.oss-cn-beijing.aliyuncs.com/CocosDesktop.dmg' })
+        }
+        if (agent.indexOf("Win") >= 0 || agent.indexOf("wow") >= 0) {
+            this.setState({ downLoad: 'https://cocosbcx.oss-cn-beijing.aliyuncs.com/CocosDesktop.exe' })
+        }
+
     }
     render() {
         let lang = localStorage.getItem('lang_type');
