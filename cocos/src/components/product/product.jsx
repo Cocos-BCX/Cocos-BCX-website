@@ -106,7 +106,7 @@ export default class Product extends Component {
                             </div>
                             <div className="news_til_mask"></div>
                         </div>
-                        <div className='dev_game_box'>
+                        <div className='dev_game_box dev_game_box_s'>
                             {this.state.toolList.map((item, index) => {
                                 return <a href={item.url} target='_blank' rel="noopener noreferrer" className='dev_game_left lt' key={index}>
                                     <div className='img_box lt'>

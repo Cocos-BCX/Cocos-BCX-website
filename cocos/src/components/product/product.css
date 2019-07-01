@@ -80,11 +80,15 @@
   transform: skewX(-20deg);
 }
 .product .dev_list_box .dev_game .dev_game_box {
-  overflow: hidden;
+  height: 450px;
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left {
   overflow: hidden;
   margin-top: 37px;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left:hover {
+  box-shadow: 0px 0px 15px 0px #dcdcdc;
+  border-radius: 2px;
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left:nth-child(even) {
   margin-left: 70px;
@@ -166,6 +170,9 @@
   line-height: 28px;
   position: relative;
   color: #000;
+}
+.product .dev_list_box .dev_game .dev_game_box_s {
+  height: 560px;
 }
 @media screen and (max-width: 1400px) {
   .product .banner_s_box {
@@ -268,7 +275,7 @@
     text-align: center;
   }
   .product .dev_list_box .dev_game .dev_game_box {
-    overflow: hidden;
+    height: 320px;
   }
   .product .dev_list_box .dev_game .dev_game_box .dev_game_left {
     overflow: hidden;
@@ -343,5 +350,8 @@
     line-height: 21px;
     position: relative;
     color: #000;
+  }
+  .product .dev_list_box .dev_game .dev_game_box_s {
+    height: 500px;
   }
 }

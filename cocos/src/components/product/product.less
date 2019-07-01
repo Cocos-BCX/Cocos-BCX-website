@@ -49,6 +49,8 @@
             width: 1170px;
             padding-bottom: 90px;
 
+
+
             .news_til_box {
                 margin: auto;
                 height: 59px;
@@ -95,11 +97,18 @@
             }
 
             .dev_game_box {
-                overflow: hidden;
-                // height: 877px;
+                // overflow: hidden;
+
+                height: 450px;
+
                 .dev_game_left {
                     overflow: hidden;
                     margin-top: 37px;
+
+                    &:hover {
+                        box-shadow: 0px 0px 15px 0px rgba(220, 220, 220, 1);
+                        border-radius: 2px;
+                    }
 
                     &:nth-child(even) {
                         margin-left: 70px;
@@ -211,7 +220,13 @@
                     }
                 }
             }
+
+            .dev_game_box_s {
+                height: 560px;
+            }
         }
+
+
     }
 }
 
@@ -334,7 +349,8 @@
                 }
 
                 .dev_game_box {
-                    overflow: hidden;
+                    // overflow: hidden;
+                    height: 320px;
 
                     .dev_game_left {
                         overflow: hidden;
@@ -434,6 +450,10 @@
 
                         }
                     }
+                }
+
+                .dev_game_box_s {
+                    height: 500px;
                 }
             }
         }
