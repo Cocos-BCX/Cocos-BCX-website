@@ -256,6 +256,7 @@ export default class Home extends Component {
         };
     }
     componentDidMount() {
+        this.runbanner()
         window.onload = (() => {
             this.runbanner()
         })
