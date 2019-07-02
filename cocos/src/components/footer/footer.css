@@ -25,6 +25,9 @@
   border-bottom: 1px solid #707070;
   box-sizing: border-box;
 }
+.footer .footer_box .message div:nth-child(7) {
+  border-bottom: 0;
+}
 .footer .footer_box .message div:hover {
   background: #2AD9FE;
 }

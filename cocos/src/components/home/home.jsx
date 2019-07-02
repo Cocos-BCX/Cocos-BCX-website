@@ -378,8 +378,8 @@ export default class Home extends Component {
                     </div>
                     <div className="swiper-container" >
                         <div className="swiper-wrapper" >
-                            {lang === 'zh' ? <div className="swiper-slide slide-3" >
-                                <a href="https://mp.weixin.qq.com/s/izOYBwMAeeI8byrRicwigw" target="_blank" rel="noopener noreferrer">
+                            <div className="swiper-slide slide-3" >
+                                <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/izOYBwMAeeI8byrRicwigw" : 'https://medium.com/@CocosBCX/cocos-bcx-launched-ecosystem-incentive-plan-globally-1045eec0ca07'} target="_blank" rel="noopener noreferrer">
                                     <div key="amache" className='banner_box bannern_box full' ref={(x) => { this.banner = x }} >
                                         <div className='home_btn_box_g'>
                                             <div className='til'>210,000,000<span> COCOS</span></div>
@@ -388,7 +388,7 @@ export default class Home extends Component {
                                         </div>
                                     </div>
                                 </a>
-                            </div> : null}
+                            </div>
                             <div className="swiper-slide slide-2" >
                                 <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/2bw7_nbtzqvFVZikU6EWBQ" : 'https://medium.com/@CocosBCX/cocos-bcx-will-launch-testnet-1-0-gang-rinpoche-on-june-6-8cbb0b90e2e0'} target="_blank" rel="noopener noreferrer">
                                     <div key="amache" className='banner_box bannerg_box full' ref={(x) => { this.banner = x }} >

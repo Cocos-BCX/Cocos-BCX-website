@@ -94,7 +94,7 @@ export default class Product extends Component {
                                     </div>
                                 </a>
                             })}
-                            <div className='dev_game_left lt' >
+                            <a href="https://www.cocosbcx.io/download.html" rel="noopener noreferrer" className='dev_game_left lt' >
                                 <div className='img_box lt'>
                                     <img src={tool5} alt="" />
                                 </div>
@@ -102,40 +102,20 @@ export default class Product extends Component {
                                     <h4>{t.tname5}</h4>
                                     <div className='w-box'>
                                         <div className='wordroom'>{t.tauther5}</div>
-                                        <div className='img-icon ios'>
-                                            <a href="https://fir.im/iOSWallet" target='_blank' rel="noopener noreferrer">
-                                                <img src={ios} alt="" />
-                                            </a>
-                                            <img className="iosma" src={iosma} alt="" />
-                                        </div>
-                                        <div className='img-icon az'>
-                                            <a href="https://cocosbcx.oss-cn-beijing.aliyuncs.com/androidWallet.apk" target='_blank' rel="noopener noreferrer">
-                                                <img src={az} alt="" />
-                                            </a>
-                                            <img className="azma" src={iosma} alt="" />
-                                        </div>
                                     </div>
                                     <p>{t.tex5}</p>
                                 </div>
-                                <div className='dev_game_left lt' >
-                                    <div className='img_box lt'>
-                                        <img src={desk} alt="" />
+                            </a>
+                            <div className='dev_game_left lt' >
+                                <div className='img_box lt'>
+                                    <img src={desk} alt="" />
+                                </div>
+                                <div className='dev_text_box lt'>
+                                    <h4>{t.tname7}</h4>
+                                    <div className='w-box'>
+                                        <div className='wordroom'>{t.tauther5}</div>
                                     </div>
-                                    <div className='dev_text_box lt'>
-                                        <h4>{t.tname7}</h4>
-                                        <div className='w-box'>
-                                            <div className='wordroom'>{t.tauther5}</div>
-                                            <div className='img-icon ios'>
-                                                <a href="https://cocosbcx.oss-cn-beijing.aliyuncs.com/CocosDesktop.dmg" >  <img src={mac} alt="" /></a>
-
-                                            </div>
-                                            <div className='img-icon az'>
-                                                <a href="https://cocosbcx.oss-cn-beijing.aliyuncs.com/CocosDesktop.exe"> <img src={win} alt="" /></a>
-
-                                            </div>
-                                        </div>
-                                        <p>{t.tex7}</p>
-                                    </div>
+                                    <p>{t.tex7}</p>
                                 </div>
                             </div>
                         </div>
