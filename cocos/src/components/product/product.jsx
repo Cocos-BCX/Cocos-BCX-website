@@ -10,11 +10,7 @@ import tool2 from '../../images/tool2.png'
 import tool3 from '../../images/tool3.png'
 import tool5 from '../../images/ios.png'
 import desk from '../../images/deskapp.png'
-import ios from '../../images/iosicon.png'
-import az from '../../images/azicon.png'
-import iosma from '../../images/iosma.png'
-import mac from '../../images/mac.png'
-import win from '../../images/win.png'
+import wama from '../../images/wama.png'
 import './product.css'
 
 export default class Product extends Component {
@@ -32,15 +28,30 @@ export default class Product extends Component {
                 { img: tool2, url: 'http://cocos-terminal.com/', til: 'tname2', auther: 'tauther2', gex: 'tex2' },
                 { img: tool3, url: 'https://chrome.google.com/webstore/detail/cocospay/ffbhaeoepdfapfjhcihbbhlaigejfack', til: 'tname4', auther: 'tauther4', gex: 'tex2' },
             ],
+            downLoad: '',
         }
     }
     componentDidMount() {
+        this.choose()
         this.devbtn.onmouseenter = () => {
             this.devbtn.classList.add('bounceIn');
         }
         this.devplan.onmouseleave = () => {
             this.devbtn.classList.remove('bounceIn');
         }
+    }
+    choose() {
+        let agent = navigator.userAgent;
+        console.log(agent);
+
+        let isMac = /macintosh|mac os x/i.test(agent);
+        if (isMac) {
+            this.setState({ downLoad: 'https://cocosbcx.oss-cn-beijing.aliyuncs.com/CocosDesktop.dmg' })
+        }
+        if (agent.indexOf("Win") >= 0 || agent.indexOf("wow") >= 0) {
+            this.setState({ downLoad: 'https://cocosbcx.oss-cn-beijing.aliyuncs.com/CocosDesktop.exe' })
+        }
+
     }
     render() {
         let lang = localStorage.getItem('lang_type');
@@ -73,6 +84,7 @@ export default class Product extends Component {
                                     <div className='img_box lt'>
                                         <img src={item.img} alt="" />
                                     </div>
+                                    <div className='dev_game_mask'></div>
                                     <div className='dev_text_box lt'>
                                         <h4>{t[item.til]}</h4>
                                         <div className='wordroom'>{t[item.auther]}</div>
@@ -91,12 +103,13 @@ export default class Product extends Component {
                             </div>
                             <div className="news_til_mask"></div>
                         </div>
-                        <div className='dev_game_box'>
+                        <div className='dev_game_box dev_game_box_s'>
                             {this.state.toolList.map((item, index) => {
                                 return <a href={item.url} target='_blank' rel="noopener noreferrer" className='dev_game_left lt' key={index}>
                                     <div className='img_box lt'>
                                         <img src={item.img} alt="" />
                                     </div>
+                                    <div className='dev_game_mask'></div>
                                     <div className='dev_text_box lt'>
                                         <h4>{t[item.til]}</h4>
                                         <div className='wordroom'>{t[item.auther]}</div>
@@ -108,42 +121,32 @@ export default class Product extends Component {
                                 <div className='img_box lt'>
                                     <img src={tool5} alt="" />
                                 </div>
+                                <div className='wama'>
+                                    <img src={wama} alt=""/>
+                                </div>
+                                <div className='dev_game_mask'></div>
                                 <div className='dev_text_box lt'>
                                     <h4>{t.tname5}</h4>
                                     <div className='w-box'>
                                         <div className='wordroom'>{t.tauther5}</div>
-                                        <div className='img-icon ios'>
-                                            <img src={ios} alt="" />
-                                            <img className="iosma" src={iosma} alt="" />
-                                        </div>
-                                        <div className='img-icon az'>
-                                            <img src={az} alt="" />
-                                            <img className="azma" src={iosma} alt="" />
-                                        </div>
+
                                     </div>
                                     <p>{t.tex5}</p>
                                 </div>
                             </div>
-                            <div className='dev_game_left lt' >
+                            <a href={this.state.downLoad} className='dev_game_left lt' >
                                 <div className='img_box lt'>
                                     <img src={desk} alt="" />
                                 </div>
+                                <div className='dev_game_mask'></div>
                                 <div className='dev_text_box lt'>
                                     <h4>{t.tname7}</h4>
                                     <div className='w-box'>
                                         <div className='wordroom'>{t.tauther5}</div>
-                                        <div className='img-icon ios'>
-                                            <a href="https://cocosbcx.oss-cn-beijing.aliyuncs.com/CocosDesktop.dmg" >  <img src={mac} alt="" /></a>
-
-                                        </div>
-                                        <div className='img-icon az'>
-                                            <a href="https://cocosbcx.oss-cn-beijing.aliyuncs.com/CocosDesktop.exe"> <img src={win} alt="" /></a>
-
-                                        </div>
                                     </div>
                                     <p>{t.tex7}</p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>

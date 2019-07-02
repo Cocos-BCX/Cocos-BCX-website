@@ -6,6 +6,52 @@
   position: relative;
   margin: auto;
 }
+.footer .footer_box .message {
+  width: 50px;
+  height: 350px;
+  position: fixed;
+  right: 50px;
+  bottom: 100px;
+  background: #666666;
+  border-radius: 2px;
+}
+.footer .footer_box .message div {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid #707070;
+  box-sizing: border-box;
+}
+.footer .footer_box .message div:nth-child(7) {
+  border-bottom: 0;
+}
+.footer .footer_box .message div:hover {
+  background: #2AD9FE;
+}
+.footer .footer_box .message div a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .footer_box .message div a img {
+  width: 24px;
+  height: 24px;
+}
+.footer .footer_box .message div .kf {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: 55px;
+  display: none;
+}
+.footer .footer_box .message .m-kf:hover .kf {
+  display: block;
+}
 .footer .footer_box .totop {
   height: 54px;
   width: 63px;

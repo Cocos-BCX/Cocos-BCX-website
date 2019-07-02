@@ -16,7 +16,6 @@ export default class Big extends Component {
             ss3: [
                 { date: '2017-09', til: 'ss32' },
                 { date: '2017-07', til: 'ss31' },
-
             ],
             ss4: [
                 { date: '2017-12', til: 'ss41' },

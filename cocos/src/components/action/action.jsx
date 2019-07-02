@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
-import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
+import { Route, Redirect, Switch } from "react-router-dom";
 import { getLang } from '../../utils/chooselang'
 import Nav from '../nav/nav'
 import New from './new/new'

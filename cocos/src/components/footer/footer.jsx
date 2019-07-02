@@ -11,6 +11,13 @@ import git from '../../images/github.png'
 import zs from '../../images/zs.png'
 import reddit from '../../images/reddit.png'
 import discord from '../../images/discord.png'
+import mt from '../../images/mt.png'
+import mg from '../../images/mg.png'
+import mm from '../../images/mm.png'
+import md from '../../images/md.png'
+import mwx from '../../images/mwx.png'
+import mtele from '../../images/mtele.png'
+import top from '../../images/top.png'
 
 import mediumb from '../../images/mediumb.png'
 import twitterb from '../../images/Twitterb.png'
@@ -42,7 +49,7 @@ export default class Footer extends Component {
         let setScrollTop = (value) => {
             document.documentElement.scrollTop = value;
         }
-        window.onscroll = () => { getScrollTop() - 400 > 0 ? this.toTomDom.style.display = "block" : this.toTomDom.style.display = "none"; }
+        // window.onscroll = () => { getScrollTop() - 400 > 0 ? this.toTomDom.style.display = "block" : this.toTomDom.style.display = "none"; }
     }
     changeimg() {
         this.mediuma.onmouseenter = (() => {
@@ -118,11 +125,45 @@ export default class Footer extends Component {
         return (
             <div className='footer'>
                 <div className='footer_box'>
-                    <div className='totop' ref={(x) => { this.toTomDom = x }} onClick={this.toTop}>
+                    <div className='message'>
+                        <div>
+                            <a href="https://twitter.com/CocosBCX" target='_blank' rel="noopener noreferrer">
+                                <img src={mt} alt="" />
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://github.com/cocos-bcx" target='_blank' rel="noopener noreferrer">
+                                <img src={mg} alt="" />
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://medium.com/cocosbcx" target='_blank' rel="noopener noreferrer">
+                                <img src={mm} alt="" />
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://discord.gg/jdJMNtC" target='_blank' rel="noopener noreferrer">
+                                <img src={md} alt="" />
+                            </a>
+                        </div>
+                        <div className="m-kf">
+                            <img src={mwx} alt="" />
+                            <img className="kf" src={zsma} alt="" />
+                        </div>
+                        <div>
+                            <a href={lang === 'zh' ? "https://t.me/CocosBCX" : 'https://t.me/cocosbcxen'} target='_blank' rel="noopener noreferrer">
+                                <img src={mtele} alt="" />
+                            </a>
+                        </div>
+                        <div onClick={this.toTop}>
+                            <img src={top} alt="" />
+                        </div>
+                    </div>
+                    {/* <div className='totop' ref={(x) => { this.toTomDom = x }} onClick={this.toTop}>
                         <div className='tojt'>
                             <div></div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className='footer_con'>
                         <div className="footer_con_l lt">
                             <div className='f_til'>{t.tel}</div>
