@@ -30,7 +30,7 @@ export default class Product extends Component {
             toolList: [
                 { img: tool1, url: 'https://explorer.cocosbcx.io/', til: 'tname1', auther: 'tauther1', gex: 'tex1' },
                 { img: tool2, url: 'http://cocos-terminal.com/', til: 'tname2', auther: 'tauther2', gex: 'tex2' },
-                { img: tool3, url: 'https://chrome.google.com/webstore/detail/cocospay/ffbhaeoepdfapfjhcihbbhlaigejfack', til: 'tname4', auther: 'tauther4', gex: 'tex2' },
+                { img: tool3, url: 'https://chrome.google.com/webstore/detail/cocospay/ffbhaeoepdfapfjhcihbbhlaigejfack', til: 'tname4', auther: 'tauther4', gex: 'tex4' },
                 // {img:tool3,url:'http://gpe.famegame.com.cn/',til:'tname3',auther:'tauther3',gex:'tex3'},
             ],
         }
