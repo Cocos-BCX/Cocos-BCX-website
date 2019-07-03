@@ -88,7 +88,9 @@ export default class Product extends Component {
                                     <div className='dev_text_box lt'>
                                         <h4>{t[item.til]}</h4>
                                         <div className='wordroom'>{t[item.auther]}</div>
-                                        <p>{t[item.gex]}</p>
+                                        <p>{t[item.gex]}
+                                            {index == 1&&lang==='en' ? <p className='p-hover'>{t[item.gex]}</p> : null}
+                                        </p>
                                     </div>
                                 </a>
                             })}
@@ -122,7 +124,7 @@ export default class Product extends Component {
                                     <img src={tool5} alt="" />
                                 </div>
                                 <div className='wama'>
-                                    <img src={wama} alt=""/>
+                                    <img src={wama} alt="" />
                                 </div>
                                 <div className='dev_game_mask'></div>
                                 <div className='dev_text_box lt'>

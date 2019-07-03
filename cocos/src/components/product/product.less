@@ -112,6 +112,14 @@
                         display: block;
                     }
 
+                    &:hover .dev_text_box .p-hover {
+                        display: block;
+                        background: #fff;
+                        margin-top: 0px;
+                        font-size: 12px;
+                        line-height: 18px;
+                    }
+
                     &:hover .wama {
                         display: block;
                     }
@@ -228,24 +236,20 @@
                             width: 323px;
                             height: 106px;
                             margin-top: 14px;
-                            font-size: 16px;
+                            font-size: 15px;
                             font-weight: 300;
-                            line-height: 28px;
+                            line-height: 26px;
                             position: relative;
                             color: #000;
                             overflow: hidden;
 
-                            // &::after {
-                            //     content: "...";
-                            //     position: absolute;
-                            //     bottom: 0;
-                            //     right: 0;
-                            //     padding-left: 40px;
-                            //     background: -webkit-linear-gradient(left, transparent, #fff 55%);
-                            //     background: -o-linear-gradient(right, transparent, #fff 55%);
-                            //     background: -moz-linear-gradient(right, transparent, #fff 55%);
-                            //     background: linear-gradient(to right, transparent, #fff 55%);
-                            // }
+                            .p-hover {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                display: none;
+                            }
+
                         }
 
                     }
@@ -386,6 +390,15 @@
                     .dev_game_left {
                         margin-top: 37px;
 
+                        &:hover .dev_text_box .p-hover {
+                            display: block;
+                            background: #fff;
+                            margin-top: 0px;
+                            font-size: 10px;
+                            line-height: 14px;
+                            width: 100%;
+                        }
+
                         &:nth-child(even) {
                             margin-left: 52px;
                         }
@@ -469,11 +482,11 @@
 
                             p {
                                 width: 242px;
-                                height: 80px;
+                                height: 110px;
                                 margin-top: 8px;
-                                font-size: 14px;
+                                font-size: 12px;
                                 font-weight: 300;
-                                line-height: 21px;
+                                line-height: 16px;
                                 position: relative;
                                 color: #000;
 

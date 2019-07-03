@@ -90,6 +90,13 @@
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left:hover .dev_game_mask {
   display: block;
 }
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left:hover .dev_text_box .p-hover {
+  display: block;
+  background: #fff;
+  margin-top: 0px;
+  font-size: 12px;
+  line-height: 18px;
+}
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left:hover .wama {
   display: block;
 }
@@ -188,12 +195,18 @@
   width: 323px;
   height: 106px;
   margin-top: 14px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
-  line-height: 28px;
+  line-height: 26px;
   position: relative;
   color: #000;
   overflow: hidden;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box p .p-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
 }
 .product .dev_list_box .dev_game .dev_game_box_s {
   height: 560px;
@@ -304,6 +317,14 @@
   .product .dev_list_box .dev_game .dev_game_box .dev_game_left {
     margin-top: 37px;
   }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left:hover .dev_text_box .p-hover {
+    display: block;
+    background: #fff;
+    margin-top: 0px;
+    font-size: 10px;
+    line-height: 14px;
+    width: 100%;
+  }
   .product .dev_list_box .dev_game .dev_game_box .dev_game_left:nth-child(even) {
     margin-left: 52px;
   }
@@ -376,11 +397,11 @@
   }
   .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box p {
     width: 242px;
-    height: 80px;
+    height: 110px;
     margin-top: 8px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 300;
-    line-height: 21px;
+    line-height: 16px;
     position: relative;
     color: #000;
   }
