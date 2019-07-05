@@ -151,13 +151,24 @@ export default class Footer extends Component {
                             <img className="kf" src={zsma} alt="" />
                         </div>
                         <div>
-                            <a href={lang === 'zh' ? "https://t.me/CocosBCX" : 'https://t.me/cocosbcxen'} target='_blank' rel="noopener noreferrer">
+                            <a href='javascript:;' className="tele" rel="noopener noreferrer">
+                                <ul className='tele_box'>
+                                    <li>
+                                        <a href="https://t.me/cocosbcxen" target="_blank" rel="noopener noreferrer">English Group：https://t.me/cocosbcxen</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://t.me/CocosBCX" target="_blank" rel="noopener noreferrer">Chinese Group：https://t.me/CocosBCX</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://t.me/cocosbcxvietnam" target="_blank" rel="noopener noreferrer">https://t.me/cocosbcxvietnam</a>
+                                    </li>
+                                </ul>
                                 <img src={mtele} alt="" />
                             </a>
                         </div>
-                        <div onClick={this.toTop}>
+                        {/* <div onClick={this.toTop}>
                             <img src={top} alt="" />
-                        </div>
+                        </div> */}
                     </div>
                     {/* <div className='totop' ref={(x) => { this.toTomDom = x }} onClick={this.toTop}>
                         <div className='tojt'>

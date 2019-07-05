@@ -7,29 +7,23 @@
   margin: auto;
 }
 .footer .footer_box .message {
-  width: 50px;
-  height: 350px;
+  width: 30px;
   position: fixed;
-  right: 50px;
-  bottom: 100px;
-  background: #666666;
-  border-radius: 2px;
+  right: 20px;
+  bottom: 40px;
+  z-index: 10;
 }
 .footer .footer_box .message div {
-  height: 50px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   position: relative;
-  border-bottom: 1px solid #707070;
-  box-sizing: border-box;
+  margin-top: 12px;
 }
 .footer .footer_box .message div:nth-child(7) {
   border-bottom: 0;
-}
-.footer .footer_box .message div:hover {
-  background: #2AD9FE;
 }
 .footer .footer_box .message div a {
   width: 100%;
@@ -37,10 +31,56 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+.footer .footer_box .message div a .tele_box {
+  display: none;
+  position: absolute;
+  width: 334px;
+  height: 151px;
+  background: #ffffff;
+  box-shadow: 0px 0px 12px 0px rgba(151, 151, 151, 0.5);
+  border-radius: 4px;
+  right: 50px;
+  bottom: -10px;
+  padding: 26px 0 0 20px;
+  box-sizing: border-box;
+  z-index: 20;
+}
+.footer .footer_box .message div a .tele_box li a {
+  position: relative;
+  height: 20px;
+  color: #333333;
+  font-size: 14px;
+  margin-bottom: 20px;
+  justify-content: left;
+  padding-left: 20px;
+}
+.footer .footer_box .message div a .tele_box li a::after {
+  content: '';
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent transparent #9B9B9B;
+  position: absolute;
+  left: 0px;
+  top: 2px;
+}
+.footer .footer_box .message div a .tele_box li a:hover {
+  color: #2AD9FE;
+}
+.footer .footer_box .message div a .tele_box li a:hover::after {
+  content: '';
+  border-color: transparent transparent transparent #2AD9FE;
 }
 .footer .footer_box .message div a img {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
+}
+.footer .footer_box .message div a img:hover {
+  opacity: .5;
+}
+.footer .footer_box .message div .tele:hover .tele_box {
+  display: block;
 }
 .footer .footer_box .message div .kf {
   position: absolute;
@@ -310,6 +350,9 @@
   .footer .footer_box {
     position: relative;
     margin: auto;
+  }
+  .footer .footer_box .message {
+    zoom: .8;
   }
   .footer .footer_box .totop {
     height: 54px;
