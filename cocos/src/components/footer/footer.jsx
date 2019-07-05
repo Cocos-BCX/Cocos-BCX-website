@@ -160,7 +160,7 @@ export default class Footer extends Component {
                                         <a href="https://t.me/CocosBCX" target="_blank" rel="noopener noreferrer">Chinese Group：https://t.me/CocosBCX</a>
                                     </li>
                                     <li>
-                                        <a href="https://t.me/cocosbcxvietnam" target="_blank" rel="noopener noreferrer">https://t.me/cocosbcxvietnam</a>
+                                        <a href="https://t.me/cocosbcxvietnam" target="_blank" rel="noopener noreferrer">Vietnam Group：https://t.me/cocosbcxvietnam</a>
                                     </li>
                                 </ul>
                                 <img src={mtele} alt="" />
