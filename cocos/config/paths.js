@@ -34,7 +34,7 @@ const getPublicUrl = appPackageJson =>
 function getServedPath(appPackageJson) {
   const publicUrl = getPublicUrl(appPackageJson);
   const servedUrl =
-    envPublicUrl || (publicUrl ? url.parse(publicUrl).pathname : 'https://jdi.cocosbcx.net/webpc/');
+    envPublicUrl || (publicUrl ? url.parse(publicUrl).pathname : './');
   return ensureSlash(servedUrl, true);
 }
 
