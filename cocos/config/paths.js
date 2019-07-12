@@ -3,6 +3,9 @@
 const path = require('path');
 const fs = require('fs');
 const url = require('url');
+const env = process.env.npm_config_env || 'test'; // 指定环境
+console.log('-------------env------------')
+console.log(env)
 
 // Make sure any symlinks in the project folder are resolved:
 // https://github.com/facebook/create-react-app/issues/637
@@ -31,10 +34,25 @@ const getPublicUrl = appPackageJson =>
 // single-page apps that may serve index.html for nested URLs like /todos/42.
 // We can't use a relative path in HTML because we don't want to load something
 // like /todos/42/static/js/bundle.7289d.js. We have to know the root.
+let interFace = ''
+switch (env) {
+  case 'test':
+    interFace = './'
+    break;
+
+  case 'pro':
+    
+    interFace = 'https://jdi.cocosbcx.net/webpc/'
+    break;
+  default:
+    
+    interFace = './'
+    break;
+}
 function getServedPath(appPackageJson) {
   const publicUrl = getPublicUrl(appPackageJson);
   const servedUrl =
-    envPublicUrl || (publicUrl ? url.parse(publicUrl).pathname : '/');
+    envPublicUrl || (publicUrl ? url.parse(publicUrl).pathname : interFace);
   return ensureSlash(servedUrl, true);
 }
 
