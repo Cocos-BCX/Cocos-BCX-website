@@ -37,7 +37,7 @@ function getServedPath(appPackageJson) {
     envPublicUrl || (publicUrl ? url.parse(publicUrl).pathname : '/');//1111
   return ensureSlash(servedUrl, true);
 }
-
+  
 const moduleFileExtensions = [
   'web.mjs',
   'mjs',
