@@ -41,10 +41,9 @@ exports.lang = {
         system4: '用户',
         system5: '创作内容',
 
-
         map: '技术进展',
         map1: '优化智能合约编译方式；',
-        map11: '优化合约在创建非同质资产时的规则；优化DataBase数据库目录；',
+        map11: '优化合约在创建非同质资产时的规则；优化DataBase数据库目录； ',
         map2: '完善同质资产交易逻辑和转账逻辑；',
         map22: '向开发者提供获取op序列化原型的入口；',
         map3: '调整账户信息属性；',
@@ -58,8 +57,6 @@ exports.lang = {
         md3: '2019.04.29',
         md4: '2019.05.13',
         md5: '2019.05.26',
-
-
 
         hz: '战略投资机构 & 合作伙伴',
         hzsm: '严正声明',
@@ -113,7 +110,7 @@ exports.lang = {
         tex4: '官方浏览器插件钱包。支持基本钱包功能和 DApp 调用，使用起来方便简洁，可在谷歌商店下载体验。',
         tex5: '官方手机端钱包。支持秘钥管理，支持签名转账、管理账号资源等所有操作。CocosWallet 支持多账号登陆。',
         tex6: '官方手机端钱包。支持秘钥管理，支持签名转账、管理账号资源等所有操作。CocosWallet 支持多账号登陆。',
-        tex7: 'CocosDesktop是基于Cocos-BCX开发的桌面版钱包，可以帮助我们进行签名转账、管理账号资源，查询历史记录等所有的操作。',
+        tex7: 'CocosDesktop是基于COCOS-BCX开发的桌面版钱包，可以帮助我们进行签名转账、管理账号资源，查询历史记录等所有的操作。',
 
         //关于我们
         lookBook: '查看白皮书',
@@ -128,9 +125,6 @@ exports.lang = {
         p6: 'James Jeon',
         p7: 'Frederick Lim',
         p8: 'Hirokuni Fujita',
-        p9: 'Jason',
-        p10: 'Focus Wang',
-        p11: '王翔羽',
         p12: 'Jennie Pan',
         p13: '王哲',
         p14: 'Kevin Yin',
@@ -238,7 +232,7 @@ exports.lang = {
         develop: 'DEVELOPER',
         developPlan: 'PROGRAM',
         developApi: 'DOC',
-        developsq: 'DISCORD',
+        developsq: 'FORUM',
         navxs: 'BOUNTY',
         jili: 'CONTRIBUTION',
         stproduct: 'ECOSYSTEM',
@@ -251,7 +245,6 @@ exports.lang = {
         gtil: 'COCOS-BCX TESTNET 1.0',
         gdh: '"GANG RINPOCHE"',
         gdate: 'LAUNCHING ON 06.06.2019',
-
         //首页
         next: 'Next-Gen Digital Game Economy',
         nextex: 'Cocos-BCX is committed to facilitate the development of blockchain gaming. As the platform for the next generation of digital game economy, Cocos-BCX provides a complete set of development tools, as well as an integrated ecosystem',
@@ -277,7 +270,6 @@ exports.lang = {
         system5: 'Copyrights & IPs',
 
         map: 'Technical Updates',
-
 
         map1: "Optimized smart contract compilation;",
         map11: 'Optimized contract rules of creating non-homogeneous assets;Optimizing the DataBase directory;',
@@ -327,7 +319,6 @@ exports.lang = {
         gex3: 'A flying shooting game. In Cocos Shooting, players can manipulate their aircraft and gain resources by constantly shooting down enemy aircraft to enhance the aircraft and defeat every BOSS. The game has implemented the props-crossing feature unique to the Cocos-BCX chain, and players can use props from other games.',
         gex4: 'Classic dice rolling game Demo',
         gex5: 'This is a classic casual competitive game. Players operate their own snakes and peas in the game to get resources, make the body longer, while avoiding other snakes.',
-
         tname1: 'Cocos-BCX  Explorer',
         tname2: 'Cocos Terminal',
         tname3: 'Game props exchange',
@@ -342,7 +333,6 @@ exports.lang = {
         tauther5: 'Cocos-BCX',
         tauther6: 'Cocos-BCX',
         tauther7: 'Cocos-BCX',
-
         tex1: 'A simplified version of the official explorer. You can view the the on-chain details of block height, transactions and node in real time.',
         tex2: 'Cocos-Terminal is a terminal integrated the features of decentralized wallet, blockchain browser, asset transaction, DApp distribution, visualizeddesign,  development assistance.',
         tex3: 'Developed based on the Cocos-BCX JS SDK, the dApp contains game market, wallet, order system and access to game center. In the market, players can purchase or sell the props(character, item, and treasure box , etc) for his beloved games. Players can deposit or withdraw in the market. Meanwhile, the props market is also an important social platform at which players can discuss about gameplay and strategy, etc. ',

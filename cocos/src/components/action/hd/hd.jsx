@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { getLang } from '../../../utils/chooselang'
 import { get } from '../../../api/api'
 import Page from '../../../common/pagecomponent/Pagecontainer'
+import Swiper from 'swiper'
+import 'swiper/dist/css/swiper.min.css'
 import './hd.css'
 export default class Hd extends Component {
 
@@ -10,9 +12,6 @@ export default class Hd extends Component {
         this.state = {
             newmsg: {},
             forList: [
-                // {title:'超级赛亚人级赛亚人级赛亚人',address:'北京',published_at:'2018-02-23'},
-                // {title:'超级赛亚人',address:'北京',published_at:'2018-02-23'},
-                // {title:'超级赛亚人',address:'北京',published_at:'2018-02-23'},
             ],
             hdList: []
         }
@@ -29,8 +28,7 @@ export default class Hd extends Component {
         let params = { lang: lang, };
         get(url, params).then(response => {
             // console.log(response);
-            this.setState({ forList: response.data.data });
-                this.tjt()
+            this.setState({ forList: response.data.data })
         })
     }
     //获取活动列表
@@ -49,19 +47,19 @@ export default class Hd extends Component {
             this.setState({ newmsg: response.data.data })
         })
     }
-        //推荐动画
-        tjt() {
-            let ele = document.getElementsByClassName('hd_every');
-                    for (let i = 0; i < ele.length; i++) {
-                        setTimeout(() => {
-                            ele[i].style.transform='translateY(0)';
-                            ele[i].style.opacity = '1';
-                        }, 0 + i * 200)
-                    }
-              
-        }
     componentDidMount() {
         this.forList()
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 3000,//1秒切换一次
+                disableOnInteraction: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        })
     }
     componentWillUnmount = () => {
         this.setState = (state, callback) => {
@@ -74,41 +72,48 @@ export default class Hd extends Component {
             <div className='new hd'>
                 <div className="news_til_box">
                     <div className="news_til">
-                        <h3>{t.hd}</h3>
+                    <h3>{t.hd}</h3>
                         <div className='news_line'></div>
                     </div>
                     <div className="news_til_mask"></div>
                 </div>
-                <div className='hd_for'>
+                {
+                    this.state.forList.length>0?
+                     <div className='hd_for'>
                     <div className='hd_box'>
-                        {this.state.forList.map((item, index) => {
-                            return <a href={item.resource} target="_blank" className='hd_every lt' key={index} rel="noopener noreferrer">
-                                <div className='every_til'>{item.title}</div>
-                                <div className='every_b'>
-                                    <div className='e_address lt'>
-                                        <p>{item.address}</p>
+                        <div className="swiper-container" >
+                            <div className="swiper-wrapper" >
+                                {this.state.forList.map((item, index) => {
+                                    return <div className='swiper-slide' key={index}>
+                                        <div className='hd_every  ' key={index} style={{ marginLeft: '1.2rem', width: '3rem' }}>
+                                            <div className='every_til'>{item.title}</div>
+                                            <div className='every_b'>
+                                                <div className='e_address lt'>
+                                                    <p>{item.address}</p>
+                                                </div>
+                                                <div className='e_date rt'>{item.published_at}</div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className='e_date rt'>{item.published_at}</div>
-                                </div>
-                            </a>
-                        })}
-                    </div>
-                    {
-                        this.state.forList.length > 0 ?
-                            <div className='yg_box'>
-                                <div className='yg_text lt'><span>{t.yg}</span></div>
-                                <div className='line1 lt'>--------------------</div>
-                                <div className='ball lt'></div>
-                                <div className='line2 lt'>----------------------------------</div>
-                                <div className='ball lt'></div>
-                                <div className='line3 lt'>---------------------------------------</div>
-                                <div className='ball lt'></div>
-                                <div className='line4 lt'>-----------------------</div>
-                            </div>
-                            : null
-                    }
+                                })}
 
+                            </div>
+                            <div className="swiper-button-prev swiper-button-black" style={{left:'0',backgroundSize:'.25rem'}}></div>
+                            <div className="swiper-button-next swiper-button-black" style={{right:'0',backgroundSize:'.25rem'}} ></div>
+                        </div>
+
+                    </div>
+                    <div className='yg_box'>
+                    <div className='yg_text lt'><span>{t.yg}</span></div>
+                        <div className='line1 lt'>--------------------------</div>
+                        <div className='ball lt'></div>
+                        <div className='line2 lt'>--------------------------------------------------------------------------------------</div>
+                        <div className='ball lt'></div>
+                    </div>
                 </div>
+                    :null
+                }
+               
                 <div className='hd_list_box'>
                     {this.state.hdList.map((item, index) => {
                         return <a href={item.resource} target="_blank" className=' hd_list_e' style={{ display: 'block' }} key={index} rel="noopener noreferrer" >
@@ -116,10 +121,10 @@ export default class Hd extends Component {
                                 <img src={item.image} alt="" />
                             </div>
                             <div className='e_text_box lt'>
-                                <h5>{item.title}</h5>
+                                <h5 style={{"WebkitBoxOrient": "vertical"}}>{item.title}</h5>
                                 <p>{item.summary}</p>
-                                <div className='e_address'>{item.address}</div>
-                                <div className="e_date">{item.published_at}</div>
+                                <div className='e_address lt'><span>{item.address}</span></div>
+                                <div className="e_date rt">{item.published_at}</div>
                             </div>
                         </a>
                     })}
