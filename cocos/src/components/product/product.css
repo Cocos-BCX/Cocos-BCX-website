@@ -1,105 +1,144 @@
 .product .banner_s_box {
   margin: auto;
-  height: 3.59rem;
-  background: url('../../images/s_banner.png') no-repeat center;
-  background-size: 7.5rem 3.59rem;
+  height: 336px;
+  background-size: cover;
+  background-color: #033E4E;
   overflow: hidden;
 }
 .product .dev_plan {
-  width: 6.68rem;
-  height: 1.56rem;
+  width: 1170px;
+  height: 272px;
   margin: auto;
-  margin-top: -0.4rem;
+  margin-top: 30px;
   background: url('../../images/net.png') no-repeat center;
-  background-size: 6.68rem 1.56rem;
   overflow: hidden;
 }
 .product .dev_plan .ljdev {
   display: block;
-  height: .37rem;
-  margin-top: .62rem;
-  font-size: .14rem;
-  color: #ffffff;
-  line-height: .37rem;
+  height: 65px;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 108px;
   text-align: center;
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 65px;
 }
 .product .dev_plan .ljdev span {
   display: inline-block;
   background: #2ad9fe;
   border-radius: 4px;
-  margin: auto;
-  padding: 0 .15rem;
+  line-height: 65px;
+  padding: 0 30px;
 }
 .product .dev_list_box {
   margin: auto;
-  margin-top: .44rem;
+  margin-top: 64px;
+  padding-bottom: 100px;
 }
 .product .dev_list_box .dev_game {
   margin: auto;
-  width: 6.54rem;
+  width: 1170px;
+  padding-bottom: 90px;
 }
 .product .dev_list_box .dev_game .news_til_box {
   margin: auto;
-  height: .49rem;
+  height: 59px;
   position: relative;
 }
 .product .dev_list_box .dev_game .news_til_box .news_til {
-  width: 1.6rem;
-  height: .44rem;
+  width: 177px;
+  height: 54px;
   background: #585858;
   transform: skewX(-20deg);
   position: relative;
-  margin-left: .1rem;
+  margin-left: 11.6px;
 }
 .product .dev_list_box .dev_game .news_til_box .news_til h3 {
   transform: skewX(20deg);
   letter-spacing: 1px;
-  font-size: .26rem;
+  font-size: 20px;
   color: #ffffff;
   font-weight: normal;
-  line-height: .44rem;
+  line-height: 54px;
   text-align: center;
-  margin-left: -0.08rem;
+  margin-left: -8px;
 }
 .product .dev_list_box .dev_game .news_til_box .news_til .news_line {
-  width: 6.54rem;
+  width: 1168px;
   height: 5px;
   background: #2ad9fe;
 }
 .product .dev_list_box .dev_game .news_til_box .news_til_mask {
   position: absolute;
-  width: 1.23rem;
-  height: .41rem;
+  width: 164px;
+  height: 54px;
   background: #2AD9FE;
-  top: -0.15rem;
-  left: 1.1rem;
+  top: -19px;
+  left: 112px;
   z-index: -2;
   transform: skewX(-20deg);
 }
 .product .dev_list_box .dev_game .dev_game_box {
-  overflow: hidden;
-  padding-bottom: .5rem;
+  height: 450px;
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left {
-  overflow: hidden;
-  margin-top: .35rem;
+  margin-top: 37px;
+  position: relative;
+  cursor: pointer;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left:hover .dev_game_mask {
+  display: block;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left:hover .dev_text_box .p-hover {
+  display: block;
+  background: #fff;
+  margin-top: 0px;
+  font-size: 12px;
+  line-height: 18px;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left:hover .wama {
+  display: block;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .wama {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  display: none;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .wama img {
+  width: 100%;
+  height: 100%;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_game_mask {
+  position: absolute;
+  width: 115%;
+  height: 120%;
+  box-shadow: 0px 0px 15px 0px #dcdcdc;
+  border-radius: 2px;
+  top: -20px;
+  left: -30px;
+  display: none;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left:nth-child(even) {
+  margin-left: 70px;
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .img_box {
-  margin-top: .1rem;
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 160px;
+  height: 160px;
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .img_box img {
   width: 100%;
   height: 100%;
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box {
-  margin-left: .33rem;
+  margin-left: 39px;
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box h4 {
-  font-size: .26rem;
+  font-size: 20px;
   font-weight: bold;
   color: #696969;
+  line-height: 31px;
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .w-box {
   display: flex;
@@ -107,22 +146,22 @@
   align-items: center;
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .wordroom {
-  margin-top: .16rem;
-  background: url('../../images/people.png') 0 0rem no-repeat;
-  background-size: auto .2rem;
-  padding-left: .3rem;
-  font-size: .2rem;
+  margin-top: 16px;
+  background: url('../../images/cocos3.png') no-repeat;
+  background-size: 15px 19px;
+  padding-left: 25px;
+  font-size: 20px;
   font-weight: 400;
   color: #696969;
+  line-height: 20px;
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .img-icon {
-  width: .4rem;
-  height: .4rem;
-  margin-left: .2rem;
-  margin-top: .12rem;
+  width: 25px;
+  height: 25px;
+  margin-left: 20px;
+  margin-top: 10px;
   position: relative;
   cursor: pointer;
-  font-size: 0;
 }
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .img-icon img {
   width: 100%;
@@ -146,17 +185,227 @@
   z-index: 10;
   display: none;
 }
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .ios:hover .iosma {
+  display: block;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .az:hover .azma {
+  display: block;
+}
 .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box p {
-  width: 3.55rem;
-  height: 1.3rem;
-  margin-top: .3rem;
-  font-size: .22rem;
+  width: 323px;
+  height: 106px;
+  margin-top: 14px;
+  font-size: 15px;
   font-weight: 300;
-  line-height: .27rem;
+  line-height: 26px;
   position: relative;
   color: #000;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
   overflow: hidden;
+}
+.product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box p .p-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.product .dev_list_box .dev_game .dev_game_box_s {
+  height: 560px;
+}
+@media screen and (max-width: 1400px) {
+  .product .banner_s_box {
+    margin: auto;
+    height: 336px;
+    background-size: cover;
+    background-color: #033E4E;
+    overflow: hidden;
+  }
+  .product .dev_plan {
+    width: 878px;
+    height: 205px;
+    margin: auto;
+    margin-top: 30px;
+    background: url('../../images/net.png') no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+  }
+  .product .dev_plan .ljdev {
+    display: block;
+    height: 48px;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 81px;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 48px;
+  }
+  .product .dev_plan .ljdev span {
+    display: inline-block;
+    background: #2ad9fe;
+    border-radius: 4px;
+    padding: 0 30px;
+  }
+  .product .dev_list_box {
+    margin: auto;
+    margin-top: 64px;
+    padding-bottom: 30px;
+  }
+  .product .dev_list_box .dev_game {
+    margin: auto;
+    width: 877px;
+    padding-bottom: 90px;
+  }
+  .product .dev_list_box .dev_game .news_til_box {
+    height: 48px;
+    position: relative;
+  }
+  .product .dev_list_box .dev_game .news_til_box .news_til {
+    width: 151px;
+    height: 46px;
+    background: #585858;
+    transform: skewX(-20deg);
+    position: relative;
+    margin-left: 11.6px;
+  }
+  .product .dev_list_box .dev_game .news_til_box .news_til h3 {
+    transform: skewX(20deg);
+    letter-spacing: 1px;
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: normal;
+    line-height: 46px;
+    text-align: center;
+    margin-left: -5px;
+  }
+  .product .dev_list_box .dev_game .news_til_box .news_til .news_line {
+    width: 876px;
+    height: 4px;
+    background: #2ad9fe;
+  }
+  .product .dev_list_box .dev_game .news_til_box .news_til_mask {
+    position: absolute;
+    width: 150px;
+    height: 46px;
+    background: #2AD9FE;
+    top: -19px;
+    left: 95px;
+    z-index: -2;
+    transform: skewX(-20deg);
+  }
+  .product .dev_list_box .dev_game .news_til_box .news_til_more {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    width: 86px;
+    height: 28px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    transform: skewX(10deg);
+    cursor: pointer;
+  }
+  .product .dev_list_box .dev_game .news_til_box .news_til_more div {
+    transform: skewX(-10deg);
+    font-size: 11px;
+    font-weight: 400;
+    color: #aaaaaa;
+    line-height: 28px;
+    text-align: center;
+  }
+  .product .dev_list_box .dev_game .dev_game_box {
+    height: 320px;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left {
+    margin-top: 37px;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left:hover .dev_text_box .p-hover {
+    display: block;
+    background: #fff;
+    margin-top: 0px;
+    font-size: 10px;
+    line-height: 14px;
+    width: 100%;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left:nth-child(even) {
+    margin-left: 52px;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left .wama {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    display: none;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left .wama img {
+    width: 100%;
+    height: 100%;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left .img_box {
+    width: 120px;
+    height: 120px;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left .img_box img {
+    width: 100%;
+    height: 100%;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box {
+    margin-left: 29px;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box h4 {
+    font-size: 17px;
+    font-weight: bold;
+    color: #696969;
+    line-height: 23px;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .wordroom {
+    margin-top: 12px;
+    background: url('../../images/cocos3.png') no-repeat;
+    background-size: 12px 15px;
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #696969;
+    line-height: 15px;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .img-icon {
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    margin-top: 10px;
+    position: relative;
+    cursor: pointer;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .img-icon img {
+    width: 100%;
+    height: 100%;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .img-icon .iosma {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 25px;
+    left: -30px;
+    z-index: 10;
+    display: none;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box .img-icon .azma {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 25px;
+    left: -30px;
+    z-index: 10;
+    display: none;
+  }
+  .product .dev_list_box .dev_game .dev_game_box .dev_game_left .dev_text_box p {
+    width: 242px;
+    height: 110px;
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16px;
+    position: relative;
+    color: #000;
+  }
+  .product .dev_list_box .dev_game .dev_game_box_s {
+    height: 500px;
+  }
 }

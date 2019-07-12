@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { getLang } from '../../utils/chooselang'
 import { NavLink } from "react-router-dom";
 import Nav from '../nav/nav'
 import { get, } from '../../api/api'
+import { getLang } from '../../utils/chooselang'
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 import play from '../../images/play.png'
@@ -49,6 +49,7 @@ import w12 from '../../images/white(12).png'
 import w13 from '../../images/white(13).png'
 import w14 from '../../images/white(14).png'
 import jia from '../../images/jia.png'
+import close from '../../images/close.png'
 import dline from '../../images/dline.png'
 import './home.css'
 
@@ -58,36 +59,38 @@ export default class Home extends Component {
         this.state = {
             lang: localStorage.getItem('lang_type'),
             black1: [{ b: b, w: w, url: 'http://www.ngc.fund/' }, { b: b1, w: w1, url: 'https://labs.binance.com/' }, { b: b2, w: w2, url: 'http://www.inblockchain.com/' }, { b: b3, w: w3, }, { b: b4, w: w4, url: 'https://500.co/' }, { b: b5, w: w5, url: 'https://www.blockvc.com/' }, { b: b6, w: w6, url: 'https://www.okcoin.com/capital' }, { b: b7, w: w7, url: 'http://yisucapital.com/' }, { b: b8, w: w8, url: 'http://gs.holdings/' }, { b: b9, w: w9, url: 'https://ont.io/' }],
-            black2: [{ b: b10, w: w10, url: 'https://www.helloeos.com.cn/' }, { b: b11, w: w11, url: 'https://slowmist.io/' }, { b: b12, w: w12, url: 'https://nebulas.io/cn/' }, { b: b13, w: w13, url: 'https://loomx.io/' }, { b: b14, w: w14, url: 'https://www.imeos.one/' }],
+            black2: [{ b: b10, w: w10, url: 'https://www.helloeos.com.cn/' }, { b: b11, w: w11, url: 'https://slowmist.io/' }, { b: b12, w: w12, url: 'https://bitpie.com/' }, { b: b13, w: w13, url: 'https://loomx.io/' }, { b: b14, w: w14, url: 'https://www.imeos.one/' }],
             sysImg: [{ img: cocos1, text: 'system1' },
             { img: cocos2, text: 'system2' },
             { img: cocos3, text: 'system3' },
             { img: cocos4, text: 'system4' },
             { img: cocos5, text: 'system5' },],
-            mapList: [{
-                til1: 'map1',
-                til2: 'map11',
-                til3: 'md1',
-            },
-            {
-                til1: 'map5',
-                til2: 'map55',
-                til3: 'md5',
-            },
-            {
-                til1: 'map4',
-                til2: 'map44',
-                til3: 'md4',
-            },
-            {
-                til1: 'map3',
-                til2: 'map33',
-                til3: 'md3',
-            }, {
-                til1: 'map2',
-                til2: 'map22',
-                til3: 'md2',
-            },],
+            mapList: [
+                {
+                    til1: 'map1',
+                    til2: 'map11',
+                    til3: 'md1',
+                },
+                {
+                    til1: 'map5',
+                    til2: 'map55',
+                    til3: 'md5',
+                },
+                {
+                    til1: 'map4',
+                    til2: 'map44',
+                    til3: 'md4',
+                },
+                {
+                    til1: 'map3',
+                    til2: 'map33',
+                    til3: 'md3',
+                },
+                {
+                    til1: 'map2',
+                    til2: 'map22',
+                    til3: 'md2',
+                },],
             newsTopList: [],
             newsBottomList: []
         }
@@ -97,8 +100,8 @@ export default class Home extends Component {
         var swiper = new Swiper('.swiper-container', {
             loop: true,
             autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
+                // delay: 4000,
+                // disableOnInteraction: false,
             },
             lazy: {
                 //loadPrevNext: true,
@@ -126,7 +129,7 @@ export default class Home extends Component {
             this.setState({ newsTopList: response.data.data })
         })
     }
-    //获取4篇新闻
+    //获取6篇新闻
     getNews = () => {
         let lang = localStorage.getItem('lang_type');
         if (lang === 'en') {
@@ -135,26 +138,31 @@ export default class Home extends Component {
             lang = 'zh_CN'
         }
         let url = 'news/recent';
-        let params = { lang: lang, limit: 4 };
+        let params = { lang: lang, };
         get(url, params).then(response => {
             this.setState({ newsBottomList: response.data.data })
         })
     }
     //打开播放器
     showVideo = () => {
-        this.videoBox.style.transform = ' translateY(0)';
-        this.video.play();
+        if (this.state.lang === 'en') {
+            this.youku.src = 'https://video.cocosbcx.net/Cocos-BCX%20en.mp4'
+        } else {
+            this.youku.src = 'https://video.cocosbcx.net/Cocos-BCX%20cn.mp4'
+        }
+        this.videoBox.style.display = 'flex';
+
     }
-    hideVideo = (e) => {
-        this.stopImmediate(e)
-        this.video.pause()
-        this.videoBox.style.transform = 'translateY(-30rem)';
+    hideVideo = () => {
+        this.youku.src = ''
+        this.videoBox.style.display = 'none';
     }
     //隐藏播放器
     closeVideo = () => {
         document.addEventListener('click', () => {
             if (this.videoBox) {
-                this.videoBox.style.display = 'translateY(-30rem)';
+                this.youku.src = ''
+                this.videoBox.style.display = 'none';
             }
         }, false)
     }
@@ -166,45 +174,34 @@ export default class Home extends Component {
     }
     //引擎动画
     yqt() {
-        // let box = document.getElementsByClassName('explane_img')[0];
-        let ele = document.getElementsByClassName('ex_l_r');
-        let to = () => {
-            for (let i = 0; i < ele.length; i++) {
-                setTimeout(() => {
-                    ele[i].style.opacity = '1';
-                    ele[i].style.transform = 'translateX(0)';
-                }, 0 + i * 300)
-            }
-        }
-        setTimeout(() => {
-            to()
-        }, 300)
-    }
-    //技术进展动画
-    jst() {
-        let ele = document.getElementsByClassName('jishu');
+        let box = document.getElementsByClassName('explane_img')[0];
+        let ele = document.getElementsByClassName('ex_l_box');
         let to = () => {
             let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-            if (scrollTop > (this.offset(ele[0]).top - cHeight)) {
-                ele[0].style.transform = 'translateX(0)';
-                ele[0].style.opacity = '1';
+            if (scrollTop > (box.offsetTop - cHeight)) {
+                for (let i = 0; i < ele.length; i++) {
+                    setTimeout(() => {
+                        ele[i].style.opacity = '1';
+                    }, 0 + i * 200)
+                }
             }
-            if (scrollTop > (this.offset(ele[1]).top - cHeight)) {
-                ele[1].style.transform = 'translateX(0)';
-                ele[1].style.opacity = '1';
-            }
-            if (scrollTop > (this.offset(ele[2]).top - cHeight)) {
-                ele[2].style.transform = 'translateX(0)';
-                ele[2].style.opacity = '1';
-            }
-            if (scrollTop > (this.offset(ele[3]).top - cHeight)) {
-                ele[3].style.transform = 'translateX(0)';
-                ele[3].style.opacity = '1';
-            }
-            if (scrollTop > (this.offset(ele[4]).top - cHeight)) {
-                ele[4].style.transform = 'translateX(0)';
-                ele[4].style.opacity = '1';
+        }
+        document.addEventListener('scroll', to)
+    }
+    //技术进展动画
+    jst() {
+        let box = document.getElementsByClassName('map_main_box')[0];
+        let ele = document.getElementsByClassName('map_s_box');
+        let to = () => {
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            if (scrollTop > (box.offsetTop - cHeight)) {
+                for (let i = 0; i < ele.length; i++) {
+                    setTimeout(() => {
+                        ele[i].style.transform = 'translateY(0)';
+                    }, 0 + i * 200)
+                }
             }
         }
         document.addEventListener('scroll', to)
@@ -216,9 +213,8 @@ export default class Home extends Component {
             let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
             for (let j = 0; j < box.length; j++) {
-                if (scrollTop - 50 > (this.offset(box[j]).top - cHeight)) {
+                if (scrollTop - 50 > (box[j].offsetTop - cHeight)) {
                     box[j].style.transform = 'translateY(0)';
-                    box[j].style.opacity = '1';
                 }
             }
         }
@@ -230,9 +226,8 @@ export default class Home extends Component {
             let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             let cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
             for (let j = 0; j < box.length; j++) {
-                if (scrollTop - 50 > (this.offset(box[j]).top - cHeight)) {
+                if (scrollTop - 50 > (box[j].offsetTop - cHeight)) {
                     box[j].style.transform = 'translateY(0)';
-                    box[j].style.opacity = '1';
                 }
             }
         }
@@ -255,6 +250,84 @@ export default class Home extends Component {
             left: l
         };
     }
+    //banner动画
+    bannerTrans() {
+
+        let container = document.getElementsByClassName('container')[0];
+        let inner = this.banner;
+        let mouse = {
+            _x: 0,
+            _y: 0,
+            x: 0,
+            y: 0,
+            updatePosition: function (event) {
+                let e = event || window.event;
+                this.x = e.clientX - this._x;
+                this.y = (e.clientY - this._y) * -1;
+            },
+            setOrigin: function (e) {
+                this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
+                this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
+            },
+            show: function () {
+                return "(" + this.x + ", " + this.y + ")";
+            },
+        };
+
+
+        // Track the mouse position relative to the center of the container.
+        mouse.setOrigin(this.banner);
+
+        //-----------------------------------------
+
+        let counter = 0;
+        let updateRate = 10;
+        let isTimeToUpdate = function () {
+            return counter++ % updateRate === 0;
+        };
+
+        //-----------------------------------------
+
+        let onMouseEnterHandler = function (event) {
+            update(event);
+        };
+
+        let onMouseLeaveHandler = function () {
+            inner.style = "";
+        };
+
+        let onMouseMoveHandler = function (event) {
+            if (isTimeToUpdate()) {
+                update(event);
+            }
+        };
+
+        //-----------------------------------------
+
+        let update = function (event) {
+            mouse.updatePosition(event);
+            updateTransformStyle(
+                (mouse.y / inner.offsetHeight / 2).toFixed(2),
+                (mouse.x / inner.offsetWidth / 2).toFixed(2)
+            );
+        };
+
+        let updateTransformStyle = function (x, y) {
+            let style = "rotateX(" + x / 5 + "deg) rotateY(" + y / 5 + "deg)";
+            inner.style.transform = style;
+            inner.style.webkitTransform = style;
+            inner.style.mozTransform = style;
+            inner.style.msTransform = style;
+            inner.style.oTransform = style;
+        };
+
+        //-----------------------------------------
+
+        container.onmouseenter = onMouseEnterHandler;
+        container.onmouseleave = onMouseLeaveHandler;
+        container.onmousemove = onMouseMoveHandler;
+    }
+
     componentDidMount() {
         this.runbanner()
         window.onload = (() => {
@@ -262,89 +335,97 @@ export default class Home extends Component {
         })
         this.getNews();
         this.getTopNews()
-        this.closeVideo()
+        this.closeVideo();
         this.yqt()
         this.jst()
         this.hzt()
         this.hzdt()
+
+
+
     }
+
     componentWillUnmount = () => {
         this.setState = (state, callback) => {
             return;
         };
     }
+    componentWillMount() {
+    }
+
     render() {
         let lang = localStorage.getItem('lang_type');
         let t = getLang();
         return (
             <div className='homepage_index'>
-                <div className='video_box '
-                    onClick={(e) => { this.hideVideo(e) }} ref={(x) => { this.videoBox = x }}>
+                <div className='video_box' ref={(x) => { this.videoBox = x }}>
                     <div className='video'>
-                        {/* <div className='close_box' onClick={this.hideVideo}>
+                        <div className='close_box' onClick={this.hideVideo}>
                             <img src={close} alt="" />
-                        </div> */}
+                        </div>
                         {
                             lang === 'en' ?
-                                <video controls="controls" ref={(x) => { this.video = x }} style={{ width: '7.5rem' }}>
-                                    <source src="https://video.cocosbcx.net/Cocos-BCX%20en.mp4" type="video/mp4" />
-                                    你的浏览器不支持H5播放器
-                        </video> :
-                                <video controls="controls" ref={(x) => { this.video = x }} style={{ width: '7.5rem' }}>
-                                    <source src="https://video.cocosbcx.net/Cocos-BCX%20cn.mp4" type="video/mp4" />
-                                    你的浏览器不支持H5播放器
-                            </video>
+                                <iframe type="text/html" width="1200px" height="688px" ref={(x) => { this.youku = x }} src="" frameBorder="0" allowFullScreen allowtransparency='yes' allow="autoplay"></iframe> :
+                                <iframe width="1200px" height="688px" ref={(x) => { this.youku = x }} src='' frameBorder='0' allowtransparency='yes' flashvars="isAutoPlay=true" allow="autoplay" >
+                                </iframe>
+                            // <embed src='http://player.youku.com/player.php/sid/XNDA4NjA1NDAwMA==/v.swf' allowFullScreen={true} flashvars="isAutoPlay=true" quality='high' width='480' height='400' align='middle' allowscriptaccess='always' type='application/x-shockwave-flash'></embed>
                         }
+
                     </div>
                 </div>
-                <div className='nav-box'>
-                    <Nav></Nav>
-                </div>
-                <div className="swiper-container" >
-                    <div className="swiper-wrapper" >
-                        <div className="swiper-slide slide-3">
-                            <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/izOYBwMAeeI8byrRicwigw" : 'https://medium.com/@CocosBCX/cocos-bcx-launched-ecosystem-incentive-plan-globally-1045eec0ca07'} target="_blank">
-                                <div className='banner_box bannern_box_g'>
-                                    <img src={logow} className='wlogo' alt="" />
-                                    <div className='home_btn_box_g'>
-                                        <div className='til'>210,000,000<span> COCOS</span></div>
-                                        <div className='text'>{t.banner3}</div>
-                                        <div className='line'></div>
+                <div className='container'>
+                    <div className="nav-box">
+                        <Nav choose={this.props.choose}></Nav>
+                    </div>
+                    <div className="swiper-container" >
+                        <div className="swiper-wrapper" >
+                            <div className="swiper-slide slide-3" >
+                                <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/izOYBwMAeeI8byrRicwigw" : 'https://medium.com/@CocosBCX/cocos-bcx-launched-ecosystem-incentive-plan-globally-1045eec0ca07'} target="_blank" rel="noopener noreferrer">
+                                    <div key="amache" className='banner_box bannern_box full' ref={(x) => { this.banner = x }} >
+                                        <div className='home_btn_box_g'>
+                                            <div className='til'>210,000,000<span> COCOS</span></div>
+                                            <div className='text'>{t.banner3}</div>
+                                            <div className='line'></div>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="swiper-slide slide-1">
-                            <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/2bw7_nbtzqvFVZikU6EWBQ" : 'https://medium.com/@CocosBCX/cocos-bcx-will-launch-testnet-1-0-gang-rinpoche-on-june-6-8cbb0b90e2e0'} target="_blank">
-                                <div className='banner_box banner_box_g'>
-                                    <img src={logow} className='wlogo' alt="" />
-                                    <div className={lang === 'zh' ? 'home_btn_box' : 'home_btn_box home_btn_box_en'}>
-                                        <div className='til'>{t.gtil}</div>
-                                        <div className='line'></div>
-                                        <p className='dh'>{t.gdh}</p>
-                                        <p className='date'>{t.gdate}</p>
+                                </a>
+                            </div>
+                            <div className="swiper-slide slide-2" >
+                                <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/2bw7_nbtzqvFVZikU6EWBQ" : 'https://medium.com/@CocosBCX/cocos-bcx-will-launch-testnet-1-0-gang-rinpoche-on-june-6-8cbb0b90e2e0'} target="_blank" rel="noopener noreferrer">
+                                    <div key="amache" className='banner_box bannerg_box full' ref={(x) => { this.banner = x }} >
+                                        <div className='home_btn_box_g'>
+                                            <div className='til'>{t.gtil}</div>
+                                            <div className='line'></div>
+                                            <p className='dh'>{t.gdh}</p>
+                                            <p className='date'>{t.gdate}</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
+                                </a>
+                            </div>
 
-                        <div className="swiper-slide slide-2">
-                            <div className='banner_box'>
-                                <img src={logow} className='wlogo' alt="" />
-                                <div className={lang === 'zh' ? 'home_btn_box' : 'home_btn_box home_btn_box_en'}>
-                                    <h5>COCOS</h5>
-                                    <h5>BLOCKCHAIN EXPEDITION</h5>
-                                    <h6>{t.next}</h6>
-                                    <div className='play_btn'>
-                                        <img src={play} className='play_btn lt' alt='' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
-                                        <p style={{ "WebkitBoxOrient": "vertical" }} className='lt'>{t.nextex}</p>
+
+                            <div className="swiper-slide slide-1" >
+                                <div key="amache" className='banner_box animated full' ref={(x) => { this.banner = x }} >
+                                    <div className='home_btn_box'>
+                                        <div className='home_btn_box_mask  tada delay-1s'>
+                                            <h5>COCOS</h5>
+                                            <h5>BLOCKCHAIN EXPEDITION</h5>
+                                            <h6>{t.next}</h6>
+                                            <div className='play_btn'>
+                                                <img src={play} alt="" className='lt' onClick={(e) => { this.showVideo(); this.stopImmediate(e) }} />
+                                                <p className='lt'>{t.nextex}</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div className="swiper-pagination"></div>
+                        <div className="swiper-button-prev swiper-button-blue" style={{ opacity: '.5' }}></div>
+                        <div className="swiper-button-next swiper-button-blue" style={{ opacity: '.5' }}></div>
                     </div>
-                    <div className="swiper-pagination"></div>
                 </div>
+
                 <div className='explane'>
                     <div className="expplane_til">{t.explane}</div>
                     <div className="expplane_main">
@@ -356,31 +437,25 @@ export default class Home extends Component {
                     <img className='fenge' src={fenge} alt="" />
                     <div className='explane_img'>
                         <div className='ex_l_box lt' >
-                            <div className='ex_l_w lt'>
+                            <div className='ex_l_w'>
                                 <img src={game} className='ex_l_img' alt="" />
                             </div>
-                            <div className='ex_l_r lt'>
-                                <h4 className='ex_img_til'>{t.ex_tel1}</h4>
-                                <p className='ex_img_text'>{t.ex_text1}</p>
-                            </div>
+                            <h4 className='ex_img_til'>{t.ex_tel1}</h4>
+                            <p className='ex_img_text'>{t.ex_text1}</p>
                         </div>
                         <div className='ex_l_box lt' >
-                            <div className='ex_l_w lt'>
+                            <div className='ex_l_w'>
                                 <img src={daohang} className='ex_l_img' alt="" />
                             </div>
-                            <div className='ex_l_r lt'>
-                                <h4 className='ex_img_til' /* style={lang === 'en' ? { fontSize: '.22rem' } : null} */>{t.ex_tel2}</h4>
-                                <p style={{ "WebkitBoxOrient": "vertical" }} className='ex_img_text' >{t.ex_text2}</p>
-                            </div>
+                            <h4 className='ex_img_til'>{t.ex_tel2}</h4>
+                            <p className='ex_img_text' >{t.ex_text2}</p>
                         </div>
                         <div className='ex_l_box lt' >
-                            <div className='ex_l_w lt'>
+                            <div className='ex_l_w'>
                                 <img src={eye} className='ex_l_img' alt="" />
                             </div>
-                            <div className='ex_l_r lt'>
-                                <h4 className='ex_img_til'>{t.ex_tel3}</h4>
-                                <p className='ex_img_text'>{t.ex_text3}</p>
-                            </div>
+                            <h4 className='ex_img_til'>{t.ex_tel3}</h4>
+                            <p className='ex_img_text'>{t.ex_text3}</p>
                         </div>
                     </div>
                 </div>
@@ -403,25 +478,29 @@ export default class Home extends Component {
                     <div className='news_main'>
                         <div className="news_top">
                             {this.state.newsTopList.map((item, index) => {
-                                return <a href={item.resource} target="_blank" rel="noopener noreferrer" className='news_top_box ' key={index}>
-                                    <div className='news_pic lt'>
-                                        <img src={item.image} alt="" />
+                                return <div className='news_top_box lt' key={index}>
+                                    <div className='news_pic'>
+                                        <a href={item.resource} target="_blank" rel="noopener noreferrer"><img src={item.image} alt="" /></a>
+                                        <div className='news_top_til'>
+                                            <div>
+                                                <h5>{item.title}</h5>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className='news_top_til lt'>
-                                        <h5>{item.title}</h5>
-                                        <div className='news_top_content lt' style={{ "WebkitBoxOrient": "vertical" }}>{item.summary}</div>
-                                    </div>
-                                </a>
+                                    <div className='news_top_content'>{item.summary}</div>
+                                </div>
                             })}
                         </div>
                         <ul className='news_bottom'>
                             {this.state.newsBottomList.map((item, index) => {
                                 return <li className='lt' key={index}>
                                     <a href={item.resource} target="_blank" rel="noopener noreferrer">
-                                        <img src={item.image} alt='' className='img_box lt' />
+                                        <div className='img_box lt'>
+                                            <img src={item.image} alt="" />
+                                        </div>
                                         <div className='img_box_text lt'>
                                             <div>
-                                                <h5 style={{ "WebkitBoxOrient": "vertical" }}>{item.title}</h5>
+                                                <h5>{item.title}</h5>
                                             </div>
                                         </div>
                                     </a>
@@ -436,8 +515,12 @@ export default class Home extends Component {
                             <h4>{t.system}</h4>
                         </div>
                     </div>
-                    <img src={cocoslogo} alt="" className='sys_logo' />
-                    <img src={line} alt="" className='sys_line' />
+                    <div className='sys_logo'>
+                        <img src={cocoslogo} alt="" />
+                    </div>
+                    <div className='sys_line'>
+                        <img src={line} alt="" />
+                    </div>
                     <div className='sys_img'>
                         {this.state.sysImg.map((item, index) => {
                             return <div className='sys_img_box lt' key={index}>
@@ -450,10 +533,11 @@ export default class Home extends Component {
                 <div className='map'>
                     <div className="news_til_box">
                         <div className="news_til">
-                            <h3 style={lang === 'en' ? { fontSize: '.16rem' } : null}>{t.map}</h3>
+                            <h3>{t.map}</h3>
                             <div className='news_line'></div>
                         </div>
                         <div className="news_til_mask"></div>
+
                         <div className='news_til_more' >
                             <NavLink to="action/yb" exact={true}>
                                 <div>
@@ -462,27 +546,32 @@ export default class Home extends Component {
                             </NavLink>
 
                         </div>
+
                     </div>
                     <div className='map_main_box'>
                         {this.state.mapList.map((item, index) => {
-                            return <div className='map_s_box lt' key={index}>
-                                <h5 className='lt'>{t[item.til3]}</h5>
-                                <p style={{ "WebkitBoxOrient": "vertical" }} className='jishu lt'>
-                                    {t[item.til1]}
-                                    <br />
-                                    {t[item.til2]}
-                                </p>
+                            return <div className='map_s_box lt ' key={index} style={lang === 'en' ? { height: '200px' } : { height: '130px' }}>
+                                <p>{t[item.til1]}</p>
+                                <p>{t[item.til2]}</p>
+                                {/* <h5><FormattedMessage id={item.til3} /></h5> */}
                             </div>
                         })}
-                        <div className='line_box'>
-                            <img src={dline} alt="" />
-                            <img src={dline} alt="" />
-                            <img src={dline} alt="" />
-                            <img src={dline} alt="" />
-                            <img src={dline} alt="" />
-                        </div>
                     </div>
 
+                    <div className='line_box'>
+                        <img src={dline} alt="" />
+                        <img src={dline} alt="" />
+                        <img src={dline} alt="" />
+                        <img src={dline} alt="" />
+                        <img src={dline} alt="" />
+                    </div>
+                    <div className='map_date'>
+                        {this.state.mapList.map((item, index) => {
+                            return <div className='map_date_box' key={index}>
+                                {t[item.til3]}
+                            </div>
+                        })}
+                    </div>
 
                 </div>
                 <div className='hezuo'>
@@ -491,6 +580,7 @@ export default class Home extends Component {
                             <div className='head_b'>
                                 <img src={logow} alt="" />
                             </div>
+                            {/* <div className='head_w'></div> */}
                             <div className='head_til'>
                                 <div className='head_til_box'>
                                     {t.hz}
@@ -501,19 +591,21 @@ export default class Home extends Component {
                         <div className='hezuo_com'>
                             <div className="hezuo_top">
                                 {this.state.black1.map((item, index) => {
-                                    return <a href={item.url} target="_blank" rel="noopener noreferrer" key={index} className='hezuo_pic lt' style={{ background: `url(${item.b}) no-repeat center`, backgroundSize: '1.26rem .86rem' }}
-                                    /*     onMouseEnter={(e) => { e.target.style.background = `url(${item.w})no-repeat center` }}
-                                        onMouseLeave={(e) => { e.target.style.background = `url(${item.b})no-repeat center` }} */
+                                    return <a href={item.url} rel="noopener noreferrer" target="_blank" key={index} className='hezuo_pic lt' style={{ background: `url(${item.b})`, }}
+                                        onMouseEnter={(e) => { e.target.style.background = `url(${item.w})` }}
+                                        onMouseLeave={(e) => { e.target.style.background = `url(${item.b})` }}
                                     >
                                     </a>
                                 })}
                             </div>
-                            <img src={jia} alt="" className="hezuo_middle" />
+                            <div className="hezuo_middle">
+                                <img src={jia} alt="" />
+                            </div>
                             <div className="hezuo_bottom">
                                 {this.state.black2.map((item, index) => {
-                                    return <a href={item.url} target="_blank" rel="noopener noreferrer" key={index} className='hz_picd lt' style={{ background: `url(${item.b}) no-repeat center`, backgroundSize: '1.26rem .86rem' }}
-                                    /* onMouseEnter={(e) => { e.target.style.background = `url(${item.w})` }}
-                                    onMouseLeave={(e) => { e.target.style.background = `url(${item.b})` }} */
+                                    return <a href={item.url} rel="noopener noreferrer" target="_blank" key={index} className='hz_picd lt' style={{ background: `url(${item.b})`, }}
+                                        onMouseEnter={(e) => { e.target.style.background = `url(${item.w})` }}
+                                        onMouseLeave={(e) => { e.target.style.background = `url(${item.b})` }}
                                     >
                                     </a>
                                 })}
@@ -525,6 +617,8 @@ export default class Home extends Component {
                         </div>
                     </div>
                 </div>
+
+
             </div >
         );
     }

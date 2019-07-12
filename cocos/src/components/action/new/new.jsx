@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { getLang } from '../../../utils/chooselang'
 import { get } from '../../../api/api'
-import '../../../api/rem'
+import { getLang } from '../../../utils/chooselang'
 import Page from '../../../common/pagecomponent/Pagecontainer'
 import './new.css'
 export default class New extends Component {
@@ -59,12 +58,12 @@ export default class New extends Component {
             <div className='new'>
                 <div className="news_til_box">
                     <div className="news_til">
-                    <h3><span>{t.news}</span></h3>
+                        <h3>{t.news}</h3>
                         <div className='news_line'></div>
                     </div>
                     <div className="news_til_mask"></div>
                     <div className='news_til_more'>
-                        <div className='zx_btn active lt' style={{background:'#585858',color:'#fff' }} ref={(x) => { this.articleBtn = x }} onClick={this.showarticle}><span>{t.zx}</span></div>
+                        <div className='zx_btn active lt' ref={(x) => { this.articleBtn = x }} onClick={this.showarticle}><span>{t.zx}</span></div>
                         <div className='sp_btn lt' ref={(x) => { this.videoBtn = x }} onClick={this.showVideo}><span>{t.video}</span></div>
                     </div>
                 </div>
@@ -94,6 +93,8 @@ export default class New extends Component {
                             <Page msg={this.state.newmsg} key={this.state.type} getNews={this.getNews}></Page>
 
                     }
+                    {/* <Page msg={this.state.newmsg} getNews={this.getNews}></Page>
+                    <Page msg={this.state.newmsg} getNews={this.getNews}></Page> */}
                 </div>
             </div>
         );

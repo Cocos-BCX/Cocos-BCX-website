@@ -1,11 +1,9 @@
-.pagenumber_box {
+.pagenumber_box{
     float: right;
 }
-
-.pageNumber:nth-child(1) {
+.pageNumber:nth-child(1){
     float: right;
 }
-
 .page-container:after {
     content: '.';
     display: block;
@@ -13,7 +11,6 @@
     overflow: hidden;
     clear: both;
 }
-
 .page-container {
     zoom: 1
 }
@@ -21,12 +18,12 @@
 .page-container li {
     list-style: none;
     float: left;
-    padding: 0 .12rem;
+    padding: 0px 8px;
     cursor: pointer;
     border: 1px solid #ccc;
-    height: .4rem;
-    line-height: .4rem;
-    margin-right: .08rem;
+    height: 28px;
+    line-height: 28px;
+    margin-right: 8px;
 }
 
 .page-container li:last-child {

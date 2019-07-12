@@ -4,7 +4,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-    font-family: PingFangSC-Regular, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,22 +11,16 @@ body {
 @font-face {
   font-family: 'FjallaOne';
   src: url('./font/fjallaone-webfont.woff2') format('woff2'),
-       url('./font/fjallaone-webfont.woff') format('woff');
+    url('./font/fjallaone-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
+}
 
-}
-@font-face{
-  font-family: 'ar';
-  src: url('./font/arial_black-webfont.woff2') format('woff2'),
-       url('./font/arial_black-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-li{
+li {
   list-style: none;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

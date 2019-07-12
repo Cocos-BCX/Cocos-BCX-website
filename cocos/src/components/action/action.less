@@ -1,18 +1,16 @@
 .action {
     .banne_n_box {
         margin: auto;
-        height: 3.59rem;
-        width: 7.5rem;
-        background: url('../../images/n_banner.png') no-repeat center;
-        background-size: 7.5rem 3.59rem;
+        height: 336px;
+        // background: url('../../images/n_banner.png') no-repeat center;
         background-color: #07070a;
         overflow: hidden;
 
         .a_nav {
-            width: 6.5rem;
-            height: .47rem;
+            width: 760px;
+            height: 54px;
             margin: auto;
-            margin-top: 1.73rem;
+            margin-top: 176px;
             transform: skewX(-25deg);
             display: flex;
             align-items: center;
@@ -23,23 +21,16 @@
                 flex: 1;
                 margin-left: 2px;
                 background: #585858;
-                height: .47rem;
-                line-height: .47rem;
+                height: 54px;
+                line-height: 54px;
                 color: #fff;
-                font-size: .2rem;
+                font-size: 20px;
                 font-weight: 400;
-                // font-family: miui;
-                border: 1px solid transparent;
-                box-sizing: border-box;
+
 
                 span {
                     display: block;
                     transform: skewX(25deg);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-
                 }
 
             }
@@ -53,6 +44,51 @@
 
             .active {
                 background: #2AD9FE;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1400px) {
+    .action {
+        .banne_n_box {
+            margin: auto;
+            height: 336px;
+            // background: url('../../images/s_banner.png') no-repeat center;
+            background-color: #07070a;
+            overflow: hidden;
+    
+            .a_nav {
+                width: 570px;
+                height: 41px;
+                margin: auto;
+                margin-top: 176px;
+                transform: skewX(-25deg);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+    
+                a {
+                    flex: 1;
+                    margin-left: 2px;
+                    background: #585858;
+                    height: 41px;
+                    line-height: 41px;
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 400;
+    
+    
+                    span {
+                        display: block;
+                        transform: skewX(25deg);
+                    }
+    
+                }
+              
+                .active {
+                    background: #2AD9FE;
+                }
             }
         }
     }

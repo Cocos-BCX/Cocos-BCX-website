@@ -10,11 +10,7 @@ import tool2 from '../../images/tool2.png'
 import tool3 from '../../images/tool3.png'
 import tool5 from '../../images/ios.png'
 import desk from '../../images/deskapp.png'
-import ios from '../../images/iosicon.png'
-import az from '../../images/azicon.png'
-import iosma from '../../images/iosma.png'
-import mac from '../../images/mac.png'
-import win from '../../images/win.png'
+import wama from '../../images/wama.png'
 import './product.css'
 
 export default class Product extends Component {
@@ -31,21 +27,46 @@ export default class Product extends Component {
                 { img: tool1, url: 'https://explorer.cocosbcx.io/', til: 'tname1', auther: 'tauther1', gex: 'tex1' },
                 { img: tool2, url: 'http://cocos-terminal.com/', til: 'tname2', auther: 'tauther2', gex: 'tex2' },
                 { img: tool3, url: 'https://chrome.google.com/webstore/detail/cocospay/ffbhaeoepdfapfjhcihbbhlaigejfack', til: 'tname4', auther: 'tauther4', gex: 'tex4' },
-                // {img:tool3,url:'http://gpe.famegame.com.cn/',til:'tname3',auther:'tauther3',gex:'tex3'},
             ],
+            downLoad: '',
         }
+    }
+    componentDidMount() {
+        this.choose()
+        this.devbtn.onmouseenter = () => {
+            this.devbtn.classList.add('bounceIn');
+        }
+        this.devplan.onmouseleave = () => {
+            this.devbtn.classList.remove('bounceIn');
+        }
+    }
+    choose() {
+        let agent = navigator.userAgent;
+        console.log(agent);
+
+        let isMac = /macintosh|mac os x/i.test(agent);
+        if (isMac) {
+            this.setState({ downLoad: 'https://cocosbcx.oss-cn-beijing.aliyuncs.com/CocosDesktop.dmg' })
+        }
+        if (agent.indexOf("Win") >= 0 || agent.indexOf("wow") >= 0) {
+            this.setState({ downLoad: 'https://cocosbcx.oss-cn-beijing.aliyuncs.com/CocosDesktop.exe' })
+        }
+
     }
     render() {
         let lang = localStorage.getItem('lang_type');
         let t = getLang();
         return (
             <div className='product'>
-                <div className="banner_s_box">
+                <div className="banner_s_box" style={{ background: "url('https://jdi.cocosbcx.net/image/cocosbcx/product_banner.jpg') no-repeat center" }}>
                     <Nav></Nav>
                 </div>
-                <div className='dev_plan'>
-                    <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/bbtYU76j26PTxri8ytrxsA" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7'} className='ljdev' target='_blank' rel="noopener noreferrer">
-                        <span>{t.ljdev}</span>
+                <div className='dev_plan' ref={(x) => { this.devplan = x }}>
+                    <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/bbtYU76j26PTxri8ytrxsA" : 'https://medium.com/@CocosBCX/cocos-bcx-alpha-testing-now-open-to-developers-globally-908880f67de7'} className='ljdev animated' target='_blank' rel="noopener noreferrer">
+                        <span ref={(x) => { this.devbtn = x }} className='animated' >
+                            {t.ljdev}
+                        </span>
+
                     </a>
                 </div>
                 <div className='dev_list_box'>
@@ -63,10 +84,13 @@ export default class Product extends Component {
                                     <div className='img_box lt'>
                                         <img src={item.img} alt="" />
                                     </div>
+                                    <div className='dev_game_mask'></div>
                                     <div className='dev_text_box lt'>
                                         <h4>{t[item.til]}</h4>
                                         <div className='wordroom'>{t[item.auther]}</div>
-                                        <p style={{ "WebkitBoxOrient": "vertical" }}>{t[item.gex]}</p>
+                                        <p>{t[item.gex]}
+                                            {index == 1&&lang==='en' ? <p className='p-hover'>{t[item.gex]}</p> : null}
+                                        </p>
                                     </div>
                                 </a>
                             })}
@@ -81,35 +105,42 @@ export default class Product extends Component {
                             </div>
                             <div className="news_til_mask"></div>
                         </div>
-                        <div className='dev_game_box'>
+                        <div className='dev_game_box dev_game_box_s'>
                             {this.state.toolList.map((item, index) => {
                                 return <a href={item.url} target='_blank' rel="noopener noreferrer" className='dev_game_left lt' key={index}>
                                     <div className='img_box lt'>
                                         <img src={item.img} alt="" />
                                     </div>
+                                    <div className='dev_game_mask'></div>
                                     <div className='dev_text_box lt'>
                                         <h4>{t[item.til]}</h4>
                                         <div className='wordroom'>{t[item.auther]}</div>
-                                        <p style={{ "WebkitBoxOrient": "vertical" }}>{t[item.gex]}</p>
+                                        <p>{t[item.gex]}</p>
                                     </div>
                                 </a>
                             })}
-                            <a href="https://www.cocosbcx.io/download.html" rel="noopener noreferrer" className='dev_game_left lt' >
+                            <div className='dev_game_left lt' >
                                 <div className='img_box lt'>
                                     <img src={tool5} alt="" />
                                 </div>
+                                <div className='wama'>
+                                    <img src={wama} alt="" />
+                                </div>
+                                <div className='dev_game_mask'></div>
                                 <div className='dev_text_box lt'>
                                     <h4>{t.tname5}</h4>
                                     <div className='w-box'>
                                         <div className='wordroom'>{t.tauther5}</div>
+
                                     </div>
                                     <p>{t.tex5}</p>
                                 </div>
-                            </a>
-                            <div className='dev_game_left lt' >
+                            </div>
+                            <a href={this.state.downLoad} className='dev_game_left lt' >
                                 <div className='img_box lt'>
                                     <img src={desk} alt="" />
                                 </div>
+                                <div className='dev_game_mask'></div>
                                 <div className='dev_text_box lt'>
                                     <h4>{t.tname7}</h4>
                                     <div className='w-box'>
@@ -117,7 +148,7 @@ export default class Product extends Component {
                                     </div>
                                     <p>{t.tex7}</p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>

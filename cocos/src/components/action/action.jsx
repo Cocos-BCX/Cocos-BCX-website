@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Redirect, Switch } from "react-router-dom";
 import { getLang } from '../../utils/chooselang'
 import Nav from '../nav/nav'
 import New from './new/new'
@@ -10,17 +10,17 @@ import Big from './big/big'
 import './action.css'
 
 export default class Footer extends Component {
-    // componentDidMount(nextProps) {
-    //     window.scrollTo(0, 0)
-    // }
+    componentDidMount(nextProps) {
+        window.scrollTo(0, 0)
+    }
     render() {
         let t = getLang();
         return (
             <div className='action'>
-                <div className='banne_n_box'>
+                <div className='banne_n_box' style={{ background: "url('https://jdi.cocosbcx.net/image/cocosbcx/active_banner.jpg') no-repeat center" }}>
                     <Nav></Nav>
                     <div className='a_nav'>
-                    <NavLink to="/action/news" activeClassName="active"
+                        <NavLink to="/action/news" activeClassName="active"
                             className='a_nav_new' ><span>{t.a_news}</span>
                         </NavLink>
                         <NavLink to="/action/hd" activeClassName="active"
@@ -39,8 +39,8 @@ export default class Footer extends Component {
                     <Route path="/action/hd" component={Hd} />
                     <Route path="/action/yb" component={Yb} />
                     <Route path="/action/big" component={Big} />
-                    <Route path='/' render={() => (
-                        <Redirect to='/home' />
+                    <Route path='/action' render={() => (
+                        <Redirect to='/action/news' />
                     )} />
                 </Switch>
             </div>

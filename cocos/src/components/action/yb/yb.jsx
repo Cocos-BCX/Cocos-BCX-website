@@ -22,7 +22,6 @@ export default class Yb extends Component {
         let url = 'reports/list';
         let params = { lang: lang, limit: 8, page: page, };
         get(url, params).then(response => {
-            console.log(response.data.data);
             this.setState({ newList: response.data.data.data })
             this.setState({ newmsg: response.data.data })
         })
@@ -38,7 +37,7 @@ export default class Yb extends Component {
             <div className='new yb'>
                 <div className="news_til_box">
                     <div className="news_til">
-                    <h3 className=''>{t.yb}</h3>
+                        <h3 className=''>{t.yb}</h3>
                         <div className='news_line'></div>
                     </div>
                     <div className="news_til_mask"></div>
@@ -47,8 +46,8 @@ export default class Yb extends Component {
                     <ul className='new_list_box'>
                         {this.state.newList.map((item, index) => {
                             return <li className='lt' key={index}>
-                                <a href={item.resource} target="_blank"  rel="noopener noreferrer" >
-                                    <div className='img_box' style={{height:'1.75rem'}}>
+                                <a href={item.resource} target="_blank" rel="noopener noreferrer" >
+                                    <div className='img_box'>
                                         <img src={item.image} alt="" />
                                     </div>
                                     <div className='new_til'>{item.title}</div>

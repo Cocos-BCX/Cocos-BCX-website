@@ -13,17 +13,6 @@ export default class Develop extends Component {
 
         }
     }
-    componentDidMount() {
-        setTimeout(() => {
-            let box = document.getElementsByClassName('dev_m');
-            for (let i = 0; i < box.length; i++) {
-                setTimeout(() => {
-                    box[i].style.opacity = '1';
-                    box[i].style.transform = 'translateX(0)';
-                }, 0 + i * 200)
-            }
-        }, 100)
-    }
     render() {
         let lang = localStorage.getItem('lang_type');
         let t = getLang();
@@ -33,7 +22,7 @@ export default class Develop extends Component {
                     <Nav></Nav>
                 </div>
                 <div className='dev_box'>
-                    <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/bbtYU76j26PTxri8ytrxsA" : 'https://medium.com/@CocosBCX/cocos-bcx-successfully-launched-testnet-1-0-gang-rinpoche-99609ea72c0e'} target="_blank" rel="noopener noreferrer" className='dev_m'>
+                    <a href={lang === 'zh' ? "https://mp.weixin.qq.com/s/bbtYU76j26PTxri8ytrxsA" : 'https://medium.com/@CocosBCX/cocos-bcx-successfully-launched-testnet-1-0-gang-rinpoche-99609ea72c0e'} target="_blank" rel="noopener noreferrer" className='dev_m animated bounceInRight'>
                         <div className='dev_img lt'>
                             <img src={dev1} alt="" />
                         </div>
@@ -41,13 +30,13 @@ export default class Develop extends Component {
                             <div className='dev_main_til'>
                                 <h4>{t.developPlan}</h4>
                             </div>
-                            <p style={{ "WebkitBoxOrient": "vertical" }}>{t.devjh}</p>
+                            <p className={lang === 'en' ? 'dev_en' : null}>{t.devjh}</p>
                             <div className='dev_go'>
                                 <div>GO</div>
                             </div>
                         </div>
                     </a>
-                    <a href={lang === 'zh' ? "https://cn-dev.cocosbcx.io" : 'https://dev.cocosbcx.io'} target="_blank" rel="noopener noreferrer" className='dev_m'>
+                    <a href={lang === 'zh' ? "https://cn-dev.cocosbcx.io" : 'https://dev.cocosbcx.io'} target="_blank" rel="noopener noreferrer " className='dev_m animated bounceInRight'>
                         <div className='dev_img lt'>
                             <img src={dev2} alt="" />
                         </div>
@@ -61,7 +50,7 @@ export default class Develop extends Component {
                             </div>
                         </div>
                     </a>
-                    <a href={lang === 'zh' ? "http://www.cocoachina.com/bbs/thread.php?fid-90.html" : ' https://discord.gg/jdJMNtC'} target="_blank" rel="noopener noreferrer" className='dev_m'>
+                    <a href={lang === 'zh' ? "http://www.cocoachina.com/bbs/thread.php?fid-90.html" : 'https://discord.gg/jdJMNtC'} target="_blank" rel="noopener noreferrer" className='dev_m animated bounceInRight'>
                         <div className='dev_img lt'>
                             <img src={dev3} alt="" />
                         </div>

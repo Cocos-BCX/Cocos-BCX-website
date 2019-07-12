@@ -1,91 +1,167 @@
 .develop .banner_box {
   margin: auto;
-  height: 3.6rem;
-  background: url('../../images/d_banner.png') no-repeat center;
-  background-size: 7.5rem 3.59rem;
+  height: 336px;
+  background: url('../../images/develop_banner.jpg') no-repeat center;
+  overflow: hidden;
 }
 .develop .dev_box {
+  margin-top: 14px;
   overflow: hidden;
   margin: auto;
-  padding-bottom: .4rem;
+  padding-bottom: 136px;
 }
 .develop .dev_box .dev_m {
   display: block;
-  width: 6.64rem;
-  height: 3.9rem;
+  width: 1170px;
+  height: 384px;
   background: rgba(226, 226, 226, 0.22);
   border: 1px solid #e2e2e2;
   margin: auto;
-  margin-top: .5rem;
+  margin-top: 90px;
   overflow: hidden;
   color: #000;
-  transform: translateX(7rem);
-  opacity: .2;
-  transition: all .7s;
 }
 .develop .dev_box .dev_m .dev_img {
-  width: 3.06rem;
-  height: 3rem;
-  margin-top: .13rem;
-  margin-left: .1rem;
+  width: 286px;
+  height: 306px;
+  margin-top: 41px;
+  margin-left: 56px;
 }
 .develop .dev_box .dev_m .dev_img img {
   width: 100%;
   height: 100%;
 }
 .develop .dev_box .dev_m .dev_main {
-  width: 3.1rem;
-  margin-left: .15rem;
-  margin-top: .4rem;
+  width: 705px;
+  margin-left: 63px;
+  margin-top: 48px;
 }
 .develop .dev_box .dev_m .dev_main .dev_main_til {
-  width: 1.5rem;
-  height: .44rem;
+  width: 185px;
+  height: 54px;
   background: #585858;
   transform: skewX(-22deg);
   border-radius: 1px;
-  margin-left: .1rem;
 }
 .develop .dev_box .dev_m .dev_main .dev_main_til h4 {
   transform: skewX(22deg);
-  font-size: .2rem;
+  font-size: 20px;
+  font-weight: bold;
   color: #ffffff;
-  line-height: .44rem;
+  line-height: 54px;
   text-align: center;
+  margin-left: -3px;
 }
 .develop .dev_box .dev_m .dev_main p {
-  height: 2.02rem;
-  font-size: .16rem;
+  height: 127px;
+  font-size: 20px;
   font-weight: 400;
-  line-height: .29rem;
-  margin-top: .18rem;
+  line-height: 36px;
+  margin-top: 20px;
 }
 .develop .dev_box .dev_m .dev_main .dev_go {
   display: block;
-  margin-top: .25rem;
-  width: 1.2rem;
+  margin-top: 46px;
+  width: 155px;
   background: #2AD9FE;
   transform: skewX(-22deg);
-  height: .41rem;
-  margin-left: 1.56rem;
-  font-family: FjallaOne;
+  height: 50px;
+  margin-left: 538px;
+}
+.develop .dev_box .dev_m .dev_main .dev_go:hover {
+  background: #0088ac;
 }
 .develop .dev_box .dev_m .dev_main .dev_go div {
-  font-size: .29rem;
+  font-size: 29px;
   font-weight: 400;
   color: #ffffff;
-  line-height: .41rem;
+  line-height: 50px;
   text-align: center;
   transform: skewX(22deg);
-  border: 1px solid transparent;
-  box-sizing: border-box;
 }
-.develop .dev_box .dev_m:nth-child(1) p {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 7;
-  overflow: hidden;
+.develop .dev_box .dev_m:nth-child(1) .dev_en {
+  font-size: 18px;
+  line-height: 32px;
 }
-.develop .dev_box .dev_m:nth-child(2) p {
-  line-height: .26rem;
+@media screen and (max-width: 1400px) {
+  .develop .banner_box {
+    margin: auto;
+    overflow: hidden;
+  }
+  .develop .dev_box {
+    margin-top: 14px;
+    overflow: hidden;
+    margin: auto;
+    padding-bottom: 136px;
+  }
+  .develop .dev_box .dev_m {
+    display: block;
+    width: 877px;
+    height: 288px;
+    background: rgba(226, 226, 226, 0.22);
+    border: 1px solid #e2e2e2;
+    margin: auto;
+    margin-top: 90px;
+    overflow: hidden;
+    color: #000;
+  }
+  .develop .dev_box .dev_m .dev_img {
+    width: 215px;
+    height: 230px;
+    margin-top: 31px;
+    margin-left: 42px;
+  }
+  .develop .dev_box .dev_m .dev_img img {
+    width: 100%;
+    height: 100%;
+  }
+  .develop .dev_box .dev_m .dev_main {
+    width: 529px;
+    margin-left: 47px;
+    margin-top: 36px;
+  }
+  .develop .dev_box .dev_m .dev_main .dev_main_til {
+    width: 140px;
+    height: 41px;
+    background: #585858;
+    transform: skewX(-22deg);
+    border-radius: 1px;
+  }
+  .develop .dev_box .dev_m .dev_main .dev_main_til h4 {
+    transform: skewX(22deg);
+    font-size: 17px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 41px;
+    text-align: center;
+    margin-left: -3px;
+  }
+  .develop .dev_box .dev_m .dev_main p {
+    height: 95px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-top: 15px;
+  }
+  .develop .dev_box .dev_m .dev_main .dev_go {
+    display: block;
+    margin-top: 35px;
+    width: 120px;
+    background: #2AD9FE;
+    transform: skewX(-22deg);
+    height: 38px;
+    margin-left: 404px;
+  }
+  .develop .dev_box .dev_m .dev_main .dev_go div {
+    font-size: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 38px;
+    text-align: center;
+    transform: skewX(22deg);
+  }
+  .develop .dev_box .dev_m:nth-child(1) .dev_en {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
