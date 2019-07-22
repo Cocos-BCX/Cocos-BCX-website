@@ -92,9 +92,7 @@ export default class Nav extends Component {
     //     window.location.hash = '/develop'
     // }
 
-    componentWillMount() {
 
-    }
     closeLang = () => {
         document.addEventListener('click', () => {
             if (this.langBox) {
@@ -149,8 +147,16 @@ export default class Nav extends Component {
                                                 {t.developApi}
                                             </div>
                                             <div className='dev_a'
+                                                onClick={(e) => { this.stopImmediate(e); window.open('https://github.com/cocos-bcx', '_blank'); }} >
+                                                GitHub
+                                            </div>
+                                            {/* <div className='dev_a'
                                                 onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "http://www.cocoachina.com/bbs/thread.php?fid-90.html" : 'https://discord.gg/jdJMNtC', '_blank'); }} >
                                                 {t.developsq}
+                                            </div> */}
+                                            <div className='dev_a'
+                                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? explorer : `${explorer}?language=en`, '_blank'); }} >
+                                                {t.browser}
                                             </div>
                                         </div>
                                     </div>
@@ -168,17 +174,14 @@ export default class Nav extends Component {
                                 className='nav_st_click' >{t.stproduct}
                             </NavLink>
                         </div>
-                        <div className='nav_action lt'>
+                        {/* <div className='nav_action lt'>
                             <NavLink to="/action/" activeClassName="active"
                                 className='nav_action_click' >{t.action}
                             </NavLink>
-                        </div>
-                        <div className='nav_browser lt'>
+                        </div> */}
+                        {/* <div className='nav_browser lt'>
                             <a href={lang === 'zh' ? explorer : `${explorer}?language=en`} rel="noopener noreferrer" className='nav_browser_click' >{t.browser}</a>
-                            {/* <NavLink to="/browser" exact={true} activeClassName="active"
-                                className='nav_browser_click' ><FormattedMessage id='browser' />
-                            </NavLink> */}
-                        </div>
+                        </div> */}
                         {/* <div className='nav_about lt' >
                             <NavLink to="/about" exact={true} activeClassName="active"
                                 className='nav_about_click' > <span  ><FormattedMessage id='about' />  </span>
@@ -186,7 +189,7 @@ export default class Nav extends Component {
                         </div> */}
                         <div className='nav_about lt' onMouseEnter={this.showAboutList} onMouseLeave={this.closeAboutList}>
                             <NavLink to="/about" activeClassName="active"
-                                className='nav_about_click' > <span ref={(x) => { this.abouttil = x }} >{t.about}</span>
+                                className='nav_about_click' > <span className='choose_about' ref={(x) => { this.abouttil = x }} >{t.about}</span>
                             </NavLink>
                             {this.state.aboutListSwitch ?
                                 <div className='nav_about_more_close' ></div> :
@@ -198,6 +201,9 @@ export default class Nav extends Component {
                                     <div className='nav_about_list_box' >
                                         <div className='nav_about_list_trans' ref={(x) => { this.aboutList = x }}>
                                             <div className='dev_a' onClick={(e) => { this.stopImmediate(e); }}> <a href={lang === 'zh' ? 'https://www.cocosbcx.io/static/Whitepaper_zh.pdf' : 'https://www.cocosbcx.io/static/Whitepaper_en.pdf'} target="_blank" style={{ lineHeight: 'normal' }} className='w_book ' rel="noopener noreferrer">{t.whiteBook}</a></div>
+                                            <NavLink to="/action" activeClassName="active"
+                                                className='dev_a' >{t.action}
+                                            </NavLink>
                                             <NavLink to="/about" activeClassName="active">
                                                 <div className='dev_a'  >{t.team}</div>
                                             </NavLink>

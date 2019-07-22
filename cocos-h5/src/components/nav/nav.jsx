@@ -95,8 +95,12 @@ export default class Nav extends Component {
                                 {t.developApi}
                             </div>
                             <div className='dev_a navBox'
-                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? "http://www.cocoachina.com/bbs/thread.php?fid-90.html" : 'https://discord.gg/jdJMNtC', '_blank'); }} >
-                                {t.developsq}
+                                onClick={(e) => { this.stopImmediate(e); window.open('https://github.com/cocos-bcx', '_blank'); }} >
+                                GitHub
+                            </div>
+                            <div className='dev_a navBox'
+                                onClick={(e) => { this.stopImmediate(e); window.open(lang === 'zh' ? explorer : `${explorer}?language=en`, '_blank'); }} >
+                                {t.browser}
                             </div>
 
                             <a href={lang === 'zh' ? " https://bounty.cocosbcx.io" : ' https://bounty.cocosbcx.io'} rel="noopener noreferrer" className='dev_a navBox' target='_blank'>{t.navxs}</a>
@@ -106,10 +110,8 @@ export default class Nav extends Component {
                                 className='nav_st_click navBox' >{t.stproduct}
                             </NavLink>
 
-                            <NavLink to="/action/news" exact={true} activeClassName="active"
-                                className='nav_action_click navBox' >{t.action}
-                            </NavLink>
-                            <a href={lang === 'zh' ? explorer : `${explorer}?language=en`} className='nav_browser_click navBox' >{t.browser}</a>
+
+                            {/* <a href={lang === 'zh' ? explorer : `${explorer}?language=en`} className='nav_browser_click navBox' >{t.browser}</a> */}
 
                             <NavLink to="/about" exact={true} activeClassName="active"
                                 className='nav_about_click navBox' > <span ref={(x) => { this.abouttil = x }} >{t.about}  </span>
@@ -118,6 +120,9 @@ export default class Nav extends Component {
                                 <a href={lang === 'zh' ? 'https://www.cocosbcx.io/static/Whitepaper_zh.pdf' : 'https://www.cocosbcx.io/static/Whitepaper_en.pdf'} style={{ color: '#585858' }}>{t.whiteBook}</a>
 
                             </div>
+                            <NavLink to="/action/news" exact={true} activeClassName="active"
+                                className='nav_action_click navBox' >{t.action}
+                            </NavLink>
                             <NavLink to="/about" exact={true} activeClassName="active"
                                 className='nav_about_click navBox' > <span ref={(x) => { this.abouttil = x }} >{t.team} </span>
                             </NavLink>
