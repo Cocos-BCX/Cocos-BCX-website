@@ -230,6 +230,12 @@ exports.lang = {
         yg: '活动预告',
         kf: '官方客服',
         gzh: '官方公众号',
+
+
+        // 激励计划
+        incentiveTitle1: '激励计划',
+        incentiveModule: []
+
     },
 
 

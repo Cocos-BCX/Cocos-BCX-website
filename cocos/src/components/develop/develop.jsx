@@ -9,9 +9,6 @@ import './develop.css'
 export default class Develop extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-
-        }
     }
     render() {
         let lang = localStorage.getItem('lang_type');
