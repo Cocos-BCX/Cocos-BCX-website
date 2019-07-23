@@ -33,11 +33,11 @@
   left: 350px;
 }
 .nav_box .nav {
-  width: 810px;
+  width: 750px;
   height: 41px;
   background: #676767;
   transform: skewX(-30deg);
-  margin-left: 194px;
+  margin-left: 240px;
 }
 .nav_box .nav .nav_list_box {
   transform: skewX(30deg);
@@ -54,7 +54,7 @@
 .nav_box .nav .nav_list_box .nav_action,
 .nav_box .nav .nav_list_box .nav_browser,
 .nav_box .nav .nav_list_box .nav_about {
-  margin-left: 47px;
+  margin-left: 67px;
 }
 .nav_box .nav .nav_list_box a {
   color: #BEBEBE;
@@ -103,13 +103,13 @@
 .nav_box .nav .nav_list_box .nav_develop .nav_develop_list .nav_develop_list_box {
   margin-top: 46px;
   width: 83px;
-  height: 88px;
+  height: 106px;
   overflow: hidden;
 }
 .nav_box .nav .nav_list_box .nav_develop .nav_develop_list .nav_develop_list_box .nav_develop_list_trans {
   padding-top: 2px;
   width: 83px;
-  height: 86px;
+  height: 106px;
   background: #333333;
   opacity: 0.76;
   transform: translateY(-88px);
@@ -172,7 +172,7 @@
 .nav_box .nav .nav_list_box .nav_about .nav_about_list .nav_about_list_box .nav_about_list_trans {
   padding-top: 2px;
   width: 135px;
-  height: 63px;
+  height: 90px;
   background: #333333;
   opacity: 0.76;
   transform: translateY(-88px);
@@ -205,7 +205,7 @@
 .nav_box .nav .nav_list_en .nav_action,
 .nav_box .nav .nav_list_en .nav_browser,
 .nav_box .nav .nav_list_en .nav_about {
-  margin-left: 29px;
+  margin-left: 45px;
 }
 .nav_box .nav .nav_list_en a {
   color: #BEBEBE;
@@ -254,13 +254,13 @@
 .nav_box .nav .nav_list_en .nav_develop .nav_develop_list .nav_develop_list_box {
   margin-top: 46px;
   width: 83px;
-  height: 88px;
+  height: 106px;
   overflow: hidden;
 }
 .nav_box .nav .nav_list_en .nav_develop .nav_develop_list .nav_develop_list_box .nav_develop_list_trans {
   padding-top: 2px;
   width: 83px;
-  height: 86px;
+  height: 106px;
   background: #333333;
   opacity: 0.76;
   transform: translateY(-88px);
@@ -323,7 +323,7 @@
 .nav_box .nav .nav_list_en .nav_about .nav_about_list .nav_about_list_box .nav_about_list_trans {
   padding-top: 2px;
   width: 135px;
-  height: 63px;
+  height: 90px;
   background: #333333;
   opacity: 0.76;
   transform: translateY(-88px);

@@ -48,7 +48,7 @@ const moduleFileExtensions = [
   'web.tsx',
   'tsx',
   'json',
-  'web.jsx',
+  'web.jsx', 
   'jsx',
 ];
 

@@ -12,6 +12,8 @@ import './action.css'
 export default class Footer extends Component {
     componentDidMount(nextProps) {
         window.scrollTo(0, 0)
+        let el = document.getElementsByClassName('choose_about')[0];
+        el.style.color = "rgb(42,217,254)"
     }
     render() {
         let t = getLang();
