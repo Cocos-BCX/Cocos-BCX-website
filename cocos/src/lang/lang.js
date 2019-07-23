@@ -236,11 +236,11 @@ exports.lang = {
 
         // 激励计划
         ecologicalnodesTitle1: '生态激励计划',
-        incentiveContent1: 'Cocos-BCX 百万美金激励计划出炉：开  放泛节点生态计划与 COCOS Bounty',
+        incentiveContent1: 'Cocos-BCX 百万美金激励计划出炉：开放泛节点生态计划与 COCOS Bounty',
         incentiveContent2: '2.1亿枚 COCOS 生态节点激励计划出炉',
         incentive1Uri: 'https://mp.weixin.qq.com/s/2bw7_nbtzqvFVZikU6EWBQ',
         incentive2Uri: 'https://mp.weixin.qq.com/s/izOYBwMAeeI8byrRicwigw',
-        ecologicalnodesTitle2: 'COCOS 生态',
+        ecologicalnodesTitle2: '生态要闻',
         ecosystemContent1: 'Cocos-BCX 宣布首批测试网生态贡献节点，比特派、慢雾、纯白矩阵等当选',
         ecosystemLink1: 'https://mp.weixin.qq.com/s/g2m_pUiFuOidHGUPUb_LtQ',
         ecosystemLink2: '',
