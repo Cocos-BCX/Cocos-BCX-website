@@ -1,3 +1,4 @@
+
 exports.lang = {
     zh: {
         homepage: "首页",
@@ -232,9 +233,157 @@ exports.lang = {
         gzh: '官方公众号',
 
 
+
         // 激励计划
-        incentiveTitle1: '激励计划',
-        incentiveModule: []
+        ecologicalnodesTitle1: '生态激励计划',
+        incentiveContent1: 'Cocos-BCX 百万美金激励计划出炉：开  放泛节点生态计划与 COCOS Bounty',
+        incentiveContent2: '2.1亿枚 COCOS 生态节点激励计划出炉',
+        incentive1Uri: 'https://mp.weixin.qq.com/s/2bw7_nbtzqvFVZikU6EWBQ',
+        incentive2Uri: 'https://mp.weixin.qq.com/s/izOYBwMAeeI8byrRicwigw',
+        ecologicalnodesTitle2: 'COCOS 生态',
+        ecosystemContent1: 'Cocos-BCX 宣布首批测试网生态贡献节点，比特派、慢雾、纯白矩阵等当选',
+        ecosystemLink1: 'https://mp.weixin.qq.com/s/g2m_pUiFuOidHGUPUb_LtQ',
+        ecosystemLink2: '',
+        ecosystemContent2: 'Cocos-BCX 测试网“生态贡献节点”全网征名 200,000 COCOS 人人有份',
+        ecologicalnodesTitle3: '生态合伙人',
+        applyBtn: '立即申请',
+        QABtn: '我要咨询',
+
+        ecosystemContent: [
+            {
+                // bgTitle: ['宣布首批测试网生态贡献节点', '助力Cocos-BCX生态共建'],
+                introduce: 'Cocos-BCX 宣布首批测试网生态贡献节点，比特派、慢雾、纯白矩阵等当选',
+                linkUri: 'https://mp.weixin.qq.com/s/g2m_pUiFuOidHGUPUb_LtQ',
+            },
+            {
+                introduce: 'Cocos-BCX 测试网“生态贡献节点”全网征名 200,000 COCOS 人人有份',
+                linkUri: 'https://mp.weixin.qq.com/s/LjK1-UafxpM9vWpYZkL4kw'
+            }
+        ],
+        ecologicalnodes: {
+            iconInfomation: [
+                {
+                    title: 'COCOS微博战队',
+                    link: 'https://weibo.com/u/6252177350',
+                    describe: '微博大V组成的战队，可覆盖微博用户过百万，流量担当。'
+                },
+                {
+                    title: '节点易',
+                    link: 'https://www.nodeasy.com',
+                    describe: '节点易，助你进入Staking Economy时代。'
+                },
+                {
+                    title: '纯白矩阵',
+                    link: 'https://www.nodeasy.com',
+                    describe: '运用区块链思维，节约游戏运营成本，构造全新的游戏性。'
+                },
+                {
+                    title: 'CardMaker',
+                    link: 'https://www.cardmaker.io',
+                    describe: '融合卡牌，分布式经济，去中心化金融不同维度的特质。'
+                },
+                {
+                    title: 'VanG万聚联盟',
+                    link: 'http://www.vanglabs.com',
+                    describe: '是集区块链资讯、资源交互社区推广等等为一体的综合性社区。'
+                },
+                {
+                    title: '比特魔方（BitMoreFun）',
+                    link: 'https://m.bihu.com/people/1596626073?i=Jp8&c=3&s=1K3hnr&from=groupmessage',
+                    describe: '我们在币乎拥有最明显的传播优势，几乎可以覆盖所有时间和用户。'
+                },
+                {
+                    title: '蓝鲸社区',
+                    link: '',
+                    describe: '专注于区块链二级市场投资者教育，拥有多名专业交易导师。'
+                },
+                {
+                    title: 'Cocos-BCX UN',
+                    link: 'http://www.cocosbcxun.com',
+                    describe: '专门为 Cocos-BCX 生态成立和打造的全国性社区联盟。'
+                },
+                {
+                    title: '上手区块链',
+                    link: 'https://www.bihu.com/people/17476',
+                    describe: '由7个币圈自媒体和运营联合成立，覆盖粉丝约6万人。'
+                },
+                {
+                    title: 'HelloPool',
+                    link: 'https://www.hellopool.io',
+                    describe: '为POS和DPOS机制为主的公链项目提供专业化的节点运维服务。'
+                },
+                {
+                    title: '泡泡区块',
+                    link: '',
+                    describe: '致力于分享最新最热区块链游戏的媒体，输出测评和攻略。'
+                },
+                {
+                    title: 'BLOCKLORDS',
+                    describe: '是欧洲中世纪背景的区块链策略类游戏。'
+                },
+                {
+                    title: '慢雾区安全节点',
+                    link: 'https://slowmist.io',
+                    describe: '关注区块链生态的成长并持续为区块链生态的安全保驾护航。'
+                },
+                {
+                    title: '星际社区',
+                    link: '',
+                    describe: '专门从事优质项目节点投资以及为优质项目进行社区建设。'
+                },
+                {
+                    title: '比特派',
+                    link: 'https://bitpie.com',
+                    describe: '致力于为用户提供安全方便的数字资产存储及区块链应用服务。'
+                },
+                {
+                    title: 'GOGOC',
+                    link: 'https://bihu.com/people/239093',
+                    describe: '由28位引力节点组成，团队来自各行业，有社区和项目孵化基金。'
+                },
+                {
+                    title: '区块牛资本',
+                    link: 'http://blockox.vc',
+                    describe: '一家专注于数字货币的投资机构。'
+                },
+                {
+                    title: 'COCOS_KOL',
+                    link: '',
+                    describe: '集文字、深度分析、漫画、视频等内容于一处。'
+                },
+                {
+                    title: '陀螺游戏',
+                    link: 'https://www.tuoluocaijing.cn',
+                    describe: '是国内手游圈头部媒体“游戏陀螺”旗下成立区块链游戏发行商。'
+                },
+                {
+                    title: 'IMCOCOS',
+                    link: 'https://imcocos.com',
+                    describe: 'IMCOCOS是Cocos-BCX的首个生态门户网站。'
+                },
+                {
+                    title: 'COCOS小天使',
+                    link: '',
+                    describe: '是币圈自发组成的第三方 Cocos-BCX社区。'
+                },
+                {
+                    title: 'GPE',
+                    link: '',
+                    describe: '泛娱资产交易平台。将为用户提供市场、钱包、订单、背包等功能。'
+                },
+                {
+                    title: 'YuyeTech',
+                    link: '',
+                    describe: '具备传统游戏开发经验，有与万达和腾讯的合作研发经验。'
+                },
+            ]
+        },
+        excitationConsultation: {
+            qrcode1Title: '想要参与 Cocos-BCX 生态建设的小伙伴，可以添加客服“技术小姐姐”，邀请您进入小姐姐的群并获得相应支持',
+            qrcode1Name: 'Cocos-BCX技术小姐姐',
+            qrcode2Title: '非技术问题也可加大可小姐姐咨询哦',
+            qrcode2Name: 'Cocos-BCX大可'
+        }
 
     },
 
@@ -472,5 +621,152 @@ exports.lang = {
         yg: 'Activity Notice',
         kf: '官方客服',
         gzh: '官方公众号',
+
+
+        // 激励计划
+        ecologicalnodesTitle1: 'Incentive Plan',
+        incentiveContent1: 'Cocos-BCX Launched Ecosystem Incentive Plan Globally',
+        incentiveContent2: 'Cocos-BCX Will Launch TestNet 1.0 “Gang Rinpoche” on June 6!',
+        incentive1Uri: 'https://medium.com/@CocosBCX/cocos-bcx-will-launch-testnet-1-0-gang-rinpoche-on-june-6-8cbb0b90e2e0',
+        incentive2Uri: 'https://medium.com/cocosbcx/cocos-bcx-launched-ecosystem-incentive-plan-globally-1045eec0ca07',
+        ecologicalnodesTitle2: 'Ecosystem News',
+        ecosystemContent1: 'Cocos-BCX’s First Buidlers & Angels List',
+        ecosystemLink1: 'https://mp.weixin.qq.com/s/g2m_pUiFuOidHGUPUb_LtQ',
+        ecosystemContent2: '',
+        ecosystemLink2: '',
+        ecologicalnodesTitle3: 'Buidlers&Angels',
+        applyBtn: 'APPLY NOW',
+        QABtn: 'Q&A',
+        ecosystemContent: [
+            {
+                bgTitle: ['Cocos-BCX', 'First Buidlers & Angels List'],
+                introduce: 'Cocos-BCX’s First Buidlers & Angels List',
+                linkUri: 'https://medium.com/@CocosBCX/cocos-bcxs-first-buidlers-angels-list-5b00c9b101b2',
+            }
+        ],
+        ecologicalnodes: {
+            iconInfomation: [
+                {
+                    title: 'COCOS_Weibo',
+                    link: 'https://weibo.com/u/6252177350',
+                    describe: 'We promote cocos-bcx on China\'s largest social media platform.'
+                },
+                {
+                    title: 'Nodeasy.com',
+                    link: 'https://www.nodeasy.com',
+                    describe: 'Nodeasy is a Staking Economy portal in China.'
+                },
+                {
+                    title: 'WhiteMatrix',
+                    link: 'https://www.nodeasy.com',
+                    describe: 'WhiteMatrix is a startup company of Dapp design. '
+                },
+                {
+                    title: 'CardMaker',
+                    link: 'https://www.cardmaker.io',
+                    describe: 'CardMaker combines classic card game with decentralized finance.'
+                },
+                {
+                    title: 'VanG Labs',
+                    link: 'http://www.vanglabs.com',
+                    describe: 'VanG focuses on early-stage projects. '
+                },
+                {
+                    title: 'BitMoreFun',
+                    link: 'https://m.bihu.com/people/1596626073?i=Jp8&c=3&s=1K3hnr&from=groupmessage',
+                    describe: 'We connect the blockchain game investers, players and projects.'
+                },
+                {
+                    title: 'Blue Whale Community',
+                    link: '',
+                    describe: 'We focus on secondary market investor education.'
+                },
+                {
+                    title: 'Cocos-BCX UN',
+                    link: 'http://www.cocosbcxun.com',
+                    describe: 'A national community for the Cocos-BCX ecosystem.'
+                },
+                {
+                    title: 'Easy Blockchain',
+                    link: 'https://www.bihu.com/people/17476',
+                    describe: 'Easy Blockchain is an influential blockchain senior self-media.'
+                },
+                {
+                    title: 'HelloPool',
+                    link: 'https://www.hellopool.io',
+                    describe: 'We provide professional node operation for public chain projects.'
+                },
+                {
+                    title: 'PaoPao Blockchain',
+                    link: '',
+                    describe: 'A media for the lastest & hottest blockchain games.'
+                },
+                {
+                    title: 'BLOCKLORDS',
+                    describe: 'BLOCKLORDS is a grand strategy game set in medieval Europe.. '
+                },
+                {
+                    title: 'SlowMist Safe Staking',
+                    link: 'https://slowmist.io',
+                    describe: 'SlowMist focuses on the ecological security of the blockchain.'
+                },
+                {
+                    title: 'interstellar community',
+                    link: '',
+                    describe: 'The Interstellar Community is a community of ten thousand people.'
+                },
+                {
+                    title: 'Bitpie',
+                    link: 'https://bitpie.com',
+                    describe: 'Bitpie is an industry-leading multi-blockchain wallet.'
+                },
+                {
+                    title: 'GOGOC',
+                    link: 'https://bihu.com/people/239093',
+                    describe: 'Content exporter, blockchain investment and education.'
+                },
+                {
+                    title: 'BLOCKOX',
+                    link: 'http://blockox.vc',
+                    describe: 'A management agency focused on digital currency investments.'
+                },
+                {
+                    title: 'COCOS_KOL',
+                    link: '',
+                    describe: 'We publish texts, cartoons, videos, and analyses on multiple platforms.'
+                },
+                {
+                    title: 'Gyro Game',
+                    link: 'https://www.tuoluocaijing.cn',
+                    describe: 'A blockchain game publisher established by Game Gyro.'
+                },
+                {
+                    title: 'IMCOCOS',
+                    link: 'https://imcocos.com',
+                    describe: 'First information portal dedicated to the Cocos-BCX ecosystem.'
+                },
+                {
+                    title: 'COCOS angel',
+                    link: '',
+                    describe: 'COCOS angel team is a third party Cocos-BCX community.'
+                },
+                {
+                    title: 'GPE',
+                    link: '',
+                    describe: 'Game Property Exchange provides digital asset exchange service.'
+                },
+                {
+                    title: 'YuyeTech',
+                    link: '',
+                    describe: 'YuyeTech has a wealth of experiece of game development.'
+                },
+            ]
+        },
+        excitationConsultation: {
+            qrcode1Title: 'If you want to participate in the Cocos-BCX ecological construction, welcome to contact our Customer Service "Miss Technology" on WeChat and get support.',
+            qrcode1Name: 'Miss Technology of Cocos-BCX',
+            qrcode2Title: 'She is also happy to solve non-tech problems',
+            qrcode2Name: 'Miss Technology of Cocos-BCX'
+        }
     }
 }

@@ -12,14 +12,20 @@ import nodeecology3 from './images/node-ecology/3.png'
 
 import horizontalBarLeft from './images/horizontal-bar-left.png'
 import horizontalBarRight from './images/horizontal-bar-right.png'
+import ecosystemCn from './images/ecosystem/cn'
+import ecosystemEn from './images/ecosystem/en'
 
 import ecologicalnodesIconInfomation from './config/index.js'
+
+
+import ecologicalnodesIcon from './images/icon'
 
 import './ecologicalnodes.css'
 
 export default class Product extends Component {
     constructor(props) {
         super(props);
+        console.log(ecologicalnodesIcon)
         this.state = {
             iconInfomation: ecologicalnodesIconInfomation.iconInfomation
         }
@@ -54,7 +60,7 @@ export default class Product extends Component {
                     <div className='dev_game'>
                         <div className="news_til_box">
                             <div className="news_til">
-                                <h3>{t.incentiveTitle1}</h3>
+                                <h3>{t.ecologicalnodesTitle1}</h3>
                                 <div className='news_line'></div>
                             </div>
                         </div>
@@ -62,6 +68,7 @@ export default class Product extends Component {
                         <div className='container'>
                             <div className='main-col-2'>
                                 <div className='main-col-2-img'>
+                                <a href={t.incentive1Uri}>
                                     <img src={col2bg1} alt=""/>
                                     <div className='main-col-2-left-img-text'>
                                         <div className='main-col-2-img-text-title text-align-right'>{t.gtil}</div>
@@ -71,14 +78,16 @@ export default class Product extends Component {
                                         <div className='main-col-2-img-text-title text-align-right'>{t.gdh}</div>
                                         <div className='main-col-2-img-text-date text-align-right'>{t.gdate}</div>
                                     </div>
+                                </a>
                                 </div>
-                                <div className='main-col-2-describe'>
-                                Cocos-BCX 百万美金激励计划出炉：开放泛节点生态计划与 COCOS Bounty
-                                </div>
-                                <a href="http://cocosbcxio.mikecrm.com/jVBsJdD" className='main-col-2-btn'>立即申请</a>
+                                <a href={t.incentive1Uri} className='main-col-2-describe'>
+                                {t.incentiveContent1}
+                                </a>
+                                <a href="http://cocosbcxio.mikecrm.com/jVBsJdD" className='main-col-2-btn'>{t.applyBtn}</a>
                             </div>
                             <div className='main-col-2'>
                                 <div className='main-col-2-img'>
+                                <a href={t.incentive2Uri}>
                                     <img src={col2bg2} alt=""/>
                                     <div className='main-col-2-left-img-text'>
                                         <p className='main-col-2-img-text-title'>210,000,000<span>COCOS</span></p>
@@ -87,9 +96,13 @@ export default class Product extends Component {
                                             <img className='horizontal-bar-right' src={horizontalBarRight} alt=""/>
                                         </p>
                                     </div>
+                                </a>
                                 </div>
-                                <div className='main-col-2-describe'>2.1亿枚 COCOS 生态节点激励计划出炉</div>
-                                <a href="/excitationConsultation" className='main-col-2-btn'>我要咨询</a>
+                                <a href={t.incentive2Uri} className='main-col-2-describe'>
+                                {/* 2.1亿枚 COCOS 生态节点激励计划出炉 */}
+                                {t.incentiveContent2}
+                                </a>
+                                <a href="/excitationConsultation" className='main-col-2-btn'>{t.QABtn}</a>
                             </div>
                         </div>
                     </div>
@@ -98,52 +111,61 @@ export default class Product extends Component {
                     <div className='dev_game'>
                         <div className="news_til_box">
                             <div className="news_til">
-                                <h3>节点生态</h3>
+                                <h3>{t.ecologicalnodesTitle2}</h3>
                                 <div className='news_line'></div>
                             </div>
                         </div>
                         <div className='container'>
-                            <div className='main-col-3'>
+                            
+                        {
+                            t.ecosystemContent.map((item, index) => {
+                                return<div className='main-col-3'>
+                                    <a href={item.linkUri}>
+                                        <div className='main-col-3-img'>
+                                        {lang === 'zh' ?<img src={ecosystemCn[index]} alt=""/>:<img src={ecosystemEn[index]} alt=""/>}
+                                        </div>
+                                        <div className='main-col-3-describe'>
+                                        {item.introduce}
+                                        </div>
+                                    </a>
+                                </div> 
+                            //     <div className="col-2-container bor1">
+                            //     <a href={item.linkUri}>
+                            //     {lang === 'zh' ?<img src={ecosystemCn[index]} alt=""/>:<img src={ecosystemEn[index]} alt=""/>}
+                                    
+                            //         <div className="infomation">
+                            //             <p>{item.introduce}</p>
+                            //         </div>
+                            //     </a>
+                            // </div>
+                            })
+                        }
+                            {/* <div className='main-col-3'>
                                 <div className='main-col-3-img'>
                                     <img src={nodeecology1} alt=""/>
                                 </div>
                                 <div className='main-col-3-describe'>
                                 Cocos-BCX 百万美金激励计划出炉：开放泛节点生态计划与 COCOS Bounty
                                 </div>
-                            </div>
-                            <div className='main-col-3'>
-                                <div className='main-col-3-img'>
-                                    <img src={nodeecology2} alt=""/>
-                                </div>
-                                <div className='main-col-3-describe'>
-                                Cocos-BCX 百万美金激励计划出炉：开放泛节点生态计划与 COCOS Bounty
-                                </div>
-                            </div>
-                            <div className='main-col-3'>
-                                <div className='main-col-3-img'>
-                                    <img src={nodeecology3} alt=""/>
-                                </div>
-                                <div className='main-col-3-describe'>
-                                Cocos-BCX 百万美金激励计划出炉：开放泛节点生态计划与 COCOS Bounty
-                                </div>
-                            </div>
+                            </div> */}
+                            
                         </div>
                     </div>
                     <div className='dev_game'>
                         <div className="news_til_box">
                             <div className="news_til">
-                                <h3>节点介绍</h3>
+                                <h3>{t.ecologicalnodesTitle3}</h3>
                                 <div className='news_line'></div>
                             </div>
                         </div>
                         <div className='container'>
                                 {
-                                    this.state.iconInfomation.map((item) => {
+                                    t.ecologicalnodes.iconInfomation.map((item, index) => {
                                         return <div className='main-col-3'>
                                             <a href={item.link?item.link:'javascript:;'}>
                                                 <div className='main-col-3-icon-content'>
                                                     <div className='main-col-3-icon'>
-                                                        <img src={item.icon} alt=""/>
+                                                        <img src={ecologicalnodesIcon[index]} alt=""/>
                                                     </div>
                                                     <div className='main-col-3-icon-infomation'>
                                                         <div className='title'>{item.title}</div>

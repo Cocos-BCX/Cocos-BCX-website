@@ -93,17 +93,19 @@ export default class Product extends Component {
                     </div>
                 </div>
                 <div className='explane'>
-                    <div className='excitationConsultation-title'>想要参与 Cocos-BCX 生态建设的小伙伴，可以添加客服“技术小姐姐”，邀请您进入小姐姐的群并获得相应支持</div>
+                    {/* <div className='excitationConsultation-title'>想要参与 Cocos-BCX 生态建设的小伙伴，可以添加客服“技术小姐姐”，邀请您进入小姐姐的群并获得相应支持</div> */}
+                    <div className='excitationConsultation-title'>{t.excitationConsultation.qrcode1Title}</div>
                     <div className='excitationConsultation-qrcode-container excitationConsultation-qrcode-container-bg1'>
                         <img className='qrcode-img' src="https://jdi.cocosbcx.net/image/cocosbcx/CustomerService.jpg" alt=""/>
-                        <p className='qrcode-img-name'>Cocos-BCX技术小姐姐</p>
+                        {/* <p className='qrcode-img-name'>Cocos-BCX技术小姐姐</p> */}
+                        <p className='qrcode-img-name'>{t.excitationConsultation.qrcode1Name}</p>
                     </div>
                 </div>
                 <div className='explane'>
-                    <div className='excitationConsultation-title'>非技术问题也可加大可小姐姐咨询哦</div>
+                    <div className='excitationConsultation-title'>{t.excitationConsultation.qrcode2Title}</div>
                     <div className='excitationConsultation-qrcode-container excitationConsultation-qrcode-container-bg2'>
                         <img className='qrcode-img' src="https://jdi.cocosbcx.net/image/explorer/kcode.jpeg" alt=""/>
-                        <p className='qrcode-img-name'>Cocos-BCX大可</p>
+                        <p className='qrcode-img-name'>{t.excitationConsultation.qrcode2Name}</p>
                     </div>
                 </div>
                 
