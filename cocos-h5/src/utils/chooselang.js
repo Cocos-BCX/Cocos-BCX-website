@@ -1,4 +1,4 @@
-import {lang} from '../lang/lang'
+import { lang } from '../lang/lang'
 
 
 export function getLang() {

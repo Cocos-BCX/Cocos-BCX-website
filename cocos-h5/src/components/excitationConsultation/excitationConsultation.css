@@ -1,0 +1,127 @@
+
+.banner-excitation-consultation {
+  margin: auto;
+  height: 5.47rem;
+  background-size: cover;
+  background-color: #033E4E;
+  overflow: hidden;
+}
+
+.banner-excitation-consultation .home_btn_box {
+  width: 7.1rem;
+  margin: auto;
+  margin-top: 2rem;
+}
+.banner-excitation-consultation .home_btn_box .home_btn_box_mask {
+  padding-left: 0.2rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.16rem;
+  width: 5rem;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.46) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.banner-excitation-consultation .home_btn_box .home_btn_box_mask h5 {
+  color: #fff;
+  font-size: 0.38rem;
+  font-weight: 400;
+}
+.banner-excitation-consultation .home_btn_box .home_btn_box_mask h6 {
+  color: #fff;
+  font-size: 0.28rem;
+  font-weight: bold;
+}
+.banner-excitation-consultation .home_btn_box .home_btn_box_mask .play_btn {
+  overflow: hidden;
+  margin-top: 0.18rem;
+}
+.banner-excitation-consultation .home_btn_box .home_btn_box_mask .play_btn img {
+  width: 0.5rem;
+  height: 0.5rem;
+  cursor: pointer;
+  opacity: .8;
+}
+.banner-excitation-consultation .home_btn_box .home_btn_box_mask .play_btn img:hover {
+  opacity: 1;
+}
+.banner-excitation-consultation .home_btn_box .home_btn_box_mask .play_btn p {
+  width: 2.8rem;
+  margin-left: 0.25rem;
+  color: #dbd2d2;
+  font-size: 0.12rem;
+  line-height: 0.19rem;
+}
+
+.excitationConsultation-qrcode-container{
+  height: 3.2rem;
+  padding-top: 0.5rem;
+  box-sizing: border-box;
+}
+.excitationConsultation-qrcode-container .qrcode-img{
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: 0 auto;
+  display: block;
+}
+.excitationConsultation-qrcode-container .qrcode-img-name{
+  width: 100%;
+  height: 0.25rem;
+  font-size: 0.18rem;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height: 0.25rem;
+  text-align: center;
+  margin-top: 0.16rem;
+}
+.excitationConsultation-qrcode-container-bg1{
+  background: url(./images/bg1.png) no-repeat center center;
+  background-size: 100% 100%;
+}
+.excitationConsultation-qrcode-container-bg2{
+  background: url(./images/bg2.png) no-repeat center center;
+  background-size: 100% 100%;
+}
+.blank-bottom{
+  height: 2.48rem;
+}
+/* @media screen and (max-width: 1400px) {
+  .banner-excitation-consultation .home_btn_box {
+    width: 862px;
+    margin: auto;
+    margin-top: 225px;
+  }
+  .excitationConsultation-qrcode-container{
+    height: 240px;
+    background-size: 100% 100%;
+  }
+  
+  .excitationConsultation-qrcode-container .qrcode-img{
+    width: 135px;
+    height: 135px;
+    margin: 0 auto;
+    display: block;
+  }
+  .excitationConsultation-qrcode-container .qrcode-img-name{
+    width: 100%;
+    height:25px;
+    font-size:14px;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    line-height:25px;
+    text-align: center;
+    margin-top: 12px;
+  }
+  
+  .blank-bottom{
+    height: 186px;
+  }
+} */
+
+.excitationConsultation-title{
+  margin-top: 1.2rem;
+  margin-bottom: 0.3rem;
+  text-align: center;
+  font-size: 0.14rem;
+}
+
+.blank70{
+  height: 0.7rem;
+}
