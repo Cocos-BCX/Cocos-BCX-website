@@ -4,6 +4,23 @@ const path = require('path');
 const fs = require('fs');
 const url = require('url');
 
+const env = process.env.npm_config_env || 'test'; // 指定环境
+
+let envPublicPath = ''
+switch (env) {
+  case 'test':
+    envPublicPath = '/'
+    break;
+
+  case 'pro':
+    envPublicPath = 'https://jdi.cocosbcx.net/webh5/'
+    break;
+  default:
+    envPublicPath = '/'
+    break;
+}
+
+
 // Make sure any symlinks in the project folder are resolved:
 // https://github.com/facebook/create-react-app/issues/637
 const appDirectory = fs.realpathSync(process.cwd());
@@ -34,7 +51,7 @@ const getPublicUrl = appPackageJson =>
 function getServedPath(appPackageJson) {
   const publicUrl = getPublicUrl(appPackageJson);
   const servedUrl =
-    envPublicUrl || (publicUrl ? url.parse(publicUrl).pathname : 'https://jdi.cocosbcx.net/webh5/');
+    envPublicUrl || (publicUrl ? url.parse(publicUrl).pathname : envPublicPath);
   return ensureSlash(servedUrl, true);
 }
 
