@@ -1,5 +1,5 @@
 .container{
-  margin-top: 40px;
+  /* margin-top: 40px; */
   display: flex;
   flex-wrap: wrap;
 }
@@ -200,7 +200,7 @@
 
 @media screen and (max-width: 1400px){
   .container{
-    margin-top: 30px;
+    /* margin-top: 30px; */
     display: flex;
     flex-wrap: wrap;
   }
